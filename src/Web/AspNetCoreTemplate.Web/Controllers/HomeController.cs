@@ -1,0 +1,45 @@
+﻿namespace AspNetCoreTemplate.Web.Controllers
+{
+    using System.Diagnostics;
+
+    using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Services.Messaging;
+    using AspNetCoreTemplate.Web.ViewModels;
+    using AspNetCoreTemplate.Web.ViewModels.Home;
+    using Microsoft.AspNetCore.Mvc;
+
+    public class HomeController : BaseController
+    {
+        private readonly IEmailSender emailSender;
+        private readonly ICategoriesService categoriesService;
+
+        public HomeController(IEmailSender emailSender, ICategoriesService categoriesService)
+        {
+            this.emailSender = emailSender;
+            this.categoriesService = categoriesService;
+        }
+
+        public IActionResult Index()
+        {
+            var viewModel = new ViewModels.Home.IndexViewModel();
+
+            var categories = this.categoriesService.GetAll<IndexCategoryViewModel>();
+
+            viewModel.Categories = categories;
+
+            return this.View(viewModel);
+        }
+
+        public IActionResult Privacy()
+        {
+            return this.View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return this.View(
+                new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
+        }
+    }
+}
