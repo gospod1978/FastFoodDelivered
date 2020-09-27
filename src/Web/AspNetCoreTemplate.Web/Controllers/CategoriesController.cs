@@ -52,5 +52,16 @@
             this.TempData["InfoMessage"] = "Forum post created!";
             return this.RedirectToAction(nameof(this.Create));
         }
+
+        public IActionResult All()
+        {
+            var viewModel = new ViewModels.Categories.CategoryIndexViewModel();
+
+            var categories = this.categoriesService.GetAll<CategoryAll>();
+
+            viewModel.Categories = categories;
+
+            return this.View(viewModel);
+        }
     }
 }

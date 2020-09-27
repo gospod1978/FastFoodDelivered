@@ -56,11 +56,11 @@
             return query.To<T>().ToList();
         }
 
-        public T GetById<T>(string id)
+        public string GetById<T>(string id)
         {
-            var role = this.roleRepository.All().Where(x => x.Id == id)
-                .To<T>().FirstOrDefault();
-            return role;
+            var role = this.roleManager.Roles.Where(x => x.Id == id).FirstOrDefault();
+
+            return role.Name;
         }
 
         public async Task DeleteById(string id)

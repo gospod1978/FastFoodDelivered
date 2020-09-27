@@ -7,7 +7,7 @@
     using AspNetCoreTemplate.Services.Mapping;
     using AutoMapper;
 
-    public class UserAddRoleCreateInputModel : IMapTo<ApplicationUser>, IHaveCustomMappings
+    public class UserAddRoleCreateInputModel : IMapTo<ApplicationUser>
     {
         [Required]
         public string UserName { get; set; }
@@ -16,14 +16,5 @@
         public string RoleId { get; set; }
 
         public IEnumerable<RolesDropDownViewModels> Roles { get; set; }
-
-        public void CreateMappings(IProfileExpression configuration)
-        {
-            configuration.CreateMap<ApplicationRole, UserAddRoleCreateInputModel>()
-                .ForMember(x => x.RoleId, options =>
-                {
-                    options.MapFrom(p => p.Id);
-                });
-        }
     }
 }

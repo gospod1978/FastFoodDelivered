@@ -2,6 +2,7 @@
 {
     using System.Threading.Tasks;
 
+    using AspNetCoreTemplate.Data.Common.Repositories;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Web.ViewModels.Users;
@@ -14,15 +15,18 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IRoleServices roleServices;
         private readonly IUserServices userServices;
+        private readonly IDeletableEntityRepository<ApplicationRole> roleRepository;
 
         public UsersController(
             UserManager<ApplicationUser> userManager,
             IRoleServices roleServices,
-            IUserServices userServices)
+            IUserServices userServices,
+            IDeletableEntityRepository<ApplicationRole> roleRepository)
         {
             this.userManager = userManager;
             this.roleServices = roleServices;
             this.userServices = userServices;
+            this.roleRepository = roleRepository;
         }
 
         public IActionResult ByName(string name)
@@ -48,16 +52,22 @@
         [Authorize]
         public async Task<IActionResult> Create(UserAddRoleCreateInputModel input)
         {
-            var user = await this.userManager.GetUserAsync(this.User);
             if (!this.ModelState.IsValid)
             {
                 return this.View(input);
             }
 
-            await this.userServices.AddRoleToUser<string>(input.UserName, input.RoleId);
-            var role = this.userServices.GetById<string>(input.RoleId);
-            this.TempData["InfoMessage"] = $"Role {role} added to {input.UserName}!";
+            var role = this.roleServices.GetById<string>(input.RoleId);
+
+            await this.userServices.AddRoleToUser<string>(input.UserName, role);
+            this.TempData["InfoMessageAddRole"] = $"Role {role} added to {input.UserName}!";
             return this.RedirectToAction(nameof(this.Create));
+        }
+
+        [Authorize]
+        public IActionResult NavBarAdmin()
+        {
+            return this.View();
         }
     }
 }
