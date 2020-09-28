@@ -24,5 +24,6 @@
   
   <ItemGroup>
     <Folder Include="UserHome\" />
+    <Folder Include="Courier\" />
   </ItemGroup>
 </Project>
