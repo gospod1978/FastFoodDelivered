@@ -4,6 +4,8 @@
     {
         public const string SystemName = "F.F.D";
 
+        public const string SystemFullName = "Fast Food Delivered";
+
         public const string AdministratorRoleName = "Administrator";
 
         public const string AdminRoleName = "Admin";
