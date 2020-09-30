@@ -30,5 +30,7 @@
     <Folder Include="Home\" />
     <Folder Include="Users\" />
     <Folder Include="Roles\" />
+    <Folder Include="Couriers\" />
+    <Folder Include="Cities\" />
   </ItemGroup>
 </Project>

@@ -6,10 +6,11 @@
     using AspNetCoreTemplate.Data;
     using AspNetCoreTemplate.Data.Common;
     using AspNetCoreTemplate.Data.Common.Repositories;
-    using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Repositories;
     using AspNetCoreTemplate.Data.Seeding;
     using AspNetCoreTemplate.Services.Data;
+    using AspNetCoreTemplate.Services.Data.Courier;
+    using AspNetCoreTemplate.Services.Data.FastFoodCommonService;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Services.Mapping;
     using AspNetCoreTemplate.Services.Messaging;
@@ -68,9 +69,12 @@
             services.AddTransient<IEmailSender>(x => new SendGridEmailSender(GlobalConstants.EmailApiKey));
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICategoriesService, CategoriesService>();
-            services.AddTransient<IPostsServices, PostsServices>();
-            services.AddTransient<IUserServices, UserServices>();
-            services.AddTransient<IRoleServices, RoleServices>();
+            services.AddTransient<IPostsService, PostsService>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<ICourierService, CourierService>();
+            services.AddTransient<ICityService, CityService>();
+            services.AddTransient<IVehicleService, VehicleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

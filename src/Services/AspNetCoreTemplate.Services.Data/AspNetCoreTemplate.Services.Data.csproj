@@ -26,5 +26,7 @@
 
   <ItemGroup>
     <Folder Include="UserService\" />
+    <Folder Include="Courier\" />
+    <Folder Include="FastFoodCommonService\" />
   </ItemGroup>
 </Project>

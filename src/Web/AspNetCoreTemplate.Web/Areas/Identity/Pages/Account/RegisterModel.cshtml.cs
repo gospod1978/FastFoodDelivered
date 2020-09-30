@@ -82,8 +82,8 @@
             if (this.ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = this.Input.UserName, Email = this.Input.Email };
-                var userExisistEmail = this.userManager.FindByNameAsync(this.Input.Email);
-                var userNameExisist = this.userManager.FindByNameAsync(this.Input.UserName);
+                var userExisistEmail = this.userManager.Users.Where(x => x.Email == this.Input.Email).FirstOrDefault();
+                var userNameExisist = this.userManager.Users.Where(x => x.UserName == this.Input.UserName).FirstOrDefault();
 
                 if (userExisistEmail == null && userNameExisist == null)
                 {

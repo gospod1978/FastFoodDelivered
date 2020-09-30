@@ -14,13 +14,13 @@
     public class RolesController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IRoleServices roleServices;
-        private readonly IUserServices userServices;
+        private readonly IRoleService roleServices;
+        private readonly IUserService userServices;
 
         public RolesController(
             UserManager<ApplicationUser> userManager,
-            IRoleServices roleServices,
-            IUserServices userServices)
+            IRoleService roleServices,
+            IUserService userServices)
         {
             this.userManager = userManager;
             this.roleServices = roleServices;

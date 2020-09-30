@@ -8,6 +8,8 @@
 
     using AspNetCoreTemplate.Data.Common.Models;
     using AspNetCoreTemplate.Data.Models;
+    using AspNetCoreTemplate.Data.Models.Courier;
+    using AspNetCoreTemplate.Data.Models.FastFoodCommon;
     using AspNetCoreTemplate.Data.Models.UserHome;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
@@ -31,6 +33,12 @@
         public DbSet<Post> Posts { get; set; }
 
         public DbSet<Comment> Comments { get; set; }
+
+        public DbSet<Courier> Couriers { get; set; }
+
+        public DbSet<Vehichle> Vehichles { get; set; }
+
+        public DbSet<City> Cities { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 

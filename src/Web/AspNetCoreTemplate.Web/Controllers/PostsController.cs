@@ -12,12 +12,12 @@
 
     public class PostsController : Controller
     {
-        private readonly IPostsServices postsService;
+        private readonly IPostsService postsService;
         private readonly ICategoriesService categoriesService;
         private readonly UserManager<ApplicationUser> userManager;
 
         public PostsController(
-            IPostsServices postsService,
+            IPostsService postsService,
             ICategoriesService categoriesService,
             UserManager<ApplicationUser> userManager)
         {
