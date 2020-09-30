@@ -44,8 +44,9 @@
     <Folder Include="Views\Posts\" />
     <Folder Include="Views\Roles\" />
     <Folder Include="Views\Users\" />
-    <Folder Include="Views\Couriers\" />
+    <Folder Include="Views\Courier\" />
     <Folder Include="Views\Cities\" />
+    <Folder Include="Views\Vehicle\" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\Users\NavBarAdmin.cshtml">

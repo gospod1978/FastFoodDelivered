@@ -32,5 +32,6 @@
     <Folder Include="Roles\" />
     <Folder Include="Couriers\" />
     <Folder Include="Cities\" />
+    <Folder Include="Vehicle\" />
   </ItemGroup>
 </Project>
