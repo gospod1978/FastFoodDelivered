@@ -13,14 +13,14 @@
     public class UsersController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IRoleServices roleServices;
-        private readonly IUserServices userServices;
+        private readonly IRoleService roleServices;
+        private readonly IUserService userServices;
         private readonly IDeletableEntityRepository<ApplicationRole> roleRepository;
 
         public UsersController(
             UserManager<ApplicationUser> userManager,
-            IRoleServices roleServices,
-            IUserServices userServices,
+            IRoleService roleServices,
+            IUserService userServices,
             IDeletableEntityRepository<ApplicationRole> roleRepository)
         {
             this.userManager = userManager;

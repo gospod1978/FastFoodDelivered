@@ -139,6 +139,109 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Courier.Courier", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("Birthday")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CityId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VehicleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("VehicleId");
+
+                    b.ToTable("Couriers");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Courier.Vehichle", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Vehichles");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.FastFoodCommon.City", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Cities");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Setting", b =>
                 {
                     b.Property<int>("Id")
@@ -392,6 +495,17 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Courier.Courier", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.FastFoodCommon.City", "City")
+                        .WithMany()
+                        .HasForeignKey("CityId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Courier.Vehichle", "Vehicle")
+                        .WithMany()
+                        .HasForeignKey("VehicleId");
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Comment", b =>

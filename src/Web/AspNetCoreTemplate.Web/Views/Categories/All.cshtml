@@ -20,7 +20,7 @@ else
         @foreach (var category in Model.Categories)
         {
             <div class="media col-md-4">
-                <img src="@category.ImageUrl" width="100" class="mr-3" alt="@category.Title">
+                <img src="@category.ImageUrl" width="100" height="80" class="mr-3" alt="@category.Title">
                 <div class="media-body">
                     <h5 class="mt-0"><a href="@category.Url">@category.Title (@category.PostsCount.)</a></h5>
                 </div>
@@ -29,6 +29,7 @@ else
     </div>
 }
 
+<hr />
 <div>
     <a class="btn btn-danger" asp-area="" asp-controller="Categories" asp-action="Create">CreateNewCategory</a>
     <a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>

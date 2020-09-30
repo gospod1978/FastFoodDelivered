@@ -25,5 +25,6 @@
   <ItemGroup>
     <Folder Include="UserHome\" />
     <Folder Include="Courier\" />
+    <Folder Include="FastFoodCommon\" />
   </ItemGroup>
 </Project>
