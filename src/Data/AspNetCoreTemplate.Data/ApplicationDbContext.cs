@@ -8,8 +8,9 @@
 
     using AspNetCoreTemplate.Data.Common.Models;
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Data.Models.Courier;
-    using AspNetCoreTemplate.Data.Models.FastFoodCommon;
+    using AspNetCoreTemplate.Data.Models.Addresses;
+    using AspNetCoreTemplate.Data.Models.Couriers;
+    using AspNetCoreTemplate.Data.Models.Restaurants;
     using AspNetCoreTemplate.Data.Models.UserHome;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
@@ -39,6 +40,20 @@
         public DbSet<Vehichle> Vehichles { get; set; }
 
         public DbSet<City> Cities { get; set; }
+
+        public DbSet<Address> Addresses { get; set; }
+
+        public DbSet<Area> Areas { get; set; }
+
+        public DbSet<Location> Locations { get; set; }
+
+        public DbSet<LocationObject> LocationObjects { get; set; }
+
+        public DbSet<Street> Streets { get; set; }
+
+        public DbSet<WorkingArea> WorkingAreas { get; set; }
+
+        public DbSet<Restaurant> Restaurants { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 

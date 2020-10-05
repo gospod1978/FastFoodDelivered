@@ -10,6 +10,7 @@
 
     using AspNetCoreTemplate.Data;
     using AspNetCoreTemplate.Data.Models;
+    using AspNetCoreTemplate.Services.Data.UserService;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -26,17 +27,26 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly ILogger<RegisterModel> logger;
         private readonly IEmailSender emailSender;
+        private readonly IRoleService roleService;
+        private readonly IUserService userService;
+        private readonly RoleManager<ApplicationRole> roleManager;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IRoleService roleService,
+            IUserService userService,
+            RoleManager<ApplicationRole> roleManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.logger = logger;
             this.emailSender = emailSender;
+            this.roleService = roleService;
+            this.userService = userService;
+            this.roleManager = roleManager;
         }
 
         [BindProperty]
@@ -82,55 +92,71 @@
             if (this.ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = this.Input.UserName, Email = this.Input.Email };
+                var userBaseIsEmpty = this.userManager.Users.Count();
                 var userExisistEmail = this.userManager.Users.Where(x => x.Email == this.Input.Email).FirstOrDefault();
                 var userNameExisist = this.userManager.Users.Where(x => x.UserName == this.Input.UserName).FirstOrDefault();
 
+                if (userBaseIsEmpty == 0)
+                {
+                    var userNameAndRole = "Admin";
+                    var roleExsist = this.roleManager.Roles.Where(x => x.Name == userNameAndRole).FirstOrDefault();
+
+                    if (roleExsist == null)
+                    {
+                        var roleAdmin = this.roleService.CreateAsyncRole(userNameAndRole);
+                    }
+
+                    var userAdmin = new ApplicationUser { UserName = userNameAndRole, Email = "admin@admin.com" };
+                    await this.userManager.CreateAsync(userAdmin, "admin2020");
+                    await this.userService.AddRoleToUser<string>(userNameAndRole, userNameAndRole);
+                }
+
                 if (userExisistEmail == null && userNameExisist == null)
                 {
-                    var result = await this.userManager.CreateAsync(user, this.Input.Password);
-                    if (result.Succeeded)
-                    {
-                        this.logger.LogInformation("User created a new account with password.");
-
-                        var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
-                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                        var callbackUrl = this.Url.Page(
-                            "/Account/ConfirmEmail",
-                            pageHandler: null,
-                            values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
-                            protocol: this.Request.Scheme);
-
-                        await this.emailSender.SendEmailAsync(this.Input.Email, "Confirm your email", $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                        if (this.userManager.Options.SignIn.RequireConfirmedAccount)
+                        var result = await this.userManager.CreateAsync(user, this.Input.Password);
+                        if (result.Succeeded)
                         {
-                            return this.RedirectToPage("RegisterConfirmation", new { email = this.Input.Email, returnUrl = returnUrl });
-                        }
-                        else
-                        {
-                            await this.signInManager.SignInAsync(user, isPersistent: false);
-                            return this.LocalRedirect(returnUrl);
-                        }
-                    }
+                            this.logger.LogInformation("User created a new account with password.");
 
-                    foreach (var error in result.Errors)
-                    {
-                        this.ModelState.AddModelError(string.Empty, error.Description);
-                    }
+                            var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
+                            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                            var callbackUrl = this.Url.Page(
+                                "/Account/ConfirmEmail",
+                                pageHandler: null,
+                                values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
+                                protocol: this.Request.Scheme);
+
+                            await this.emailSender.SendEmailAsync(this.Input.Email, "Confirm your email", $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+
+                            if (this.userManager.Options.SignIn.RequireConfirmedAccount)
+                            {
+                                return this.RedirectToPage("RegisterConfirmation", new { email = this.Input.Email, returnUrl = returnUrl });
+                            }
+                            else
+                            {
+                                await this.signInManager.SignInAsync(user, isPersistent: false);
+                                return this.LocalRedirect(returnUrl);
+                            }
+                        }
+
+                        foreach (var error in result.Errors)
+                        {
+                            this.ModelState.AddModelError(string.Empty, error.Description);
+                        }
                 }
                 else
                 {
-                    if (userNameExisist != null)
-                    {
-                        this.ModelState.AddModelError("UserName", "UserName Already exists!");
-                    }
+                        if (userNameExisist != null)
+                        {
+                            this.ModelState.AddModelError("UserName", "UserName Already exists!");
+                        }
 
-                    if (userExisistEmail != null)
-                    {
-                        this.ModelState.AddModelError("Email", "Email Already exists!");
-                    }
+                        if (userExisistEmail != null)
+                        {
+                            this.ModelState.AddModelError("Email", "Email Already exists!");
+                        }
 
-                    this.ReturnUrl = returnUrl;
+                        this.ReturnUrl = returnUrl;
                 }
             }
 

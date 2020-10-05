@@ -19,6 +19,245 @@ namespace AspNetCoreTemplate.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Address", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AreaId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CityId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LocationId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StreetId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("LocationId");
+
+                    b.HasIndex("StreetId");
+
+                    b.ToTable("Addresses");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Area", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AreaName")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CityId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Areas");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.City", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Location", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Entrance")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Flour")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StreetId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("StreetId");
+
+                    b.ToTable("Locations");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.LocationObject", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AddressId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddressId");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("LocationObjects");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Street", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AreaId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Streets");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.WorkingArea", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AreaId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("WorkingAreas");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.ApplicationRole", b =>
                 {
                     b.Property<string>("Id")
@@ -67,6 +306,9 @@ namespace AspNetCoreTemplate.Data.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("AreaId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -124,7 +366,12 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
+                    b.Property<string>("WorkingAreaId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
 
                     b.HasIndex("IsDeleted");
 
@@ -136,19 +383,21 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
+                    b.HasIndex("WorkingAreaId");
+
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Courier.Courier", b =>
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Couriers.Courier", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("AreaId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("CityId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -156,39 +405,49 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IsCourier")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("IsWorking")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("VehicleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("WorkingAreaId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CityId");
+                    b.HasIndex("AreaId");
 
                     b.HasIndex("IsDeleted");
 
+                    b.HasIndex("UserId");
+
                     b.HasIndex("VehicleId");
+
+                    b.HasIndex("WorkingAreaId");
 
                     b.ToTable("Couriers");
                 });
 
-            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Courier.Vehichle", b =>
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Couriers.Vehichle", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -215,13 +474,13 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Vehichles");
                 });
 
-            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.FastFoodCommon.City", b =>
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("CityName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("AreaId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -229,17 +488,41 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<int>("IsRestaurnat")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IsWorking")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("WorkingAreaId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("AreaId");
 
                     b.HasIndex("IsDeleted");
 
-                    b.ToTable("Cities");
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("WorkingAreaId");
+
+                    b.ToTable("Restaurants");
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Setting", b =>
@@ -497,15 +780,107 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Courier.Courier", b =>
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Address", b =>
                 {
-                    b.HasOne("AspNetCoreTemplate.Data.Models.FastFoodCommon.City", "City")
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", "Area")
+                        .WithMany()
+                        .HasForeignKey("AreaId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.City", "City")
                         .WithMany()
                         .HasForeignKey("CityId");
 
-                    b.HasOne("AspNetCoreTemplate.Data.Models.Courier.Vehichle", "Vehicle")
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Location", "Location")
                         .WithMany()
+                        .HasForeignKey("LocationId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Street", "Street")
+                        .WithMany()
+                        .HasForeignKey("StreetId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Area", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.City", "City")
+                        .WithMany("Areas")
+                        .HasForeignKey("CityId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Location", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Street", "Street")
+                        .WithMany("Locations")
+                        .HasForeignKey("StreetId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.LocationObject", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", null)
+                        .WithMany("LocationObjects")
+                        .HasForeignKey("ApplicationUserId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.Street", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", "Area")
+                        .WithMany("Streets")
+                        .HasForeignKey("AreaId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Addresses.WorkingArea", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", "Area")
+                        .WithMany()
+                        .HasForeignKey("AreaId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", null)
+                        .WithMany("Users")
+                        .HasForeignKey("AreaId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.WorkingArea", null)
+                        .WithMany("Users")
+                        .HasForeignKey("WorkingAreaId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Couriers.Courier", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", null)
+                        .WithMany("Couriers")
+                        .HasForeignKey("AreaId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Couriers.Vehichle", "Vehicle")
+                        .WithMany("Couriers")
                         .HasForeignKey("VehicleId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.WorkingArea", "WorkingArea")
+                        .WithMany("Couriers")
+                        .HasForeignKey("WorkingAreaId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", null)
+                        .WithMany("Restaurants")
+                        .HasForeignKey("AreaId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.WorkingArea", "WorkingArea")
+                        .WithMany("Restaurants")
+                        .HasForeignKey("WorkingAreaId");
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Comment", b =>

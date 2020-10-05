@@ -2,8 +2,8 @@
 {
     using System;
 
-    using AspNetCoreTemplate.Data.Models.Courier;
-    using AspNetCoreTemplate.Data.Models.FastFoodCommon;
+    using AspNetCoreTemplate.Data.Models.Addresses;
+    using AspNetCoreTemplate.Data.Models.Couriers;
     using AspNetCoreTemplate.Services.Mapping;
 
     public class CourierDetailsViewModel : IMapFrom<Courier>

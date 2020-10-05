@@ -9,8 +9,8 @@
     using AspNetCoreTemplate.Data.Repositories;
     using AspNetCoreTemplate.Data.Seeding;
     using AspNetCoreTemplate.Services.Data;
+    using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Courier;
-    using AspNetCoreTemplate.Services.Data.FastFoodCommonService;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Services.Mapping;
     using AspNetCoreTemplate.Services.Messaging;
@@ -73,7 +73,7 @@
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<ICourierService, CourierService>();
-            services.AddTransient<ICityService, CityService>();
+            services.AddTransient<IAddressService, AddressService>();
             services.AddTransient<IVehicleService, VehicleService>();
         }
 

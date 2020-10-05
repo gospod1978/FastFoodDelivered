@@ -5,7 +5,7 @@ namespace AspNetCoreTemplate.Data.Models
     using System.Collections.Generic;
 
     using AspNetCoreTemplate.Data.Common.Models;
-
+    using AspNetCoreTemplate.Data.Models.Addresses;
     using Microsoft.AspNetCore.Identity;
 
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity
@@ -16,6 +16,7 @@ namespace AspNetCoreTemplate.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.LocationObjects = new HashSet<LocationObject>();
         }
 
         // Audit info
@@ -33,5 +34,7 @@ namespace AspNetCoreTemplate.Data.Models
         public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; }
 
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
+
+        public virtual ICollection<LocationObject> LocationObjects { get; set; }
     }
 }
