@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zdVjUpBtwtvoGm60tFTG6giwBwmxnYLvuE05cajsEjPDshAmiKNpU9T3sDtGKrgXqY9Mm0Or+50WdbSA6I3rOQ==",
+  "success": true,
+  "projectFilePath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "/Users/gospod1978/.nuget/packages/stylecop.analyzers/1.2.0-beta.164/stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
+    "/Users/gospod1978/.nuget/packages/stylecop.analyzers.unstable/1.2.0.164/stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,106 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/AddressService/AddressService.cs" Line="60" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/AddressController.cs" Line="137" Column="15" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/Location.cs" Line="1" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/LocationObject.cs" Line="22" Column="50" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/Address.cs" Line="12" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfRepository.cs" Line="43" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data/ApplicationDbContext.cs" Line="129" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data/Migrations/ApplicationDbContextModelSnapshot.cs" Line="981" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/Area.cs" Line="1" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/City.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Address/CreateLocation.cshtml" Line="20" Column="59" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Address/Create.cshtml" Line="1" Column="75" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Cities/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Addresses/LocationCreateInputModel.cs" Line="13" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Posts/ById.cshtml" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Address/AllLocation.cshtml" Line="2" Column="74" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Categories/All.cshtml" Line="2" Column="61" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Categories/CategoryIndexViewModel.cs" Line="5" Column="18" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Addresses/LocationIndexViewModel.cs" Line="5" Column="18" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Categories/CategoryAll.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Categories/CategoryViewModel.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Cities/CitiesAll.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Addresses/AllLocationViewModel.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Addresses/DeatilsAddressViewModel.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Addresses/AddressCreateInputModel.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/CategoriesController.cs" Line="1" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Couriers/Courier.cs" Line="33" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AspNetCoreTemplate" expanded="True" selected="True">
+            <Node name="Data" expanded="True">
+              <Node name="AspNetCoreTemplate.Data" expanded="True">
+                <Node name="Migrations" expanded="True" />
+                <Node name="Repositories" expanded="True" />
+              </Node>
+              <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
+                <Node name="Addresses" expanded="True" />
+                <Node name="Couriers" expanded="True" />
+                <Node name="Restaurants" expanded="True" />
+                <Node name="UserHome" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Services" expanded="True">
+              <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
+                <Node name="AddressService" expanded="True" />
+                <Node name="Courier" expanded="True" />
+                <Node name="UserService" expanded="True" />
+              </Node>
+              <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
+            </Node>
+            <Node name="Web" expanded="True">
+              <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Areas" expanded="True">
+                  <Node name="Identity" expanded="True">
+                    <Node name="Pages" expanded="True">
+                      <Node name="Account" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="Controllers" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="Address" expanded="True" />
+                  <Node name="Areas" expanded="True" />
+                  <Node name="Categories" expanded="True" />
+                  <Node name="Cities" expanded="True" />
+                  <Node name="Courier" expanded="True" />
+                  <Node name="Home" expanded="True" />
+                  <Node name="Posts" expanded="True" />
+                  <Node name="Users" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
+                <Node name="Addresses" expanded="True" />
+                <Node name="Areas" expanded="True" />
+                <Node name="Categories" expanded="True" />
+                <Node name="Cities" expanded="True" />
+                <Node name="Locations" expanded="True" />
+                <Node name="Posts" expanded="True" />
+                <Node name="Streets" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="AspNetCoreTemplate.Common" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Web.AspNetCoreTemplate.Web PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Debugger.DebugSourceFolders>
+    <String>/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered</String>
+  </Debugger.DebugSourceFolders>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,25 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Vehicle.VehicleCreateInputViewModel
+@{
+    this.ViewData["Title"] = "Create Vehicle";
+}
+@if (this.TempData["InfoMessageVehicle"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageVehicle"]
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<a class="btn btn-danger" asp-area="" asp-controller="Vehicle" asp-action="All">Back</a>

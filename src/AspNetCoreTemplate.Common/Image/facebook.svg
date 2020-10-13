@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Desktop" transform="translate(-1059.000000, -2687.000000)">
+            <g id="Group-13" transform="translate(174.000000, 2595.000000)">
+                <g id="Group-12" transform="translate(885.000000, 92.000000)">
+                    <g id="Group-3">
+                        <circle id="Oval" stroke="#2F313F" cx="20" cy="20" r="19.5"></circle>
+                        <g id="f-2" transform="translate(15.000000, 10.000000)" fill="#2F313F" fill-rule="nonzero">
+                            <path d="M6.72215323,20 L6.72215323,10.889553 L9.79687831,10.889553 L10.2558531,7.32335937 L6.72215323,7.32335937 L6.72215323,5.05285565 C6.72215323,4.02117775 7.01053564,3.32256122 8.48900318,3.32256122 L10.3777048,3.32256122 L10.3777048,0.138169596 C9.46687553,0.0440312066 8.55171985,-0.0020655239 7.63604114,7.09798249e-05 C4.91874777,7.09798249e-05 3.06660163,1.65725438 3.06660163,4.69948566 L3.06660163,7.32335937 L3.90798505e-14,7.32335937 L3.90798505e-14,10.889553 L3.06660163,10.889553 L3.06660163,20 L6.72215323,20 Z" id="f"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

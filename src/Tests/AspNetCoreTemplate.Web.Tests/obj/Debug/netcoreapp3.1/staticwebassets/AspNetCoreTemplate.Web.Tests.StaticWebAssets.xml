@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/Identity" Path="/Users/gospod1978/.nuget/packages/microsoft.aspnetcore.identity.ui/3.1.8/build/../staticwebassets/V4/" />
+  <ContentRoot BasePath="_content/AspNetCoreTemplate.Web" Path="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/" />
+</StaticWebAssets>
