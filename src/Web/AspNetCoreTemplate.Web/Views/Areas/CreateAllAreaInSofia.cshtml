@@ -1,0 +1,13 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Areas.AreaCreateInputModel
+@{
+    this.ViewData["Title"] = "Area Create";
+    var cities = Model.Cities.Select(x => new SelectListItem(x.CityName, x.Id.ToString()));
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="CreateAllAreaInSofia">
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+<a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>

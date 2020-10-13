@@ -1,0 +1,25 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Areas.AreaCreateInputModel
+@{
+    this.ViewData["Title"] = "Area Create";
+    var cities = Model.Cities.Select(x => new SelectListItem(x.CityName, x.Id.ToString()));
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create">
+    <div>
+        <label asp-for="CityId"></label>
+        <select asp-for="CityId" asp-items="cities" class="form-control"></select>
+        <span asp-validation-for="CityId" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control" />
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+<a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="CreateAllAreaInSofia">Generate all Areas in Sofia</a>

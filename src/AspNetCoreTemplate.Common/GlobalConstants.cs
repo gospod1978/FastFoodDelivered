@@ -16,5 +16,7 @@
 
         public const string EmailApiKey =
             "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";
+
+        public const string Sofia = "Sofia";
     }
 }

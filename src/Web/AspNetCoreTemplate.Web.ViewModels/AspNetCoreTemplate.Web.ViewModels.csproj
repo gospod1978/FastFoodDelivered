@@ -33,5 +33,9 @@
     <Folder Include="Couriers\" />
     <Folder Include="Cities\" />
     <Folder Include="Vehicle\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Addresses\" />
+    <Folder Include="Streets\" />
+    <Folder Include="Locations\" />
   </ItemGroup>
 </Project>
