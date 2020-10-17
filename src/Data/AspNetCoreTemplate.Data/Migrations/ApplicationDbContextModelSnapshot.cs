@@ -68,8 +68,8 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("AreaName")
-                        .HasColumnType("int");
+                    b.Property<string>("AreaName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CityId")
                         .HasColumnType("nvarchar(450)");

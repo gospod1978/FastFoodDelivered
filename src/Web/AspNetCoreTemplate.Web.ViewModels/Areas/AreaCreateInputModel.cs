@@ -12,6 +12,10 @@
         [Display(Name = "City")]
         public string CityId { get; set; }
 
+        [Required]
+        [Display(Name = "Name")]
+        public string AreaName { get; set; }
+
         public IEnumerable<CityDropDownViewModels> Cities { get; set; }
 
         public IEnumerable<AreaNameDropDownModel> AreasName { get; set; }

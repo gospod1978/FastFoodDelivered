@@ -1,0 +1,13 @@
+﻿@{
+    this.ViewData["Title"] = "Areas Panel";
+}
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Areas" asp-action="Create">Create</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Cities" asp-action="All">All</a>
+        </li>
+    </ul>
+
+<a class="btn btn-danger" asp-area="" asp-controller="Address" asp-action="NavBarAddress">Back</a>

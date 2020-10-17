@@ -7,7 +7,7 @@
     {
         public string Id { get; set; }
 
-        public AreaName AreaName { get; set; }
+        public string AreaName { get; set; }
 
         public string CityId { get; set; }
 
@@ -16,5 +16,7 @@
         public string Image { get; set; }
 
         public string Url => $"/a/{this.AreaName.ToString().Replace(' ', '-')}";
+
+        public int StreetsCount { get; set; }
     }
 }

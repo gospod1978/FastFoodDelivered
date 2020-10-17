@@ -49,6 +49,9 @@
     <Folder Include="Views\Vehicle\" />
     <Folder Include="Views\Areas\" />
     <Folder Include="Views\Address\" />
+    <Folder Include="Views\Streets\" />
+    <Folder Include="Views\Locations\" />
+    <Folder Include="Views\LocationsObject\" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\Users\NavBarAdmin.cshtml">
@@ -106,6 +109,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Update="Views\Settings\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\Areas\All.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

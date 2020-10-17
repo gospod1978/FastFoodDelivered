@@ -21,7 +21,7 @@ else
         {
             <div class="media col-md-4">
                 <div class="media-body">
-                    <h5 class="mt-0"><a asp-controller="Areas" asp-action="All" asp-route-id="@city.Id">@city.CityName (@city.AreasCount)</a></h5>
+                    <h5 class="mt-0"><a asp-controller="Areas" asp-action="All" asp-route-id="@city.Id">@city.CityName - Areas in this City(@city.AreasCount)</a></h5>
                 </div>
             </div>
         }
@@ -31,5 +31,5 @@ else
 <div>
     <a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="Create">CreateNewCity</a>
     <a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">CreateArea</a>
-    <a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="NavBar">Back</a>
 </div>

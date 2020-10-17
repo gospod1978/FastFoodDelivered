@@ -10,5 +10,7 @@
         public string CityName { get; set; }
 
         public int AreasCount { get; set; }
+
+        public string Url => $"/a/{this.CityName.ToString().Replace(' ', '-')}";
     }
 }

@@ -7,22 +7,27 @@
     using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
+    using AspNetCoreTemplate.Web.ViewModels.Cities;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class AreasController : Controller
     {
-        private readonly IAddressService addressService;
+        private readonly IAreasService areasService;
+        private readonly ICitiesService citiesService;
 
-        public AreasController(IAddressService addressService)
+        public AreasController(
+            IAreasService areasService,
+            ICitiesService citiesService)
         {
-            this.addressService = addressService;
+            this.areasService = areasService;
+            this.citiesService = citiesService;
         }
 
         [Authorize]
         public IActionResult Create()
         {
-            var cities = this.addressService.GetAllCities<CityDropDownViewModels>();
+            var cities = this.citiesService.GetAllCities<CityDropDownViewModels>();
 
             var viewModel = new AreaCreateInputModel
             {
@@ -35,13 +40,12 @@
         [Authorize]
         public async Task<IActionResult> Create(AreaCreateInputModel input)
         {
-            var city = this.addressService.GetByIdCity<string>(input.CityId);
             if (!this.ModelState.IsValid)
             {
                 return this.View(input);
             }
 
-            var areaId = await this.addressService.CreateAsyncArea(input.AreasName.ToString(), input.CityId, input.Image);
+            var areaId = await this.areasService.CreateAsyncArea(input.AreaName.ToString(), input.CityId, input.Image);
             this.TempData["InfoMessageAreas"] = "Area was created!";
             return this.RedirectToAction(nameof(this.All));
         }
@@ -49,7 +53,7 @@
         [Authorize]
         public async Task<IActionResult> CreateAllAreaInSofia()
         {
-            var cities = this.addressService.GetAllCities<CityDropDownViewModels>();
+            var cities = this.citiesService.GetAllCities<CityDropDownViewModels>();
             var cityId = string.Empty;
 
             foreach (var city in cities)
@@ -71,11 +75,11 @@
             {
                 string image = areas[i + 1][0];
                 string areaName = areas[i + 1][1];
-                var area = await this.addressService.CreateAsyncArea(areaName, cityId, image);
+                var area = await this.areasService.CreateAsyncArea(areaName, cityId, image);
             }
 
             this.TempData["InfoMessageAreas"] = "Areas Sofia was created!";
-            return this.RedirectToAction(nameof(this.Create));
+            return this.RedirectToAction(nameof(this.All));
         }
 
         [Authorize]
@@ -83,11 +87,17 @@
         {
             var viewModel = new ViewModels.Areas.AreaIndexViewModel();
 
-            var areas = this.addressService.GetAllAreas<AreasAll>(input.Id);
+            var areas = this.areasService.GetAllAreas<AreasAll>(input.Id);
 
             viewModel.Areas = areas;
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult NavBar()
+        {
+            return this.View();
         }
 
         private Dictionary<int, List<string>> Image()

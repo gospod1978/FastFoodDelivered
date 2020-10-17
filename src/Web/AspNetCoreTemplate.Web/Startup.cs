@@ -37,11 +37,6 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddDbContext<ApplicationDbContext>(
-            //    options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
-
-            // services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
-            //    .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.Configure<CookiePolicyOptions>(
                 options =>
                     {
@@ -75,6 +70,11 @@
             services.AddTransient<ICourierService, CourierService>();
             services.AddTransient<IAddressService, AddressService>();
             services.AddTransient<IVehicleService, VehicleService>();
+            services.AddTransient<ICitiesService, CitiesService>();
+            services.AddTransient<IAreasService, AreasService>();
+            services.AddTransient<IStreetsService, StreetsService>();
+            services.AddTransient<ILocationsService, LocationsService>();
+            services.AddTransient<ILocationsObjectService, LocationsObjectService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

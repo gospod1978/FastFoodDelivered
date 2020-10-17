@@ -50,11 +50,11 @@
         public IActionResult Create()
         {
             var viewModel = new CourierCreateInputViewModel();
-            var cities = this.addressService.GetAllCities<CitiesAll>();
-            var areas = this.addressService.GetAllAreas<WorkingAllArea>(cities.ToString());
+            //var cities = this.addressService.GetAllCities<CitiesAll>();
+            //var areas = this.addressService.GetAllAreas<WorkingAllArea>(cities.ToString());
             var vechiles = this.vehicleService.GetAll<VehicleAll>();
-            viewModel.Vechiles = vechiles;
-            viewModel.Areas = areas;
+            //viewModel.Vechiles = vechiles;
+            //viewModel.Areas = areas;
 
             return this.View(viewModel);
         }
@@ -114,11 +114,11 @@
             var viewModel = new ViewModels.Couriers.CourierAllViewModel();
 
             var couriers = this.courierService.GetAll<CuriersAll>();
-            var cities = this.addressService.GetAllCities<CitiesAll>();
+            //var cities = this.addressService.GetAllCities<CitiesAll>();
             var vehciles = this.vehicleService.GetAll<VehicleAll>();
 
             viewModel.Curiers = couriers;
-            viewModel.Cities = cities;
+            //viewModel.Cities = cities;
             viewModel.Vehichles = vehciles;
 
             return this.View(viewModel);

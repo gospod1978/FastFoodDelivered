@@ -95,10 +95,10 @@
             //    await this.addressService.CreateAsyncLocation(input.Apartament, input.Number, input.Flour, input.Entrance, streetId);
             //}
 
-            cityId = await this.addressService.CreateAsyncCity(input.CityName);
-            areaId = await this.addressService.CreateAsyncArea(input.AreaName, cityId, " ");
-            streetId = await this.addressService.CreateAsyncStreet(input.StreetName, areaId);
-            var locId = await this.addressService.CreateAsyncLocation(input.Apartament, input.Number, input.Flour, input.Entrance, streetId);
+            //cityId = await this.addressService.CreateAsyncCity(input.CityName);
+            //areaId = await this.addressService.CreateAsyncArea(input.AreaName, cityId, " ");
+            //streetId = await this.addressService.CreateAsyncStreet(input.StreetName, areaId);
+            //var locId = await this.addressService.CreateAsyncLocation(input.Apartament, input.Number, input.Flour, input.Entrance, streetId);
 
             // var addressId = await this.addressService.CreateAsyncAddress(cityId, areaId, streetId, locId);
             var addressId = await this.addressService.CreateAsyncAddress("6d3ff375-f98a-4bec-a5c8-ced34bbb7332", "0791be20-5096-438e-b774-a98fc3f53dec", "054bf199-22ad-4fff-ba6e-daa59b595ae2", "69eb3e0e-9bf9-41bd-af3e-e57866aadddd");
@@ -125,7 +125,7 @@
                 return this.View(input);
             }
 
-            var locationCreate = await this.addressService.CreateAsyncLocationObject(input.Name, input.AddressId);
+            //var locationCreate = await this.addressService.CreateAsyncLocationObject(input.Name, input.AddressId);
             this.TempData["InfoMessageLocationObject"] = "Location was created!";
             return this.RedirectToAction(nameof(this.AllLocation));
         }
@@ -135,6 +135,18 @@
         {
             var viewModel = new LocationIndexViewModel();
             //var locationObject = this.addressService.GetAllLocationObjects();
+            return this.View();
+        }
+
+        [Authorize]
+        public IActionResult NavBar()
+        {
+            return this.View();
+        }
+
+        [Authorize]
+        public IActionResult NavBarAddress()
+        {
             return this.View();
         }
     }

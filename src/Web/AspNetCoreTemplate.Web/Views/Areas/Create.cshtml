@@ -12,7 +12,11 @@
         <select asp-for="CityId" asp-items="cities" class="form-control"></select>
         <span asp-validation-for="CityId" class="text-danger"></span>
     </div>
-
+    <div>
+        <label asp-for="AreaName"></label>
+        <input asp-for="AreaName" class="form-control" />
+        <span asp-validation-for="AreaName" class="text-danger"></span>
+    </div>
     <div>
         <label asp-for="Image"></label>
         <input asp-for="Image" class="form-control" />
@@ -21,5 +25,5 @@
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
-<a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="NavBar">Back</a>
 <a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="CreateAllAreaInSofia">Generate all Areas in Sofia</a>

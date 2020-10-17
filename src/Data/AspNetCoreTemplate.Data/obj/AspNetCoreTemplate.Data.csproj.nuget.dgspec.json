@@ -14,7 +14,7 @@
         "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/AspNetCoreTemplate.Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gospod1978/.nuget/NuGet/NuGet.Config"
+          "/Users/gospod1978/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -73,7 +73,7 @@
         "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gospod1978/.nuget/NuGet/NuGet.Config"
+          "/Users/gospod1978/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -136,7 +136,7 @@
         "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gospod1978/.nuget/NuGet/NuGet.Config"
+          "/Users/gospod1978/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -202,7 +202,7 @@
         "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gospod1978/.nuget/NuGet/NuGet.Config"
+          "/Users/gospod1978/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

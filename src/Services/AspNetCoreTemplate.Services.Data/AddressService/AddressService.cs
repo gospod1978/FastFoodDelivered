@@ -81,13 +81,13 @@
 
         public async Task<string> CreateAsyncArea(string name, string cityId, string image)
         {
-            var areaName = Enum.Parse<AreaName>(name);
-            var area = this.areaRepository.All().Where(x => x.AreaName == areaName).FirstOrDefault();
+            //var areaName = Enum.Parse<AreaName>(name);
+            var area = this.areaRepository.All().Where(x => x.AreaName == name).FirstOrDefault();
             if (area == null)
             {
                 area = new Area
                 {
-                    AreaName = areaName,
+                    AreaName = name,
                     CityId = cityId,
                     Image = image,
                 };
@@ -381,9 +381,9 @@
 
         public T GetByNameArea<T>(string name)
         {
-            var areaName = Enum.Parse<AreaName>(name);
+            //var areaName = Enum.Parse<AreaName>(name);
             var area = this.areaRepository.All()
-                .Where(x => x.AreaName == areaName)
+                .Where(x => x.AreaName == name)
                 .To<T>().FirstOrDefault();
 
             return area;
@@ -405,6 +405,16 @@
                 .To<T>().FirstOrDefault();
 
             return location;
+        }
+
+        public T GetByName<T>(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public T GetById<T>(string id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

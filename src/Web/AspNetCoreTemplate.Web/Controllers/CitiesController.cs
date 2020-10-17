@@ -9,11 +9,11 @@
 
     public class CitiesController : Controller
     {
-        private readonly IAddressService addressServices;
+        private readonly ICitiesService citiesServices;
 
-        public CitiesController(IAddressService addressServices)
+        public CitiesController(ICitiesService citiesServices)
         {
-            this.addressServices = addressServices;
+            this.citiesServices = citiesServices;
         }
 
         [Authorize]
@@ -33,7 +33,7 @@
                 return this.View(input);
             }
 
-            var cityId = await this.addressServices.CreateAsyncCity(input.CityName);
+            var cityId = await this.citiesServices.CreateAsyncCity(input.CityName);
             this.TempData["InfoMessageCity"] = "City created!";
             return this.RedirectToAction(nameof(this.All));
         }
@@ -43,11 +43,17 @@
         {
             var viewModel = new ViewModels.Cities.CityIndexViewModel();
 
-            var cities = this.addressServices.GetAllCities<CitiesAll>();
+            var cities = this.citiesServices.GetAllCities<CitiesAll>();
 
             viewModel.Cities = cities;
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult NavBar()
+        {
+            return this.View();
         }
     }
 }

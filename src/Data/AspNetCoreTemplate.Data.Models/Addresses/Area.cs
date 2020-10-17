@@ -19,7 +19,7 @@
             this.Users = new HashSet<ApplicationUser>();
         }
 
-        public AreaName AreaName { get; set; }
+        public string AreaName { get; set; }
 
         public string CityId { get; set; }
 

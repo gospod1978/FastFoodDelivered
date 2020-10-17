@@ -3,10 +3,10 @@
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Services.Mapping;
 
-    public class StreetDetailsViewModel : IMapFrom<Street>
+    public class CitiesDropDownMenuInStreet : IMapFrom<City>
     {
         public string Id { get; set; }
 
-        public string Name { get; set; }
+        public string CityName { get; set; }
     }
 }
