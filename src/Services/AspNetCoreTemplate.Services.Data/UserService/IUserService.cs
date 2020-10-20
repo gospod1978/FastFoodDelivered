@@ -12,5 +12,7 @@
         Task<string> AddRoleToUser<T>(string userName, string role);
 
         T GetById<T>(string id);
+
+        string GetUserName(string name);
     }
 }

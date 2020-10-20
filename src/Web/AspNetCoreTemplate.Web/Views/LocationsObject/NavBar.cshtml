@@ -1,10 +1,13 @@
 ﻿@{
     this.ViewData["Title"] = "LocationObject Panel";
 }
-<ul>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="LocationsObject" asp-action="Create">Create</a>
-    </li>
-</ul>
+    <ul>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="LocationsObject" asp-action="AllByUser">All By User</a>
+        </li>
+    </ul>
 
 <a class="btn btn-danger" asp-area="" asp-controller="Address" asp-action="NavBarAddress">Back</a>

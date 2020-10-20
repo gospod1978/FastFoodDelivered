@@ -75,6 +75,7 @@
             services.AddTransient<IStreetsService, StreetsService>();
             services.AddTransient<ILocationsService, LocationsService>();
             services.AddTransient<ILocationsObjectService, LocationsObjectService>();
+            //services.AddTransient<IIdentityService, IdentityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

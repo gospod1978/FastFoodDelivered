@@ -15,15 +15,18 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<ApplicationRole> roleManager;
         private readonly IRoleService roleServices;
+        private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
 
         public UserService(
             UserManager<ApplicationUser> userManager,
             RoleManager<ApplicationRole> roleManager,
-            IRoleService roleServices)
+            IRoleService roleServices,
+            IDeletableEntityRepository<ApplicationUser> userRepository)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
             this.roleServices = roleServices;
+            this.userRepository = userRepository;
         }
 
         public async Task<string> AddRoleToUser<T>(string userName, string roleName)
@@ -65,6 +68,13 @@
                 .To<T>().FirstOrDefault();
 
             return user;
+        }
+
+        public string GetUserName(string name)
+        {
+            var user = this.userRepository.All().Where(x => x.UserName == name).FirstOrDefault();
+
+            return user.Id;
         }
     }
 }

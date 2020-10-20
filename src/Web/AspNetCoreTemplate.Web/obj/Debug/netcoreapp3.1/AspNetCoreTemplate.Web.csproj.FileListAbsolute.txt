@@ -923,9 +923,7 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewImports.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/AllLocation.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/Create.cshtml.g.cs
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/CreateLocation.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/NavBar.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/NavBarAddress.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Areas/AllByCity.cshtml.g.cs
@@ -980,3 +978,9 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Areas/All.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Streets/Create1.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Streets/Create2.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Locations/Create1.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Locations/Create2.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/Create1.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/Create2.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/LocationsObject/AllByUser.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Address/Details.cshtml.g.cs

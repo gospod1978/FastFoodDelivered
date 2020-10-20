@@ -1,5 +1,5 @@
 ﻿@using AspNetCoreTemplate.Common
-@model AspNetCoreTemplate.Web.ViewModels.Addresses.LocationIndexViewModel
+@model AspNetCoreTemplate.Web.ViewModels.LocationObjects.AllLocationObject
 
 @{
     this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
@@ -21,7 +21,7 @@ else
         {
             <div class="media col-md-4">
                 <div class="media-body">
-                    <h5 class="mt-0"><a asp-controller="Areas" asp-action="All" asp-route-id="@location.AddressId">@location.Name </a></h5>
+                    <h5 class="mt-0"><a asp-controller="Address" asp-action="Details" asp-route-id="@location.AddressId">@location.Name</a></h5>
                 </div>
             </div>
         }
@@ -29,6 +29,7 @@ else
 }
 
 <div>
-    <a class="btn btn-danger" asp-area="" asp-controller="Address" asp-action="Create">Create New Location</a>
-    <a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="Create">CreateNewCity</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">CreateArea</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="NavBar">Back</a>
 </div>

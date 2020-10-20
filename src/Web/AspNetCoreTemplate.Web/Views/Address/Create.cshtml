@@ -1,55 +1,19 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Addresses.AddressCreateInputModel
+﻿@model AspNetCoreTemplate.Web.ViewModels.Addresses.CreateAddressInputModel
 @{
-    this.ViewData["Title"] = "Create Address";
-}
-@if (this.TempData["InfoMessageAreas"] != null)
-{
-    <div class="alert alert-success">
-        @this.TempData["InfoMessageAreas"]
-    </div>
+    this.ViewData["Title"] = "Street Create";
+    var cities = Model.Cities.Select(x => new SelectListItem(x.CityName, x.Id.ToString()));
 }
 
 <h1>@this.ViewData["Title"]</h1>
 
-<form method="post" asp-action="Create">
+<form method="post" asp-action="Create1">
     <div>
-        <label asp-for="CityName"></label>
-        <input asp-for="CityName" class="form-control" />
-        <span asp-validation-for="CityName" class="text-danger"></span>
+        <label asp-for="CityId"></label>
+        <select asp-for="CityId" asp-items="cities" class="form-control"></select>
+        <span asp-validation-for="CityId" class="text-danger"></span>
     </div>
-    <div>
-        <label asp-for="AreaName"></label>
-        <input asp-for="AreaName" class="form-control" />
-        <span asp-validation-for="AreaName" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="StreetName"></label>
-        <input asp-for="StreetName" class="form-control" />
-        <span asp-validation-for="StreetName" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Number"></label>
-        <input asp-for="Number" class="form-control" />
-        <span asp-validation-for="Number" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Flour"></label>
-        <input asp-for="Flour" class="form-control" />
-        <span asp-validation-for="Flour" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Entrance"></label>
-        <input asp-for="Entrance" class="form-control" />
-        <span asp-validation-for="Entrance" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="Apartament"></label>
-        <input asp-for="Apartament" class="form-control" />
-        <span asp-validation-for="Apartament" class="text-danger"></span>
-    </div>
-
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
-
-<a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="All">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="Create">Create City</a>

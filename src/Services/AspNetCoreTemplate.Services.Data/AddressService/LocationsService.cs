@@ -1,9 +1,9 @@
 ﻿namespace AspNetCoreTemplate.Services.Data.AddressService
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+
     using AspNetCoreTemplate.Data.Common.Repositories;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Services.Mapping;
@@ -23,7 +23,15 @@
 
         public async Task<string> CreateAsyncLocation(int apartment, int number, int flour, int entrance, string streetId)
         {
-            var location = this.locationRepository.All().Where(x => x.StreetId == streetId).FirstOrDefault();
+            var location = this.locationRepository.All().Where(x =>
+                x.Apartament == apartment &&
+                x.Entrance == entrance &&
+                x.Number == number &&
+                x.Flour == flour &&
+                x.StreetId == streetId).FirstOrDefault();
+
+            var checker = 0;
+
             if (location == null)
             {
                 location = new Location
@@ -87,12 +95,19 @@
                                     StreetId = streetId,
                                 };
                             }
+                            else
+                            {
+                                checker = 1;
+                            }
                         }
                     }
                 }
             }
 
-            await this.locationRepository.AddAsync(location);
+            if (checker == 0)
+            {
+                await this.locationRepository.AddAsync(location);
+            }
 
             await this.locationRepository.SaveChangesAsync();
 

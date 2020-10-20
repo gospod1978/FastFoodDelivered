@@ -5,9 +5,13 @@
 
     public interface ILocationsObjectService
     {
-        Task<string> CreateAsyncLocationObject(string name, string adressId);
+        Task<string> CreateAsyncLocationObject(string name, string adressId, string userId);
 
-        IEnumerable<T> GetAllLocationsObjects<T>(string id, int? count = null);
+        IEnumerable<T> GetAllLocationsObjects<T>(int? count = null);
+
+        IEnumerable<T> GetAllByUserId<T>(string id, int? count = null);
+
+        IEnumerable<T> GetAllByAddressId<T>(string id, int? count = null);
 
         T GetByName<T>(string name);
 

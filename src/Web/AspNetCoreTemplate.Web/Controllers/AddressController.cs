@@ -1,7 +1,7 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
     using System.Threading.Tasks;
-
+    using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Web.ViewModels.Addresses;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
@@ -14,128 +14,103 @@
     public class AddressController : Controller
     {
         private readonly IAddressService addressService;
+        private readonly IAreasService areasService;
+        private readonly ICitiesService citiesService;
+        private readonly IStreetsService streetsService;
+        private readonly ILocationsService locationsService;
 
-        public AddressController(IAddressService addressService)
+        public AddressController(
+            IAddressService addressService,
+            IAreasService areasService,
+            ICitiesService citiesService,
+            IStreetsService streetsService,
+            ILocationsService locationsService)
         {
             this.addressService = addressService;
+            this.areasService = areasService;
+            this.citiesService = citiesService;
+            this.streetsService = streetsService;
+            this.locationsService = locationsService;
         }
 
         [Authorize]
         public IActionResult Create()
         {
-            var viewModel = new AddressCreateInputModel();
+            var viewModel = new CreateAddressInputModel();
+
+            var cities = this.citiesService.GetAllCities<CitiesDropDownMenuInStreet>();
+
+            viewModel.Cities = cities;
 
             return this.View(viewModel);
         }
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create(AddressCreateInputModel input)
+        public IActionResult Create(CreateAddressInputModel input)
+        {
+            var areas = this.areasService.GetAllAreas<AreasDropDownMenu>(input.CityId);
+            var viewModel = new CreateAddressInputModel();
+            viewModel.Areas = areas;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult Create1(CreateAddressInputModel input)
+        {
+            var city = this.citiesService.GetById<CitiesDropDownMenuInStreet>(input.CityId);
+            var areas = this.areasService.GetAllAreas<AreasDropDownMenu>(input.CityId);
+            var viewModel = new CreateAddressInputModel();
+            viewModel.Areas = areas;
+            viewModel.CityName = city.CityName;
+            viewModel.CityId = input.CityId;
+
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public IActionResult Create2(CreateAddressInputModel input)
+        {
+            var city = this.citiesService.GetById<CitiesDropDownMenuInStreet>(input.CityId);
+            var area = this.areasService.GetById<AreasDropDownMenu>(input.AreaId);
+
+            var streets = this.streetsService.GetAllStreets<StreetDropDownMenu>(input.AreaId);
+
+            var viewModel = new CreateAddressInputModel();
+
+            viewModel.AreaName = area.AreaName;
+            viewModel.CityName = city.CityName;
+            viewModel.Streets = streets;
+            viewModel.CityId = input.CityId;
+            viewModel.AreaId = input.AreaId;
+
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Create3(CreateAddressInputModel input)
         {
             if (!this.ModelState.IsValid)
             {
                 return this.View(input);
             }
 
-            // var city = this.addressService.GetByNameCity<string>(input.CityName.ToUpper());
-            var cityId = " ";
-
-            //if (city == null)
-            //{
-            //   cityId = await this.addressService.CreateAsyncCity(input.CityName);
-            //}
-            //else
-            //{
-            //    cityId = city;
-            //}
-
-            //var area = this.addressService.GetByNameArea<AreasAll>(input.AreaName);
-            var areaId = " ";
-
-            //if (area == null)
-            //{
-            //    areaId = await this.addressService.CreateAsyncArea(input.AreaName, cityId, " ");
-            //}
-            //else
-            //{
-            //    areaId = area.Id;
-            //}
-
-            //var street = this.addressService.GetByNameStreets<StreetDetailsViewModel>(input.StreetName);
-            var streetId = " ";
-
-            //if (street == null)
-            //{
-            //    streetId = await this.addressService.CreateAsyncStreet(input.StreetName, areaId);
-            //}
-            //else
-            //{
-            //    streetId = street.Id;
-            //}
-
-            //var location = this.addressService.GetByNameLocations<LocationDetailsViewModel>(input.Number);
-
-            //if (input.Apartament.ToString() == null)
-            //{
-            //    input.Apartament = 0;
-            //}
-
-            //if (input.Flour.ToString() == null)
-            //{
-            //    input.Flour = 0;
-            //}
-
-            //if (input.Entrance.ToString() == null)
-            //{
-            //    input.Entrance = 0;
-            //}
-
-            //if (location == null)
-            //{
-            //    await this.addressService.CreateAsyncLocation(input.Apartament, input.Number, input.Flour, input.Entrance, streetId);
-            //}
-
-            //cityId = await this.addressService.CreateAsyncCity(input.CityName);
-            //areaId = await this.addressService.CreateAsyncArea(input.AreaName, cityId, " ");
-            //streetId = await this.addressService.CreateAsyncStreet(input.StreetName, areaId);
-            //var locId = await this.addressService.CreateAsyncLocation(input.Apartament, input.Number, input.Flour, input.Entrance, streetId);
-
-            // var addressId = await this.addressService.CreateAsyncAddress(cityId, areaId, streetId, locId);
-            var addressId = await this.addressService.CreateAsyncAddress("6d3ff375-f98a-4bec-a5c8-ced34bbb7332", "0791be20-5096-438e-b774-a98fc3f53dec", "054bf199-22ad-4fff-ba6e-daa59b595ae2", "69eb3e0e-9bf9-41bd-af3e-e57866aadddd");
+            var locationId = await this.locationsService.CreateAsyncLocation(input.Apartament, input.Number, input.Flour, input.Entrance, input.StreetId);
+            var address = await this.addressService.CreateAsyncAddress(input.CityId, input.AreaId, input.StreetId, locationId);
             this.TempData["InfoMessageAreas"] = "Address was created!";
-            return this.RedirectToAction(nameof(this.CreateLocation), new { id = addressId });
+            return this.RedirectToAction("Create", "LocationsObject", new { @addressId = address });
         }
 
         [Authorize]
-        public IActionResult CreateLocation(string id)
+        public IActionResult Details(string id)
         {
-            var addressId = "9aff8807-1702-4926-8de6-a368586f2a9e";
+           // var viewModel = new DetailsAddressIndexViewModel();
+            var viewModel = this.addressService.GetById<DetailsAddressIndexViewModel>(id);
 
-            var viewModel = new LocationCreateInputModel();
-            viewModel.AddressId = addressId;
             return this.View(viewModel);
-        }
-
-        [Authorize]
-        [HttpPost]
-        public async Task<IActionResult> CreateLocation(LocationCreateInputModel input)
-        {
-            if (!this.ModelState.IsValid)
-            {
-                return this.View(input);
-            }
-
-            //var locationCreate = await this.addressService.CreateAsyncLocationObject(input.Name, input.AddressId);
-            this.TempData["InfoMessageLocationObject"] = "Location was created!";
-            return this.RedirectToAction(nameof(this.AllLocation));
-        }
-
-        [Authorize]
-        public IActionResult AllLocation()
-        {
-            var viewModel = new LocationIndexViewModel();
-            //var locationObject = this.addressService.GetAllLocationObjects();
-            return this.View();
         }
 
         [Authorize]

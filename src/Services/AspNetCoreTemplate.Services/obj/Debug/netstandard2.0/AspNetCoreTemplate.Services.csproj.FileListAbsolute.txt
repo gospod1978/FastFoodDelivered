@@ -15,3 +15,4 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/obj/Debug/netstandard2.0/AspNetCoreTemplate.Services.csproj.CoreCompileInputs.cache
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/obj/Debug/netstandard2.0/AspNetCoreTemplate.Services.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/obj/Debug/netstandard2.0/AspNetCoreTemplate.Services.pdb
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/obj/Debug/netstandard2.0/AspNetCoreTemplate.Services.csprojAssemblyReference.cache
