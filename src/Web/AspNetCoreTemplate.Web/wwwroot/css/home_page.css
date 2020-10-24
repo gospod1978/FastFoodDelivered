@@ -461,5 +461,9 @@ footer {
     padding-top:7px;
 }
 
+.view-courier {
+    border: 2px solid red;
+    border-radius: 5px;
+}
 
 

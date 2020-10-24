@@ -1,11 +1,9 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
     using System.Threading.Tasks;
-    using AspNetCoreTemplate.Data.Models.Addresses;
+
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Web.ViewModels.Addresses;
-    using AspNetCoreTemplate.Web.ViewModels.Areas;
-    using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Locations;
     using AspNetCoreTemplate.Web.ViewModels.Streets;
     using Microsoft.AspNetCore.Authorization;
@@ -107,7 +105,6 @@
         [Authorize]
         public IActionResult Details(string id)
         {
-           // var viewModel = new DetailsAddressIndexViewModel();
             var viewModel = this.addressService.GetById<DetailsAddressIndexViewModel>(id);
 
             return this.View(viewModel);

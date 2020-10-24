@@ -132,6 +132,27 @@
             return address.Id;
         }
 
+        public async Task<string> CreateAsyncWorkingArea(string areaId, string userId)
+        {
+            var workingArea = this.workingAreaRepository.All().Where(x => x.UserId == userId).FirstOrDefault();
+
+            if (workingArea == null)
+            {
+                workingArea = new WorkingArea
+                {
+                    AreaId = areaId,
+                    UserId = userId,
+                    ActiveWorkingArea = ActiveWorkingArea.No,
+                };
+
+                await this.workingAreaRepository.AddAsync(workingArea);
+            }
+
+            await this.workingAreaRepository.SaveChangesAsync();
+
+            return workingArea.Id;
+        }
+
         public Address GetAddress(string id)
         {
             var entity = this.addressRepository.All().Where(x => x.Id == id)
@@ -159,6 +180,32 @@
                 .To<T>().FirstOrDefault();
 
             return entity;
+        }
+
+        public async void ChangeWorkingAreaOff(string id)
+        {
+            var workinArea = this.workingAreaRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            workinArea.ActiveWorkingArea = ActiveWorkingArea.No;
+
+            this.workingAreaRepository.Update(workinArea);
+            await this.workingAreaRepository.SaveChangesAsync();
+        }
+
+        public async void ChangeWorkingAreaOn(string id, string areaId)
+        {
+            var workinArea = this.workingAreaRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            workinArea.ActiveWorkingArea = ActiveWorkingArea.Yes;
+            workinArea.AreaId = areaId;
+
+            this.workingAreaRepository.Update(workinArea);
+            await this.workingAreaRepository.SaveChangesAsync();
+        }
+
+        public WorkingArea GetByWorkingAreaByUserId(string userId)
+        {
+            var workingArea = this.workingAreaRepository.All().Where(x => x.UserId == userId).FirstOrDefault();
+
+            return workingArea;
         }
     }
 }

@@ -648,6 +648,46 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Document", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("DataFiles")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileType")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("UserDataId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserDataId");
+
+                    b.ToTable("Documents");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -688,6 +728,38 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.UserData", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserDatas");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -914,6 +986,13 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasForeignKey("UserId");
                 });
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Document", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", "UserData")
+                        .WithMany("Documents")
+                        .HasForeignKey("UserDataId");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Post", b =>
                 {
                     b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.Category", "Category")
@@ -922,6 +1001,13 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.UserData", b =>
+                {
                     b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId");

@@ -52,6 +52,7 @@
     <Folder Include="Views\Streets\" />
     <Folder Include="Views\Locations\" />
     <Folder Include="Views\LocationsObject\" />
+    <Folder Include="Views\UsersData\" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\Users\NavBarAdmin.cshtml">

@@ -14,5 +14,13 @@
         T GetById<T>(string id);
 
         Address GetAddress(string id);
+
+        Task<string> CreateAsyncWorkingArea(string areaId, string userId);
+
+        WorkingArea GetByWorkingAreaByUserId(string id);
+
+        void ChangeWorkingAreaOn(string id, string areaId);
+
+        void ChangeWorkingAreaOff(string id);
     }
 }

@@ -2,7 +2,7 @@
 @{
     this.ViewData["Title"] = "Apply for Courier";
     var vechiles = Model.Vechiles.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
-    var areas = Model.Areas.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var areas = Model.Areas.Select(x => new SelectListItem(x.AreaName, x.Id.ToString()));
 }
 
 @if (this.TempData["InfoMessageCourier"] != null)
@@ -49,4 +49,4 @@
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="All">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Back</a>

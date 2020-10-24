@@ -32,6 +32,10 @@
 
         public string UserId { get; set; }
 
-        public ApplicationUser User { get; set; }
+        public virtual ApplicationUser User { get; set; }
+
+        public string AreaId { get; set; }
+
+        public virtual Area Area { get; set; }
     }
 }

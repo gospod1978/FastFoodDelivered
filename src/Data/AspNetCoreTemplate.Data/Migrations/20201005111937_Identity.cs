@@ -19,7 +19,7 @@
                     CreatedOn = table.Column<DateTime>(nullable: false),
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    DeletedOn = table.Column<DateTime>(nullable: true)
+                    DeletedOn = table.Column<DateTime>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -39,7 +39,7 @@
                     Name = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    ImageUrl = table.Column<string>(nullable: true)
+                    ImageUrl = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -55,7 +55,7 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    CityName = table.Column<string>(nullable: true)
+                    CityName = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -73,7 +73,7 @@
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
-                    Value = table.Column<string>(nullable: true)
+                    Value = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -89,7 +89,7 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -104,7 +104,7 @@
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
-                    ClaimValue = table.Column<string>(nullable: true)
+                    ClaimValue = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -127,7 +127,7 @@
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     AreaName = table.Column<int>(nullable: false),
-                    CityId = table.Column<string>(nullable: true)
+                    CityId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -150,7 +150,7 @@
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
-                    AreaId = table.Column<string>(nullable: true)
+                    AreaId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -172,7 +172,7 @@
                     ModifiedOn = table.Column<DateTime>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
-                    AreaId = table.Column<string>(nullable: true)
+                    AreaId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -197,7 +197,7 @@
                     Number = table.Column<int>(nullable: false),
                     Flour = table.Column<int>(nullable: false),
                     Entrance = table.Column<int>(nullable: false),
-                    StreetId = table.Column<string>(nullable: true)
+                    StreetId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -234,7 +234,7 @@
                     IsDeleted = table.Column<bool>(nullable: false),
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     AreaId = table.Column<string>(nullable: true),
-                    WorkingAreaId = table.Column<string>(nullable: true)
+                    WorkingAreaId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -265,7 +265,7 @@
                     CityId = table.Column<string>(nullable: true),
                     AreaId = table.Column<string>(nullable: true),
                     StreetId = table.Column<string>(nullable: true),
-                    LocationId = table.Column<string>(nullable: true)
+                    LocationId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -304,7 +304,7 @@
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
-                    ClaimValue = table.Column<string>(nullable: true)
+                    ClaimValue = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -324,7 +324,7 @@
                     LoginProvider = table.Column<string>(nullable: false),
                     ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: false)
+                    UserId = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -342,7 +342,7 @@
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    RoleId = table.Column<string>(nullable: false)
+                    RoleId = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -368,7 +368,7 @@
                     UserId = table.Column<string>(nullable: false),
                     LoginProvider = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: false),
-                    Value = table.Column<string>(nullable: true)
+                    Value = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -398,7 +398,7 @@
                     IsWorking = table.Column<int>(nullable: false),
                     IsCourier = table.Column<int>(nullable: false),
                     UserId = table.Column<string>(nullable: true),
-                    AreaId = table.Column<string>(nullable: true)
+                    AreaId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -442,7 +442,7 @@
                     Title = table.Column<string>(nullable: true),
                     Content = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false)
+                    CategoryId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -476,7 +476,7 @@
                     IsWorking = table.Column<int>(nullable: false),
                     IsRestaurnat = table.Column<int>(nullable: false),
                     UserId = table.Column<string>(nullable: true),
-                    AreaId = table.Column<string>(nullable: true)
+                    AreaId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -512,7 +512,7 @@
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     AddressId = table.Column<string>(nullable: true),
-                    ApplicationUserId = table.Column<string>(nullable: true)
+                    ApplicationUserId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -543,7 +543,7 @@
                     DeletedOn = table.Column<DateTime>(nullable: true),
                     PostId = table.Column<int>(nullable: false),
                     UserId = table.Column<string>(nullable: true),
-                    Content = table.Column<string>(nullable: true)
+                    Content = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {

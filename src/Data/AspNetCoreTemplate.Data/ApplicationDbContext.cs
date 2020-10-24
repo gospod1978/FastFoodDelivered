@@ -55,6 +55,10 @@
 
         public DbSet<Restaurant> Restaurants { get; set; }
 
+        public DbSet<UserData> UserDatas { get; set; }
+
+        public DbSet<Document> Documents { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

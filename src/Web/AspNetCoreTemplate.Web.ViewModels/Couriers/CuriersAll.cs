@@ -8,6 +8,8 @@
 
     public class CuriersAll : IMapFrom<Courier>
     {
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
         public string Image { get; set; }
@@ -16,9 +18,13 @@
 
         public string Phone { get; set; }
 
-        public Vehichle Vehicle { get; set; }
+        public string VehicleId { get; set; }
 
-        public City City { get; set; }
+        public virtual Vehichle Vehicle { get; set; }
+
+        public string AreaId { get; set; }
+
+        public virtual Area Area { get; set; }
 
         public DateTime Birthday { get; set; }
     }

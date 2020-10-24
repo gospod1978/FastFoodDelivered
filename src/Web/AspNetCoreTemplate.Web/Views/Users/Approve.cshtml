@@ -1,0 +1,52 @@
+﻿@using AspNetCoreTemplate.Common
+@model AspNetCoreTemplate.Web.ViewModels.Couriers.TakeCourierAll
+
+@{
+    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
+}
+
+@if (this.TempData["InfoMessageAreas"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageAreas"]
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">@this.ViewData["Title"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@if (Model.Couriers.Count() == 0)
+{
+
+}
+else
+{
+    <div class="row">
+        @foreach (var courier in Model.Couriers)
+        {
+        <div class="media flex-wrap w-100 align-items-center view-courier">
+            <div class="media-body ml-3">
+                <div class="text-muted small">
+                    <p>Full name - @courier.User.UserName</p>
+                </div>
+                <div class="text-muted small">
+                    <p>IsCourier - @courier.IsCourier</p>
+                    <a class="nav-link text-dark" asp-controller="Users" asp-action="IsCourier" asp-route-id="@courier.UserId">Approve</a>
+                    <a class="nav-link text-dark" asp-controller="Users" asp-action="NoCourier" asp-route-id="@courier.UserId">Decline</a>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+}
+
+<hr />
+<div>
+    <a class="nav-link text-dark" asp-controller="Users" asp-action="NoCourier">Decline</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">Create New Area</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create1">Create New Street</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="All">Back</a>
+</div>
+

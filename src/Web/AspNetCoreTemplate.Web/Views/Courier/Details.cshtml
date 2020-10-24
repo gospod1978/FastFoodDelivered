@@ -19,21 +19,26 @@
                     <div class="media flex-wrap w-100 align-items-center">
                         <img src="@Model.Image" width="100" height="80" class="d-block ui-w-40 rounded-circle" alt="">
                         <div class="media-body ml-3">
-                            @Model.Name
                             <div class="text-muted small">
-                                <p>@Model.Phone</p>
+                                <p>Full name - @Model.CourierName</p>
                             </div>
                             <div class="text-muted small">
-                                <p>@Model.Email</p>
+                                <p>Birthday - @Model.Birthday</p>
                             </div>
                             <div class="text-muted small">
-                                <p>@Model.Vehicle.Name</p>
+                                <p>Mobilen Phone @Model.Phone</p>
                             </div>
                             <div class="text-muted small">
-                                <p>@Model.City.CityName</p>
+                                <p>Email - @Model.Email</p>
                             </div>
                             <div class="text-muted small">
-                                <time datetime="@Model.Birthday.ToString("O")"></time>
+                                <p>Vehicle - @Model.Vehicle</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>City - @Model.City</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Workin Area - @Model.WorkingArea - @Model.IsActiv<a class="nav-link text-dark" asp-controller="Courier" asp-action="IsActive" asp-route-id="@Model.Id">Change Status</a></p>
                             </div>
                         </div>
                     </div>

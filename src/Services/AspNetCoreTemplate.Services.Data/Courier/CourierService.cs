@@ -1,5 +1,6 @@
 ﻿namespace AspNetCoreTemplate.Services.Data.Courier
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -30,21 +31,28 @@
             this.userManager = userManager;
         }
 
-        public async Task<string> CreateAsync(string image, string phone, string vechileID, string birthday, string workingAreaId, string userId)
+        public async Task<string> CreateAsync(string image, string phone, string vechileID, DateTime birthday, string workingAreaId, string userId, string areaId)
         {
+            var courier = this.courierRepository.All().Where(x => x.UserId == userId).FirstOrDefault();
             var vehcile = this.vehichleRepository.All().Where(x => x.Id == vechileID).FirstOrDefault();
-            var courier = new Courier
-            {
-                Image = image,
-                Phone = phone,
-                Vehicle = vehcile,
-                WorkingAreaId = workingAreaId,
-                IsWorking = IsWorking.No,
-                IsCourier = IsCourier.No,
-                UserId = userId,
-            };
 
-            await this.courierRepository.AddAsync(courier);
+            if (courier == null)
+            {
+                courier = new Courier
+                {
+                    Image = image,
+                    Phone = phone,
+                    Vehicle = vehcile,
+                    WorkingAreaId = workingAreaId,
+                    IsWorking = IsWorking.No,
+                    IsCourier = IsCourier.No,
+                    UserId = userId,
+                    Birthday = birthday,
+                    AreaId = areaId,
+                };
+
+                await this.courierRepository.AddAsync(courier);
+            }
 
             await this.courierRepository.SaveChangesAsync();
 
@@ -64,9 +72,35 @@
             return query.To<T>().ToList();
         }
 
+        public IEnumerable<T> GetAllNo<T>(int? count = null)
+        {
+            IQueryable<Courier> query =
+                this.courierRepository.All().Where(x => x.IsCourier == IsCourier.No).OrderBy(x => x.User.UserName);
+
+            if (count.HasValue)
+            {
+                query = query.Take(count.Value);
+            }
+
+            return query.To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllYes<T>(int? count = null)
+        {
+            IQueryable<Courier> query =
+                this.courierRepository.All().Where(x => x.IsCourier == IsCourier.Yes).OrderBy(x => x.User.UserName);
+
+            if (count.HasValue)
+            {
+                query = query.Take(count.Value);
+            }
+
+            return query.To<T>().ToList();
+        }
+
         public T GetById<T>(string id)
         {
-            var courier = this.courierRepository.All().Where(x => x.UserId == id)
+            var courier = this.courierRepository.All().Where(x => x.Id == id)
                 .To<T>().FirstOrDefault();
 
             return courier;
@@ -79,6 +113,34 @@
                 .To<T>().FirstOrDefault();
 
             return courier;
+        }
+
+        public T GetByUserId<T>(string id)
+        {
+            var courier = this.courierRepository.All().Where(x => x.UserId == id)
+                .To<T>().FirstOrDefault();
+
+            return courier;
+        }
+
+        public async void MadeIsCourier(string id)
+        {
+            var courier = this.courierRepository.All().Where(x => x.Id == id)
+                .FirstOrDefault();
+            courier.IsCourier = IsCourier.Yes;
+
+            this.courierRepository.Update(courier);
+            await this.courierRepository.SaveChangesAsync();
+        }
+
+        public async void MadeIsNoCourier(string id)
+        {
+            var courier = this.courierRepository.All().Where(x => x.Id == id)
+               .FirstOrDefault();
+            courier.IsCourier = IsCourier.No;
+
+            this.courierRepository.Update(courier);
+            await this.courierRepository.SaveChangesAsync();
         }
     }
 }

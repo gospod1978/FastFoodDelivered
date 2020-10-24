@@ -9,7 +9,11 @@
     <h1 class="display-4">@this.ViewData["Title"]</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
+<ul>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create</a>
+    </li>
+</ul>
 @if (Model.Categories.Count() == 0)
 {
 
@@ -27,4 +31,8 @@ else
             </div>
         }
     </div>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
+    </li>
+    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
 }

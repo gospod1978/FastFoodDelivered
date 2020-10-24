@@ -29,6 +29,13 @@
             this.userRepository = userRepository;
         }
 
+        public async void AddRoleCourier(string userName, string role)
+        {
+            var user = this.userManager.Users.Where(x => x.UserName == userName).
+                FirstOrDefault();
+            await this.userManager.AddToRoleAsync(user, role);
+        }
+
         public async Task<string> AddRoleToUser<T>(string userName, string roleName)
         {
             var user = this.userManager.Users.Where(x => x.UserName == userName).
@@ -56,9 +63,10 @@
 
         public T GetById<T>(string id)
         {
-            var users = this.userManager.Users.Where(x => x.Id == id)
+            var user = this.userManager.Users.Where(x => x.Id == id)
                 .To<T>().FirstOrDefault();
-            return users;
+
+            return user;
         }
 
         public T GetByName<T>(string name)

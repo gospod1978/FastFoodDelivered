@@ -1,27 +1,52 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Users/Approve.cshtml" Line="47" Column="80" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/UsersController.cs" Line="73" Column="20" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Courier/ICourierService.cs" Line="25" Column="22" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/UserService.cs" Line="32" Column="41" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/IRoleService.cs" Line="1" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Courier/CourierService.cs" Line="129" Column="35" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Mapping/QueryableMappingExtensions.cs" Line="21" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/RoleService.cs" Line="56" Column="42" />
+      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfDeletableEntityRepository.cs" Line="20" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfRepository.cs" Line="24" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Users/UserAddRoleCreateInputModel.cs" Line="10" Column="70" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Users/CurierUserName.cs" Line="6" Column="32" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/ApplicationUser.cs" Line="20" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/Couriers/Courier.cs" Line="13" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Program.cs" Line="10" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/ApplicationRole.cs" Line="15" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/IUserService.cs" Line="18" Column="59" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AspNetCoreTemplate" expanded="True">
+          <Node name="AspNetCoreTemplate" expanded="True" selected="True">
             <Node name="Data" expanded="True">
               <Node name="AspNetCoreTemplate.Data" expanded="True">
                 <Node name="Repositories" expanded="True" />
               </Node>
               <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
                 <Node name="Addresses" expanded="True" />
+                <Node name="Couriers" expanded="True" />
+                <Node name="Restaurants" expanded="True" />
                 <Node name="UserHome" expanded="True" />
               </Node>
             </Node>
             <Node name="Services" expanded="True">
               <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
                 <Node name="AddressService" expanded="True" />
+                <Node name="Courier" expanded="True" />
                 <Node name="UserService" expanded="True" />
               </Node>
               <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
             </Node>
             <Node name="Web" expanded="True">
               <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="FrameworkReferences" expanded="True" />
+                </Node>
                 <Node name="Areas" expanded="True">
                   <Node name="Identity" expanded="True">
                     <Node name="Pages" expanded="True">
@@ -35,20 +60,31 @@
                   <Node name="Areas" expanded="True" />
                   <Node name="Categories" expanded="True" />
                   <Node name="Cities" expanded="True" />
+                  <Node name="Courier" expanded="True" />
                   <Node name="Home" expanded="True" />
                   <Node name="LocationsObject" expanded="True" />
                   <Node name="Posts" expanded="True" />
                   <Node name="Roles" expanded="True" />
+                  <Node name="Shared" expanded="True" />
                   <Node name="Streets" expanded="True" />
+                  <Node name="Users" expanded="True" />
+                  <Node name="UsersData" expanded="True" />
                 </Node>
-                <Node name="Startup.cs" selected="True" />
+                <Node name="wwwroot" expanded="True">
+                  <Node name="css" expanded="True" />
+                </Node>
               </Node>
               <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
                 <Node name="Addresses" expanded="True" />
                 <Node name="Areas" expanded="True" />
                 <Node name="Cities" expanded="True" />
+                <Node name="Couriers" expanded="True" />
                 <Node name="LocationObjects" expanded="True" />
                 <Node name="Locations" expanded="True" />
+                <Node name="Roles" expanded="True" />
+                <Node name="Users" expanded="True" />
+                <Node name="UsersData" expanded="True" />
+                <Node name="Vehicle" expanded="True" />
               </Node>
             </Node>
           </Node>

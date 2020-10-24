@@ -2,14 +2,20 @@
 {
     using System;
     using System.Globalization;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Courier;
+    using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
+    using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
+    using AspNetCoreTemplate.Web.ViewModels.Users;
+    using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using AspNetCoreTemplate.Web.ViewModels.Vehicle;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -21,40 +27,93 @@
         private readonly IAddressService addressService;
         private readonly IVehicleService vehicleService;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly ICitiesService citiesService;
+        private readonly ILocationsObjectService locationsObjectService;
+        private readonly IAreasService areasService;
+        private readonly IUsersDataService usersDataService;
+        private readonly IUserService userService;
 
         public CourierController(
             ICourierService courierService,
             IAddressService addressService,
             IVehicleService vehicleService,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            ICitiesService citiesService,
+            ILocationsObjectService locationsObjectService,
+            IAreasService areasService,
+            IUsersDataService usersDataService,
+            IUserService userService)
         {
             this.courierService = courierService;
             this.addressService = addressService;
             this.vehicleService = vehicleService;
             this.userManager = userManager;
+            this.citiesService = citiesService;
+            this.locationsObjectService = locationsObjectService;
+            this.areasService = areasService;
+            this.usersDataService = usersDataService;
+            this.userService = userService;
         }
 
         [Authorize]
-        public IActionResult Details(string id)
+        public async Task<IActionResult> Details(string id)
         {
-            var courierViewModel = this.courierService.GetById<CourierDetailsViewModel>(id);
-            if (courierViewModel == null)
+            if (id == null)
+            {
+                var userLogin = await this.userManager.GetUserAsync(this.User);
+                var curier = this.courierService.GetByUserId<CuriersAll>(userLogin.Id);
+                id = curier.Id;
+            }
+
+            var couriers = this.courierService.GetById<CuriersAll>(id);
+            var courierUser = this.courierService.GetById<InfoCurierModel>(id);
+            var user = this.usersDataService.GetByUserId<CourierUserDataViewModel>(courierUser.UserId);
+            var userData = this.userService.GetById<UserViewCourier>(courierUser.UserId);
+            var vehichle = this.vehicleService.GetById<VehicleAll>(couriers.VehicleId);
+            var workingArea = this.addressService.GetByWorkingAreaByUserId(courierUser.UserId);
+            var area = this.areasService.GetById<AreasAll>(workingArea.AreaId);
+            var viewModel = new CourierDetailsViewModel();
+
+            viewModel.CourierName = user.Name;
+            viewModel.City = area.City.CityName;
+            viewModel.Birthday = couriers.Birthday.ToString();
+            viewModel.Email = userData.Email;
+            viewModel.Image = couriers.Image;
+            viewModel.Id = id;
+            viewModel.Phone = couriers.Phone;
+            viewModel.Vehicle = vehichle.Name;
+            viewModel.WorkingArea = area.AreaName;
+            viewModel.IsActiv = workingArea.ActiveWorkingArea.ToString();
+            if (viewModel == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(courierViewModel);
+            return this.View(viewModel);
         }
 
         [Authorize]
-        public IActionResult Create()
+        public async Task<IActionResult> Create1()
         {
-            var viewModel = new CourierCreateInputViewModel();
-            //var cities = this.addressService.GetAllCities<CitiesAll>();
-            //var areas = this.addressService.GetAllAreas<WorkingAllArea>(cities.ToString());
+            var user = await this.userManager.GetUserAsync(this.User);
+            var location = this.locationsObjectService.GetAllByUserId<LocationObjectIndexViewModel>(user.Id).ToList();
+            var cityId = location.Where(x => x.UserId == user.Id).Select(c => c.Address.CityId).FirstOrDefault();
+            var city = this.citiesService.GetById<CitiesAll>(cityId);
+            var cityName = city.CityName;
+
+            return location.Count == 0 ? this.RedirectToAction("Create", "Address") : this.RedirectToAction(nameof(this.Create), new { name = cityName, id = city.Id });
+        }
+
+        [Authorize]
+        public IActionResult Create(string name, string id)
+        {
             var vechiles = this.vehicleService.GetAll<VehicleAll>();
-            //viewModel.Vechiles = vechiles;
-            //viewModel.Areas = areas;
+            var areas = this.areasService.GetAllAreas<AreasAll>(id);
+
+            var viewModel = new CourierCreateInputViewModel();
+
+            viewModel.Vechiles = vechiles;
+            viewModel.Areas = areas;
 
             return this.View(viewModel);
         }
@@ -75,10 +134,8 @@
                 image = input.Image;
             }
 
-            DateTime dateBirthday;
-            var birthday = DateTime.TryParseExact(input.Birthday, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out dateBirthday);
             DateTime dateNow = DateTime.UtcNow;
-            int age = new DateTime((dateNow - dateBirthday).Ticks).Year;
+            int age = new DateTime((dateNow - input.Birthday).Ticks).Year;
 
             if (age < 18)
             {
@@ -91,7 +148,9 @@
                 return this.View(input);
             }
 
-            var courierId = await this.courierService.CreateAsync(image, input.Phone, input.VechileId, input.Birthday, input.AreaId, user.Id);
+            var workingArea = this.addressService.CreateAsyncWorkingArea(input.AreaId, user.Id);
+
+            var courierId = await this.courierService.CreateAsync(image, input.Phone, input.VechileId, input.Birthday, workingArea.Result, user.Id, input.AreaId);
             this.TempData["InfoMessageCourier"] = "You applied for Courier!";
             return this.RedirectToAction(nameof(this.Details), new { id = courierId });
         }
@@ -114,14 +173,22 @@
             var viewModel = new ViewModels.Couriers.CourierAllViewModel();
 
             var couriers = this.courierService.GetAll<CuriersAll>();
-            //var cities = this.addressService.GetAllCities<CitiesAll>();
+
+            // var cities = this.addressService.GetAllCities<CitiesAll>();
             var vehciles = this.vehicleService.GetAll<VehicleAll>();
 
             viewModel.Curiers = couriers;
-            //viewModel.Cities = cities;
+
+            // viewModel.Cities = cities;
             viewModel.Vehichles = vehciles;
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult IsActive(string id)
+        {
+            return this.View();
         }
 
         private string Image()

@@ -14,5 +14,7 @@
         T GetById<T>(string id);
 
         string GetUserName(string name);
+
+        void AddRoleCourier(string userName, string role);
     }
 }
