@@ -1,0 +1,22 @@
+﻿@using AspNetCoreTemplate.Common
+@model AspNetCoreTemplate.Web.ViewModels.UsersData.DocumentDeleted
+
+@{
+    this.ViewData["Title"] = "UsersData";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@this.ViewData["Title"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+ <div class="row">
+            <h3>Document Name @Model.Name</h3>
+            <div class="media col-md-10">
+                <div class="media-body">
+                    <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+                </div>
+            </div>
+
+    </div>
+

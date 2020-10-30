@@ -1,0 +1,32 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.UsersData.CreateUserDataViewModel
+@{
+    this.ViewData["Title"] = "Create Data";
+    var userName = Model.UserUserName;
+    var id = Model.UserId;
+}
+@if (this.TempData["InfoMessageCity"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCity"]
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create">
+    <div class="media-body">
+        <h5 class="mt-0" asp-for="CityName">@userName</h5>
+        <input type="hidden" asp-for="UserId" class="form-control" value="@id" />
+        <input type="hidden" asp-for="UserUserName" class="form-control" value="@userName" />
+    </div>
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="NavBar">Back</a>

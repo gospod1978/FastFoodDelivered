@@ -3,7 +3,15 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AspNetCoreTemplate" expanded="True" selected="True" />
+          <Node name="AspNetCoreTemplate" expanded="True">
+            <Node name="Data" expanded="True">
+              <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
+                <Node name="Orders" expanded="True">
+                  <Node name="Order.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

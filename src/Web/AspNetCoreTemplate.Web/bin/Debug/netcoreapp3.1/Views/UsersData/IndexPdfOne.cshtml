@@ -1,0 +1,26 @@
+﻿@using AspNetCoreTemplate.Common
+@model AspNetCoreTemplate.Web.ViewModels.UsersData.UserDocumentPdfDetail
+
+@{
+    this.ViewData["Title"] = "UsersData";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@this.ViewData["Title"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>Name @Model.RaelName</h1>
+<a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Download" asp-route-id="@Model.Id">Download</a>
+        <div class="media col-md-10">
+            <div class="media-body">
+                <h5 class="mt-0"><a asp-controller="UsersData" asp-action="ViewDocument" asp-route-id="@Model.Id" type="application/pdf" width="300" height="200">@Model.Name / Created - @Model.CreatedOn</a></h5>
+            </div>
+            <iframe src="@Url.Action("ViewDocument", "UsersData", new { id = Model.Id })" width="600" height="600"></iframe>
+        </div>
+        
+
+        <div>
+            <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Uploaud" asp-route-id="@Model.UserDataId">Uploud new Document</a>
+            <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="NavBar">Back</a>
+        </div>
