@@ -11,7 +11,7 @@
 </div>
 
 <h1>Name @Model.RaelName</h1>
-
+<a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Download" asp-route-id="@Model.Id">Download</a>
         <div class="media col-md-10">
             <div class="media-body">
                 <h5 class="mt-0"><a asp-controller="UsersData" asp-action="ViewDocument" asp-route-id="@Model.Id" type="application/pdf" width="300" height="200">@Model.Name / Created - @Model.CreatedOn</a></h5>
@@ -21,7 +21,6 @@
         
 
         <div>
-            <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Uploaud">Uploud new Document</a>
-            <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Download" asp-route-id="@Model.Id">Download</a>
+            <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Uploaud" asp-route-id="@Model.UserDataId">Uploud new Document</a>
             <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="NavBar">Back</a>
         </div>

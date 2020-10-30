@@ -36,6 +36,7 @@ else
                     <a class="nav-link text-dark" asp-controller="Users" asp-action="IsCourier" asp-route-id="@courier.UserId">Approve</a>
                     <a class="nav-link text-dark" asp-controller="Users" asp-action="NoCourier" asp-route-id="@courier.UserId">Decline</a>
                 </div>
+                <a class="nav-link text-dark" asp-controller="UsersData" asp-action="Index" asp-route-id="@courier.UserId">Documents</a>
             </div>
         </div>
         }
@@ -44,7 +45,6 @@ else
 
 <hr />
 <div>
-    <a class="nav-link text-dark" asp-controller="Users" asp-action="NoCourier">Decline</a>
     <a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">Create New Area</a>
     <a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create1">Create New Street</a>
     <a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="All">Back</a>

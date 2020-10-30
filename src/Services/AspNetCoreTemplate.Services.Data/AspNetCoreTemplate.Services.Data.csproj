@@ -28,5 +28,6 @@
     <Folder Include="UserService\" />
     <Folder Include="Courier\" />
     <Folder Include="AddressService\" />
+    <Folder Include="Restaurant\" />
   </ItemGroup>
 </Project>

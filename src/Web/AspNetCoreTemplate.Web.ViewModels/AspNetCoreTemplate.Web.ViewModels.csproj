@@ -17,6 +17,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="HtmlSanitizer" Version="5.0.343" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,5 +40,6 @@
     <Folder Include="Locations\" />
     <Folder Include="LocationObjects\" />
     <Folder Include="UsersData\" />
+    <Folder Include="Restaurant\" />
   </ItemGroup>
 </Project>

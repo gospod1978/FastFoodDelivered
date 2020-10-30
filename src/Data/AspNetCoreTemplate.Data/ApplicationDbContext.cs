@@ -10,6 +10,7 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Couriers;
+    using AspNetCoreTemplate.Data.Models.Orders;
     using AspNetCoreTemplate.Data.Models.Restaurants;
     using AspNetCoreTemplate.Data.Models.UserHome;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -58,6 +59,12 @@
         public DbSet<UserData> UserDatas { get; set; }
 
         public DbSet<Document> Documents { get; set; }
+
+        public DbSet<Photo> Photos { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<Picture> Pictures { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 

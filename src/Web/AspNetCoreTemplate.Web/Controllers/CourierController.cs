@@ -1,7 +1,6 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
     using System;
-    using System.Globalization;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -14,8 +13,6 @@
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
-    using AspNetCoreTemplate.Web.ViewModels.Users;
-    using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using AspNetCoreTemplate.Web.ViewModels.Vehicle;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;

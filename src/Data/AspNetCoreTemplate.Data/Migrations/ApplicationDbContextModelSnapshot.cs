@@ -488,6 +488,79 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Vehichles");
                 });
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Orders.Order", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CourierId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("DeliveryPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("MenuPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("PromotionType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RestaurantId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TimeDelivery")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TimePrepartion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserDataId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourierId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("PictureId");
+
+                    b.HasIndex("RestaurantId");
+
+                    b.HasIndex("UserDataId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", b =>
                 {
                     b.Property<string>("Id")
@@ -686,6 +759,86 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.HasIndex("UserDataId");
 
                     b.ToTable("Documents");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Photo", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("DataFiles")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Exstention")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("UserDataId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserDataId");
+
+                    b.ToTable("Photos");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Picture", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("DataFiles")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Exstention")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("UserDataId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserDataId");
+
+                    b.ToTable("Pictures");
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Post", b =>
@@ -941,7 +1094,7 @@ namespace AspNetCoreTemplate.Data.Migrations
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Couriers.Courier", b =>
                 {
-                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", null)
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", "Area")
                         .WithMany("Couriers")
                         .HasForeignKey("AreaId");
 
@@ -958,9 +1111,32 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasForeignKey("WorkingAreaId");
                 });
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Orders.Order", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Couriers.Courier", "Courier")
+                        .WithMany("Orders")
+                        .HasForeignKey("CourierId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.Picture", "Picture")
+                        .WithMany()
+                        .HasForeignKey("PictureId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", "Restaurant")
+                        .WithMany("Orders")
+                        .HasForeignKey("RestaurantId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("UserDataId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", b =>
                 {
-                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", null)
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Addresses.Area", "Area")
                         .WithMany("Restaurants")
                         .HasForeignKey("AreaId");
 
@@ -990,6 +1166,20 @@ namespace AspNetCoreTemplate.Data.Migrations
                 {
                     b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", "UserData")
                         .WithMany("Documents")
+                        .HasForeignKey("UserDataId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Photo", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", "UserData")
+                        .WithMany("Photos")
+                        .HasForeignKey("UserDataId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Picture", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", "UserData")
+                        .WithMany()
                         .HasForeignKey("UserDataId");
                 });
 

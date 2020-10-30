@@ -1,0 +1,39 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Restaurant.RestaurantCreateInputViewModel
+@{
+    this.ViewData["Title"] = "Apply for Courier";
+    var areas = Model.Areas.Select(x => new SelectListItem(x.AreaName, x.Id.ToString()));
+}
+
+@if (this.TempData["InfoMessageCourier"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCourier"]
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create">
+    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" width="80" height="80" class="d-block ui-w-40 rounded-circle" alt="@Model.ImageName"/>
+    <input asp-for="PhotoId" class="form-control" value="@Model.PhotoId" />
+    <div>
+        <label asp-for="ImageName"></label>
+        <input asp-for="ImageName" class="form-control" value="@Model.ImageName" />
+    </div>
+    <div>
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="AreaId"></label>
+        <select asp-for="AreaId" asp-items="areas" class="form-control"></select>
+        <span asp-validation-for="AreaId" class="text-danger"></span>
+    </div>
+
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Back</a>

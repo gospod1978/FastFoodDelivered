@@ -27,5 +27,6 @@
     <Folder Include="Couriers\" />
     <Folder Include="Addresses\" />
     <Folder Include="Restaurants\" />
+    <Folder Include="Orders\" />
   </ItemGroup>
 </Project>
