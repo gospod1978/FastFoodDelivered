@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Web.ViewModels.Restaurant
+﻿namespace AspNetCoreTemplate.Web.ViewModels.Restaurants
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;

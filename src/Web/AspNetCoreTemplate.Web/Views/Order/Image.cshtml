@@ -1,0 +1,30 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Orders.UploadImageViewModel
+@{
+    this.ViewData["Title"] = "Apply for Courier";
+}
+
+@if (this.TempData["InfoMessageCourier"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCourier"]
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Order" asp-action="Image">
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Upload file</p>
+            <input class="form-control" name="files" type="file" />
+        </div>
+    </div>
+    <input type="hidden" asp-for="OrderId" class="form-control" value="@Model.OrderId" />
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" class="btn btn-success" value="Upload" />
+        </div>
+    </div>
+</form>
+
+<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Back</a>

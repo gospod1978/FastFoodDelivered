@@ -1,0 +1,65 @@
+﻿@using AspNetCoreTemplate.Common
+@model AspNetCoreTemplate.Web.ViewModels.Orders.AllOrdersViewModel
+
+@{
+    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
+}
+@if (this.TempData["InfoMessageApply"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageApply"]
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">@this.ViewData["Title"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create</a>
+    </li>
+</ul>
+@if (Model.Orders.Count() == 0)
+{
+
+}
+else
+{
+    <h1>Book</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Menu</th>
+                <th>Category</th>
+                <th>Restaurant</th>
+                <th>Menu Price</th>
+                <th>Time</th>
+                <th>Description</th>
+                <th>Purchase</th>
+                <th>OrderId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Orders)
+            {
+            <tr>
+                <td>@order.Name </td>
+                <td>@order.Category.Name</td>  
+                <td>@order.RestaurantId</td>
+                <td>@order.Price</td>
+                <td>@order.TimePrepartion</td>
+                <td>@order.Description</td>
+                <td><a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Create" asp-route-id="@order.Id">Purchase</a></td>
+                <td>@order.Id</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
+    </li>
+    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
+}

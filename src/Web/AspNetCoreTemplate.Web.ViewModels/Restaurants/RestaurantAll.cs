@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Web.ViewModels.Restaurant
+﻿namespace AspNetCoreTemplate.Web.ViewModels.Restaurants
 {
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Restaurants;
