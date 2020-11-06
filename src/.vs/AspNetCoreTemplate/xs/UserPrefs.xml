@@ -3,14 +3,65 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AspNetCoreTemplate" expanded="True">
+          <Node name="AspNetCoreTemplate" expanded="True" selected="True">
             <Node name="Data" expanded="True">
+              <Node name="AspNetCoreTemplate.Data" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
               <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
-                <Node name="Orders" expanded="True">
-                  <Node name="Order.cs" selected="True" />
-                </Node>
+                <Node name="Addresses" expanded="True" />
+                <Node name="Couriers" expanded="True" />
+                <Node name="Orders" expanded="True" />
+                <Node name="Restaurants" expanded="True" />
+                <Node name="UserHome" expanded="True" />
               </Node>
             </Node>
+            <Node name="Services" expanded="True">
+              <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="ProjectDependencies" expanded="True" />
+                </Node>
+                <Node name="AddressService" expanded="True" />
+                <Node name="Courier" expanded="True" />
+                <Node name="Orders" expanded="True" />
+                <Node name="Restaurant" expanded="True" />
+                <Node name="UserService" expanded="True" />
+              </Node>
+              <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
+            </Node>
+            <Node name="Web" expanded="True">
+              <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="Areas" expanded="True" />
+                  <Node name="Categories" expanded="True" />
+                  <Node name="Courier" expanded="True" />
+                  <Node name="Home" expanded="True" />
+                  <Node name="Order" expanded="True" />
+                  <Node name="Posts" expanded="True" />
+                  <Node name="Purchase" expanded="True" />
+                  <Node name="Restaurant" expanded="True" />
+                  <Node name="Shared" expanded="True" />
+                  <Node name="Users" expanded="True" />
+                  <Node name="UsersData" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
+                <Node name="Areas" expanded="True" />
+                <Node name="Categories" expanded="True" />
+                <Node name="Couriers" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="LocationObjects" expanded="True" />
+                <Node name="Orders" expanded="True" />
+                <Node name="Posts" expanded="True" />
+                <Node name="Purchase" expanded="True" />
+                <Node name="Restaurants" expanded="True" />
+                <Node name="Roles" expanded="True" />
+                <Node name="Users" expanded="True" />
+                <Node name="UsersData" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="AspNetCoreTemplate.Common" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -23,7 +74,10 @@
     <String>/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered</String>
   </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" line="106" column="1" />
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" line="65" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

@@ -81,20 +81,15 @@
         {
             var entity = this.documentRepository.All().Where(x => x.Id == id).FirstOrDefault();
 
-            entity.IsDeleted = true;
-            entity.DeletedOn = DateTime.UtcNow;
-
-            this.documentRepository.Update(entity);
+            this.documentRepository.Delete(entity);
             await this.documentRepository.SaveChangesAsync();
         }
 
         public async void DeleteByName(string name)
         {
             var entity = this.documentRepository.All().Where(x => x.Name == name).FirstOrDefault();
-            entity.IsDeleted = true;
-            entity.DeletedOn = DateTime.UtcNow;
 
-            this.documentRepository.Update(entity);
+            this.documentRepository.Delete(entity);
             await this.documentRepository.SaveChangesAsync();
         }
 

@@ -1,0 +1,52 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Purchase.CreatePurchaseViewModel
+@{
+    this.ViewData["Title"] = "New Menu";
+    var locationsObject = Model.LocationsUser.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+    var totalPrice = Model.MenuPrice + Model.DeliveryPrice;
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create">
+    <div>
+        <label asp-for="OrderName"></label>
+        <input asp-for="OrderName" class="form-control" value="@Model.OrderName" />
+        <span asp-validation-for="OrderName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ResaurantName"></label>
+        <input asp-for="ResaurantName" class="form-control" value="@Model.ResaurantName" />
+        <span asp-validation-for="ResaurantName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="ResaurantName"></label>
+        <input asp-for="ResaurantName" class="form-control" value="@Model.ResaurantName" />
+        <span asp-validation-for="ResaurantName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="PromotionType"></label>
+        <input asp-for="PromotionType" class="form-control" value="@Model.PromotionType" />
+        <span asp-validation-for="PromotionType" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="MenuPrice"></label>
+        <input asp-for="MenuPrice" class="form-control" value="@Model.MenuPrice" />
+        <span asp-validation-for="MenuPrice" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="DeliveryPrice"></label>
+        <input asp-for="DeliveryPrice" class="form-control" value="@Model.DeliveryPrice" />
+        <span asp-validation-for="DeliveryPrice" class="text-danger"></span>
+    </div>
+    <div>
+        
+        <input class="form-control" value="totalPrice" />
+    </div>
+    <div>
+        <label asp-for="LocactionUserId"></label>
+        <select asp-for="LocactionUserId" asp-items="locationsObject" class="form-control"></select>
+        <span asp-validation-for="LocactionUserId" class="text-danger"></span>
+    </div>
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>

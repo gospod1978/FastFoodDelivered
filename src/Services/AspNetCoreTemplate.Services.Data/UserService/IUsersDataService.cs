@@ -15,5 +15,7 @@
         string GetId(string id);
 
         string GetByDataId(string id);
+
+        T GetByDataIdG<T>(string id);
     }
 }

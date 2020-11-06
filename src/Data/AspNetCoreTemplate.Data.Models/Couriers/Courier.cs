@@ -2,6 +2,8 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     using AspNetCoreTemplate.Data.Common.Models;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Orders;
@@ -16,6 +18,7 @@
 
         public string Image { get; set; }
 
+        [Required]
         public string Phone { get; set; }
 
         public string VehicleId { get; set; }

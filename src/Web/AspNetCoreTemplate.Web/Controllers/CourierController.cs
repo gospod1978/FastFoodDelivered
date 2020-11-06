@@ -1,6 +1,7 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
     using System;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -8,11 +9,14 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Courier;
+    using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
+    using AspNetCoreTemplate.Web.ViewModels.Restaurants;
+    using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using AspNetCoreTemplate.Web.ViewModels.Vehicle;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -29,6 +33,9 @@
         private readonly IAreasService areasService;
         private readonly IUsersDataService usersDataService;
         private readonly IUserService userService;
+        private readonly IImagesService imagesService;
+        private readonly IRestaurantService restaurantService;
+        private readonly RoleManager<ApplicationRole> roleManager;
 
         public CourierController(
             ICourierService courierService,
@@ -39,7 +46,10 @@
             ILocationsObjectService locationsObjectService,
             IAreasService areasService,
             IUsersDataService usersDataService,
-            IUserService userService)
+            IUserService userService,
+            IImagesService imagesService,
+            IRestaurantService restaurantService,
+            RoleManager<ApplicationRole> roleManager)
         {
             this.courierService = courierService;
             this.addressService = addressService;
@@ -50,6 +60,9 @@
             this.areasService = areasService;
             this.usersDataService = usersDataService;
             this.userService = userService;
+            this.imagesService = imagesService;
+            this.restaurantService = restaurantService;
+            this.roleManager = roleManager;
         }
 
         [Authorize]
@@ -69,13 +82,15 @@
             var vehichle = this.vehicleService.GetById<VehicleAll>(couriers.VehicleId);
             var workingArea = this.addressService.GetByWorkingAreaByUserId(courierUser.UserId);
             var area = this.areasService.GetById<AreasAll>(workingArea.AreaId);
+            var photo = this.imagesService.GetAllImagesByUser<ImageDetailsViewModel>(user.Id).FirstOrDefault();
             var viewModel = new CourierDetailsViewModel();
 
             viewModel.CourierName = user.Name;
             viewModel.City = area.City.CityName;
             viewModel.Birthday = couriers.Birthday.ToString();
             viewModel.Email = userData.Email;
-            viewModel.Image = couriers.Image;
+            viewModel.Photo = photo.DataFiles;
+            viewModel.ImageName = photo.Name;
             viewModel.Id = id;
             viewModel.Phone = couriers.Phone;
             viewModel.Vehicle = vehichle.Name;
@@ -93,8 +108,36 @@
         public async Task<IActionResult> Create1()
         {
             var user = await this.userManager.GetUserAsync(this.User);
+            if (user.Roles.Count() != 0)
+            {
+                this.TempData["InfoMessageApply"] = $"You are {user.Roles}!";
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            var restaurant = this.restaurantService.GetByUserId<InfoRestaurantModel>(user.Id);
+
+            if (restaurant != null)
+            {
+                this.TempData["InfoMessageApply"] = "You are apliade restaurant!";
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            var courier = this.courierService.GetByUserId<InfoCurierModel>(user.Id);
+
+            if (courier != null)
+            {
+                this.TempData["InfoMessageApply"] = "You are allready apliead for Courier!";
+                return this.RedirectToAction("Index", "Home");
+            }
+
             var location = this.locationsObjectService.GetAllByUserId<LocationObjectIndexViewModel>(user.Id).ToList();
             var cityId = location.Where(x => x.UserId == user.Id).Select(c => c.Address.CityId).FirstOrDefault();
+
+            if (cityId == null)
+            {
+                return this.RedirectToAction("Create", "Address");
+            }
+
             var city = this.citiesService.GetById<CitiesAll>(cityId);
             var cityName = city.CityName;
 
@@ -115,20 +158,41 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
+        public async Task<IActionResult> Create2(string name, string id)
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var location = this.locationsObjectService.GetAllByUserId<LocationObjectIndexViewModel>(user.Id).ToList();
+            var cityId = location.Where(x => x.UserId == user.Id).Select(c => c.Address.CityId).FirstOrDefault();
+            var areas = this.areasService.GetAllAreas<AreasAll>(cityId);
+            var vechiles = this.vehicleService.GetAll<VehicleAll>();
+            var image = this.imagesService.GetById<ImageDetailsViewModel>(id);
+
+            var viewModel = new CourierCreateInputViewModel();
+            var stream = new MemoryStream(image.DataFiles);
+            viewModel.Areas = areas;
+            viewModel.Photo = image.DataFiles;
+            viewModel.ImageName = image.Name;
+            viewModel.PhotoId = id;
+            viewModel.Vechiles = vechiles;
+
+            return this.View(viewModel);
+        }
+
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Create(CourierCreateInputViewModel input)
+        public async Task<IActionResult> Create2(CourierCreateInputViewModel input)
         {
             var user = await this.userManager.GetUserAsync(this.User);
             string image = string.Empty;
 
-            if (input.Image == null)
+            if (input.Photo == null)
             {
                 image = this.Image();
             }
             else
             {
-                image = input.Image;
+                image = input.PhotoId;
             }
 
             DateTime dateNow = DateTime.UtcNow;

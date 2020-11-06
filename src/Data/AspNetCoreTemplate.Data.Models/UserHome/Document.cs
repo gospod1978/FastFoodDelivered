@@ -17,9 +17,11 @@
         public UserData UserData { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string Name { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string FileType { get; set; }
 
         [MaxLength]

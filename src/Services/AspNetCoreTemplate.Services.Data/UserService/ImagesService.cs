@@ -39,20 +39,15 @@
         {
             var entity = this.imageRepository.All().Where(x => x.Id == id).FirstOrDefault();
 
-            entity.IsDeleted = true;
-            entity.DeletedOn = DateTime.UtcNow;
-
-            this.imageRepository.Update(entity);
+            this.imageRepository.Delete(entity);
             await this.imageRepository.SaveChangesAsync();
         }
 
         public async void DeleteByName(string name)
         {
             var entity = this.imageRepository.All().Where(x => x.Name == name).FirstOrDefault();
-            entity.IsDeleted = true;
-            entity.DeletedOn = DateTime.UtcNow;
 
-            this.imageRepository.Update(entity);
+            this.imageRepository.Delete(entity);
             await this.imageRepository.SaveChangesAsync();
         }
 

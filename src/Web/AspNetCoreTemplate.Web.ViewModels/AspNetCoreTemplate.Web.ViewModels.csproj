@@ -40,6 +40,8 @@
     <Folder Include="Locations\" />
     <Folder Include="LocationObjects\" />
     <Folder Include="UsersData\" />
-    <Folder Include="Restaurant\" />
+    <Folder Include="Restaurants\" />
+    <Folder Include="Orders\" />
+    <Folder Include="Purchase\" />
   </ItemGroup>
 </Project>

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
     using AspNetCoreTemplate.Data.Models.Couriers;
@@ -19,6 +20,7 @@
             this.Users = new HashSet<ApplicationUser>();
         }
 
+        [Required]
         public string AreaName { get; set; }
 
         public string CityId { get; set; }

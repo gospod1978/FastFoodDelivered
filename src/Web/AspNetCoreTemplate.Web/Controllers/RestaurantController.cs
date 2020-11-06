@@ -7,13 +7,14 @@
     using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.AddressService;
+    using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
-    using AspNetCoreTemplate.Web.ViewModels.Restaurant;
+    using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@
         private readonly IRestaurantService restaurantService;
         private readonly IWebHostEnvironment hostEnvironment;
         private readonly IImagesService imagesService;
+        private readonly ICourierService courierService;
 
         public RestaurantController(
             IAddressService addressService,
@@ -43,7 +45,8 @@
             IUserService userService,
             IRestaurantService restaurantService,
             IWebHostEnvironment hostEnvironment,
-            IImagesService imagesService)
+            IImagesService imagesService,
+            ICourierService courierService)
         {
             this.addressService = addressService;
             this.userManager = userManager;
@@ -55,12 +58,36 @@
             this.restaurantService = restaurantService;
             this.hostEnvironment = hostEnvironment;
             this.imagesService = imagesService;
+            this.courierService = courierService;
         }
 
         [Authorize]
         public async Task<IActionResult> Create1()
         {
             var user = await this.userManager.GetUserAsync(this.User);
+
+            if (user.Roles.Count() != 0)
+            {
+                this.TempData["InfoMessageApply"] = $"You are {user.Roles}!";
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            var courier = this.courierService.GetByUserId<InfoCurierModel>(user.Id);
+
+            if (courier != null)
+            {
+                this.TempData["InfoMessageApply"] = "You are apliade courier!";
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            var restaurant = this.restaurantService.GetByUserId<InfoRestaurantModel>(user.Id);
+
+            if (restaurant != null)
+            {
+                this.TempData["InfoMessageApply"] = "You are allready apliead for Restaurant!";
+                return this.RedirectToAction("Index", "Home");
+            }
+
             var location = this.locationsObjectService.GetAllByUserId<LocationObjectIndexViewModel>(user.Id).ToList();
             if (location.Count() == 0)
             {

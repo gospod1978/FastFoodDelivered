@@ -84,5 +84,13 @@
 
             return entity.UserId;
         }
+
+        public T GetByDataIdG<T>(string id)
+        {
+            var entity = this.dataRepository.All().Where(x => x.Id == id)
+               .To<T>().FirstOrDefault();
+
+            return entity;
+        }
     }
 }

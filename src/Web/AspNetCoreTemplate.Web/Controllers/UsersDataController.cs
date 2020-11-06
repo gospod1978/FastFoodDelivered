@@ -314,7 +314,15 @@
                 input.UserDataId = this.usersDataService.GetId(id);
             }
 
-            var newName = files.FileName;
+            var images = this.imagesService.GetAllImagesByUser<ImageDetailsViewModel>(input.UserDataId);
+            if (images != null)
+            {
+                foreach (var image in images)
+                {
+                    this.imagesService.DeleteById(image.Id);
+                }
+            }
+
             var target = new MemoryStream();
 
             string fileName = Path.GetFileNameWithoutExtension(input.Files.FileName);
@@ -329,6 +337,60 @@
             var imageId = await this.imagesService.CreateAsyncImage(uniqueFileName, extension, target.ToArray(), input.UserDataId);
 
             return this.RedirectToAction("Create3", "Restaurant", new { id = imageId, userId = input.UserDataId });
+        }
+
+        [Authorize]
+        public IActionResult Image2()
+        {
+            var viewModel = new UploadImageViewModel();
+            var userName = this.User.Identity.Name.ToString();
+            var id = this.userService.GetUserName(userName);
+            var userDataId = this.usersDataService.GetByUserId<UserDataIndexViewModel>(id);
+
+            if (userDataId == null)
+            {
+                return this.RedirectToAction(nameof(this.Create));
+            }
+
+            viewModel.UserDataId = userDataId.Id;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Image3(IFormFile files, UploadImageViewModel input)
+        {
+            if (input.UserDataId == null)
+            {
+                var userName = this.User.Identity.Name.ToString();
+                var id = this.userService.GetUserName(userName);
+                input.UserDataId = this.usersDataService.GetId(id);
+            }
+
+            var images = this.imagesService.GetAllImagesByUser<ImageDetailsViewModel>(input.UserDataId);
+            if (images != null)
+            {
+                foreach (var image in images)
+                {
+                    this.imagesService.DeleteById(image.Id);
+                }
+            }
+
+            var target = new MemoryStream();
+
+            string fileName = Path.GetFileNameWithoutExtension(input.Files.FileName);
+            string extension = Path.GetExtension(input.Files.FileName);
+
+            using (target)
+            {
+                await input.Files.CopyToAsync(target);
+            }
+
+            string uniqueFileName = fileName + extension;
+            var imageId = await this.imagesService.CreateAsyncImage(uniqueFileName, extension, target.ToArray(), input.UserDataId);
+
+            return this.RedirectToAction("Create2", "Courier", new { id = imageId, userId = input.UserDataId });
         }
     }
 }

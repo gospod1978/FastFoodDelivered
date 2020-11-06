@@ -1123,7 +1123,7 @@
       "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Models/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gospod1978/.nuget/NuGet/NuGet.Config"
+        "/Users/gospod1978/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
 
@@ -14,6 +15,7 @@
             this.Locations = new HashSet<Location>();
         }
 
+        [Required]
         public string Name { get; set; }
 
         public string AreaId { get; set; }

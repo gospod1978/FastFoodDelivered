@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
 
@@ -14,6 +15,7 @@
             this.Areas = new HashSet<Area>();
         }
 
+        [Required]
         public string CityName { get; set; }
 
         public virtual ICollection<Area> Areas { get; set; }

@@ -20,6 +20,16 @@
                 <li class="nav-item">
                     <a class="nav-link" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Admin</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
+                </li>
+            }
+
+            if (this.User.IsInRole(GlobalConstants.RestaurantRoleName))
+            {
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
+                </li>
             }
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Courier" asp-action="Create1">Courier Apply</a>

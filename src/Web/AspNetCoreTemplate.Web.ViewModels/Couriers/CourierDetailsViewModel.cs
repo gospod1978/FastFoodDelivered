@@ -21,5 +21,9 @@
         public string CourierName { get; set; }
 
         public string City { get; set; }
+
+        public byte[] Photo { get; set; }
+
+        public string ImageName { get; set; }
     }
 }

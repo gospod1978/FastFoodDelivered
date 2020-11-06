@@ -9,10 +9,13 @@
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Vehicle;
+    using Microsoft.AspNetCore.Http;
 
     public class CourierCreateInputViewModel : IMapFrom<Courier>
     {
-        public string Image { get; set; }
+        public string ImageName { get; set; }
+
+        public IFormFile ImageFile { get; set; }
 
         [Required]
         public string Phone { get; set; }
@@ -29,5 +32,9 @@
         public string AreaId { get; set; }
 
         public IEnumerable<AreasAll> Areas { get; set; }
+
+        public string PhotoId { get; set; }
+
+        public byte[] Photo { get; set; }
     }
 }

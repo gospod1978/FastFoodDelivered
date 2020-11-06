@@ -1,6 +1,7 @@
 ﻿namespace AspNetCoreTemplate.Data.Models.Addresses
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
 
@@ -11,6 +12,7 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
+        [Required]
         public string Name { get; set; }
 
         public string AddressId { get; set; }

@@ -11,6 +11,7 @@
     using AspNetCoreTemplate.Services.Data;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Courier;
+    using AspNetCoreTemplate.Services.Data.Orders;
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Services.Mapping;
@@ -80,6 +81,9 @@
             services.AddTransient<IUsersDataService, UsersDataService>();
             services.AddTransient<IRestaurantService, RestaurantService>();
             services.AddTransient<IImagesService, ImagesService>();
+            services.AddTransient<IOrdersService, OrdersService>();
+            services.AddTransient<IPictureService, PictureService>();
+            services.AddTransient<IPurchaseService, PurchaseService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,7 @@
 ﻿namespace AspNetCoreTemplate.Data.Models.Orders
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
     using AspNetCoreTemplate.Data.Models.Couriers;
@@ -14,36 +15,33 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
+        [Required]
         public string Name { get; set; }
 
+        [Required]
         public string Description { get; set; }
 
-        public string UserId { get; set; }
-
-        public virtual ApplicationUser User { get; set; }
+        public string UserDataId { get; set; }
 
         public string CourierId { get; set; }
 
-        public virtual Courier Courier { get; set; }
-
+        [Required]
         public string RestaurantId { get; set; }
 
         public virtual Restaurant Restaurant { get; set; }
 
+        [Required]
         public string TimePrepartion { get; set; }
 
-        public string TimeDelivery { get; set; }
-
+        [Required]
         public decimal Price { get; set; }
 
-        public decimal MenuPrice { get; set; }
+        public virtual PromotionType PromotionType { get; set; }
 
-        public decimal DeliveryPrice { get; set; }
+        public string Picture { get; set; }
 
-        public string PromotionType { get; set; }
+        public int CategoryId { get; set; }
 
-        public string PictureId { get; set; }
-
-        public virtual Picture Picture { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

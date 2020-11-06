@@ -2,11 +2,14 @@
 {
     using System.Threading.Tasks;
 
+    using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Common.Repositories;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.Courier;
+    using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
+    using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.Roles;
     using AspNetCoreTemplate.Web.ViewModels.Users;
     using Microsoft.AspNetCore.Authorization;
@@ -20,19 +23,22 @@
         private readonly IUserService userServices;
         private readonly IDeletableEntityRepository<ApplicationRole> roleRepository;
         private readonly ICourierService courierService;
+        private readonly IRestaurantService restaurantService;
 
         public UsersController(
             UserManager<ApplicationUser> userManager,
             IRoleService roleServices,
             IUserService userServices,
             IDeletableEntityRepository<ApplicationRole> roleRepository,
-            ICourierService courierService)
+            ICourierService courierService,
+            IRestaurantService restaurantService)
         {
             this.userManager = userManager;
             this.roleServices = roleServices;
             this.userServices = userServices;
             this.roleRepository = roleRepository;
             this.courierService = courierService;
+            this.restaurantService = restaurantService;
         }
 
         public IActionResult ByName(string name)
@@ -81,13 +87,23 @@
         }
 
         [Authorize]
-        public IActionResult IsCourier(string id)
+        public IActionResult ApproveRest()
         {
-            var user = this.userServices.GetById<CurierUserName>(id);
+            var viewModel = new TakeRestaurantAll();
+            var restaurants = this.restaurantService.GetAllNo<RestaurantWaitApprove>();
+            viewModel.Restaurant = restaurants;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> IsCourier(string id)
+        {
+            var user = this.userServices.GetById<AplicantUserName>(id);
             var courier = this.courierService.GetByUserId<CourierWaitApprove>(id);
+            await this.userServices.AddRoleToUser<string>(user.UserName, GlobalConstants.CourierRoleName);
             this.courierService.MadeIsCourier(courier.Id);
 
-            this.userServices.AddRoleToUser<string>(user.UserName, "Courier");
             return this.RedirectToAction(nameof(this.Approve));
         }
 
@@ -98,6 +114,26 @@
             this.courierService.MadeIsCourier(courier.Id);
 
             return this.RedirectToAction(nameof(this.Approve));
+        }
+
+        [Authorize]
+        public async Task<IActionResult> IsRestaurant(string id)
+        {
+            var user = this.userServices.GetById<AplicantUserName>(id);
+            var restaurant = this.restaurantService.GetByUserId<RestaurantWaitApprove>(id);
+            await this.userServices.AddRoleToUser<string>(user.UserName, GlobalConstants.RestaurantRoleName);
+            this.restaurantService.MadeIsRestaurant(restaurant.Id);
+
+            return this.RedirectToAction(nameof(this.ApproveRest));
+        }
+
+        [Authorize]
+        public IActionResult NoRestaurant(string id)
+        {
+            var restaurant = this.restaurantService.GetByUserId<RestaurantWaitApprove>(id);
+            this.restaurantService.MadeIsRestaurant(restaurant.Id);
+
+            return this.RedirectToAction(nameof(this.ApproveRest));
         }
 
         [Authorize]

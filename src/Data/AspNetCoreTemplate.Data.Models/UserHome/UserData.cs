@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
     using AspNetCoreTemplate.Data.Models.Orders;
@@ -16,6 +17,7 @@
             this.Orders = new HashSet<Order>();
         }
 
+        [Required]
         public string Name { get; set; }
 
         public string UserId { get; set; }

@@ -1,0 +1,52 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Orders.OrderIndexViewModel
+@{
+    this.ViewData["Title"] = "Detail Order";
+}
+@if (this.TempData["InfoMessageCourier"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCourier"]
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<div class="container-fluid mt-100">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="media flex-wrap w-100 align-items-center">
+                        <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" width="80" height="80" class="d-block ui-w-40 rounded-circle" alt="@Model.Photo" />
+                        <div class="media-body ml-3">
+                            <div class="text-muted small">
+                                <p>Menu name - @Model.Name</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Category - @Model.CategoryName</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Restaurant - @Model.RestaurantName</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Mobilen Phone @Model.Phone</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Email - @Model.Email</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Price - @Model.Price</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Time Preparation - @Model.TimePrepartion</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>Description - @Model.Content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

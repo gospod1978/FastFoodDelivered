@@ -10,7 +10,7 @@
 
         public const string AdminRoleName = "Admin";
 
-        public const string DriverRoleName = "Driver";
+        public const string CourierRoleName = "Courier";
 
         public const string RestaurantRoleName = "Restaurant";
 

@@ -16,5 +16,9 @@
         string GetUserName(string name);
 
         void AddRoleCourier(string userName, string role);
+
+        T GetByUserByUserDataId<T>(string id);
+
+        string GetUserByRestaurantId(string id);
     }
 }

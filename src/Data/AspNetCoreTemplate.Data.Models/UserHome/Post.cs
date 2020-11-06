@@ -1,6 +1,7 @@
 ﻿namespace AspNetCoreTemplate.Data.Models.UserHome
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using AspNetCoreTemplate.Data.Common.Models;
 
@@ -11,6 +12,7 @@
             this.Comments = new HashSet<Comment>();
         }
 
+        [Required]
         public string Title { get; set; }
 
         public string Content { get; set; }

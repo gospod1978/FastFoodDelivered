@@ -69,6 +69,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("AreaName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CityId")
@@ -104,6 +105,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CityName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -187,6 +189,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -224,6 +227,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -435,6 +439,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Phone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -479,6 +484,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -489,6 +495,72 @@ namespace AspNetCoreTemplate.Data.Migrations
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Orders.Order", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CourierId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("PromotionType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RestaurantId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("TimePrepartion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserDataId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("CourierId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("RestaurantId");
+
+                    b.HasIndex("UserDataId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Orders.Purchase", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -505,9 +577,6 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Property<decimal>("DeliveryPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -517,29 +586,20 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PictureId")
+                    b.Property<string>("OrderId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("PromotionType")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PromotionType")
+                        .HasColumnType("int");
 
                     b.Property<string>("RestaurantId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("TimeDelivery")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TimePrepartion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserDataId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -550,15 +610,13 @@ namespace AspNetCoreTemplate.Data.Migrations
 
                     b.HasIndex("IsDeleted");
 
-                    b.HasIndex("PictureId");
+                    b.HasIndex("OrderId");
 
                     b.HasIndex("RestaurantId");
 
-                    b.HasIndex("UserDataId");
-
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Purchases");
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", b =>
@@ -591,6 +649,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Phone")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -651,6 +710,9 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CategoryType")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -670,6 +732,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -736,6 +799,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("FileType")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -746,6 +810,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -776,6 +841,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Exstention")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -786,6 +852,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -816,6 +883,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Exstention")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
@@ -826,17 +894,18 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
-                    b.Property<string>("UserDataId")
+                    b.Property<string>("OrderId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("IsDeleted");
 
-                    b.HasIndex("UserDataId");
+                    b.HasIndex("OrderId");
 
                     b.ToTable("Pictures");
                 });
@@ -867,6 +936,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -901,6 +971,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -1113,21 +1184,40 @@ namespace AspNetCoreTemplate.Data.Migrations
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Orders.Order", b =>
                 {
-                    b.HasOne("AspNetCoreTemplate.Data.Models.Couriers.Courier", "Courier")
+                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.Category", "Category")
+                        .WithMany("Orders")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Couriers.Courier", null)
                         .WithMany("Orders")
                         .HasForeignKey("CourierId");
 
-                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.Picture", "Picture")
-                        .WithMany()
-                        .HasForeignKey("PictureId");
-
                     b.HasOne("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", "Restaurant")
                         .WithMany("Orders")
-                        .HasForeignKey("RestaurantId");
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", null)
                         .WithMany("Orders")
                         .HasForeignKey("UserDataId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.Orders.Purchase", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Couriers.Courier", "Courier")
+                        .WithMany()
+                        .HasForeignKey("CourierId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Orders.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId");
+
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Restaurants.Restaurant", "Restaurant")
+                        .WithMany()
+                        .HasForeignKey("RestaurantId");
 
                     b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
                         .WithMany()
@@ -1178,9 +1268,9 @@ namespace AspNetCoreTemplate.Data.Migrations
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Picture", b =>
                 {
-                    b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", "UserData")
+                    b.HasOne("AspNetCoreTemplate.Data.Models.Orders.Order", "Order")
                         .WithMany()
-                        .HasForeignKey("UserDataId");
+                        .HasForeignKey("OrderId");
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Post", b =>

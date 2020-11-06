@@ -1,9 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using AspNetCoreTemplate.Data.Common.Models;
-
-namespace AspNetCoreTemplate.Data.Models.UserHome
+﻿namespace AspNetCoreTemplate.Data.Models.UserHome
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
+    using AspNetCoreTemplate.Data.Common.Models;
+    using AspNetCoreTemplate.Data.Models.Orders;
+
     public class Picture : BaseDeletableModel<string>
     {
         public Picture()
@@ -11,14 +13,16 @@ namespace AspNetCoreTemplate.Data.Models.UserHome
             this.Id = Guid.NewGuid().ToString();
         }
 
-        public string UserDataId { get; set; }
+        public string OrderId { get; set; }
 
-        public UserData UserData { get; set; }
+        public Order Order { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string Name { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string Exstention { get; set; }
 
         [MaxLength]

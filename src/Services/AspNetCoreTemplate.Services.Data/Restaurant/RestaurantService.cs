@@ -40,6 +40,7 @@
                     Phone = phone,
                     WorkingAreaId = workingAreaId,
                     IsWorking = IsWorking.No,
+                    IsRestaurnat = IsRestaurnat.No,
                     UserId = userId,
                     AreaId = areaId,
                 };
@@ -120,7 +121,7 @@
         {
             var restaurant = this.restaurantRepository.All().Where(x => x.Id == id)
                 .FirstOrDefault();
-            restaurant.IsRestaurnat = IsRestaurnat.Yes;
+            restaurant.IsRestaurnat = IsRestaurnat.No;
 
             this.restaurantRepository.Update(restaurant);
             await this.restaurantRepository.SaveChangesAsync();
@@ -130,7 +131,7 @@
         {
             var restaurant = this.restaurantRepository.All().Where(x => x.Id == id)
                 .FirstOrDefault();
-            restaurant.IsRestaurnat = IsRestaurnat.No;
+            restaurant.IsRestaurnat = IsRestaurnat.Yes;
 
             this.restaurantRepository.Update(restaurant);
             await this.restaurantRepository.SaveChangesAsync();
