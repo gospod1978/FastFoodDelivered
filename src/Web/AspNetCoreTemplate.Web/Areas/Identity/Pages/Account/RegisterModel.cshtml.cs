@@ -135,9 +135,9 @@
                             else
                             {
                                 await this.signInManager.SignInAsync(user, isPersistent: false);
-                                return this.LocalRedirect(returnUrl);
-                            }
+                                return this.LocalRedirect(returnUrl + "Address/Create");
                         }
+                    }
 
                         foreach (var error in result.Errors)
                         {

@@ -50,6 +50,94 @@
             return enitity.Id;
         }
 
+        public string CourierIdFind(string restAreaId)
+        {
+            var allCourierByAreaId = this.courierRepository.All().Where(x => x.AreaId == restAreaId).ToArray();
+            var areaName = this.areaRepository.All().Where(x => x.Id == restAreaId).FirstOrDefault();
+
+            string courierId = string.Empty;
+
+            if (allCourierByAreaId.Length > 1)
+            {
+                foreach (var couriers in allCourierByAreaId)
+                {
+                    if (couriers.Orders.Count() == 0)
+                    {
+                        courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 0).FirstOrDefault().Id;
+                    }
+                    else if (couriers.Orders.Count() == 1)
+                    {
+                        courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 1).FirstOrDefault().Id;
+                    }
+                    else
+                    {
+                        courierId = allCourierByAreaId.Where(x => x.Orders.Count() >= 1).FirstOrDefault().Id;
+                    }
+                }
+            }
+            else
+            {
+                var areas = this.AreaLocationSofia();
+                var postCodeArea = areas[areaName.AreaName];
+                foreach (var area in areas)
+                {
+                    var result = Math.Abs(postCodeArea - area.Value);
+                    if (result < 10)
+                    {
+                        var areaCourierSearch = this.areaRepository.All().Where(x => x.AreaName == area.Key).FirstOrDefault();
+                        allCourierByAreaId = this.courierRepository.All().Where(x => x.AreaId == areaCourierSearch.Id).ToArray();
+                        if (allCourierByAreaId.Length > 1)
+                        {
+                            foreach (var couriers in allCourierByAreaId)
+                            {
+                                if (couriers.Orders.Count() == 0)
+                                {
+                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 0).FirstOrDefault().Id;
+                                }
+                                else if (couriers.Orders.Count() == 1)
+                                {
+                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 1).FirstOrDefault().Id;
+                                }
+                                else
+                                {
+                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() >= 1).FirstOrDefault().Id;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            courierId = allCourierByAreaId.FirstOrDefault().Id;
+                        }
+                    }
+                    else
+                    {
+                        var areaCourierSearch = this.areaRepository.All().Where(x => x.AreaName == area.Key).FirstOrDefault();
+                        allCourierByAreaId = this.courierRepository.All().Where(x => x.AreaId == areaCourierSearch.Id).ToArray();
+                        if (allCourierByAreaId.Length > 1)
+                        {
+                            foreach (var couriers in allCourierByAreaId)
+                            {
+                                if (couriers.Orders.Count() == 0)
+                                {
+                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 0).FirstOrDefault().Id;
+                                }
+                                else if (couriers.Orders.Count() == 1)
+                                {
+                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 1).FirstOrDefault().Id;
+                                }
+                                else
+                                {
+                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() >= 1).FirstOrDefault().Id;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return courierId;
+        }
+
         public async Task<string> CreateAsyncMenu(string orderId, string userId, string? courierId, string restaurantID, string promotionType, decimal menuPrice, decimal deliveryPrice)
         {
             var newPromotionType = (PromotionType)Enum.Parse(typeof(PromotionType), promotionType);
@@ -173,6 +261,49 @@
             }
 
             return query.To<T>().ToList();
+        }
+
+        public decimal PriceCourier(string userAreaName, string restAreaName)
+        {
+            var area = this.AreaLocationSofia();
+            var userPostCode = 0;
+            var restPostCode = 0;
+            var deliveryPrice = 0M;
+
+            if (area.ContainsKey(userAreaName))
+            {
+                userPostCode = area[userAreaName];
+            }
+
+            if (area.ContainsKey(restAreaName))
+            {
+                restPostCode = area[restAreaName];
+            }
+
+            var result = Math.Abs(userPostCode - restPostCode);
+
+            if (result < 10)
+            {
+                deliveryPrice = 3.90M;
+            }
+            else if (result >= 10 && result < 20)
+            {
+                deliveryPrice = 5.90M;
+            }
+            else if (result >= 20 && result < 30)
+            {
+                deliveryPrice = 7.90M;
+            }
+            else if (result >= 30 && result < 40)
+            {
+                deliveryPrice = 9.90M;
+            }
+            else
+            {
+                deliveryPrice = 11.90M;
+            }
+
+            return deliveryPrice;
         }
 
         private Dictionary<string, int> AreaLocationSofia()

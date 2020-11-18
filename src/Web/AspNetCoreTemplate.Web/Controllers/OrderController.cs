@@ -4,10 +4,13 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Models;
+    using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Orders;
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Web.ViewModels.Addresses;
     using AspNetCoreTemplate.Web.ViewModels.Categories;
+    using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using AspNetCoreTemplate.Web.ViewModels.Orders;
     using AspNetCoreTemplate.Web.ViewModels.Posts;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
@@ -27,6 +30,9 @@
         private readonly IPictureService pictureService;
         private readonly IUsersDataService usersDataService;
         private readonly IUserService userService;
+        private readonly ILocationsObjectService locationsObjectService;
+        private readonly IPurchaseService purchaseService;
+        private readonly IAddressService addressService;
 
         public OrderController(
             IOrdersService ordersService,
@@ -35,7 +41,10 @@
             UserManager<ApplicationUser> userManager,
             IPictureService pictureService,
             IUsersDataService usersDataService,
-            IUserService userService)
+            IUserService userService,
+            ILocationsObjectService locationsObjectService,
+            IPurchaseService purchaseService,
+            IAddressService addressService)
         {
             this.ordersService = ordersService;
             this.categoriesService = categoriesService;
@@ -44,6 +53,9 @@
             this.pictureService = pictureService;
             this.usersDataService = usersDataService;
             this.userService = userService;
+            this.locationsObjectService = locationsObjectService;
+            this.purchaseService = purchaseService;
+            this.addressService = addressService;
         }
 
         [Authorize]
@@ -124,16 +136,33 @@
             viewModel.CategoryName = categoryName.Name;
             viewModel.Phone = restorantDetails.Phone;
             viewModel.Email = userData.Email;
+            viewModel.AreaName = restorantDetails.Area.AreaName;
 
             return this.View(viewModel);
         }
 
         [Authorize]
-        public IActionResult AllByCategories(string id)
+        public async Task<IActionResult> AllByCategories(string id)
         {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var locationObjUserId = this.locationsObjectService.GetLocationByUserIdOnly<LocationObjectIndexViewModel>(user.Id);
+            var address = this.addressService.GetById<DetailsAddressIndexViewModel>(locationObjUserId.AddressId);
+            var userAreaName = address.AreaAreaName;
             var viewModel = new AllOrdersViewModel();
 
             var orders = this.ordersService.GetAllByCategoryName<OrderDetailsViewModel>(id);
+            foreach (var order in orders)
+            {
+                var userIdrest = this.ordersService.GetById<OrderDetailsViewModel>(order.Id);
+                var workingAreaRestaurant = this.userService.GetUserByRestaurantId(userIdrest.RestaurantId);
+                var restorant = this.restaurantService.GetById<RestaurantAll>(workingAreaRestaurant);
+                var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restorant.UserId);
+                var locationRestaurantAreaName = restorant.Area.AreaName;
+                var priceDelivery = this.purchaseService.PriceCourier(userAreaName, locationRestaurantAreaName);
+                order.DeliveryPrice = priceDelivery;
+                order.TotalPrice = order.Price + priceDelivery;
+                order.RestaurantName = restname.Name;
+            }
 
             viewModel.Orders = orders;
 

@@ -2580,7 +2580,8 @@
         "dependencies": {
           "AspNetCoreTemplate.Data.Common": "1.0.0",
           "AspNetCoreTemplate.Data.Models": "1.0.0",
-          "AspNetCoreTemplate.Services.Mapping": "1.0.0"
+          "AspNetCoreTemplate.Services.Mapping": "1.0.0",
+          "AspNetCoreTemplate.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "AspNetCoreTemplate.Services.Data.dll": {}

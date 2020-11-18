@@ -11,11 +11,13 @@
     using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Web.ViewModels.Addresses;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
+    using AspNetCoreTemplate.Web.ViewModels.Streets;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using AspNetCoreTemplate.Web.ViewModels.Vehicle;
     using Microsoft.AspNetCore.Authorization;
@@ -249,7 +251,26 @@
         [Authorize]
         public IActionResult IsActive(string id)
         {
-            return this.View();
+            var courierDetail = this.courierService.GetById<CourierDetailsViewModel>(id);
+            var city = this.areasService.GetById<AreasAll>(courierDetail.AreaId);
+            var cityName = city.City.CityName;
+            // var cityId = this.citiesService.GetByName<CitiesAll>(cityName);
+            var areas = this.areasService.GetAllAreas<AreasDropDownMenu>(city.CityId);
+            var viewModel = new ChangeWorkingAreaIdViewModel();
+            viewModel.Areas = areas;
+            viewModel.CityName = cityName;
+            viewModel.CourierId = id;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> IsActive(ChangeWorkingAreaIdViewModel input)
+        {
+            await this.courierService.CreateWorkingAreaByCourierId(input.CourierId, input.AreaId);
+
+            return this.RedirectToAction(nameof(this.Details), new { id = input.CourierId });
         }
 
         private string Image()

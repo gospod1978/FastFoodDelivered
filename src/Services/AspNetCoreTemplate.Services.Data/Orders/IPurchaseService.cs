@@ -23,5 +23,9 @@
         string ChangeStatus(string purchazeId, string userId, string status);
 
         Dictionary<string, decimal> FindCourier(string restaurantLocation);
+
+        decimal PriceCourier(string userAreaId, string restAreaId);
+
+        string CourierIdFind(string restAreaId);
     }
 }

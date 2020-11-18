@@ -125,5 +125,13 @@
 
             return entity;
         }
+
+        public T GetLocationByUserIdOnly<T>(string id)
+        {
+            var entity = this.locationRepository.All().Where(x => x.UserId == id)
+                .To<T>().FirstOrDefault();
+
+            return entity;
+        }
     }
 }

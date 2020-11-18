@@ -1,7 +1,6 @@
 ﻿@model AspNetCoreTemplate.Web.ViewModels.Purchase.CreatePurchaseViewModel
 @{
     this.ViewData["Title"] = "New Menu";
-    var locationsObject = Model.LocationsUser.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
     var totalPrice = Model.MenuPrice + Model.DeliveryPrice;
 }
 
@@ -39,13 +38,13 @@
         <span asp-validation-for="DeliveryPrice" class="text-danger"></span>
     </div>
     <div>
-        
-        <input class="form-control" value="totalPrice" />
+        <p>Total Price</p>
+        <p>@totalPrice</p>
     </div>
     <div>
-        <label asp-for="LocactionUserId"></label>
-        <select asp-for="LocactionUserId" asp-items="locationsObject" class="form-control"></select>
-        <span asp-validation-for="LocactionUserId" class="text-danger"></span>
+        <label asp-for="LocationsUser"></label>
+        <input asp-for="LocationsUser" class="form-control" value="@Model.LocationsUser" />
+        <span asp-validation-for="LocationsUser" class="text-danger"></span>
     </div>
     <hr />
     <input type="submit" class="btn btn-primary" />

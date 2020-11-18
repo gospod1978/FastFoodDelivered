@@ -35,6 +35,8 @@ else
                 <th>Category</th>
                 <th>Restaurant</th>
                 <th>Menu Price</th>
+                <th>Delivery Price</th>
+                <th>Total Price</th>
                 <th>Time</th>
                 <th>Description</th>
                 <th>Purchase</th>
@@ -47,10 +49,12 @@ else
             <tr>
                 <td>@order.Name </td>
                 <td>@order.Category.Name</td>  
-                <td>@order.RestaurantId</td>
+                <td>@order.RestaurantName</td>
                 <td>@order.Price</td>
+                <td>@order.DeliveryPrice</td>
+                <td>@order.TotalPrice</td>
                 <td>@order.TimePrepartion</td>
-                <td>@order.Description</td>
+                <td>@order.Content</td>
                 <td><a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Create" asp-route-id="@order.Id">Purchase</a></td>
                 <td>@order.Id</td>
             </tr>

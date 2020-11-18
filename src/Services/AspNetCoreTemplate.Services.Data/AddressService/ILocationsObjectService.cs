@@ -18,5 +18,7 @@
         T GetById<T>(string id);
 
         T GetLocationByUserId<T>(string id, string locationObjName);
+
+        T GetLocationByUserIdOnly<T>(string id);
     }
 }

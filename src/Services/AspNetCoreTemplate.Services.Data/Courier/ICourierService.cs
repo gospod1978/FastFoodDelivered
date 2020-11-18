@@ -23,5 +23,7 @@
         void MadeIsCourier(string id);
 
         void MadeIsNoCourier(string id);
+
+        Task<string> CreateWorkingAreaByCourierId(string courierId, string areaId);
     }
 }

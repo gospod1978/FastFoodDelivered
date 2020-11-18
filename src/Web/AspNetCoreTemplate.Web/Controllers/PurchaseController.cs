@@ -12,6 +12,7 @@
     using AspNetCoreTemplate.Web.ViewModels.Orders;
     using AspNetCoreTemplate.Web.ViewModels.Purchase;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
+    using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
@@ -25,6 +26,7 @@
         private readonly IAddressService addressService;
         private readonly IOrdersService ordersService;
         private readonly IUserService userService;
+        private readonly IUsersDataService usersDataService;
 
         public PurchaseController(
             UserManager<ApplicationUser> userManager,
@@ -33,7 +35,8 @@
             IRestaurantService restaurantService,
             IAddressService addressService,
             IOrdersService ordersService,
-            IUserService userService)
+            IUserService userService,
+            IUsersDataService usersDataService)
         {
             this.userManager = userManager;
             this.purchaseService = purchaseService;
@@ -42,37 +45,44 @@
             this.addressService = addressService;
             this.ordersService = ordersService;
             this.userService = userService;
+            this.usersDataService = usersDataService;
         }
 
         [Authorize]
-        public async Task<IActionResult> Create(string id, string restaurantId, string promotionType, decimal menuPrice)
+        public async Task<IActionResult> Create(string id)
         {
             var orderId = id;
             var userLogin = await this.userManager.GetUserAsync(this.User);
-            var locationObjUserId = this.locationsObjectService.GetAllByUserId<LocationObjectIndexViewModel>(userLogin.Id);
+            var locationObjUserId = this.locationsObjectService.GetLocationByUserIdOnly<LocationObjectIndexViewModel>(userLogin.Id);
             var userIdrest = this.ordersService.GetById<OrderDetailsViewModel>(orderId);
 
             // var userIdByRestId = this.restaurantService.GetById<InfoRestaurantModel>(restaurantId);
             // var workingAreaRestaurant = this.addressService.GetByWorkingAreaByUserId(userIdrest.RestaurantId);
             var workingAreaRestaurant = this.userService.GetUserByRestaurantId(userIdrest.RestaurantId);
-            var locationRestaurant = workingAreaRestaurant.AreaId;
-            var courierPrice = this.purchaseService.FindCourier(locationRestaurant);
-            var courierId = courierPrice.ElementAt(0).Key;
-            var deliveryPrice = courierPrice.ElementAt(0).Value;
+            var restorant = this.restaurantService.GetById<RestaurantAll>(workingAreaRestaurant);
+            var locationRestaurantAreaName = restorant.Area.AreaName;
+            var userAreaName = locationObjUserId.Address.Area.AreaName;
+            var restName = this.restaurantService.GetById<RestaurantAll>(restorant.Id);
+            var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
+            var priceDelivery = this.purchaseService.PriceCourier(userAreaName, locationRestaurantAreaName);
+            //var courierId = this.purchaseService.CourierIdFind(restorant.AreaId);
 
-            var order = this.ordersService.GetById<OrderIndexViewModel>(orderId);
+            //var courierPrice = this.purchaseService.FindCourier(locationRestaurant);
+            //var courierId = courierPrice.ElementAt(0).Key;
+            //var deliveryPrice = courierPrice.ElementAt(0).Value;
+
+            var order = this.ordersService.GetById<OrderDetailsViewModel>(orderId);
 
             var viewModel = new CreatePurchaseViewModel();
-            viewModel.LocationsUser = locationObjUserId;
+            viewModel.LocationsUser = locationObjUserId.Name;
             viewModel.OrderId = orderId;
             viewModel.OrderName = order.Name;
-            viewModel.ResaurantName = order.RestaurantName;
-            viewModel.LocationRestaurantAreaId = locationRestaurant;
-            viewModel.RestaurantId = restaurantId;
-            viewModel.PromotionType = promotionType;
-            viewModel.MenuPrice = menuPrice;
-            viewModel.CourierId = courierId;
-            viewModel.DeliveryPrice = deliveryPrice;
+            viewModel.ResaurantName = restname.Name;
+            viewModel.LocationRestaurantAreaId = restorant.AreaId;
+            viewModel.PromotionType = userIdrest.PromotionType.ToString();
+            viewModel.MenuPrice = order.Price;
+            //viewModel.CourierId = courierId;
+            viewModel.DeliveryPrice = priceDelivery;
 
             return this.View(viewModel);
         }

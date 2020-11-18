@@ -10,6 +10,7 @@
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Couriers;
     using AspNetCoreTemplate.Services.Mapping;
+    using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using Microsoft.AspNetCore.Identity;
 
     public class CourierService : ICourierService
@@ -56,6 +57,17 @@
 
             await this.courierRepository.SaveChangesAsync();
 
+            return courier.Id;
+        }
+
+        public async Task<string> CreateWorkingAreaByCourierId(string courierId, string areaId)
+        {
+            var courier = this.courierRepository.All().Where(x => x.Id == courierId).FirstOrDefault();
+            courier.WorkingAreaId = areaId;
+            courier.AreaId = areaId;
+            courier.IsWorking = IsWorking.Yes;
+            this.courierRepository.Update(courier);
+            await this.courierRepository.SaveChangesAsync();
             return courier.Id;
         }
 

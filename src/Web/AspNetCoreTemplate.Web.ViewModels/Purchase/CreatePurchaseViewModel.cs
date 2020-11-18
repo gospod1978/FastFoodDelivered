@@ -26,6 +26,8 @@
 
         public string LocactionUserId { get; set; }
 
-        public IEnumerable<LocationObjectIndexViewModel> LocationsUser { get; set; }
+        public string LocationsUser { get; set; }
+
+        //public IEnumerable<LocationObjectIndexViewModel> LocationsUser { get; set; }
     }
 }

@@ -14,3 +14,5 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/obj/Debug/netstandard2.1/AspNetCoreTemplate.Services.Data.csproj.CopyComplete
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/obj/Debug/netstandard2.1/AspNetCoreTemplate.Services.Data.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/obj/Debug/netstandard2.1/AspNetCoreTemplate.Services.Data.pdb
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/bin/Debug/netstandard2.1/AspNetCoreTemplate.Web.ViewModels.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/bin/Debug/netstandard2.1/AspNetCoreTemplate.Web.ViewModels.pdb

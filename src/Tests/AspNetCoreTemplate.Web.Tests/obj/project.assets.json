@@ -3547,7 +3547,8 @@
         "dependencies": {
           "AspNetCoreTemplate.Data.Common": "1.0.0",
           "AspNetCoreTemplate.Data.Models": "1.0.0",
-          "AspNetCoreTemplate.Services.Mapping": "1.0.0"
+          "AspNetCoreTemplate.Services.Mapping": "1.0.0",
+          "AspNetCoreTemplate.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/AspNetCoreTemplate.Services.Data.dll": {}
@@ -10917,6 +10918,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj": {
               "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj"
@@ -10932,6 +10934,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Testing": {
             "target": "Package",
@@ -10984,7 +10987,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -23,6 +23,8 @@
 
         public string RestaurantName { get; set; }
 
+        public string AreaName { get; set; }
+
         public string CategoryName { get; set; }
 
         public string Content

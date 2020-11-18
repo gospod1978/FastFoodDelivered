@@ -6,9 +6,11 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Common.Repositories;
+    using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Orders;
     using AspNetCoreTemplate.Data.Models.UserHome;
     using AspNetCoreTemplate.Services.Mapping;
+    using Microsoft.AspNetCore.Identity;
 
     public class OrdersService : IOrdersService
     {

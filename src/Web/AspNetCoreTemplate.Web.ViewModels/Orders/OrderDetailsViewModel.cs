@@ -25,9 +25,17 @@
 
         public string RestaurantId { get; set; }
 
+        public string RestaurantName { get; set; }
+
         public string TimePrepartion { get; set; }
 
         public decimal Price { get; set; }
+
+        public PromotionType PromotionType { get; set; }
+
+        public decimal DeliveryPrice { get; set; }
+
+        public decimal TotalPrice { get; set; }
 
         public int CategoryId { get; set; }
 
