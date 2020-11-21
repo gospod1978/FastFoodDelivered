@@ -4,52 +4,65 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-    <ul class="navbar-nav">
-        @if (this.SignInManager.IsSignedIn(this.User))
+<ul class="navbar-nav">
+    @if (this.SignInManager.IsSignedIn(this.User))
+    {
+        <li class="nav-item">
+            <a class="nav-link home-margin" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @(this.User.Identity.Name)!</a>
+        </li>
+
+        if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+            this.User.IsInRole(GlobalConstants.AdministratorRoleName))
         {
             <li class="nav-item">
-                <a class="nav-link home-margin" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-link" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Admin</a>
             </li>
+        }
+
+        if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+            this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+            this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
             <li class="nav-item">
-                <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @(this.User.Identity.Name)!</a>
+                <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
             </li>
+        }
 
-            if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-                this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-            {
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Admin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
-                </li>
-            }
-
-            if (this.User.IsInRole(GlobalConstants.RestaurantRoleName))
-            {
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
-                </li>
-            }
+        if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+            this.User.IsInRole(GlobalConstants.CourierRoleName) ||
+            this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+            this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">All Purchase by Status</a>
+            </li>
+        }
+        else
+        {
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Courier" asp-action="Create1">Courier Apply</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" asp-area="" asp-controller="Restaurant" asp-action="Create1">Restaurant Apply</a>
             </li>
-            <li class="nav-item">
-                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">
-                    <button type="submit" class="btn nav-item btn-my">Logout</button>
-                </form>
-            </li>
         }
-        else
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
-            </li>
-        }
-    </ul>
+
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">
+                <button type="submit" class="btn nav-item btn-my">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

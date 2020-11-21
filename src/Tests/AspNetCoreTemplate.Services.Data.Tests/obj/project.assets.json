@@ -2753,6 +2753,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "AspNetCoreTemplate.Common": "1.0.0",
           "AspNetCoreTemplate.Data.Common": "1.0.0",
           "AspNetCoreTemplate.Data.Models": "1.0.0",
           "AspNetCoreTemplate.Services.Mapping": "1.0.0",

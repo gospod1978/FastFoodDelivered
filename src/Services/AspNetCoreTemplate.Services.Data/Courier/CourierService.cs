@@ -9,6 +9,7 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Couriers;
+    using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Mapping;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using Microsoft.AspNetCore.Identity;
@@ -18,18 +19,24 @@
         private readonly IDeletableEntityRepository<Courier> courierRepository;
         private readonly IDeletableEntityRepository<Vehichle> vehichleRepository;
         private readonly IDeletableEntityRepository<City> cityRepository;
+        private readonly IDeletableEntityRepository<WorkingArea> workingAreaRepository;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly IAddressService addressService;
 
         public CourierService(
             IDeletableEntityRepository<Courier> courierRepository,
             IDeletableEntityRepository<Vehichle> vehichleRepository,
             IDeletableEntityRepository<City> cityRepository,
-            UserManager<ApplicationUser> userManager)
+            IDeletableEntityRepository<WorkingArea> workingAreaRepository,
+            UserManager<ApplicationUser> userManager,
+            IAddressService addressService)
         {
             this.courierRepository = courierRepository;
             this.vehichleRepository = vehichleRepository;
             this.cityRepository = cityRepository;
+            this.workingAreaRepository = workingAreaRepository;
             this.userManager = userManager;
+            this.addressService = addressService;
         }
 
         public async Task<string> CreateAsync(string image, string phone, string vechileID, DateTime birthday, string workingAreaId, string userId, string areaId)
@@ -63,11 +70,23 @@
         public async Task<string> CreateWorkingAreaByCourierId(string courierId, string areaId)
         {
             var courier = this.courierRepository.All().Where(x => x.Id == courierId).FirstOrDefault();
-            courier.WorkingAreaId = areaId;
-            courier.AreaId = areaId;
+            var workingArea = this.addressService.GetByWorkingAreaByUserId(courier.UserId);
+            workingArea.AreaId = areaId;
+            if (workingArea.ActiveWorkingArea == ActiveWorkingArea.Yes)
+            {
+                workingArea.ActiveWorkingArea = ActiveWorkingArea.No;
+            }
+            else
+            {
+                workingArea.ActiveWorkingArea = ActiveWorkingArea.Yes;
+            }
+
             courier.IsWorking = IsWorking.Yes;
             this.courierRepository.Update(courier);
+            this.workingAreaRepository.Update(workingArea);
+            await this.workingAreaRepository.SaveChangesAsync();
             await this.courierRepository.SaveChangesAsync();
+
             return courier.Id;
         }
 

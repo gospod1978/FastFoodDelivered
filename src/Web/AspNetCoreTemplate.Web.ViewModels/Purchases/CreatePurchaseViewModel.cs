@@ -1,9 +1,5 @@
-﻿namespace AspNetCoreTemplate.Web.ViewModels.Purchase
+﻿namespace AspNetCoreTemplate.Web.ViewModels.Purchases
 {
-    using System.Collections.Generic;
-
-    using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
-
     public class CreatePurchaseViewModel
     {
         public string OrderId { get; set; }
@@ -27,7 +23,5 @@
         public string LocactionUserId { get; set; }
 
         public string LocationsUser { get; set; }
-
-        //public IEnumerable<LocationObjectIndexViewModel> LocationsUser { get; set; }
     }
 }

@@ -237,12 +237,10 @@
 
             var couriers = this.courierService.GetAll<CuriersAll>();
 
-            // var cities = this.addressService.GetAllCities<CitiesAll>();
             var vehciles = this.vehicleService.GetAll<VehicleAll>();
 
             viewModel.Curiers = couriers;
 
-            // viewModel.Cities = cities;
             viewModel.Vehichles = vehciles;
 
             return this.View(viewModel);
@@ -254,7 +252,6 @@
             var courierDetail = this.courierService.GetById<CourierDetailsViewModel>(id);
             var city = this.areasService.GetById<AreasAll>(courierDetail.AreaId);
             var cityName = city.City.CityName;
-            // var cityId = this.citiesService.GetByName<CitiesAll>(cityName);
             var areas = this.areasService.GetAllAreas<AreasDropDownMenu>(city.CityId);
             var viewModel = new ChangeWorkingAreaIdViewModel();
             viewModel.Areas = areas;

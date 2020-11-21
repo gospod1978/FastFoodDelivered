@@ -1,4 +1,4 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Purchase.CreatePurchaseViewModel
+﻿@model AspNetCoreTemplate.Web.ViewModels.Purchases.CreatePurchaseViewModel
 @{
     this.ViewData["Title"] = "New Menu";
     var totalPrice = Model.MenuPrice + Model.DeliveryPrice;
@@ -13,9 +13,19 @@
         <span asp-validation-for="OrderName" class="text-danger"></span>
     </div>
     <div>
-        <label asp-for="ResaurantName"></label>
-        <input asp-for="ResaurantName" class="form-control" value="@Model.ResaurantName" />
-        <span asp-validation-for="ResaurantName" class="text-danger"></span>
+        <label asp-for="OrderId"></label>
+        <input asp-for="OrderId" class="form-control" value="@Model.OrderId" />
+        <span asp-validation-for="OrderId" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="CourierId"></label>
+        <input asp-for="CourierId" class="form-control" value="@Model.CourierId" />
+        <span asp-validation-for="CourierId" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="RestaurantId"></label>
+        <input asp-for="RestaurantId" class="form-control" value="@Model.RestaurantId" />
+        <span asp-validation-for="RestaurantId" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="ResaurantName"></label>

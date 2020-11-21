@@ -8,7 +8,7 @@
     {
         Task<string> CreateAsyncMenu(string orderId, string userId, string courierId, string restaurantID, string promotionType, decimal price, decimal deliveryPrice);
 
-        IEnumerable<T> GetAllById<T>(string id, int? count = null);
+        IEnumerable<T> GetAll<T>(string id, string role, int? count = null);
 
         IEnumerable<T> GetAllByUserId<T>(string id, int? count = null);
 
@@ -20,12 +20,14 @@
 
         IEnumerable<T> GetAllByPromotionType<T>(string promotionType, int? count = null);
 
-        string ChangeStatus(string purchazeId, string userId, string status);
+        Task ChangeStatus(string purchazeId, string status);
 
         Dictionary<string, decimal> FindCourier(string restaurantLocation);
 
         decimal PriceCourier(string userAreaId, string restAreaId);
 
         string CourierIdFind(string restAreaId);
+
+        T GetById<T>(string id);
     }
 }

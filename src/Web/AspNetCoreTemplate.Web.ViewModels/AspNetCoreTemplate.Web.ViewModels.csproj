@@ -42,6 +42,6 @@
     <Folder Include="UsersData\" />
     <Folder Include="Restaurants\" />
     <Folder Include="Orders\" />
-    <Folder Include="Purchase\" />
+    <Folder Include="Purchases\" />
   </ItemGroup>
 </Project>

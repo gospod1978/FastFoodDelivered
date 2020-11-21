@@ -1,0 +1,52 @@
+﻿@using AspNetCoreTemplate.Common
+@model AspNetCoreTemplate.Web.ViewModels.Purchases.AllPurchaseViewModel 
+
+@{
+    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
+}
+@if (this.TempData["InfoMessageApply"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageApply"]
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">@this.ViewData["Title"]</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@if (Model.Purchases.Count() == 0)
+{
+
+}
+else
+{
+    <h1>Book</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Menu</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>OrderId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Purchases)
+            {
+                <tr>
+                    <td>@order.OrderName </td>
+                    <td>@order.Price</td>
+                    <td>@order.Status<a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Status" asp-route-id="@order.Id">Change Status</a></td>
+                    <td>@order.Id</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
+    </li>
+    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
+}

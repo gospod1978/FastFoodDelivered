@@ -5,26 +5,39 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Common.Repositories;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Couriers;
     using AspNetCoreTemplate.Data.Models.Orders;
+    using AspNetCoreTemplate.Data.Models.Restaurants;
+    using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Mapping;
+    using AspNetCoreTemplate.Web.ViewModels.Couriers;
 
     public class PurchaseService : IPurchaseService
     {
         private readonly IDeletableEntityRepository<Purchase> purchaseRepository;
         private readonly IDeletableEntityRepository<Courier> courierRepository;
         private readonly IDeletableEntityRepository<Area> areaRepository;
+        private readonly IDeletableEntityRepository<WorkingArea> workingAreaRepostiory;
+        private readonly IDeletableEntityRepository<Restaurant> restaurantRepostiory;
+        private readonly ICourierService courierService;
 
         public PurchaseService(
             IDeletableEntityRepository<Purchase> purchaseRepository,
             IDeletableEntityRepository<Courier> courierRepository,
-            IDeletableEntityRepository<Area> areaRepository)
+            IDeletableEntityRepository<Area> areaRepository,
+            IDeletableEntityRepository<WorkingArea> workingAreaRepostiory,
+            IDeletableEntityRepository<Restaurant> restaurantRepostiory,
+            ICourierService courierService)
         {
             this.purchaseRepository = purchaseRepository;
             this.courierRepository = courierRepository;
             this.areaRepository = areaRepository;
+            this.workingAreaRepostiory = workingAreaRepostiory;
+            this.restaurantRepostiory = restaurantRepostiory;
+            this.courierService = courierService;
         }
 
         public string AddCourier(string purchazeId, string courierId)
@@ -37,100 +50,38 @@
             return enitity.Id;
         }
 
-        public string ChangeStatus(string purchazeId, string userId, string status)
+        public async Task ChangeStatus(string purchazeId, string status)
         {
-            var enitity = this.purchaseRepository.All().Where(x => x.Id == purchazeId && x.UserId == userId).FirstOrDefault();
+            var enitity = this.purchaseRepository.All().Where(x => x.Id == purchazeId).FirstOrDefault();
 
             var newStatus = (Status)Enum.Parse(typeof(Status), status);
 
             enitity.Status = newStatus;
             this.purchaseRepository.Update(enitity);
-            this.purchaseRepository.SaveChangesAsync();
-
-            return enitity.Id;
+            await this.purchaseRepository.SaveChangesAsync();
         }
 
         public string CourierIdFind(string restAreaId)
         {
-            var allCourierByAreaId = this.courierRepository.All().Where(x => x.AreaId == restAreaId).ToArray();
-            var areaName = this.areaRepository.All().Where(x => x.Id == restAreaId).FirstOrDefault();
-
+            var allCourier = this.courierService.GetAllYes<CourierDetailsViewModel>();
             string courierId = string.Empty;
 
-            if (allCourierByAreaId.Length > 1)
+            foreach (var courier in allCourier)
             {
-                foreach (var couriers in allCourierByAreaId)
+                var areaWorking = this.workingAreaRepostiory.All().Where(x => x.AreaId == restAreaId).Select(x => new
                 {
-                    if (couriers.Orders.Count() == 0)
+                    Id = x.Id,
+                    AreaId = x.AreaId,
+                });
+                foreach (var area in areaWorking)
+                {
+                    if (courier.WorkingAreaId == area.Id)
                     {
-                        courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 0).FirstOrDefault().Id;
-                    }
-                    else if (couriers.Orders.Count() == 1)
-                    {
-                        courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 1).FirstOrDefault().Id;
+                        courierId = courier.Id;
                     }
                     else
                     {
-                        courierId = allCourierByAreaId.Where(x => x.Orders.Count() >= 1).FirstOrDefault().Id;
-                    }
-                }
-            }
-            else
-            {
-                var areas = this.AreaLocationSofia();
-                var postCodeArea = areas[areaName.AreaName];
-                foreach (var area in areas)
-                {
-                    var result = Math.Abs(postCodeArea - area.Value);
-                    if (result < 10)
-                    {
-                        var areaCourierSearch = this.areaRepository.All().Where(x => x.AreaName == area.Key).FirstOrDefault();
-                        allCourierByAreaId = this.courierRepository.All().Where(x => x.AreaId == areaCourierSearch.Id).ToArray();
-                        if (allCourierByAreaId.Length > 1)
-                        {
-                            foreach (var couriers in allCourierByAreaId)
-                            {
-                                if (couriers.Orders.Count() == 0)
-                                {
-                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 0).FirstOrDefault().Id;
-                                }
-                                else if (couriers.Orders.Count() == 1)
-                                {
-                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 1).FirstOrDefault().Id;
-                                }
-                                else
-                                {
-                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() >= 1).FirstOrDefault().Id;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            courierId = allCourierByAreaId.FirstOrDefault().Id;
-                        }
-                    }
-                    else
-                    {
-                        var areaCourierSearch = this.areaRepository.All().Where(x => x.AreaName == area.Key).FirstOrDefault();
-                        allCourierByAreaId = this.courierRepository.All().Where(x => x.AreaId == areaCourierSearch.Id).ToArray();
-                        if (allCourierByAreaId.Length > 1)
-                        {
-                            foreach (var couriers in allCourierByAreaId)
-                            {
-                                if (couriers.Orders.Count() == 0)
-                                {
-                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 0).FirstOrDefault().Id;
-                                }
-                                else if (couriers.Orders.Count() == 1)
-                                {
-                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() == 1).FirstOrDefault().Id;
-                                }
-                                else
-                                {
-                                    courierId = allCourierByAreaId.Where(x => x.Orders.Count() >= 1).FirstOrDefault().Id;
-                                }
-                            }
-                        }
+                        courierId = courier.Id;
                     }
                 }
             }
@@ -196,17 +147,46 @@
             return query.To<T>().ToList();
         }
 
-        public IEnumerable<T> GetAllById<T>(string id, int? count = null)
+        public IEnumerable<T> GetAll<T>(string id, string role, int? count = null)
         {
-            IQueryable<Purchase> query =
-            this.purchaseRepository.All().Where(a => a.Id == id).OrderByDescending(x => x.Price);
-
-            if (count.HasValue)
+            if (role == GlobalConstants.AdminRoleName || role == GlobalConstants.AdministratorRoleName)
             {
-                query = query.Take(count.Value);
-            }
+                IQueryable<Purchase> query =
+            this.purchaseRepository.All().OrderByDescending(x => x.Status);
 
-            return query.To<T>().ToList();
+                if (count.HasValue)
+                {
+                    query = query.Take(count.Value);
+                }
+
+                return query.To<T>().ToList();
+            }
+            else if (role == GlobalConstants.CourierRoleName)
+            {
+                var courier = this.courierRepository.All().Where(x => x.UserId == id).FirstOrDefault();
+                IQueryable<Purchase> query =
+            this.purchaseRepository.All().Where(x => x.CourierId == courier.Id).OrderByDescending(x => x.Status);
+
+                if (count.HasValue)
+                {
+                    query = query.Take(count.Value);
+                }
+
+                return query.To<T>().ToList();
+            }
+            else
+            {
+                var restaurant = this.restaurantRepostiory.All().Where(x => x.UserId == id).FirstOrDefault();
+                IQueryable<Purchase> query =
+            this.purchaseRepository.All().Where(x => x.RestaurantId == restaurant.Id).OrderByDescending(x => x.Status);
+
+                if (count.HasValue)
+                {
+                    query = query.Take(count.Value);
+                }
+
+                return query.To<T>().ToList();
+            }
         }
 
         public IEnumerable<T> GetAllByPromotionType<T>(string promotionType, int? count = null)
@@ -261,6 +241,14 @@
             }
 
             return query.To<T>().ToList();
+        }
+
+        public T GetById<T>(string id)
+        {
+            var purchase = this.purchaseRepository.All().Where(x => x.Id == id)
+                .To<T>().FirstOrDefault();
+
+            return purchase;
         }
 
         public decimal PriceCourier(string userAreaName, string restAreaName)

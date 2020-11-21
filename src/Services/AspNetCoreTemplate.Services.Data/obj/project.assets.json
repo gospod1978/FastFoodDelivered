@@ -538,6 +538,16 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "AspNetCoreTemplate.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/AspNetCoreTemplate.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspNetCoreTemplate.Common.dll": {}
+        }
+      },
       "AspNetCoreTemplate.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1646,6 +1656,11 @@
         "version.txt"
       ]
     },
+    "AspNetCoreTemplate.Common/1.0.0": {
+      "type": "project",
+      "path": "../../AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj",
+      "msbuildProject": "../../AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj"
+    },
     "AspNetCoreTemplate.Data.Common/1.0.0": {
       "type": "project",
       "path": "../../Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj",
@@ -1669,6 +1684,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "AspNetCoreTemplate.Common >= 1.0.0",
       "AspNetCoreTemplate.Data.Common >= 1.0.0",
       "AspNetCoreTemplate.Data.Models >= 1.0.0",
       "AspNetCoreTemplate.Services.Mapping >= 1.0.0",
@@ -1701,6 +1717,9 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj": {
+              "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj"
+            },
             "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj": {
               "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj"
             },

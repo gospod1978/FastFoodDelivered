@@ -5,12 +5,14 @@
 
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.AddressService;
+    using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Orders;
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using AspNetCoreTemplate.Web.ViewModels.Orders;
-    using AspNetCoreTemplate.Web.ViewModels.Purchase;
+    using AspNetCoreTemplate.Web.ViewModels.Purchases;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using Microsoft.AspNetCore.Authorization;
@@ -27,6 +29,8 @@
         private readonly IOrdersService ordersService;
         private readonly IUserService userService;
         private readonly IUsersDataService usersDataService;
+        private readonly IImagesService pictureService;
+        private readonly ICourierService courierService;
 
         public PurchaseController(
             UserManager<ApplicationUser> userManager,
@@ -36,7 +40,9 @@
             IAddressService addressService,
             IOrdersService ordersService,
             IUserService userService,
-            IUsersDataService usersDataService)
+            IUsersDataService usersDataService,
+            IImagesService pictureService,
+            ICourierService courierService)
         {
             this.userManager = userManager;
             this.purchaseService = purchaseService;
@@ -46,6 +52,8 @@
             this.ordersService = ordersService;
             this.userService = userService;
             this.usersDataService = usersDataService;
+            this.pictureService = pictureService;
+            this.courierService = courierService;
         }
 
         [Authorize]
@@ -55,9 +63,6 @@
             var userLogin = await this.userManager.GetUserAsync(this.User);
             var locationObjUserId = this.locationsObjectService.GetLocationByUserIdOnly<LocationObjectIndexViewModel>(userLogin.Id);
             var userIdrest = this.ordersService.GetById<OrderDetailsViewModel>(orderId);
-
-            // var userIdByRestId = this.restaurantService.GetById<InfoRestaurantModel>(restaurantId);
-            // var workingAreaRestaurant = this.addressService.GetByWorkingAreaByUserId(userIdrest.RestaurantId);
             var workingAreaRestaurant = this.userService.GetUserByRestaurantId(userIdrest.RestaurantId);
             var restorant = this.restaurantService.GetById<RestaurantAll>(workingAreaRestaurant);
             var locationRestaurantAreaName = restorant.Area.AreaName;
@@ -65,11 +70,7 @@
             var restName = this.restaurantService.GetById<RestaurantAll>(restorant.Id);
             var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
             var priceDelivery = this.purchaseService.PriceCourier(userAreaName, locationRestaurantAreaName);
-            //var courierId = this.purchaseService.CourierIdFind(restorant.AreaId);
-
-            //var courierPrice = this.purchaseService.FindCourier(locationRestaurant);
-            //var courierId = courierPrice.ElementAt(0).Key;
-            //var deliveryPrice = courierPrice.ElementAt(0).Value;
+            var courierId = this.purchaseService.CourierIdFind(restorant.AreaId);
 
             var order = this.ordersService.GetById<OrderDetailsViewModel>(orderId);
 
@@ -78,10 +79,11 @@
             viewModel.OrderId = orderId;
             viewModel.OrderName = order.Name;
             viewModel.ResaurantName = restname.Name;
+            viewModel.RestaurantId = restorant.Id;
             viewModel.LocationRestaurantAreaId = restorant.AreaId;
             viewModel.PromotionType = userIdrest.PromotionType.ToString();
             viewModel.MenuPrice = order.Price;
-            //viewModel.CourierId = courierId;
+            viewModel.CourierId = courierId;
             viewModel.DeliveryPrice = priceDelivery;
 
             return this.View(viewModel);
@@ -99,9 +101,98 @@
             return this.RedirectToAction(nameof(this.Details), new { id = purchase });
         }
 
+        [Authorize]
         public IActionResult Details(string id)
         {
-            return this.View();
+            var purchase = this.purchaseService.GetById<DetailsPurchaseViewModel>(id);
+            var viewModel = new DetailsPurchaseViewModel();
+            var user = this.usersDataService.GetByUserId<CourierUserDataViewModel>(purchase.UserId);
+            var photo = this.pictureService.GetAllImagesByUser<ViewModels.UsersData.ImageDetailsViewModel>(user.Id).FirstOrDefault();
+            var restName = this.restaurantService.GetById<RestaurantAll>(purchase.RestaurantId);
+            var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
+            var courier = this.courierService.GetById<CourierWaitApprove>(purchase.CourierId);
+            var couriername = this.usersDataService.GetByUserId<UserDataIndexViewModel>(courier.UserId);
+            viewModel.Id = purchase.Id;
+            viewModel.OrderId = purchase.OrderId;
+            viewModel.OrderName = purchase.OrderName;
+            viewModel.UserId = purchase.UserId;
+            viewModel.RestaurantId = purchase.RestaurantId;
+            viewModel.RestaurantName = restname.Name;
+            viewModel.CourierId = purchase.CourierId;
+            viewModel.CourierName = couriername.Name;
+            viewModel.Status = purchase.Status;
+            viewModel.PromotionType = purchase.PromotionType;
+            viewModel.Price = purchase.Price;
+            viewModel.MenuPrice = purchase.MenuPrice;
+            viewModel.DeliveryPrice = purchase.DeliveryPrice;
+            viewModel.Photo = photo.DataFiles;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> AllByStatus()
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var role = user.Roles;
+            var purchases = this.purchaseService.GetAll<DetailsPurchaseViewModel>(user.Id, role.ToString());
+            var viewModel = new AllPurchaseViewModel();
+            viewModel.Purchases = purchases;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult Status(string id)
+        {
+            var purchase = this.purchaseService.GetById<DetailsPurchaseViewModel>(id);
+            var viewModel = new DetailsPurchaseViewModel();
+            viewModel.OrderName = purchase.OrderName;
+            viewModel.Status = purchase.Status;
+            viewModel.NewStatus = this.NextStatus(purchase.Status);
+            viewModel.Id = id;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult Status(DetailsPurchaseViewModel input)
+        {
+            this.purchaseService.ChangeStatus(input.Id, input.NewStatus);
+
+            return this.RedirectToAction(nameof(this.AllByStatus));
+        }
+
+        private string NextStatus(string status)
+        {
+            string newStatus = string.Empty;
+            if (status == "Purchaise")
+            {
+                newStatus = "PreparedRestaurant";
+            }
+            else if (status == "PreparedRestaurant")
+            {
+                newStatus = "Delivered";
+            }
+            else if (status == "Delivered")
+            {
+                newStatus = "InClient";
+            }
+            else if (status == "InClient")
+            {
+                newStatus = "Unpaid";
+            }
+            else if (status == "Unpaid")
+            {
+                newStatus = "Paid";
+            }
+            else
+            {
+                newStatus = "Finished";
+            }
+
+            return newStatus;
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using AspNetCoreTemplate.Data.Models.Couriers;
-using AspNetCoreTemplate.Services.Mapping;
-
-namespace AspNetCoreTemplate.Web.ViewModels.Couriers
+﻿namespace AspNetCoreTemplate.Web.ViewModels.Couriers
 {
+    using AspNetCoreTemplate.Data.Models.Couriers;
+    using AspNetCoreTemplate.Services.Mapping;
+
     public class CourierDetailsViewModel : IMapFrom<Courier>
     {
         public string Id { get; set; }
@@ -18,6 +18,8 @@ namespace AspNetCoreTemplate.Web.ViewModels.Couriers
         public string Birthday { get; set; }
 
         public string AreaId { get; set; }
+
+        public string WorkingAreaId { get; set; }
 
         public string WorkingArea { get; set; }
 
