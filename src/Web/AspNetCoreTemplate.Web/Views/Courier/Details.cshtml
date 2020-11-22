@@ -9,15 +9,15 @@
     </div>
 }
 
-<h1>@this.ViewData["Title"]</h1>
+<h1 style="margin:20px;">@this.ViewData["Title"]</h1>
 
 <div class="container-fluid mt-100">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="card mb-4">
                 <div class="card-header">
                     <div class="media flex-wrap w-100 align-items-center">
-                        <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" width="80" height="80" class="d-block ui-w-40 rounded-circle" alt="@Model.ImageName" />
+                        <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" width="120" height="120" class="d-block ui-w-40 rounded-circle" alt="@Model.ImageName" />
                         <div class="media-body ml-3">
                             <div class="text-muted small">
                                 <p>Full name - @Model.CourierName</p>
@@ -47,3 +47,5 @@
         </div>
     </div>
 </div>
+
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">Back</a>

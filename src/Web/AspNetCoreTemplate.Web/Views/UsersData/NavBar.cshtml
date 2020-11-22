@@ -1,16 +1,33 @@
-﻿@{
+﻿@using AspNetCoreTemplate.Common
+@using AspNetCoreTemplate.Data.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
     this.ViewData["Title"] = "Users Panel";
 }
-    <ul>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="Create">Create</a>
-        </li>
+<ul>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="Create">Create</a>
+    </li>
+    @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+   this.User.IsInRole(GlobalConstants.CourierRoleName) ||
+   this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+   this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="Index">Info</a>
         </li>
+
+    }
+    @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+       this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="All">All</a>
         </li>
-    </ul>
+    }
+</ul>
 
 <a class="btn btn-danger" asp-area="" asp-controller="Address" asp-action="NavBarAddress">Back</a>

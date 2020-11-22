@@ -59,7 +59,7 @@
         public IEnumerable<T> GetAllByCategoryName<T>(string name, int? count = null)
         {
             IQueryable<Order> query =
-              this.orderRepository.All().Where(a => a.Category.Name == name).OrderByDescending(x => x.Price);
+              this.orderRepository.All().Where(a => a.Category.Name == name && a.Restaurant.IsWorking == AspNetCoreTemplate.Data.Models.Addresses.IsWorking.Yes).OrderByDescending(x => x.Price);
 
             if (count.HasValue)
             {

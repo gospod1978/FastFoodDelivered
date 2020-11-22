@@ -23,5 +23,9 @@
         void MadeIsRestaurant(string id);
 
         void MadeIsNoRestaurant(string id);
+
+        Task<string> CreateWorkingAreaByRestaurantId(string restaurantId);
+
+        Task<string> ChangeWorkingAreaByRestaurantId(string restaurantId, string areaId);
     }
 }

@@ -2,7 +2,8 @@
 @model AspNetCoreTemplate.Web.ViewModels.Orders.AllOrdersViewModel
 
 @{
-    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
+    this.ViewData["Title"] = $"All Order By Category";
+    
 }
 @if (this.TempData["InfoMessageApply"] != null)
 {
@@ -12,23 +13,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">@this.ViewData["Title"]</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 style="margin:20px;">@this.ViewData["Title"]</h1>
 </div>
-<ul>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create</a>
-    </li>
-</ul>
 @if (Model.Orders.Count() == 0)
 {
 
 }
 else
 {
-    <h1>Book</h1>
-
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Menu</th>
@@ -39,8 +32,8 @@ else
                 <th>Total Price</th>
                 <th>Time</th>
                 <th>Description</th>
+                <th>Details</th>
                 <th>Purchase</th>
-                <th>OrderId</th>
             </tr>
         </thead>
         <tbody>
@@ -54,16 +47,14 @@ else
                 <td>@order.DeliveryPrice</td>
                 <td>@order.TotalPrice</td>
                 <td>@order.TimePrepartion</td>
-                <td>@order.Content</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Create" asp-route-id="@order.Id">Purchase</a></td>
-                <td>@order.Id</td>
+                <td>@order.ShortContent</td>
+                <td><a class="btn btn-primary" asp-area="" asp-controller="Order" asp-action="Details" asp-route-id="@order.Id">Details</a></td>
+                <td><a class="btn btn-primary" asp-area="" asp-controller="Purchase" asp-action="Create" asp-route-id="@order.Id">Purchase</a></td>
+                
             </tr>
             }
         </tbody>
     </table>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
-    </li>
-    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
-    <a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
 }
+
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">Back</a>

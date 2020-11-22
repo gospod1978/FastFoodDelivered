@@ -80,7 +80,6 @@
         public async void DeleteById(string id)
         {
             var entity = this.documentRepository.All().Where(x => x.Id == id).FirstOrDefault();
-
             this.documentRepository.Delete(entity);
             await this.documentRepository.SaveChangesAsync();
         }

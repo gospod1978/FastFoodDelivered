@@ -450,7 +450,7 @@ footer {
 }
 
 .home-margin {
-    margin-right: 300px;
+    margin-right: 600px;
 }
 
 .btn-my {
@@ -466,4 +466,6 @@ footer {
     border-radius: 5px;
 }
 
-
+.purchase-image {
+    border-radius: 5px;
+}

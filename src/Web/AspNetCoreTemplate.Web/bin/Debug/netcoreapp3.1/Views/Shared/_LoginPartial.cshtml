@@ -22,33 +22,7 @@
             </li>
         }
 
-        if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
-            this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-            this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
-            </li>
-        }
-
-        if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
-            this.User.IsInRole(GlobalConstants.CourierRoleName) ||
-            this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-            this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">All Purchase by Status</a>
-            </li>
-        }
-        else
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Courier" asp-action="Create1">Courier Apply</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Restaurant" asp-action="Create1">Restaurant Apply</a>
-            </li>
-        }
+       
 
         <li class="nav-item">
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">

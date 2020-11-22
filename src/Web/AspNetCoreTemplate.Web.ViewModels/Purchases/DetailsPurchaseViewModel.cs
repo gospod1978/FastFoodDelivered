@@ -1,5 +1,6 @@
 ﻿namespace AspNetCoreTemplate.Web.ViewModels.Purchases
 {
+    using System;
     using AspNetCoreTemplate.Data.Models.Orders;
     using AspNetCoreTemplate.Services.Mapping;
 
@@ -24,6 +25,8 @@
         public string Status { get; set; }
 
         public string NewStatus { get; set; }
+
+        public DateTime CreatedOn { get; set; }
 
         public string PromotionType { get; set; }
 

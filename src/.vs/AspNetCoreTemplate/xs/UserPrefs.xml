@@ -1,10 +1,20 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/AspNetCoreTemplate.Services.Data/UserService/ImagesService.cs">
     <Files>
-      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" Line="131" Column="10" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/IPurchaseService.cs" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Shared/_LoginPartial.cshtml" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Home/Index.cshtml" Line="30" Column="105" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" Line="115" Column="52" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByStatus.cshtml" Line="27" Column="2" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/Purchase.cshtml" Line="47" Column="43" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Order/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Order/AllByCategories.cshtml" Line="24" Column="12" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Purchases/AllPurchaseViewModel.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Purchases/DetailsPurchaseViewModel.cs" Line="7" Column="42" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Orders/OrderDetailsViewModel.cs" Line="10" Column="39" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/PictureService.cs" Line="1" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/IPictureService.cs" Line="1" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/UserService/ImagesService.cs" Line="67" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,28 +36,40 @@
                 <Node name="AddressService" expanded="True" />
                 <Node name="Courier" expanded="True" />
                 <Node name="Orders" expanded="True" />
+                <Node name="Restaurant" expanded="True" />
+                <Node name="UserService" expanded="True">
+                  <Node name="ImagesService.cs" selected="True" />
+                </Node>
               </Node>
               <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
             </Node>
             <Node name="Web" expanded="True">
               <Node name="AspNetCoreTemplate.Web" expanded="True">
                 <Node name="Areas" expanded="True">
-                  <Node name="Identity" expanded="True" />
+                  <Node name="Identity" expanded="True">
+                    <Node name="Pages" expanded="True">
+                      <Node name="Account" expanded="True" />
+                    </Node>
+                  </Node>
                 </Node>
-                <Node name="Controllers" expanded="True">
-                  <Node name="PurchaseController.cs" selected="True" />
-                </Node>
+                <Node name="Controllers" expanded="True" />
                 <Node name="Views" expanded="True">
+                  <Node name="Categories" expanded="True" />
                   <Node name="Courier" expanded="True" />
                   <Node name="Home" expanded="True" />
                   <Node name="Order" expanded="True" />
                   <Node name="Purchase" expanded="True" />
+                  <Node name="Restaurant" expanded="True" />
                   <Node name="Shared" expanded="True" />
                   <Node name="UsersData" expanded="True" />
+                </Node>
+                <Node name="wwwroot" expanded="True">
+                  <Node name="css" expanded="True" />
                 </Node>
               </Node>
               <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
                 <Node name="Couriers" expanded="True" />
+                <Node name="Home" expanded="True" />
                 <Node name="Orders" expanded="True" />
                 <Node name="Purchases" expanded="True" />
                 <Node name="Restaurants" expanded="True" />
@@ -68,8 +90,7 @@
   </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" relfile="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" line="164" column="1" />
-      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" relfile="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" line="177" column="1" />
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" line="116" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

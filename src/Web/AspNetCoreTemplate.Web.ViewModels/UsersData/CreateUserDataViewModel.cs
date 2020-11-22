@@ -8,6 +8,7 @@
     public class CreateUserDataViewModel : IMapFrom<UserData>
     {
         [Required]
+        [Display(Name="Write your Full Name")]
         public string Name { get; set; }
 
         public string UserId { get; set; }

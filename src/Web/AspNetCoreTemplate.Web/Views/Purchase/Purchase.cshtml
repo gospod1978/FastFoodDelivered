@@ -25,33 +25,32 @@
 }
 else
 {
-
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Menu</th>
                 <th>Price</th>
+                <th>RestourantName</th>
+                <th>CourierName</th>
                 <th>Status</th>
-                <th>Change Status</th>
+                <th>Date Created</th>
                 <th>OrderId</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var order in Model.Purchases)
             {
-            <tr>
-                <td>@order.OrderName </td>
-                <td>@order.Price</td>
-                <td>@order.Status</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Status" asp-route-id="@order.Id">Change Status</a></td>
-                <td>@order.Id</td>
-            </tr>
+                <tr>
+                    <td>@order.OrderName </td>
+                    <td>@order.Price</td>
+                    <td>@order.RestaurantName</td>
+                    <td>@order.CourierName</td>
+                    <td>@order.Status</td>
+                    <td>@order.CreatedOn.ToString("d")</td>
+                    <td>@order.Id</td>
+                </tr>
             }
         </tbody>
     </table>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
-    </li>
-    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
-    <a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
 }

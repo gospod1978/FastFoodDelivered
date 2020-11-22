@@ -4,9 +4,9 @@
     {
         public const string FoodMobileJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
 
-        public const string CarrersJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string CarriersJpg = "https://food.bolt.eu/static/careers-4243bf4be07ec2ebb96b78408b27ea7f.jpg";
 
-        public const string CourierJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string CourierJpg = "https://food.bolt.eu/static/courier-3546d0ca0a22f0f40ead0e7212de72d8.jpg";
 
         public const string FacebookSvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
 
@@ -20,7 +20,7 @@
 
         public const string PhoneJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
 
-        public const string RestaurantJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string RestaurantJpg = "https://food.bolt.eu/static/restaurant-1614ba22162498ce62957e30130ebcf5.jpg";
 
         public const string TwiterSvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
 

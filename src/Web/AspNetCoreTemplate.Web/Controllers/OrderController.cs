@@ -168,11 +168,5 @@
 
             return this.View(viewModel);
         }
-
-        //[Authorize]
-        //public IActionResult ChangeStatus(string id)
-        //{
-        //    var order = this.ordersService.
-        //}
     }
 }

@@ -3,6 +3,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Courier;
@@ -107,11 +108,11 @@
             var purchase = this.purchaseService.GetById<DetailsPurchaseViewModel>(id);
             var viewModel = new DetailsPurchaseViewModel();
             var user = this.usersDataService.GetByUserId<CourierUserDataViewModel>(purchase.UserId);
-            var photo = this.pictureService.GetAllImagesByUser<ViewModels.UsersData.ImageDetailsViewModel>(user.Id).FirstOrDefault();
             var restName = this.restaurantService.GetById<RestaurantAll>(purchase.RestaurantId);
             var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
             var courier = this.courierService.GetById<CourierWaitApprove>(purchase.CourierId);
             var couriername = this.usersDataService.GetByUserId<UserDataIndexViewModel>(courier.UserId);
+            var photo = this.pictureService.GetAllImagesByUser<ViewModels.UsersData.ImageDetailsViewModel>(couriername.Id).FirstOrDefault();
             viewModel.Id = purchase.Id;
             viewModel.OrderId = purchase.OrderId;
             viewModel.OrderName = purchase.OrderName;
@@ -134,8 +135,45 @@
         public async Task<IActionResult> AllByStatus()
         {
             var user = await this.userManager.GetUserAsync(this.User);
-            var role = user.Roles;
-            var purchases = this.purchaseService.GetAll<DetailsPurchaseViewModel>(user.Id, role.ToString());
+            var role = string.Empty;
+            if (this.User.IsInRole(GlobalConstants.CourierRoleName))
+            {
+                role = GlobalConstants.CourierRoleName;
+            }
+            else if (this.User.IsInRole(GlobalConstants.RestaurantRoleName))
+            {
+                role = GlobalConstants.RestaurantRoleName;
+            }
+            else if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) || this.User.IsInRole(GlobalConstants.AdminRoleName))
+            {
+                role = GlobalConstants.AdminRoleName;
+            }
+
+            var purchases = this.purchaseService.GetAll<DetailsPurchaseViewModel>(user.Id, role);
+            var viewModel = new AllPurchaseViewModel();
+            viewModel.Purchases = purchases;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Purchase()
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var purchases = this.purchaseService.GetAllByUserId<DetailsPurchaseViewModel>(user.Id);
+            foreach (var item in purchases)
+            {
+                var purchase = this.purchaseService.GetById<DetailsPurchaseViewModel>(item.Id);
+                var orderName = this.ordersService.GetById<OrderDetailsViewModel>(purchase.OrderId);
+                var restName = this.restaurantService.GetById<RestaurantAll>(purchase.RestaurantId);
+                var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
+                var courier = this.courierService.GetById<CourierWaitApprove>(purchase.CourierId);
+                var couriername = this.usersDataService.GetByUserId<UserDataIndexViewModel>(courier.UserId);
+                item.RestaurantName = restname.Name;
+                item.CourierName = couriername.Name;
+                item.OrderName = orderName.Name;
+            }
+
             var viewModel = new AllPurchaseViewModel();
             viewModel.Purchases = purchases;
 

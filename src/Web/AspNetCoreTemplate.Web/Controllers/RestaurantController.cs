@@ -15,6 +15,7 @@
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
+    using AspNetCoreTemplate.Web.ViewModels.Streets;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
@@ -179,7 +180,7 @@
             var photo = this.imagesService.GetAllImagesByUser<ImageDetailsViewModel>(user.Id).FirstOrDefault();
             var viewModel = new RestaurantDetailsViewModel();
 
-            viewModel.CourierName = user.Name;
+            viewModel.FullName = user.Name;
             viewModel.City = area.City.CityName;
             viewModel.Email = userData.Email;
             viewModel.Photo = photo.DataFiles;
@@ -194,6 +195,38 @@
             }
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult IsActive(string id)
+        {
+            var restDetails = this.restaurantService.GetById<RestaurantDetailsViewModel>(id);
+            var city = this.areasService.GetById<AreasAll>(restDetails.AreaId);
+            var cityName = city.City.CityName;
+            var areas = this.areasService.GetAllAreas<AreasDropDownMenu>(city.CityId);
+            var viewModel = new ChangeWorkingAreaIdViewModel();
+            viewModel.Areas = areas;
+            viewModel.CityName = cityName;
+            viewModel.RestaurantId = id;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> IsActive(ChangeWorkingAreaIdViewModel input)
+        {
+            await this.restaurantService.ChangeWorkingAreaByRestaurantId(input.RestaurantId, input.AreaId);
+
+            return this.RedirectToAction(nameof(this.Details), new { id = input.RestaurantId });
+        }
+
+        [Authorize]
+        public async Task<IActionResult> IsWorking(string id)
+        {
+            await this.restaurantService.CreateWorkingAreaByRestaurantId(id);
+
+            return this.RedirectToAction(nameof(this.Details), new { id = id });
         }
 
         private string Image()

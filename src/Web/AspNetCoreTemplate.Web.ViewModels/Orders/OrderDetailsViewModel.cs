@@ -51,5 +51,16 @@
                         : content;
             }
         }
+
+        public string ShortContent
+        {
+            get
+            {
+                var content = WebUtility.HtmlDecode(Regex.Replace(this.Description, @"<[^>]+>", string.Empty));
+                return content.Length > 5
+                        ? content.Substring(0, 5) + "..."
+                        : content;
+            }
+        }
     }
 }

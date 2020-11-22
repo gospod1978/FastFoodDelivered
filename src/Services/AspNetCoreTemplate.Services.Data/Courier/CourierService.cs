@@ -75,13 +75,14 @@
             if (workingArea.ActiveWorkingArea == ActiveWorkingArea.Yes)
             {
                 workingArea.ActiveWorkingArea = ActiveWorkingArea.No;
+                courier.IsWorking = IsWorking.No;
             }
             else
             {
                 workingArea.ActiveWorkingArea = ActiveWorkingArea.Yes;
+                courier.IsWorking = IsWorking.Yes;
             }
 
-            courier.IsWorking = IsWorking.Yes;
             this.courierRepository.Update(courier);
             this.workingAreaRepository.Update(workingArea);
             await this.workingAreaRepository.SaveChangesAsync();
