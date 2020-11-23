@@ -15,8 +15,24 @@
         public const string RestaurantRoleName = "Restaurant";
 
         public const string EmailApiKey =
-            "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";
+            "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";
+
+        public const string EmailRegistrationApiKey = "mgospodinov1978@gmail.com";
 
         public const string Sofia = "Sofia";
+
+        public const string Purchase = "Purchaise";
+
+        public const string PreparedRestaurant = "PreparedRestaurant";
+
+        public const string Delivered = "Delivered";
+
+        public const string InClient = "InClient";
+
+        public const string Unpaid = "Unpaid";
+
+        public const string Paid = "Paid";
+
+        public const string Finished = "Finished";
     }
 }

@@ -40,6 +40,7 @@
           "Microsoft.EntityFrameworkCore.Design": "3.1.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Microsoft.Web.LibraryManager.Build": "2.1.76",
+          "SendGrid": "9.21.2",
           "StyleCop.Analyzers": "1.2.0-beta.164",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1526,15 +1527,15 @@
           }
         }
       },
-      "SendGrid/9.18.0": {
+      "SendGrid/9.21.2": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
           "starkbank-ecdsa": "1.2.0"
         },
         "runtime": {
           "lib/netstandard2.0/SendGrid.dll": {
-            "assemblyVersion": "9.18.0.0",
-            "fileVersion": "9.18.0.0"
+            "assemblyVersion": "9.21.2.0",
+            "fileVersion": "9.21.2.0"
           }
         },
         "compile": {
@@ -2604,7 +2605,7 @@
       },
       "AspNetCoreTemplate.Services.Messaging/1.0.0": {
         "dependencies": {
-          "SendGrid": "9.18.0"
+          "SendGrid": "9.21.2"
         },
         "runtime": {
           "AspNetCoreTemplate.Services.Messaging.dll": {}
@@ -2623,10 +2624,12 @@
       },
       "AspNetCoreTemplate.Web.ViewModels/1.0.0": {
         "dependencies": {
+          "AspNetCoreTemplate.Common": "1.0.0",
           "AspNetCoreTemplate.Data.Models": "1.0.0",
           "AspNetCoreTemplate.Services.Mapping": "1.0.0",
           "HtmlSanitizer": "5.0.343",
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "SendGrid": "9.21.2"
         },
         "runtime": {
           "AspNetCoreTemplate.Web.ViewModels.dll": {}
@@ -4851,12 +4854,12 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
-    "SendGrid/9.18.0": {
+    "SendGrid/9.21.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WEZUHnHpdI/6xHvqZRZDCKhFyyyys4lnAf50qiME29QDyCVjYBjMDC/KkuLEEDnQfllBrmqkX8DNyf4XU9og9g==",
-      "path": "sendgrid/9.18.0",
-      "hashPath": "sendgrid.9.18.0.nupkg.sha512"
+      "sha512": "sha512-vYp/UPtiO9FkaziuVzoGJqmKJV4WBhN6gmryXnpL9ga/UPJH2bBmzg0As8DO75lhboORKYim8cZFdDhKVthokQ==",
+      "path": "sendgrid/9.21.2",
+      "hashPath": "sendgrid.9.21.2.nupkg.sha512"
     },
     "starkbank-ecdsa/1.2.0": {
       "type": "package",

@@ -17,6 +17,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult Create()
         {
             var viewModel = new CityCreateInputViewModel();
@@ -26,6 +27,7 @@
 
         [HttpPost]
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public async Task<IActionResult> Create(CityCreateInputViewModel input)
         {
             if (!this.ModelState.IsValid)
@@ -39,6 +41,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult All()
         {
             var viewModel = new ViewModels.Cities.CityIndexViewModel();
@@ -51,6 +54,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult NavBar()
         {
             return this.View();

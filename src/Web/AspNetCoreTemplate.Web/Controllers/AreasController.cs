@@ -51,6 +51,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public async Task<IActionResult> CreateAllAreaInSofia()
         {
             var cities = this.citiesService.GetAllCities<CityDropDownViewModels>();

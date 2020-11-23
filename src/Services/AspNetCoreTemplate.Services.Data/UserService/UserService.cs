@@ -10,6 +10,7 @@
     using AspNetCoreTemplate.Data.Models.Restaurants;
     using AspNetCoreTemplate.Data.Models.UserHome;
     using AspNetCoreTemplate.Services.Mapping;
+    using AspNetCoreTemplate.Web.ViewModels.Users;
     using Microsoft.AspNetCore.Identity;
 
     public class UserService : IUserService
@@ -20,6 +21,7 @@
         private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
         private readonly IDeletableEntityRepository<UserData> dataRepository;
         private readonly IDeletableEntityRepository<Restaurant> restaurantRepository;
+        private readonly IDeletableEntityRepository<Email> emailRepository;
 
         public UserService(
             UserManager<ApplicationUser> userManager,
@@ -27,7 +29,8 @@
             IRoleService roleServices,
             IDeletableEntityRepository<ApplicationUser> userRepository,
             IDeletableEntityRepository<UserData> dataRepository,
-            IDeletableEntityRepository<Restaurant> restaurantRepository)
+            IDeletableEntityRepository<Restaurant> restaurantRepository,
+            IDeletableEntityRepository<Email> emailRepository)
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
@@ -35,6 +38,7 @@
             this.userRepository = userRepository;
             this.dataRepository = dataRepository;
             this.restaurantRepository = restaurantRepository;
+            this.emailRepository = emailRepository;
         }
 
         public async void AddRoleCourier(string userName, string role)
@@ -56,10 +60,53 @@
             return user.UserName.ToString();
         }
 
+        public async Task<string> CreateAsyncEmail(EmailModel input)
+        {
+            var email = new Email
+            {
+                From = input.From,
+                To = input.To,
+                Subject = input.Subject,
+                Body = input.Body,
+                OriginalEmail = input.OriginalEmail,
+                UserId = input.UserId,
+            };
+            await this.emailRepository.AddAsync(email);
+            await this.emailRepository.SaveChangesAsync();
+
+            return email.Id;
+        }
+
         public IEnumerable<T> GetAll<T>(int? count = null)
         {
             IQueryable<ApplicationUser> query =
                 this.userManager.Users.OrderBy(x => x.UserName);
+
+            if (count.HasValue)
+            {
+                query = query.Take(count.Value);
+            }
+
+            return query.To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllEmailByUserId<T>(string id, int? count = null)
+        {
+            IQueryable<Email> query =
+                this.emailRepository.All().Where(x => x.UserId == id).OrderBy(x => x.From);
+
+            if (count.HasValue)
+            {
+                query = query.Take(count.Value);
+            }
+
+            return query.To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllEmail<T>(int? count = null)
+        {
+            IQueryable<Email> query =
+                this.emailRepository.All().OrderBy(x => x.From);
 
             if (count.HasValue)
             {
@@ -92,6 +139,14 @@
                 .To<T>().FirstOrDefault();
 
             return user;
+        }
+
+        public T GetEmailById<T>(string id)
+        {
+            var email = this.emailRepository.All().Where(x => x.Id == id)
+                .To<T>().FirstOrDefault();
+
+            return email;
         }
 
         public string GetUserByRestaurantId(string id)

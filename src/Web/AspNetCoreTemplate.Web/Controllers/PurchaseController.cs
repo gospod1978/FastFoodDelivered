@@ -107,7 +107,6 @@
         {
             var purchase = this.purchaseService.GetById<DetailsPurchaseViewModel>(id);
             var viewModel = new DetailsPurchaseViewModel();
-            var user = this.usersDataService.GetByUserId<CourierUserDataViewModel>(purchase.UserId);
             var restName = this.restaurantService.GetById<RestaurantAll>(purchase.RestaurantId);
             var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
             var courier = this.courierService.GetById<CourierWaitApprove>(purchase.CourierId);
@@ -132,6 +131,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant, Courier")]
         public async Task<IActionResult> AllByStatus()
         {
             var user = await this.userManager.GetUserAsync(this.User);
@@ -205,29 +205,29 @@
         private string NextStatus(string status)
         {
             string newStatus = string.Empty;
-            if (status == "Purchaise")
+            if (status == GlobalConstants.Purchase)
             {
-                newStatus = "PreparedRestaurant";
+                newStatus = GlobalConstants.PreparedRestaurant;
             }
-            else if (status == "PreparedRestaurant")
+            else if (status == GlobalConstants.PreparedRestaurant)
             {
-                newStatus = "Delivered";
+                newStatus = GlobalConstants.Delivered;
             }
-            else if (status == "Delivered")
+            else if (status == GlobalConstants.Delivered)
             {
-                newStatus = "InClient";
+                newStatus = GlobalConstants.InClient;
             }
-            else if (status == "InClient")
+            else if (status == GlobalConstants.InClient)
             {
-                newStatus = "Unpaid";
+                newStatus = GlobalConstants.Unpaid;
             }
-            else if (status == "Unpaid")
+            else if (status == GlobalConstants.Unpaid)
             {
-                newStatus = "Paid";
+                newStatus = GlobalConstants.Paid;
             }
             else
             {
-                newStatus = "Finished";
+                newStatus = GlobalConstants.Finished;
             }
 
             return newStatus;

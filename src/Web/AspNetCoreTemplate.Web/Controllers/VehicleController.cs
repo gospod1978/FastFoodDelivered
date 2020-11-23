@@ -17,6 +17,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Courier")]
         public IActionResult Create()
         {
             var viewModel = new VehicleCreateInputViewModel();
@@ -26,6 +27,7 @@
 
         [HttpPost]
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Courier")]
         public async Task<IActionResult> Create(VehicleCreateInputViewModel input)
         {
             if (!this.ModelState.IsValid)
@@ -39,6 +41,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Courier")]
         public IActionResult All()
         {
             var viewModel = new ViewModels.Vehicle.VehicleIndexViewModel();

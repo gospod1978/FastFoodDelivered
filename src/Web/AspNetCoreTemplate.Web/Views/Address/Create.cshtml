@@ -1,6 +1,11 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Addresses.CreateAddressInputModel
+﻿@using AspNetCoreTemplate.Common
+@using AspNetCoreTemplate.Data.Models
+@using Microsoft.AspNetCore.Identity
+@model AspNetCoreTemplate.Web.ViewModels.Addresses.CreateAddressInputModel
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
-    this.ViewData["Title"] = "Street Create";
+    this.ViewData["Title"] = "Street Address";
     var cities = Model.Cities.Select(x => new SelectListItem(x.CityName, x.Id.ToString()));
 }
 
@@ -15,5 +20,9 @@
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
-<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">Back</a>
-<a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="Create">Create City</a>
+<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+@if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+        this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+{
+    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">Create City</a>
+}

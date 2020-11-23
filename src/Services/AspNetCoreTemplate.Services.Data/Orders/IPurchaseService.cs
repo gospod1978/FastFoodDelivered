@@ -20,7 +20,7 @@
 
         IEnumerable<T> GetAllByPromotionType<T>(string promotionType, int? count = null);
 
-        Task ChangeStatus(string purchazeId, string status);
+        Task<string> ChangeStatus(string purchazeId, string status);
 
         Dictionary<string, decimal> FindCourier(string restaurantLocation);
 

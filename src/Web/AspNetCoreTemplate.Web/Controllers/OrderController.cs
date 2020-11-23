@@ -59,6 +59,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public IActionResult MenuCreate()
         {
             var categories = this.categoriesService.GetAll<CategoryDropDownViewModels>();
@@ -70,6 +71,7 @@
 
         [Authorize]
         [HttpPost]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public async Task<IActionResult> MenuCreate(OrderCreateInputViewModel input)
         {
             if (!this.ModelState.IsValid)
@@ -115,6 +117,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public IActionResult Details(string id)
         {
             var viewModel = new OrderIndexViewModel();

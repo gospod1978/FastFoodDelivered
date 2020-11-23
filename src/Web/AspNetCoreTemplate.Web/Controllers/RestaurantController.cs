@@ -162,12 +162,18 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
                 var userLogin = await this.userManager.GetUserAsync(this.User);
                 var restaurant = this.restaurantService.GetByUserId<RestaurantAll>(userLogin.Id);
+                if (restaurant == null)
+                {
+                    return this.RedirectToAction("AllRestaurants", "UsersData");
+                }
+
                 id = restaurant.Id;
             }
 
@@ -198,6 +204,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public IActionResult IsActive(string id)
         {
             var restDetails = this.restaurantService.GetById<RestaurantDetailsViewModel>(id);
@@ -214,6 +221,7 @@
 
         [Authorize]
         [HttpPost]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public async Task<IActionResult> IsActive(ChangeWorkingAreaIdViewModel input)
         {
             await this.restaurantService.ChangeWorkingAreaByRestaurantId(input.RestaurantId, input.AreaId);
@@ -222,6 +230,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public async Task<IActionResult> IsWorking(string id)
         {
             await this.restaurantService.CreateWorkingAreaByRestaurantId(id);

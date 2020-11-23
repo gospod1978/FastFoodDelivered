@@ -1,16 +1,18 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
-    using System;
     using System.IO;
-    using System.IO.MemoryMappedFiles;
     using System.Threading.Tasks;
 
+    using AspNetCoreTemplate.Services.Data.AddressService;
+    using AspNetCoreTemplate.Services.Data.Courier;
+    using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Web.ViewModels.Couriers;
+    using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.Users;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Hosting.Server;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
@@ -21,19 +23,28 @@
         private readonly IDocumentsService documentsService;
         private readonly IImagesService imagesService;
         private readonly IWebHostEnvironment hostEnvironment;
+        private readonly ICourierService courierService;
+        private readonly ICitiesService citiesService;
+        private readonly IRestaurantService restaurantService;
 
         public UsersDataController(
             IUserService userService,
             IUsersDataService usersDataService,
             IDocumentsService documentsService,
             IImagesService imagesService,
-            IWebHostEnvironment hostEnvironment)
+            IWebHostEnvironment hostEnvironment,
+            ICourierService courierService,
+            ICitiesService citiesService,
+            IRestaurantService restaurantService)
         {
             this.userService = userService;
             this.usersDataService = usersDataService;
             this.documentsService = documentsService;
             this.imagesService = imagesService;
             this.hostEnvironment = hostEnvironment;
+            this.courierService = courierService;
+            this.citiesService = citiesService;
+            this.restaurantService = restaurantService;
         }
 
         [Authorize]
@@ -222,6 +233,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult AskDelete(string id)
         {
             var document = this.documentsService.GetById<DocumentDeleted>(id);
@@ -234,6 +246,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult Delete(string id)
         {
             var document = this.documentsService.GetById<DocumentDeleted>(id);
@@ -391,6 +404,44 @@
             var imageId = await this.imagesService.CreateAsyncImage(uniqueFileName, extension, target.ToArray(), input.UserDataId);
 
             return this.RedirectToAction("Create2", "Courier", new { id = imageId, userId = input.UserDataId });
+        }
+
+        [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
+        public IActionResult AllCouriers()
+        {
+            var curiers = this.courierService.GetAll<CuriersAll>();
+            var viewModel = new AllUserDataCourierViewModel();
+            foreach (var curier in curiers)
+            {
+                var cityName = this.citiesService.GetCityNameByAreaId(curier.AreaId);
+                curier.CityName = cityName;
+                var courierName = this.usersDataService.GetByUserId<UserDataIndexViewModel>(curier.UserId);
+                curier.Name = courierName.Name;
+            }
+
+            viewModel.Couriers = curiers;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
+        public IActionResult AllRestaurants()
+        {
+            var reastaurants = this.restaurantService.GetAll<RestaurantAll>();
+            var viewModel = new AllUserDataReastaurantViewModel();
+            foreach (var reastaurant in reastaurants)
+            {
+                var cityName = this.citiesService.GetCityNameByAreaId(reastaurant.AreaId);
+                reastaurant.CityName = cityName;
+                var courierName = this.usersDataService.GetByUserId<UserDataIndexViewModel>(reastaurant.UserId);
+                reastaurant.Name = courierName.Name;
+            }
+
+            viewModel.Restaurants = reastaurants;
+
+            return this.View(viewModel);
         }
     }
 }

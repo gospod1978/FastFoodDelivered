@@ -68,12 +68,18 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Courier")]
         public async Task<IActionResult> Details(string id)
         {
             if (id == null)
             {
                 var userLogin = await this.userManager.GetUserAsync(this.User);
                 var curier = this.courierService.GetByUserId<CuriersAll>(userLogin.Id);
+                if (curier == null)
+                {
+                    return this.RedirectToAction("AllCouriers", "UsersData");
+                }
+
                 id = curier.Id;
             }
 
@@ -219,6 +225,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult All()
         {
             var viewModel = new ViewModels.Couriers.CourierViewModel();
@@ -231,6 +238,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult AllCouriersDetail()
         {
             var viewModel = new ViewModels.Couriers.CourierAllViewModel();
@@ -247,6 +255,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Courier")]
         public IActionResult IsActive(string id)
         {
             var courierDetail = this.courierService.GetById<CourierDetailsViewModel>(id);
@@ -263,6 +272,7 @@
 
         [Authorize]
         [HttpPost]
+        [Authorize(Roles = "Administrator, Admin, Courier")]
         public async Task<IActionResult> IsActive(ChangeWorkingAreaIdViewModel input)
         {
             await this.courierService.CreateWorkingAreaByCourierId(input.CourierId, input.AreaId);

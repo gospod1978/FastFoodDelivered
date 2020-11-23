@@ -18,11 +18,13 @@
     </PackageReference>
     <PackageReference Include="HtmlSanitizer" Version="5.0.343" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="SendGrid" Version="9.21.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data.Models\AspNetCoreTemplate.Data.Models.csproj" />
     <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services.Mapping\AspNetCoreTemplate.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\AspNetCoreTemplate.Common\AspNetCoreTemplate.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

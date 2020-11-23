@@ -1840,7 +1840,7 @@
           "lib/netstandard2.0/WebDriver.dll": {}
         }
       },
-      "SendGrid/9.18.0": {
+      "SendGrid/9.21.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1",
@@ -3602,7 +3602,8 @@
           "Microsoft.AspNetCore.Identity.UI": "3.1.8",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
-          "Microsoft.Web.LibraryManager.Build": "2.1.76"
+          "Microsoft.Web.LibraryManager.Build": "2.1.76",
+          "SendGrid": "9.21.2"
         },
         "compile": {
           "bin/placeholder/AspNetCoreTemplate.Web.dll": {}
@@ -3628,10 +3629,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "AspNetCoreTemplate.Common": "1.0.0",
           "AspNetCoreTemplate.Data.Models": "1.0.0",
           "AspNetCoreTemplate.Services.Mapping": "1.0.0",
           "HtmlSanitizer": "5.0.343",
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "SendGrid": "9.21.2"
         },
         "compile": {
           "bin/placeholder/AspNetCoreTemplate.Web.ViewModels.dll": {}
@@ -6345,10 +6348,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "SendGrid/9.18.0": {
-      "sha512": "WEZUHnHpdI/6xHvqZRZDCKhFyyyys4lnAf50qiME29QDyCVjYBjMDC/KkuLEEDnQfllBrmqkX8DNyf4XU9og9g==",
+    "SendGrid/9.21.2": {
+      "sha512": "vYp/UPtiO9FkaziuVzoGJqmKJV4WBhN6gmryXnpL9ga/UPJH2bBmzg0As8DO75lhboORKYim8cZFdDhKVthokQ==",
       "type": "package",
-      "path": "sendgrid/9.18.0",
+      "path": "sendgrid/9.21.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6364,7 +6367,7 @@
         "lib/netstandard2.0/SendGrid.dll",
         "lib/netstandard2.0/SendGrid.pdb",
         "lib/netstandard2.0/SendGrid.xml",
-        "sendgrid.9.18.0.nupkg.sha512",
+        "sendgrid.9.21.2.nupkg.sha512",
         "sendgrid.nuspec"
       ]
     },

@@ -10,12 +10,10 @@
 
     public class HomeController : BaseController
     {
-        private readonly IEmailSender emailSender;
         private readonly ICategoriesService categoriesService;
 
-        public HomeController(IEmailSender emailSender, ICategoriesService categoriesService)
+        public HomeController(ICategoriesService categoriesService)
         {
-            this.emailSender = emailSender;
             this.categoriesService = categoriesService;
         }
 

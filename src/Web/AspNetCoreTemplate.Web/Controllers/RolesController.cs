@@ -28,6 +28,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult Create()
         {
             var viewModel = new RoleCreateInputModel();
@@ -37,6 +38,7 @@
 
         [HttpPost]
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public async Task<IActionResult> Create(RoleCreateInputModel input)
         {
             var user = await this.userManager.GetUserAsync(this.User);
@@ -51,6 +53,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public IActionResult All()
         {
             var viewModel = new RoleViewModel();
@@ -63,6 +66,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
         public async Task<IActionResult> Delete(RoleAllViewModel input)
         {
             await this.roleServices.DeleteById(input.Id);

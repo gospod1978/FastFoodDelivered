@@ -50,15 +50,18 @@
             return enitity.Id;
         }
 
-        public async Task ChangeStatus(string purchazeId, string status)
+        public async Task<string> ChangeStatus(string purchazeId, string status)
         {
             var enitity = this.purchaseRepository.All().Where(x => x.Id == purchazeId).FirstOrDefault();
 
             var newStatus = (Status)Enum.Parse(typeof(Status), status);
 
             enitity.Status = newStatus;
+
             this.purchaseRepository.Update(enitity);
             await this.purchaseRepository.SaveChangesAsync();
+
+            return enitity.Id;
         }
 
         public string CourierIdFind(string restAreaId)

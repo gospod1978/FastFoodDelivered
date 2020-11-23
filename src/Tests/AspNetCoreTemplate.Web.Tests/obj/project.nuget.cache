@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bB4nISqh9c0/04NUJrl8XDfJLLkE7UuYLnIcOkG7Ogvh1BZX1iRFbtgeAlHrc3uSIvCdUsE0PtyZwzsO4AMpUw==",
+  "dgSpecHash": "fZHwMdvxNRg6arLD1weFBQZEpveHNLd64RtqkNYWuI6qkNP75v3d2G+Jz7JXv4njQkmcuYuEQeVVve4YT/jM9g==",
   "success": true,
   "projectFilePath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/AspNetCoreTemplate.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -117,7 +117,7 @@
     "/Users/gospod1978/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/selenium.support/3.141.0/selenium.support.3.141.0.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/selenium.webdriver/3.141.0/selenium.webdriver.3.141.0.nupkg.sha512",
-    "/Users/gospod1978/.nuget/packages/sendgrid/9.18.0/sendgrid.9.18.0.nupkg.sha512",
+    "/Users/gospod1978/.nuget/packages/sendgrid/9.21.2/sendgrid.9.21.2.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/starkbank-ecdsa/1.2.0/starkbank-ecdsa.1.2.0.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/stylecop.analyzers/1.2.0-beta.164/stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/stylecop.analyzers.unstable/1.2.0.164/stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512",

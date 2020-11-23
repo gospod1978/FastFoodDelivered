@@ -1,21 +1,18 @@
 ﻿@model AspNetCoreTemplate.Web.ViewModels.Purchases.DetailsPurchaseViewModel
 <form method="post" asp-action="Status">
-    <p>@Model.OrderName</p>
-    <p>@Model.Status</p>
-    <p>@Model.NewStatus</p>
+    <p>Menu name - <span>@Model.OrderName</span></p> 
+    <p>Status in this moment - <span>@Model.Status</span></p> 
+    <p>New status - <span>@Model.NewStatus</span></p> 
     <div>
-        <label asp-for="Status"></label>
-        <input asp-for="Status" class="form-control" value="@Model.Status" />
+        <input type="hidden" asp-for="Status" class="form-control" value="@Model.Status" />
         <span asp-validation-for="Status" class="text-danger"></span>
     </div>
     <div>
-        <label asp-for="Id"></label>
-        <input asp-for="Id" class="form-control" value="@Model.Id" />
+        <input type="hidden" asp-for="Id" class="form-control" value="@Model.Id" />
         <span asp-validation-for="Id" class="text-danger"></span>
     </div>
     <div>
-        <label asp-for="NewStatus"></label>
-        <input asp-for="NewStatus" class="form-control" value="@Model.NewStatus" />
+        <input type="hidden" asp-for="NewStatus" class="form-control" value="@Model.NewStatus" />
         <span asp-validation-for="NewStatus" class="text-danger"></span>
     </div>
     <hr />

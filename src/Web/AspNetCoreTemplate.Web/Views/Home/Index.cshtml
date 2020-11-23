@@ -16,51 +16,67 @@
 }
 @if (this.SignInManager.IsSignedIn(this.User))
 {
-    <ul>
+<ul>
 
-        @if (!this.User.IsInRole(GlobalConstants.RestaurantRoleName) &&
-        !this.User.IsInRole(GlobalConstants.CourierRoleName) &&
-        !this.User.IsInRole(GlobalConstants.AdminRoleName) &&
-        !this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create Address Delivery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Purchase">Purchase</a>
-            </li>
-        }
-        else
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">All Purchase by Status</a>
-            </li>
-        }
+    @if (!this.User.IsInRole(GlobalConstants.RestaurantRoleName) &&
+!this.User.IsInRole(GlobalConstants.CourierRoleName) &&
+!this.User.IsInRole(GlobalConstants.AdminRoleName) &&
+!this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create Address Delivery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="LocationsObject" asp-action="AllByUser">All Address Delivery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Purchase">Purchase</a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">All Purchase by Status</a>
+        </li>
 
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="SendEmail">Send Email</a>
         </li>
-        @if (this.User.IsInRole(GlobalConstants.CourierRoleName) ||
-  this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-  this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
-            </li>
-        }
+    }
 
-        @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
-  this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-  this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-        {
-            <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
-            </li>
-        }
-    </ul>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
+    </li>
+    @if (this.User.IsInRole(GlobalConstants.CourierRoleName) ||
+this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
+        </li>
+    }
+
+    @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
+        </li>
+    }
+    @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+this.User.IsInRole(GlobalConstants.CourierRoleName) ||
+this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="EmailById">All Email sent</a>
+        </li>
+    }
+</ul>
 }
 @if (Model.Categories.Count() == 0)
 {

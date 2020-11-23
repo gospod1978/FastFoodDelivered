@@ -21,6 +21,8 @@
 
         public virtual Area Area { get; set; }
 
+        public string CityName { get; set; }
+
         public string UserId { get; set; }
 
         public virtual ApplicationUser User { get; set; }

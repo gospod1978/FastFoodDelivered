@@ -63,7 +63,6 @@
             services.AddControllers().AddControllersAsServices();
 
             // Application services
-            services.AddTransient<IEmailSender>(x => new SendGridEmailSender(GlobalConstants.EmailApiKey));
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IPostsService, PostsService>();

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GTe+R2mJM1xK5NynGJRhkJXEGmXFLlFc5ewggb1GQ1W62jQRJMYdbGtQMiCHT3OEoQaGVOZ3emflUpDfxri4FA==",
+  "dgSpecHash": "Z9VNC6GTPk57M6qOBo1pvFZEBCgwrzdB89cFxMJe8BfxIycvS880YxnTJLWWrptFSt3zbpxwwnggkMKZX6D5mQ==",
   "success": true,
   "projectFilePath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,7 @@
     "/Users/gospod1978/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "/Users/gospod1978/.nuget/packages/sendgrid/9.18.0/sendgrid.9.18.0.nupkg.sha512",
+    "/Users/gospod1978/.nuget/packages/sendgrid/9.21.2/sendgrid.9.21.2.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/starkbank-ecdsa/1.2.0/starkbank-ecdsa.1.2.0.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/stylecop.analyzers/1.2.0-beta.164/stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
     "/Users/gospod1978/.nuget/packages/stylecop.analyzers.unstable/1.2.0.164/stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512",

@@ -826,6 +826,56 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.ToTable("Documents");
                 });
 
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Email", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("From")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OriginalEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("To")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Emails");
+                });
+
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Photo", b =>
                 {
                     b.Property<string>("Id")
@@ -1257,6 +1307,15 @@ namespace AspNetCoreTemplate.Data.Migrations
                     b.HasOne("AspNetCoreTemplate.Data.Models.UserHome.UserData", "UserData")
                         .WithMany("Documents")
                         .HasForeignKey("UserDataId");
+                });
+
+            modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Email", b =>
+                {
+                    b.HasOne("AspNetCoreTemplate.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("AspNetCoreTemplate.Data.Models.UserHome.Photo", b =>

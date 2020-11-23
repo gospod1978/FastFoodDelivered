@@ -27,5 +27,9 @@
         public virtual Area Area { get; set; }
 
         public DateTime Birthday { get; set; }
+
+        public string CityName { get; set; }
+
+        public string UserId { get; set; }
     }
 }

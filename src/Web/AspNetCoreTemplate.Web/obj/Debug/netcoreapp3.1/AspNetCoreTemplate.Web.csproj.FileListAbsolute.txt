@@ -593,3 +593,9 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.genruntimeconfig.cache
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Restaurant/IsActive.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Purchase/Purchase.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Users/SendEmail.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Users/AllEmail.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Users/EmailDetails.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Users/EmailById.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/UsersData/AllCouriers.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/UsersData/AllRestaurants.cshtml.g.cs

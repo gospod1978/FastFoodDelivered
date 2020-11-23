@@ -12,10 +12,14 @@
     public class CitiesService : ICitiesService
     {
         private readonly IDeletableEntityRepository<City> cityRepository;
+        private readonly IDeletableEntityRepository<Area> areaRepository;
 
-        public CitiesService(IDeletableEntityRepository<City> cityRepository)
+        public CitiesService(
+            IDeletableEntityRepository<City> cityRepository,
+            IDeletableEntityRepository<Area> areaRepository)
         {
             this.cityRepository = cityRepository;
+            this.areaRepository = areaRepository;
         }
 
         public async Task<string> CreateAsyncCity(string name)
@@ -62,6 +66,14 @@
                 .To<T>().FirstOrDefault();
 
             return city;
+        }
+
+        public string GetCityNameByAreaId(string id)
+        {
+            var cityData = this.areaRepository.All().Where(x => x.Id == id).FirstOrDefault();
+            var cityName = this.cityRepository.All().Where(x => x.Id == cityData.CityId).FirstOrDefault();
+
+            return cityName.CityName;
         }
     }
 }
