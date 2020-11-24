@@ -95,5 +95,13 @@
 
             return entity;
         }
+
+        public T GetCityByAreaId<T>(string id)
+        {
+            var entity = this.areaRepository.All().Where(x => x.Id == id)
+                .To<T>().FirstOrDefault();
+
+            return entity;
+        }
     }
 }

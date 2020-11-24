@@ -4,6 +4,7 @@
 
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Web.ViewModels.Addresses;
+    using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Locations;
     using AspNetCoreTemplate.Web.ViewModels.Streets;
     using Microsoft.AspNetCore.Authorization;
@@ -67,11 +68,30 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
+        public IActionResult Create2(string id)
+        {
+            var city = this.areasService.GetCityByAreaId<AreasAll>(id);
+            var area = this.areasService.GetById<AreasDropDownMenu>(id);
+
+            var streets = this.streetsService.GetAllStreets<StreetDropDownMenu>(id);
+
+            var viewModel = new CreateAddressInputModel();
+
+            viewModel.AreaName = area.AreaName;
+            viewModel.CityName = city.City.CityName;
+            viewModel.Streets = streets;
+            viewModel.CityId = city.CityId;
+            viewModel.AreaId = id;
+
+            return this.View(viewModel);
+        }
+
         [HttpPost]
         [Authorize]
         public IActionResult Create2(CreateAddressInputModel input)
         {
-            var city = this.citiesService.GetById<CitiesDropDownMenuInStreet>(input.CityId);
+            var city = this.areasService.GetCityByAreaId<AreasAll>(input.AreaId);
             var area = this.areasService.GetById<AreasDropDownMenu>(input.AreaId);
 
             var streets = this.streetsService.GetAllStreets<StreetDropDownMenu>(input.AreaId);
@@ -79,9 +99,9 @@
             var viewModel = new CreateAddressInputModel();
 
             viewModel.AreaName = area.AreaName;
-            viewModel.CityName = city.CityName;
+            viewModel.CityName = city.City.CityName;
             viewModel.Streets = streets;
-            viewModel.CityId = input.CityId;
+            viewModel.CityId = city.CityId;
             viewModel.AreaId = input.AreaId;
 
             return this.View(viewModel);

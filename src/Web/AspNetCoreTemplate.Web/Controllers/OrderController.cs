@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Web.Controllers
+﻿    namespace AspNetCoreTemplate.Web.Controllers
 {
     using System.IO;
     using System.Threading.Tasks;
@@ -149,6 +149,11 @@
         {
             var user = await this.userManager.GetUserAsync(this.User);
             var locationObjUserId = this.locationsObjectService.GetLocationByUserIdOnly<LocationObjectIndexViewModel>(user.Id);
+            if (locationObjUserId == null)
+            {
+                return this.RedirectToAction("Create", "Address");
+            }
+
             var address = this.addressService.GetById<DetailsAddressIndexViewModel>(locationObjUserId.AddressId);
             var userAreaName = address.AreaAreaName;
             var viewModel = new AllOrdersViewModel();

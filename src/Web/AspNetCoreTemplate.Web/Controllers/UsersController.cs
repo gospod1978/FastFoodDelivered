@@ -174,10 +174,22 @@
         {
             this.ViewData["Message"] = "Email Sent!!!...";
             Example emailexample = new Example();
-            await this.userServices.CreateAsyncEmail(input);
-            await emailexample.Execute(input.OriginalEmail, input.To, input.Subject, input.Body, input.Body);
+            var email = await this.userServices.CreateAsyncEmail(input);
+            var userId = this.userServices.GetEmailById<EmailModel>(email);
+            var userName = this.usersDataService.GetByUserId<UserDataIndexViewModel>(userId.UserId);
+            if (userName == null)
+            {
+                input.UserName = input.From;
+            }
+            else
+            {
+                input.UserName = userName.Name;
+            }
 
-            return this.RedirectToAction(nameof(this.EmailDetails));
+            var infoBody = GlobalConstants.EmailBodyText + input.From + GlobalConstants.EmailUserName + input.UserName + input.Body;
+            await emailexample.Execute(input.OriginalEmail, input.To, input.Subject, input.Body, infoBody);
+
+            return this.RedirectToAction(nameof(this.EmailDetails), new { id = email });
         }
 
         [Authorize]

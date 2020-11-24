@@ -27,6 +27,9 @@
             <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create Address Delivery</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="LocationsObject" asp-action="AllByUser">All Address Delivery</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Purchase">Purchase</a>
         </li>
     }
@@ -39,10 +42,13 @@
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="SendEmail">Send Email</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="EmailById">All Email sent</a>
+        </li>
     }
 
     <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">User data</a>
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">Documents</a>
     </li>
     @if (this.User.IsInRole(GlobalConstants.CourierRoleName) ||
 this.User.IsInRole(GlobalConstants.AdminRoleName) ||
@@ -64,15 +70,6 @@ this.User.IsInRole(GlobalConstants.AdministratorRoleName))
             <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
         </li>
     }
-    @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
-this.User.IsInRole(GlobalConstants.CourierRoleName) ||
-this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-    {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="EmailById">All Email sent</a>
-        </li>
-    }
 </ul>
 }
 @if (Model.Categories.Count() == 0)
@@ -85,7 +82,7 @@ else
         @foreach (var category in Model.Categories)
         {
             <div class="media col-md-4">
-                <img src="@category.ImageUrl" width="100" class="mr-3" style="border-radius: 5px;" alt="@category.Title">
+                <img src="@category.ImageUrl" class="mr-3 image-category" alt="@category.Title">
                 <div class="media-body">
                     <h5 class="mt-0"><a asp-controller="Order" asp-action="AllByCategories" asp-route-id="@category.Name">@category.Title (@category.OrdersCount)</a></h5>
                 </div>
@@ -103,14 +100,14 @@ else
 
     <div class="media col-md-4">
         <div class="media-body text-center">
-            <img src=@AllImage.CourierJpg width="300" height="300" class="mr-3" style="border-radius: 5px;" alt="">
+            <img src=@AllImage.CourierJpg class="mr-3 applay-info" alt="">
 
             <h5 class="mt-0"><a asp-controller="Courier" asp-action="Create1">Courier Apply</a></h5>
         </div>
     </div>
     <div class="media col-md-4">
         <div class="media-body text-center">
-            <img src=@AllImage.RestaurantJpg width="300" height="300" class="mr-3" style="border-radius: 5px;" alt="">
+            <img src=@AllImage.RestaurantJpg class="mr-3 applay-info" alt="">
 
             <h5 class="mt-0"><a asp-controller="Restaurant" asp-action="Create1">Restaurant Apply</a></h5>
         </div>
@@ -118,7 +115,7 @@ else
     <div class="media col-md-4">
         <div class="media-body text-center">
             
-                <img src=@AllImage.CarriersJpg width="300" height="300" class="mr-3" style="border-radius: 5px;" alt="">
+                <img src=@AllImage.CarriersJpg class="mr-3 applay-info" alt="">
 
                 <h5 class="mt-0"><a asp-controller="Home" asp-action="Carriers">Carriers</a></h5>
             

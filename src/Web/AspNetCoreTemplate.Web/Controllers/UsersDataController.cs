@@ -2,7 +2,7 @@
 {
     using System.IO;
     using System.Threading.Tasks;
-
+    using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Services.Data.AddressService;
     using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Restaurant;
@@ -129,7 +129,14 @@
         {
             var userName = this.User.Identity.Name.ToString();
             var id = this.userService.GetUserName(userName);
+            var userData = this.usersDataService.GetByUserId<UserDataIndexViewModel>(id);
+            var name = userData.Name;
             var viewModel = new CreateUserDataViewModel();
+            if (name != null)
+            {
+                viewModel.Messages = string.Format(GlobalConstants.MessageUserDataController, name);
+            }
+
             viewModel.UserUserName = userName;
             viewModel.UserId = id;
 

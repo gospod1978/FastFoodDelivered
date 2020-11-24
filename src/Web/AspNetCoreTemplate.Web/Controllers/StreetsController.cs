@@ -61,6 +61,19 @@
             return this.View(viewModel);
         }
 
+        [Authorize]
+        public IActionResult Create3(string id)
+        {
+            var city = this.citiesService.GetCityNameByAreaId(id);
+            var areas = this.areasService.GetById<AreasDropDownMenu>(id);
+            var viewModel = new CreateStreetInputModel();
+            viewModel.AreaId = id;
+            viewModel.AreaName = areas.AreaName;
+            viewModel.CityName = city;
+
+            return this.View(viewModel);
+        }
+
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> Create3(CreateStreetInputModel input)
@@ -72,7 +85,7 @@
 
             var streetID = await this.streetsService.CreateAsyncStreet(input.Name, input.AreaId);
             this.TempData["InfoMessageAreas"] = "Street was created!";
-            return this.RedirectToAction(nameof(this.All));
+            return this.RedirectToAction("Create2", "Address", new { id = input.AreaId });
         }
 
         [Authorize]

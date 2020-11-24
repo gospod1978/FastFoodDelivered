@@ -18,5 +18,7 @@
         T GetByName<T>(string name);
 
         T GetById<T>(string id);
+
+        T GetCityByAreaId<T>(string id);
     }
 }

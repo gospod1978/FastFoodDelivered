@@ -6,7 +6,7 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.UserService;
     using AspNetCoreTemplate.Web.ViewModels.Categories;
-
+    using AspNetCoreTemplate.Web.ViewModels.Home;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
@@ -32,6 +32,7 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Admin, Administrator, Restaurant")]
         public IActionResult Create()
         {
             var viewModel = new CategoryCreateInputModel();
@@ -41,6 +42,7 @@
 
         [HttpPost]
         [Authorize]
+        [Authorize(Roles = "Admin, Administrator, Restaurant")]
         public async Task<IActionResult> Create(CategoryCreateInputModel input)
         {
             var user = await this.userManager.GetUserAsync(this.User);
@@ -61,16 +63,15 @@
             }
 
             var categoryId = await this.categoriesService.CreateAsync(input.Name, input.Title, input.Description, image);
-            this.TempData["InfoMessage"] = "Forum post created!";
-            return this.RedirectToAction(nameof(this.Create));
+            return this.RedirectToAction("Index", "Home");
         }
 
         [Authorize]
         public IActionResult All()
         {
-            var viewModel = new ViewModels.Categories.CategoryIndexViewModel();
+            var viewModel = new ViewModels.Home.IndexViewModel();
 
-            var categories = this.categoriesService.GetAll<CategoryAll>();
+            var categories = this.categoriesService.GetAll<IndexCategoryViewModel>();
 
             viewModel.Categories = categories;
 

@@ -469,3 +469,31 @@ footer {
 .purchase-image {
     border-radius: 5px;
 }
+
+.userDataInfo {
+    margin: 10px;
+}
+
+.btn-delete {
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.image-category {
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.applay-info {
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+.arrea-image {
+    width: 100px;
+    height: 80px;
+}

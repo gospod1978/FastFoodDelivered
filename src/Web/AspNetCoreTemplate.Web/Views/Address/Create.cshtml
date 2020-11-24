@@ -5,7 +5,7 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
-    this.ViewData["Title"] = "Street Address";
+    this.ViewData["Title"] = "Create Address";
     var cities = Model.Cities.Select(x => new SelectListItem(x.CityName, x.Id.ToString()));
 }
 
@@ -19,10 +19,12 @@
     </div>
     <hr />
     <input type="submit" class="btn btn-primary" />
+
+    @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+          this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">Create City</a>
+    }
+    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
 </form>
-<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
-@if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-        this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-{
-    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">Create City</a>
-}
+

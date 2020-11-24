@@ -19,6 +19,10 @@
 
         public const string EmailRegistrationApiKey = "mgospodinov1978@gmail.com";
 
+        public const string EmailBodyText = "This email send from ";
+
+        public const string EmailUserName = "and UserName ";
+
         public const string Sofia = "Sofia";
 
         public const string Purchase = "Purchaise";
@@ -34,5 +38,7 @@
         public const string Paid = "Paid";
 
         public const string Finished = "Finished";
+
+        public const string MessageUserDataController = "You have this Full Name - {0}, you can changed or cancel!";
     }
 }

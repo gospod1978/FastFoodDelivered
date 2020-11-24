@@ -20,7 +20,7 @@
 
         public async Task<string> CreateAsyncStreet(string name, string areaId)
         {
-            var street = this.streetRepository.All().Where(x => x.Name == name).FirstOrDefault();
+            var street = this.streetRepository.All().Where(x => x.Name == name && x.AreaId == areaId).FirstOrDefault();
             if (street == null)
             {
                 street = new Street
