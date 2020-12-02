@@ -8,6 +8,8 @@ ABOUT my web project:
 Fast Food Delivered (FFD) is an online orders and delivered food.
 The platform meets clients’ drivers and restaurants for only one click.
 
+Integrate Multilanguage - English and Bulgarian
+
 Database
 Microsoft SQL Server along with Entity Framework Core were used to create and store the values. 
 The database schema consists of the following main entities:
