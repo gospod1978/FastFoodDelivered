@@ -302,6 +302,14 @@
         "runtime": {
           "AspNetCoreTemplate.Web.dll": {}
         },
+        "resources": {
+          "bg-BG/AspNetCoreTemplate.Web.resources.dll": {
+            "locale": "bg-BG"
+          },
+          "en-GB/AspNetCoreTemplate.Web.resources.dll": {
+            "locale": "en-GB"
+          }
+        },
         "compile": {
           "AspNetCoreTemplate.Web.dll": {}
         }

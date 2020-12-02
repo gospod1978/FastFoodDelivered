@@ -1,9 +1,13 @@
-﻿@using AspNetCoreTemplate.Common
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@using AspNetCoreTemplate.Common
 @model AspNetCoreTemplate.Web.ViewModels.Orders.AllOrdersViewModel
 
 @{
     this.ViewData["Title"] = $"All Order By Category";
-    
+
 }
 @if (this.TempData["InfoMessageApply"] != null)
 {
@@ -24,37 +28,37 @@ else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Menu</th>
-                <th>Category</th>
-                <th>Restaurant</th>
-                <th>Menu Price</th>
-                <th>Delivery Price</th>
-                <th>Total Price</th>
-                <th>Time</th>
-                <th>Description</th>
-                <th>Details</th>
-                <th>Purchase</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Menu")Menu</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Category")Category</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Restaurant")Restaurant</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Price")Menu Price</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Delivery")Delivery Price</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Total")Total Price</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Description")Time</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Details")Description</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Details")Details</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Purchase")Purchase</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var order in Model.Orders)
             {
-            <tr>
-                <td>@order.Name </td>
-                <td>@order.Category.Name</td>  
-                <td>@order.RestaurantName</td>
-                <td>@order.Price</td>
-                <td>@order.DeliveryPrice</td>
-                <td>@order.TotalPrice</td>
-                <td>@order.TimePrepartion</td>
-                <td>@order.ShortContent</td>
-                <td><a class="btn btn-primary" asp-area="" asp-controller="Order" asp-action="Details" asp-route-id="@order.Id">Details</a></td>
-                <td><a class="btn btn-primary" asp-area="" asp-controller="Purchase" asp-action="Create" asp-route-id="@order.Id">Purchase</a></td>
-                
-            </tr>
+                <tr>
+                    <td>@order.Name </td>
+                    <td>@order.Category.Name</td>
+                    <td>@order.RestaurantName</td>
+                    <td>@order.Price</td>
+                    <td>@order.DeliveryPrice</td>
+                    <td>@order.TotalPrice</td>
+                    <td>@order.TimePrepartion</td>
+                    <td>@order.ShortContent</td>
+                    <td><a class="btn btn-primary" asp-area="" asp-controller="Order" asp-action="Details" asp-route-id="@order.Id">Details</a></td>
+                    <td><a class="btn btn-primary" asp-area="" asp-controller="Purchase" asp-action="Create" asp-route-id="@order.Id">Purchase</a></td>
+
+                </tr>
             }
         </tbody>
     </table>
 }
 
-<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

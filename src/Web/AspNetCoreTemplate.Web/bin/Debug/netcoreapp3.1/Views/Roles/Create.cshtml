@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Roles.RoleCreateInputModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Roles.RoleCreateInputModel
 @{
     this.ViewData["Title"] = "New Role";
 }
@@ -14,4 +18,4 @@
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Roles" asp-action="All">Back</a>
+<a class="btn btn-primary" asp-area="" asp-controller="Roles" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

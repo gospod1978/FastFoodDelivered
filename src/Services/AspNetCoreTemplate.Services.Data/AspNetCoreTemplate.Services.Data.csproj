@@ -27,9 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UserService\" />
+    <Folder Include="User\" />
     <Folder Include="Courier\" />
-    <Folder Include="AddressService\" />
+    <Folder Include="Address\" />
     <Folder Include="Restaurant\" />
     <Folder Include="Orders\" />
   </ItemGroup>

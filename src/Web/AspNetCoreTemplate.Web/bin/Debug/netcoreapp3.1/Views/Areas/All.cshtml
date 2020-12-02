@@ -1,4 +1,8 @@
 ﻿@using AspNetCoreTemplate.Common
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Areas.AreaIndexViewModel
 
 @{
@@ -28,7 +32,7 @@ else
             <div class="media col-md-4">
                 <img src="@area.Image" class="mr-3 arrea-image" alt="@area.AreaName">
                 <div class="media-body">
-                    <h5 class="mt-0"><a asp-controller="Streets" asp-action="All" asp-route-id="@area.Id">@area.AreaName - Streets in this Area(@area.StreetsCount)</a></h5>
+                    <h5 class="mt-0"><a asp-controller="Streets" asp-action="All" asp-route-id="@area.Id">@area.AreaName - @SharedLocalizer.GetLocalizedHtmlString("StreetsInThisArea") (@area.StreetsCount)</a></h5>
                 </div>
             </div>
         }
@@ -37,8 +41,8 @@ else
 
 <hr />
 <div>
-    <a class="btn btn-primary" asp-area="" asp-controller="Areas" asp-action="Create">Create New Area</a>
-    <a class="btn btn-primary" asp-area="" asp-controller="Streets" asp-action="Create1">Create New Street</a>
-    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="All">Back</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Areas" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateNewArea")</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Streets" asp-action="Create1">@SharedLocalizer.GetLocalizedHtmlString("CreateNewStreet")</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 </div>
 

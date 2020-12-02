@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="CreateAddressDelivery" xml:space="preserve">
+        <value>Създай Адрес за Досташка</value>
+    </data>
+    <data name="Language" xml:space="preserve">
+        <value>Език</value>
+    </data>
+    <data name="AllAddressDelivery" xml:space="preserve">
+        <value> Всички адреси за доставка </value>
+    </data>
+    <data name="Purchase" xml:space="preserve">
+        <value>Поръчка</value>
+    </data>
+    <data name="Home" xml:space="preserve">
+        <value>Начална</value>
+    </data>
+    <data name="AllPurchasebyStatus" xml:space="preserve">
+        <value>Всички поръчки по статъс</value>
+    </data>
+    <data name="SendEmail" xml:space="preserve">
+        <value>Изпрати Email</value>
+    </data>
+    <data name="AllEmailSent" xml:space="preserve">
+        <value>Всички изпратени Email</value>
+    </data>
+     <data name="Documents" xml:space="preserve">
+        <value>Документи</value>
+    </data>
+    <data name="DetailsCourier" xml:space="preserve">
+        <value>Детайли на Куриера</value>
+    </data>
+    <data name="Logout" xml:space="preserve">
+        <value>излез</value>
+
+</data>
+    <data name="Register" xml:space="preserve">
+        <value>Регистрирай се</value>
+    </data>
+    <data name="Login" xml:space="preserve">
+        <value>Влез</value>
+    </data>
+    <data name="MenuCreate" xml:space="preserve">
+        <value>Създай Ордер</value>
+    </data>
+
+    <data name="DetailsReastaurant" xml:space="preserve">
+        <value> Детайли на Ресторант </value>
+    </data>
+
+    <data name="CourierApply" xml:space="preserve">
+        <value> Кандидатствай за Куриер </value>
+    </data>
+
+    <data name="RestaurantApplay " xml:space="preserve">
+        <value>Кандидатсвай за Партньор Ресторант </value>
+    </data>
+
+    <data name="Carriers" xml:space="preserve">
+        <value>Свободни позиции</value>
+    </data>
+
+    <data name="PrivacyPolicy" xml:space="preserve">
+        <value> Политики на поверителност </value>
+    </data>
+
+    <data name="ClientPolicy " xml:space="preserve">
+        <value> Клиентска политика на поверителност </value>
+    </data>
+
+    <data name="Policy" xml:space="preserve">
+        <value>Политики</value>
+    </data>
+
+    <data name="Hello" xml:space="preserve">
+        <value>Здравей</value>
+    </data>
+
+    <data name="Admin" xml:space="preserve">
+        <value>Админ панел</value>
+    </data>
+
+    <data name="Back" xml:space="preserve">
+        <value>Назад</value>
+    </data>
+
+    <data name="CreateCity" xml:space="preserve">
+        <value>Създай Град</value>
+    </data>
+
+    <data name="AreaCreate" xml:space="preserve">
+        <value>Създай Зона</value>
+    </data>
+
+    <data name="CreateStreet" xml:space="preserve">
+        <value>Създай Улица</value>
+    </data>
+
+    <data name="City" xml:space="preserve">
+        <value>Град</value>
+    </data>
+
+    <data name="Area" xml:space="preserve">
+        <value>Зона</value>
+    </data>
+
+    <data name="Street" xml:space="preserve">
+        <value>Улица</value>
+    </data>
+
+    <data name="Number" xml:space="preserve">
+        <value>Номер</value>
+    </data>
+   <data name="Entrance" xml:space="preserve">
+        <value>Вход</value>
+    </data>
+   <data name="Flour" xml:space="preserve">
+        <value>Етаж</value>
+    </data>
+   <data name="Apartament" xml:space="preserve">
+        <value>Апартамент</value>
+    </data>
+   <data name="Create" xml:space="preserve">
+        <value>Създай</value>
+    </data>
+   <data name="Address" xml:space="preserve">
+        <value>Адреси</value>
+    </data>
+   <data name="Cities" xml:space="preserve">
+        <value>Градове</value>
+    </data>
+   <data name="Areas" xml:space="preserve">
+        <value>Зони</value>
+    </data>
+   <data name="Streets" xml:space="preserve">
+        <value>Улици</value>
+    </data>
+   <data name="Locations" xml:space="preserve">
+        <value>Локации</value>
+    </data>
+   <data name="LocationsObj" xml:space="preserve">
+        <value>Локации по обект</value>
+    </data>
+   <data name="StreetsInThisArea" xml:space="preserve">
+        <value>Улици в тази Зона</value>
+    </data>
+   <data name="CreateNewArea" xml:space="preserve">
+        <value> Създай нова Зона </value>
+    </data>
+   <data name="CreateNewStreet" xml:space="preserve">
+        <value> Създай нова Улица </value>
+    </data>
+   <data name="GenerateAllAreasInSofia" xml:space="preserve">
+        <value>Автоматично генереиране на всички Зони в София</value>
+    </data>
+   <data name="All" xml:space="preserve">
+        <value>Всички</value>
+    </data>
+   <data name="CreateNewCategory" xml:space="preserve">
+        <value>Създай нова Категория</value>
+    </data>
+   <data name="More" xml:space="preserve">
+        <value>Повече</value>
+    </data>
+   <data name="Comments" xml:space="preserve">
+        <value>Коментари</value>
+    </data>
+   <data name="AreaInThisCity" xml:space="preserve">
+        <value>Зони в този Град</value>
+    </data>
+   <data name="CreateNewCourier" xml:space="preserve">
+        <value>Създай нов Куриер</value>
+    </data>
+<data name="Couriers" xml:space="preserve">
+        <value> Куриери </value>
+    </data>
+<data name="Vehichles" xml:space="preserve">
+        <value>Превозни средства</value>
+    </data>
+<data name="UploadImage" xml:space="preserve">
+        <value>Качи снимка</value>
+    </data>
+<data name="FullName" xml:space="preserve">
+        <value>Пълно име</value>
+    </data>
+<data name="Birthday" xml:space="preserve">
+        <value>Рожденна дата</value>
+    </data>
+<data name="MobilePhone" xml:space="preserve">
+        <value>Мобилен телефон</value>
+    </data>
+<data name="Email" xml:space="preserve">
+        <value>Email</value>
+    </data>
+<data name="Vehichle" xml:space="preserve">
+        <value>Превозно средство</value>
+    </data>
+<data name="WorkingArea" xml:space="preserve">
+        <value>Работна Зона</value>
+    </data>
+<data name="ChangeStatus" xml:space="preserve">
+        <value>Промени статуса</value>
+    </data>
+<data name="AllByUser" xml:space="preserve">
+        <value>Всички по Юзер</value>
+    </data>
+<data name="Menu" xml:space="preserve">
+        <value>Меню</value>
+    </data>
+<data name="Category" xml:space="preserve">
+        <value>Категория</value>
+    </data>
+<data name="Restaurant" xml:space="preserve">
+        <value>Ресторант</value>
+    </data>
+<data name="Price" xml:space="preserve">
+        <value>цена</value>
+    </data>
+<data name="Delivery" xml:space="preserve">
+        <value>Доставка</value>
+    </data>
+<data name="Total" xml:space="preserve">
+        <value>Общо</value>
+    </data>
+<data name="Time" xml:space="preserve">
+        <value>Време</value>
+    </data>
+<data name="Description" xml:space="preserve">
+        <value>Пояснение</value>
+    </data>
+<data name="Details" xml:space="preserve">
+        <value>Детайли</value>
+    </data>
+<data name="Purchase" xml:space="preserve">
+        <value>Поръчка</value>
+    </data>
+<data name="Name" xml:space="preserve">
+        <value>име</value>
+    </data>
+<data name="Preparation" xml:space="preserve">
+        <value>Подготовка</value>
+    </data>
+<data name="Status" xml:space="preserve">
+        <value>Статус</value>
+    </data>
+<data name="OrderId" xml:space="preserve">
+        <value>Поръчка меню</value>
+    </data>
+<data name="Image" xml:space="preserve">
+        <value>Снимка</value>
+    </data>
+<data name="Promotion" xml:space="preserve">
+        <value>Промоция</value>
+    </data>
+<data name="Date" xml:space="preserve">
+        <value>Дата</value>
+    </data>
+<data name="StatusInThisMoment" xml:space="preserve">
+        <value>Статус в момента</value>
+    </data>
+<data name="NewStatus" xml:space="preserve">
+        <value>Нов статус</value>
+    </data>
+<data name="ChangeLocationRestaurant" xml:space="preserve">
+        <value>Промени локацията на Ресторанта</value>
+    </data>
+<data name="Delete" xml:space="preserve">
+        <value>Изтрий</value>
+    </data>
+<data name="CreateNewRole" xml:space="preserve">
+        <value>Създай нова Роля</value>
+    </data>
+<data name="LocationsInThisStreet" xml:space="preserve">
+        <value>Локации на тази Улица</value>
+    </data>
+<data name="CreateNewLocation" xml:space="preserve">
+        <value>Създай нова локация</value>
+    </data>
+<data name="From" xml:space="preserve">
+        <value>От</value>
+    </data>
+<data name="To" xml:space="preserve">
+        <value>За</value>
+    </data>
+<data name="Subject" xml:space="preserve">
+        <value>Предмет</value>
+    </data>
+<data name="SendDate" xml:space="preserve">
+        <value>Изпратено на дата</value>
+    </data>
+<data name="IsCourier" xml:space="preserve">
+        <value>Одобрен Куриер ли е</value>
+    </data>
+<data name="Approve" xml:space="preserve">
+        <value>Одобри</value>
+    </data>
+<data name="Decline" xml:space="preserve">
+        <value>Отхвърли</value>
+    </data>
+<data name="Delete" xml:space="preserve">
+        <value>Изтрий</value>
+    </data>
+<data name="Body" xml:space="preserve">
+        <value>Съдържание</value>
+    </data>
+<data name="SendTime" xml:space="preserve">
+        <value>Време на изпращане</value>
+    </data>
+<data name="SendGridEmail" xml:space="preserve">
+        <value>Изпратено от мейл</value>
+    </data>
+<data name="UserName" xml:space="preserve">
+        <value>Юзер</value>
+    </data>
+<data name="Post" xml:space="preserve">
+        <value>Пост</value>
+    </data>
+<data name="AddRoleToUser" xml:space="preserve">
+        <value>Добави Роля към Юзер</value>
+    </data>
+<data name="CitiesExist" xml:space="preserve">
+        <value>Съществуващи Градове</value>
+    </data>
+<data name="UserData" xml:space="preserve">
+        <value>Информация за Юзър</value>
+    </data>
+<data name="CourierWaitToApprove" xml:space="preserve">
+        <value>Куриери чакащи за Одобрение</value>
+    </data>
+<data name="RestaurantWaitToApprove" xml:space="preserve">
+        <value> Ресторанти чакащи за Одобрение </value>
+    </data>
+<data name="Document" xml:space="preserve">
+        <value>Документ</value>
+    </data>
+<data name="NoDocumentIn" xml:space="preserve">
+        <value>Няма документи към </value>
+    </data>
+<data name="DeleteDocumentByThisUser" xml:space="preserve">
+        <value> Изтрии документ към този Юзър </value>
+    </data>
+<data name="UploudNewDocument" xml:space="preserve">
+        <value> Качи нов документ </value>
+    </data>
+<data name="Info" xml:space="preserve">
+        <value>Инфо</value>
+    </data>
+<data name="ActiveDocumentByThisUser" xml:space="preserve">
+        <value>Съществуващи документи към този Юзър</value>
+    </data>
+<data name="CreateNewVehichle" xml:space="preserve">
+        <value> Създай ново Превозно средство </value>
+    </data>
+     <data name="ByCity" xml:space="preserve">
+        <value>Търсене на Куриер по Град</value>
+    </data>
+    <data name="ByArea" xml:space="preserve">
+        <value>Търсене на Куриер по Зона</value>
+    </data>
+    <data name="CreateAddressDelivery" xml:space="preserve">
+        <value>Създай Адрес за Доставка</value>
+    </data>
+    <data name="AllAddressDelivery" xml:space="preserve">
+        <value>Всички Адреси за Доставка</value>
+    </data>
+     <data name="CariersInfo" xml:space="preserve">
+        <value>В този момент няма свободни позиции.</value>
+    </data>
+    <data name="Courier" xml:space="preserve">
+        <value>Куриер</value>
+    </data>
+    <data name="IsRestaurnat" xml:space="preserve">
+        <value>Одобрен Ресторант ли е</value>
+    </data>
+    <data name="SendEmailWhit" xml:space="preserve">
+        <value>Email ще бъде изпратен от:</value>
+    </data>
+     <data name="UploudFile" xml:space="preserve">
+        <value>Качи Файл</value>
+    </data>
+    <data name="Download" xml:space="preserve">
+        <value>Свали</value>
+    </data>
+</root>

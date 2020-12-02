@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Restaurants.RestaurantCreateInputViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Restaurants.RestaurantCreateInputViewModel
 @{
     this.ViewData["Title"] = "Apply for Restaurant";
     var areas = Model.Areas.Select(x => new SelectListItem(x.AreaName, x.Id.ToString()));
@@ -16,7 +20,7 @@
 <form method="post" asp-action="Create">
     <div>
         <label asp-for="ImageFile"></label>
-        <a class="btn btn-outline-success" asp-area="" asp-controller="UsersData" asp-action="Image">Uploaud Image</a>
+        <a class="btn btn-outline-success" asp-area="" asp-controller="UsersData" asp-action="Image">@SharedLocalizer.GetLocalizedHtmlString("UploadImage")</a>
     </div>
     <div>
         <label asp-for="Phone"></label>
@@ -34,4 +38,4 @@
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

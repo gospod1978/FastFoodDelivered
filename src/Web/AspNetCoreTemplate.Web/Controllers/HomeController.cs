@@ -2,7 +2,7 @@
 {
     using System.Diagnostics;
 
-    using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Services.Data.User;
     using AspNetCoreTemplate.Services.Messaging;
     using AspNetCoreTemplate.Web.ViewModels;
     using AspNetCoreTemplate.Web.ViewModels.Home;
@@ -29,6 +29,11 @@
         }
 
         public IActionResult Privacy()
+        {
+            return this.View();
+        }
+
+        public IActionResult Carriers()
         {
             return this.View();
         }

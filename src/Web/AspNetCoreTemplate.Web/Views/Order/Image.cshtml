@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Orders.UploadImageViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Orders.UploadImageViewModel
 @{
     this.ViewData["Title"] = "Apply for Courier";
 }
@@ -27,4 +31,4 @@
     </div>
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

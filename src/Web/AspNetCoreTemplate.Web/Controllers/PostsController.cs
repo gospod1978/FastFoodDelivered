@@ -3,7 +3,7 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Services.Data.User;
     using AspNetCoreTemplate.Web.ViewModels.Posts;
     using AutoMapper;
     using Microsoft.AspNetCore.Authorization;

@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Locations.CreateLocationsInputModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Locations.CreateLocationsInputModel
 @{
     this.ViewData["Title"] = "Street Create";
     var areas = Model.Areas.Select(x => new SelectListItem(x.AreaName, x.Id.ToString()));
@@ -11,7 +15,7 @@
 <form method="post" asp-action="Create2">
     <div class="media-body">
         <h5 class="mt-0" asp-for="CityName">@cityName</h5>
-        <input type="hidden" asp-for="CityId" class="form-control" value="@cityId"/>
+        <input type="hidden" asp-for="CityId" class="form-control" value="@cityId" />
     </div>
     <div>
         <label asp-for="AreaId"></label>
@@ -21,5 +25,6 @@
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
-<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">Back</a>
-<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">Area Create</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateStreet")</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("AreaCreate")</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

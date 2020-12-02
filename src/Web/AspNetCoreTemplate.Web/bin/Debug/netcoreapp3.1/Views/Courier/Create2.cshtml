@@ -1,4 +1,8 @@
 ﻿@model AspNetCoreTemplate.Web.ViewModels.Couriers.CourierCreateInputViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @{
     this.ViewData["Title"] = "Apply for Courier";
     var vechiles = Model.Vechiles.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
@@ -46,4 +50,4 @@
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

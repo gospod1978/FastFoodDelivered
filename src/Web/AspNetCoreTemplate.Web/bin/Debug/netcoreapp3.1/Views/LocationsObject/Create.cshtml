@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.LocationObjects.CreateLocationObjectInputModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.LocationObjects.CreateLocationObjectInputModel
 @{
     this.ViewData["Title"] = "Create Location";
     var userId = Model.UserId;
@@ -25,4 +29,4 @@
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="All">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Purchases.DetailsPurchaseViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Purchases.DetailsPurchaseViewModel
 @{
     this.ViewData["Title"] = "Detail Purchase";
 }
@@ -21,28 +25,28 @@
                         <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" width="80" height="80" class="d-block ui-w-40 rounded-circle" alt="" />
                         <div class="media-body ml-3">
                             <div class="text-muted small">
-                                <p>Full Courier name - @Model.CourierName</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("FullName") @SharedLocalizer.GetLocalizedHtmlString("Courier") - @Model.CourierName</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Menu Name - @Model.OrderName</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Menu") @SharedLocalizer.GetLocalizedHtmlString("Name") - @Model.OrderName</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Rest Name - @Model.RestaurantName</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Restaurant") @SharedLocalizer.GetLocalizedHtmlString("Name") - @Model.RestaurantName</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Promotion - @Model.PromotionType</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Promotion") - @Model.PromotionType</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Total Price - @Model.Price</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Total") @SharedLocalizer.GetLocalizedHtmlString("Price") - @Model.Price</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Menu Price - @Model.MenuPrice</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Menu") @SharedLocalizer.GetLocalizedHtmlString("Price") - @Model.MenuPrice</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Delivery price - @Model.DeliveryPrice</p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Delivery") @SharedLocalizer.GetLocalizedHtmlString("Price") - @Model.DeliveryPrice</p>
                             </div>
                             <div class="text-muted small">
-                                <p>Status - @Model.Status<a class="nav-link text-dark" asp-controller="Purchase" asp-action="ChangeStatus" asp-route-id="@Model.Id">Change Status</a></p>
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Back")Status - @Model.Status<a class="nav-link text-dark" asp-controller="Purchase" asp-action="ChangeStatus" asp-route-id="@Model.Id">@SharedLocalizer.GetLocalizedHtmlString("ChangeStatus")</a></p>
                             </div>
                         </div>
                     </div>

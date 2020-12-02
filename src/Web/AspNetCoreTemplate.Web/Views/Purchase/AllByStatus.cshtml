@@ -1,6 +1,10 @@
 ﻿@using AspNetCoreTemplate.Common
 @using AspNetCoreTemplate.Data.Models
 @using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Purchases.AllPurchaseViewModel
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -28,25 +32,25 @@ else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Menu</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Change Status</th>
-                <th>OrderId</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Menu")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Price")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Status")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("ChangeStatus")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("OrderId")</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var order in Model.Purchases)
             {
-            <tr>
-                <td>@order.OrderName </td>
-                <td>@order.Price</td>
-                <td>@order.Status</td>
-                <td><a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Status" asp-route-id="@order.Id">Change Status</a></td>
-                <td>@order.Id</td>
-            </tr>
+                <tr>
+                    <td>@order.OrderName </td>
+                    <td>@order.Price</td>
+                    <td>@order.Status</td>
+                    <td><a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Status" asp-route-id="@order.Id">@SharedLocalizer.GetLocalizedHtmlString("ChangeStatus")</a></td>
+                    <td>@order.Id</td>
+                </tr>
             }
         </tbody>
     </table>
-    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }

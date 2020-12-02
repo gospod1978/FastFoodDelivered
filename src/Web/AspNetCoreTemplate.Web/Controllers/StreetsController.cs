@@ -2,10 +2,7 @@
 {
     using System.Threading.Tasks;
 
-    using AspNetCoreTemplate.Services.Data.AddressService;
-    using AspNetCoreTemplate.Web.ViewModels.Addresses;
-    using AspNetCoreTemplate.Web.ViewModels.Areas;
-    using AspNetCoreTemplate.Web.ViewModels.Cities;
+    using AspNetCoreTemplate.Services.Data.Address;
     using AspNetCoreTemplate.Web.ViewModels.Streets;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

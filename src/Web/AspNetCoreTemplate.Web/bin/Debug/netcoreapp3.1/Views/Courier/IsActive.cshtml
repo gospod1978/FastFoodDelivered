@@ -1,4 +1,8 @@
 ﻿@model AspNetCoreTemplate.Web.ViewModels.Couriers.ChangeWorkingAreaIdViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @{
     this.ViewData["Title"] = "Street Create";
     var areas = Model.Areas.Select(x => new SelectListItem(x.AreaName, x.Id.ToString()));
@@ -21,5 +25,5 @@
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
-<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">Back</a>
-<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">Area Create</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateNewArea")</a>

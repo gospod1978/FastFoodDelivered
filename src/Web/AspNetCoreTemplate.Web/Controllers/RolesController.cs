@@ -1,11 +1,9 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
-    using System;
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Data.UserService;
-    using AspNetCoreTemplate.Web.ViewModels.Posts;
+    using AspNetCoreTemplate.Services.Data.User;
     using AspNetCoreTemplate.Web.ViewModels.Roles;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;

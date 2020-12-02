@@ -1,6 +1,10 @@
 ﻿@using AspNetCoreTemplate.Common
 @using AspNetCoreTemplate.Data.Models
 @using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Home.IndexViewModel
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -16,61 +20,61 @@
 }
 @if (this.SignInManager.IsSignedIn(this.User))
 {
-<ul>
+    <ul>
 
-    @if (!this.User.IsInRole(GlobalConstants.RestaurantRoleName) &&
-!this.User.IsInRole(GlobalConstants.CourierRoleName) &&
-!this.User.IsInRole(GlobalConstants.AdminRoleName) &&
-!this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-    {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">Create Address Delivery</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="LocationsObject" asp-action="AllByUser">All Address Delivery</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Purchase">Purchase</a>
-        </li>
-    }
-    else
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">All Purchase by Status</a>
-        </li>
+        @if (!this.User.IsInRole(GlobalConstants.RestaurantRoleName) &&
+   !this.User.IsInRole(GlobalConstants.CourierRoleName) &&
+   !this.User.IsInRole(GlobalConstants.AdminRoleName) &&
+   !this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateAddressDelivery")</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="LocationsObject" asp-action="AllByUser">@SharedLocalizer.GetLocalizedHtmlString("AllAddressDelivery")</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="Purchase">@SharedLocalizer.GetLocalizedHtmlString("Purchase")</a>
+            </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">@SharedLocalizer.GetLocalizedHtmlString("AllPurchasebyStatus")</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="SendEmail">@SharedLocalizer.GetLocalizedHtmlString("SendEmail")</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="EmailById">@SharedLocalizer.GetLocalizedHtmlString("AllEmailSent")</a>
+            </li>
+        }
 
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="SendEmail">Send Email</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">@SharedLocalizer.GetLocalizedHtmlString("Documents")</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="EmailById">All Email sent</a>
-        </li>
-    }
+        @if (this.User.IsInRole(GlobalConstants.CourierRoleName) ||
+   this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+   this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Courier" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("DetailsCourier")</a>
+            </li>
+        }
 
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">Documents</a>
-    </li>
-    @if (this.User.IsInRole(GlobalConstants.CourierRoleName) ||
-this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-    {
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Courier" asp-action="Details">Details Courier</a>
-        </li>
-    }
-
-    @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
-this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-this.User.IsInRole(GlobalConstants.AdministratorRoleName))
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">Menu Create</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Details">Details Restaurant</a>
-        </li>
-    }
-</ul>
+        @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+   this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+   this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Order" asp-action="MenuCreate">@SharedLocalizer.GetLocalizedHtmlString("MenuCreate")</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("DetailsReastaurant")</a>
+            </li>
+        }
+    </ul>
 }
 @if (Model.Categories.Count() == 0)
 {
@@ -93,33 +97,33 @@ else
 
 <div class="row" style="margin-top: 50px;">
     @if (!this.User.IsInRole(GlobalConstants.RestaurantRoleName) &&
-     !this.User.IsInRole(GlobalConstants.CourierRoleName) &&
-     !this.User.IsInRole(GlobalConstants.AdminRoleName) &&
-     !this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    !this.User.IsInRole(GlobalConstants.CourierRoleName) &&
+    !this.User.IsInRole(GlobalConstants.AdminRoleName) &&
+    !this.User.IsInRole(GlobalConstants.AdministratorRoleName))
     {
 
-    <div class="media col-md-4">
-        <div class="media-body text-center">
-            <img src=@AllImage.CourierJpg class="mr-3 applay-info" alt="">
+        <div class="media col-md-4">
+            <div class="media-body text-center">
+                <img src=@AllImage.CourierJpg class="mr-3 applay-info" alt="">
 
-            <h5 class="mt-0"><a asp-controller="Courier" asp-action="Create1">Courier Apply</a></h5>
+                <h5 class="mt-0"><a asp-controller="Courier" asp-action="Create1">@SharedLocalizer.GetLocalizedHtmlString("CourierApply")</a></h5>
+            </div>
         </div>
-    </div>
-    <div class="media col-md-4">
-        <div class="media-body text-center">
-            <img src=@AllImage.RestaurantJpg class="mr-3 applay-info" alt="">
+        <div class="media col-md-4">
+            <div class="media-body text-center">
+                <img src=@AllImage.RestaurantJpg class="mr-3 applay-info" alt="">
 
-            <h5 class="mt-0"><a asp-controller="Restaurant" asp-action="Create1">Restaurant Apply</a></h5>
+                <h5 class="mt-0"><a asp-controller="Restaurant" asp-action="Create1">@SharedLocalizer.GetLocalizedHtmlString("RestaurantApplay")</a></h5>
+            </div>
         </div>
-    </div>
-    <div class="media col-md-4">
-        <div class="media-body text-center">
-            
+        <div class="media col-md-4">
+            <div class="media-body text-center">
+
                 <img src=@AllImage.CarriersJpg class="mr-3 applay-info" alt="">
 
-                <h5 class="mt-0"><a asp-controller="Home" asp-action="Carriers">Carriers</a></h5>
-            
+                <h5 class="mt-0"><a asp-controller="Home" asp-action="Carriers">@SharedLocalizer.GetLocalizedHtmlString("Carriers")</a></h5>
+
+            </div>
         </div>
-    </div>
     }
 </div>

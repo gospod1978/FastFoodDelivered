@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Categories.CategoryViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Categories.CategoryViewModel
 @{
     this.ViewData["Title"] = Model.Title;
 }
@@ -23,8 +27,10 @@
                 <i class="fas fa-calendar-alt"></i> @post.CreatedOn
             </li>
             <li class="list-inline-item">
-                <i class="fas fa-comment-dots"></i> @post.CommentsCount comments
+                <i class="fas fa-comment-dots"></i> @post.CommentsCount @SharedLocalizer.GetLocalizedHtmlString("Comments")
             </li>
         </ul>
     </div>
 }
+
+<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

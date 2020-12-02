@@ -1,9 +1,9 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.deps.json
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.pdb
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.csprojAssemblyReference.cache
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.AssemblyInfoInputs.cache
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.AssemblyInfo.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.csproj.CoreCompileInputs.cache
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.pdb
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/netstandard2.1/AspNetCoreTemplate.Web.Infrastructure.csprojAssemblyReference.cache

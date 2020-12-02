@@ -10,7 +10,7 @@
 
     using AspNetCoreTemplate.Data;
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Services.Data.User;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;

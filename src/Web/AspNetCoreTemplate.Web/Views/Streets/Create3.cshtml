@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Streets.CreateStreetInputModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Streets.CreateStreetInputModel
 @{
     this.ViewData["Title"] = "Street Create";
 }
@@ -23,6 +27,6 @@
     </div>
     <hr />
     <input type="submit" class="btn btn-primary" />
-    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
-    <a class="btn btn-primary" asp-area="" asp-controller="Areas" asp-action="All">All Areas</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Areas" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("All") @SharedLocalizer.GetLocalizedHtmlString("Area")</a>
 </form>

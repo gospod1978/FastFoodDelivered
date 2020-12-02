@@ -1,4 +1,8 @@
 ﻿@using AspNetCoreTemplate.Common
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Cities.CityIndexViewModel
 
 @{
@@ -20,7 +24,7 @@ else
         {
             <div class="media col-md-4">
                 <div class="media-body">
-                    <h5 class="mt-0"><a asp-controller="Areas" asp-action="All" asp-route-id="@city.Id">@city.CityName - Areas in this City(@city.AreasCount)</a></h5>
+                    <h5 class="mt-0"><a asp-controller="Areas" asp-action="All" asp-route-id="@city.Id">@city.CityName - @SharedLocalizer.GetLocalizedHtmlString("AreaInThisCity") (@city.AreasCount)</a></h5>
                 </div>
             </div>
         }
@@ -28,7 +32,7 @@ else
 }
 
 <div>
-    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">CreateNewCity</a>
-    <a class="btn btn-primary" asp-area="" asp-controller="Areas" asp-action="Create">CreateArea</a>
-    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="NavBar">Back</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateCity")</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Areas" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateNewArea")</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="NavBar">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 </div>

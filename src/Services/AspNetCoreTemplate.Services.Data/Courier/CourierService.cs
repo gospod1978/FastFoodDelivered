@@ -9,7 +9,7 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Couriers;
-    using AspNetCoreTemplate.Services.Data.AddressService;
+    using AspNetCoreTemplate.Services.Data.Address;
     using AspNetCoreTemplate.Services.Mapping;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using Microsoft.AspNetCore.Identity;

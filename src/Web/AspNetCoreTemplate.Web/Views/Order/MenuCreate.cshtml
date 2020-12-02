@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Orders.OrderCreateInputViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Orders.OrderCreateInputViewModel
 @{
     this.ViewData["Title"] = "Create Menu";
     var categories = Model.Categories.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
@@ -49,7 +53,7 @@
     </div>
     <hr />
     <input type="submit" class="btn btn-primary" />
-    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Categories" asp-action="Create">Create New Category</a>
-    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Categories" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateNewCategory")</a>
+    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 </form>
 

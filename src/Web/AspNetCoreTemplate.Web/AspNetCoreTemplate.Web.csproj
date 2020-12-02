@@ -58,6 +58,7 @@
     <Folder Include="Views\Restaurant\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Purchase\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\Users\NavBarAdmin.cshtml">
@@ -261,5 +262,23 @@
     <Content Update="Views\Courier\Create2.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResource.en-GB.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedResource.en-GB.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\SharedResource.bg-BG.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedResource.bg-BG.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\SharedResource.en-GB.Designer.cs">
+      <DependentUpon>SharedResource.en-GB.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\SharedResource.bg-BG.Designer.cs">
+      <DependentUpon>SharedResource.bg-BG.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

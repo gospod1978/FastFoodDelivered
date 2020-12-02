@@ -1,6 +1,10 @@
 ﻿@using AspNetCoreTemplate.Common
 @using AspNetCoreTemplate.Data.Models
 @using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Addresses.CreateAddressInputModel
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -21,10 +25,10 @@
     <input type="submit" class="btn btn-primary" />
 
     @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
-          this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+         this.User.IsInRole(GlobalConstants.AdministratorRoleName))
     {
-        <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">Create City</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Cities" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateCity")</a>
     }
-    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 </form>
 

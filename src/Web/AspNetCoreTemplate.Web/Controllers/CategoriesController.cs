@@ -4,7 +4,7 @@
 
     using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Data.UserService;
+    using AspNetCoreTemplate.Services.Data.User;
     using AspNetCoreTemplate.Web.ViewModels.Categories;
     using AspNetCoreTemplate.Web.ViewModels.Home;
     using Microsoft.AspNetCore.Authorization;

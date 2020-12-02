@@ -1,4 +1,7 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Users.EmailModel
 @{
     ViewData["Title"] = "SendgridEmail";
@@ -12,7 +15,7 @@
         ]
     });</script>
 
-<h2>Send Email whit email: @Model.From</h2>
+<h2>@SharedLocalizer.GetLocalizedHtmlString("SendEmailWhit")  @Model.From</h2>
 <form asp-action="SendEmail" asp-controller="Users" method="post">
     <div>
         <input type="hidden" asp-for="OriginalEmail" class="form-control" value="@Model.OriginalEmail" />

@@ -2,6 +2,10 @@
 @using AspNetCoreTemplate.Common
 @using AspNetCoreTemplate.Data.Models
 @using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 @{
@@ -13,16 +17,16 @@
 <div class="media-body">
     <ul class="list-inline list-unstyled text-center">
         <li>
-            <h3 class="mt-0"><span>City </span>@Model.CityCityName</h3>
+            <h3 class="mt-0"><span>@SharedLocalizer.GetLocalizedHtmlString("City") </span>@Model.CityCityName</h3>
         </li>
         <li>
-            <h3 class="mt-0"><span>Area </span>@Model.AreaAreaName</h3>
+            <h3 class="mt-0"><span>@SharedLocalizer.GetLocalizedHtmlString("Area") </span>@Model.AreaAreaName</h3>
         </li>
         <li>
-            <h3 class="mt-0"><span>Street </span>@Model.StreetName</h3>
+            <h3 class="mt-0"><span>@SharedLocalizer.GetLocalizedHtmlString("Street") </span>@Model.StreetName</h3>
         </li>
         <li>
-            <h3 class="mt-0"><span>Number </span>@Model.LocationNumber | <span>Entrance </span>@Model.LocationEntrance | <span>Flour </span>@Model.LocationFlour | <span>Apartament </span>@Model.LocationApartament</h3>
+            <h3 class="mt-0"><span>@SharedLocalizer.GetLocalizedHtmlString("Number") </span>@Model.LocationNumber | <span>@SharedLocalizer.GetLocalizedHtmlString("Entrance") </span>@Model.LocationEntrance | <span>@SharedLocalizer.GetLocalizedHtmlString("Flour") </span>@Model.LocationFlour | <span>@SharedLocalizer.GetLocalizedHtmlString("Apartament") </span>@Model.LocationApartament</h3>
         </li>
     </ul>
 </div>
@@ -30,10 +34,9 @@
 @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
 this.User.IsInRole(GlobalConstants.AdministratorRoleName))
 {
-    <a class="btn btn-primary" asp-area="" asp-controller="Address" asp-action="NavBarAddress">Back</a>
-
+    <a class="btn btn-primary" asp-area="" asp-controller="Address" asp-action="NavBarAddress">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }
 else
 {
-    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }

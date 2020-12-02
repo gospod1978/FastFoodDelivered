@@ -1,4 +1,8 @@
 ﻿@using AspNetCoreTemplate.Common
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Users.EmailModel
 @using AspNetCoreTemplate.Data.Models
 @using Microsoft.AspNetCore.Identity
@@ -20,34 +24,34 @@
     <h1 style="margin:20px;">@this.ViewData["Title"]</h1>
 </div>
 <div>
-    <p>From - <strong>@Model.From</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("From") - <strong>@Model.From</strong></p>
 </div>
 <div>
-    <p>To - <strong>@Model.To</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("To") - <strong>@Model.To</strong></p>
 </div>
 <div>
-    <p>Subject - <strong>@Model.Subject</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("Subject") - <strong>@Model.Subject</strong></p>
 </div>
 <div>
-    <p>Body - <strong>@Model.BodyDes</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("Body") - <strong>@Model.BodyDes</strong></p>
 </div>
 <div>
-    <p>Send time - <strong>@Model.CreatedOn.ToString("R")</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("SendTime") - <strong>@Model.CreatedOn.ToString("R")</strong></p>
 </div>
 <div>
-    <p>SendGridEmail - <strong>@Model.OriginalEmail</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("SendGridEmail") - <strong>@Model.OriginalEmail</strong></p>
 </div>
 <div>
-    <p>UserName - <strong>@Model.UserName</strong></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("UserName") - <strong>@Model.UserName</strong></p>
 </div>
 
 @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
 this.User.IsInRole(GlobalConstants.AdministratorRoleName))
 {
-    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="AllEmail">Back</a>
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="AllEmail">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }
 else
 {
-    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="EmailById">Back</a>
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="EmailById">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }
 

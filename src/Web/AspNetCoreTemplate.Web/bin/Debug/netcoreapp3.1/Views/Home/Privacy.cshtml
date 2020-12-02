@@ -1,13 +1,17 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@{
     this.ViewData["Title"] = "Privacy Policy";
 }
 <h1>@this.ViewData["Title"]</h1>
 
 <ul>
     <li class="nav-item">
-        <a class="nav-link" href="~/files/client.docx">Privacy Policy</a>
+        <a class="nav-link" href="~/files/client.docx">@SharedLocalizer.GetLocalizedHtmlString("PrivacyPolicy")</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="~/files/privacy.docx">Client Policy</a>
+        <a class="nav-link" href="~/files/privacy.docx">@SharedLocalizer.GetLocalizedHtmlString("ClientPolicy")</a>
     </li>
 </ul>

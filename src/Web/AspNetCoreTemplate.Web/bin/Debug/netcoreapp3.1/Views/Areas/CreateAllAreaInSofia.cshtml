@@ -1,4 +1,8 @@
 ﻿@model AspNetCoreTemplate.Web.ViewModels.Areas.AreaCreateInputModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @{
     this.ViewData["Title"] = "Area Create";
     var cities = Model.Cities.Select(x => new SelectListItem(x.CityName, x.Id.ToString()));
@@ -10,4 +14,4 @@
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
-<a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Categories.CategoryCreateInputModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Categories.CategoryCreateInputModel
 @{
     this.ViewData["Title"] = "New Category";
 }
@@ -39,7 +43,7 @@
     </div>
     <hr />
     <input type="submit" class="btn btn-primary" />
-    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 </form>
 
 

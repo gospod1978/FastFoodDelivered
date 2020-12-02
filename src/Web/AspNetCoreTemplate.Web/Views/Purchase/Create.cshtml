@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Purchases.CreatePurchaseViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Purchases.CreatePurchaseViewModel
 @{
     this.ViewData["Title"] = "New Menu";
     var totalPrice = Model.MenuPrice + Model.DeliveryPrice;
@@ -48,7 +52,7 @@
         <span asp-validation-for="DeliveryPrice" class="text-danger"></span>
     </div>
     <div>
-        <p>Total Price</p>
+        <p>@SharedLocalizer.GetLocalizedHtmlString("Total") @SharedLocalizer.GetLocalizedHtmlString("Price")</p>
         <p>@totalPrice</p>
     </div>
     <div>

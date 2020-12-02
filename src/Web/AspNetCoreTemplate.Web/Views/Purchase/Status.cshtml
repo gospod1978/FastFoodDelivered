@@ -1,8 +1,12 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.Purchases.DetailsPurchaseViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Purchases.DetailsPurchaseViewModel
 <form method="post" asp-action="Status">
-    <p>Menu name - <span>@Model.OrderName</span></p> 
-    <p>Status in this moment - <span>@Model.Status</span></p> 
-    <p>New status - <span>@Model.NewStatus</span></p> 
+    <p>@SharedLocalizer.GetLocalizedHtmlString("Menu") @SharedLocalizer.GetLocalizedHtmlString("Name") - <span>@Model.OrderName</span></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("StatusInThisMoment") - <span>@Model.Status</span></p>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("NewStatus") - <span>@Model.NewStatus</span></p>
     <div>
         <input type="hidden" asp-for="Status" class="form-control" value="@Model.Status" />
         <span asp-validation-for="Status" class="text-danger"></span>

@@ -1,4 +1,8 @@
-﻿@model AspNetCoreTemplate.Web.ViewModels.UsersData.CreateUserDataViewModel
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.UsersData.CreateUserDataViewModel
 @{
     this.ViewData["Title"] = "Create Info for User";
     var userName = Model.UserUserName;
@@ -31,4 +35,4 @@
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-primary" style="margin-top:20px;" asp-area="" asp-controller="UsersData" asp-action="NavBar">Back</a>
+<a class="btn btn-primary" style="margin-top:20px;" asp-area="" asp-controller="UsersData" asp-action="NavBar">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

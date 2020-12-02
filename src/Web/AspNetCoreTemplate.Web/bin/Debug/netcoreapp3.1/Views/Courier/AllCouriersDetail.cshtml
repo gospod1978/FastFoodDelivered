@@ -1,4 +1,8 @@
 ﻿@using AspNetCoreTemplate.Common
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Couriers.CourierAllViewModel
 
 @{
@@ -12,18 +16,20 @@
 
 <div class="media col-md-4">
     <div class="media-body">
-        <h5 class="mt-0"><a href="">Curiers</a></h5>
+        <h5 class="mt-0"><a href="">@SharedLocalizer.GetLocalizedHtmlString("Curiers")</a></h5>
     </div>
 </div>
 
 <div class="media col-md-4">
     <div class="media-body">
-        <h5 class="mt-0"><a href="">Cities</a></h5>
+        <h5 class="mt-0"><a href="">@SharedLocalizer.GetLocalizedHtmlString("Cities")</a></h5>
     </div>
 </div>
 
 <div class="media col-md-4">
     <div class="media-body">
-        <h5 class="mt-0"><a href="">Vehichles</a></h5>
+        <h5 class="mt-0"><a href="">@SharedLocalizer.GetLocalizedHtmlString("Vehichles")</a></h5>
     </div>
 </div>
+
+<a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

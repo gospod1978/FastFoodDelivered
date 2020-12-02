@@ -1,4 +1,8 @@
-﻿@using AspNetCoreTemplate.Common
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@using AspNetCoreTemplate.Common
 @model AspNetCoreTemplate.Web.ViewModels.UsersData.AllUserDataCourierViewModel
 
 @{
@@ -24,23 +28,23 @@ else
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>City</th>
-                <th>Area</th>
-                <th>Phone</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Name")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("City")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Area")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("MobilePhone")</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var courier in Model.Couriers)
             {
-            <tr>
-                <td>@courier.Name </td>
-                <td>@courier.CityName</td>
-                <td>@courier.Area.AreaName</td>
-                <td>@courier.Phone</td>
-                <td><a class="btn btn-primary" asp-area="" asp-controller="Courier" asp-action="Details" asp-route-id="@courier.Id">Details</a></td>
+                <tr>
+                    <td>@courier.Name </td>
+                    <td>@courier.CityName</td>
+                    <td>@courier.Area.AreaName</td>
+                    <td>@courier.Phone</td>
+                    <td><a class="btn btn-primary" asp-area="" asp-controller="Courier" asp-action="Details" asp-route-id="@courier.Id">@SharedLocalizer.GetLocalizedHtmlString("Details")</a></td>
 
-            </tr>
+                </tr>
             }
         </tbody>
     </table>
@@ -49,9 +53,9 @@ else
 @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
 this.User.IsInRole(GlobalConstants.AdministratorRoleName))
 {
-    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }
 else
 {
-    <a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }

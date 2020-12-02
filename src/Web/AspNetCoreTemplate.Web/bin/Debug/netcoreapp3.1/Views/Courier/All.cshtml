@@ -1,13 +1,16 @@
 ﻿@using AspNetCoreTemplate.Common
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
 @model AspNetCoreTemplate.Web.ViewModels.Couriers.CourierViewModel
 
 @{
-    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
+    this.ViewData["Title"] = $"All Couriers";
 }
 
 <div class="text-center">
     <h1 class="display-4">@this.ViewData["Title"]</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
 @if (Model.Curiers.Count() == 0)
@@ -31,6 +34,6 @@ else
 
 <hr />
 <div>
-    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Create">CreateNewCategory</a>
-    <a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">Back</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Courier" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateNewCourier")</a>
+    <a class="btn btn-danger" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 </div>

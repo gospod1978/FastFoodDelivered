@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .ToList();
+}
+
+<div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+        @SharedLocalizer.GetLocalizedHtmlString("Language")
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="?culture=en-GB">EN</a>
+        <a class="dropdown-item" href="?culture=bg-BG">BG</a>
+    </div>
+</div> 
