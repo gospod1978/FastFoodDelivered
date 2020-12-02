@@ -34,7 +34,7 @@ The database schema consists of the following main entities:
 21. Vehicles  
 22. WorkingAreas
 
-DatabaseSchema
+https://github.com/gospod1978/FastFoodDelivered/blob/master/src/Web/AspNetCoreTemplate.Web/wwwroot/files/shemaDB.png
 
 Backend
 
