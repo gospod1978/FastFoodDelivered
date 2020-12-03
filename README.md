@@ -41,10 +41,24 @@ https://github.com/gospod1978/FastFoodDelivered/blob/master/src/Web/AspNetCoreTe
 Backend
 
 The web project contains:
+
 4 different areas: Identity, Administration, Courier, Restaurant
+
 18  services
+
 19 controllers
+
 81 views
+
+The first time when you made registration - Project create User:
+
+UserName: Admin
+
+User email: admin@admin.com
+
+Password: admin2020
+
+You need this user to have full access to all code!
 
 Features
 Guest
