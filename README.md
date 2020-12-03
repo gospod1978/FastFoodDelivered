@@ -8,6 +8,8 @@ ABOUT my web project:
 Fast Food Delivered (FFD) is an online orders and delivered food.
 The platform meets clients’ drivers and restaurants for only one click.
 
+Integrate Multilanguage - English and Bulgarian
+
 Database
 Microsoft SQL Server along with Entity Framework Core were used to create and store the values. 
 The database schema consists of the following main entities:
@@ -39,10 +41,24 @@ https://github.com/gospod1978/FastFoodDelivered/blob/master/src/Web/AspNetCoreTe
 Backend
 
 The web project contains:
+
 4 different areas: Identity, Administration, Courier, Restaurant
+
 18  services
+
 19 controllers
+
 81 views
+
+The first time when you made registration - Project create User:
+
+UserName: Admin
+
+User email: admin@admin.com
+
+Password: admin2020
+
+You need this user to have full access to all code!
 
 Features
 Guest
