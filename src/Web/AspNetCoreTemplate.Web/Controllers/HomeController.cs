@@ -2,7 +2,7 @@
 {
     using System.Diagnostics;
 
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Services.Messaging;
     using AspNetCoreTemplate.Web.ViewModels;
     using AspNetCoreTemplate.Web.ViewModels.Home;

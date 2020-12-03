@@ -459,6 +459,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj": {
+                "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj"
+              },
               "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data/AspNetCoreTemplate.Data.csproj": {
                 "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data/AspNetCoreTemplate.Data.csproj"
               },

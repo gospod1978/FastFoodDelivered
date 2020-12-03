@@ -2,8 +2,8 @@
 {
     using System.Threading.Tasks;
 
-    using AspNetCoreTemplate.Services.Data.Address;
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Addresses;
+    using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

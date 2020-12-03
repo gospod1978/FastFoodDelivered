@@ -7,10 +7,10 @@
     using System.Text;
     using System.Text.Encodings.Web;
     using System.Threading.Tasks;
-
+    using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data;
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Users;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -98,12 +98,15 @@
 
                 if (userBaseIsEmpty == 0)
                 {
-                    var userNameAndRole = "Admin";
+                    var userNameAndRole = GlobalConstants.AdminRoleName;
                     var roleExsist = this.roleManager.Roles.Where(x => x.Name == userNameAndRole).FirstOrDefault();
 
                     if (roleExsist == null)
                     {
                         var roleAdmin = this.roleService.CreateAsyncRole(userNameAndRole);
+                        await this.roleService.CreateAsyncRole(GlobalConstants.AdministratorRoleName);
+                        await this.roleService.CreateAsyncRole(GlobalConstants.CourierRoleName);
+                        await this.roleService.CreateAsyncRole(GlobalConstants.RestaurantRoleName);
                     }
 
                     var userAdmin = new ApplicationUser { UserName = userNameAndRole, Email = "admin@admin.com" };

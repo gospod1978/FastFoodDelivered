@@ -5,7 +5,7 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Common;
-    using AspNetCoreTemplate.Services.Data.Address;
+    using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;

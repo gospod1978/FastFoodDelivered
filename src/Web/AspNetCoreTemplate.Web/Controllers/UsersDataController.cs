@@ -4,10 +4,10 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Common;
-    using AspNetCoreTemplate.Services.Data.Address;
+    using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Restaurant;
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.Users;

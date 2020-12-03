@@ -2,7 +2,7 @@
 {
     using System.Threading.Tasks;
 
-    using AspNetCoreTemplate.Services.Data.Address;
+    using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Web.ViewModels.Addresses;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Locations;

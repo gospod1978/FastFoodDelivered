@@ -6,10 +6,10 @@
 
     using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Models;
-    using AspNetCoreTemplate.Services.Data.Address;
+    using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Restaurant;
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Cities;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;

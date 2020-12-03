@@ -15,14 +15,14 @@
             <a class="nav-link home-margin" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Home")</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@SharedLocalizer.GetLocalizedHtmlString("Hello")Hello @(this.User.Identity.Name)!</a>
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@SharedLocalizer.GetLocalizedHtmlString("Hello") @(this.User.Identity.Name)!</a>
         </li>
 
         if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
             this.User.IsInRole(GlobalConstants.AdministratorRoleName))
         {
             <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Admin")Admin</a>
+                <a class="nav-link" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Admin")</a>
             </li>
         }
 

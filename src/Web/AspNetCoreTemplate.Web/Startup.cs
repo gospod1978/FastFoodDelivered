@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Globalization;
+    using System.Linq;
     using System.Reflection;
 
     using AspNetCoreTemplate.Data;
@@ -10,11 +11,11 @@
     using AspNetCoreTemplate.Data.Repositories;
     using AspNetCoreTemplate.Data.Seeding;
     using AspNetCoreTemplate.Services.Data;
-    using AspNetCoreTemplate.Services.Data.Address;
+    using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Orders;
     using AspNetCoreTemplate.Services.Data.Restaurant;
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Services.Mapping;
     using AspNetCoreTemplate.Web.Resources;
     using AspNetCoreTemplate.Web.ViewModels;
@@ -65,7 +66,20 @@
                     options.DefaultRequestCulture = new RequestCulture(culture: "en-GB", uiCulture: "en-GB");
                     options.SupportedCultures = supportedCultures;
                     options.SupportedUICultures = supportedCultures;
-                    options.RequestCultureProviders.Insert(0, new QueryStringRequestCultureProvider());
+                    var defaultCookieRequestProvider =
+                   options.RequestCultureProviders.FirstOrDefault(rcp =>
+                       rcp.GetType() == typeof(CookieRequestCultureProvider));
+                    if (defaultCookieRequestProvider != null)
+                    {
+                        options.RequestCultureProviders.Remove(defaultCookieRequestProvider);
+                    }
+
+                    options.RequestCultureProviders.Insert(0,
+                        new CookieRequestCultureProvider()
+                        {
+                            CookieName = ".AspNetCore.Culture",
+                            Options = options,
+                        });
                 });
 
             services.AddMvc()

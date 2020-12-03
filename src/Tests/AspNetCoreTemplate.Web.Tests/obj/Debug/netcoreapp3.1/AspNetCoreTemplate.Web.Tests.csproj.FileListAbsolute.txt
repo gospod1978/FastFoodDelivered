@@ -4,7 +4,6 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/bundleconfig.json
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/libman.json
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.StaticWebAssets.xml
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.Tests.StaticWebAssets.xml
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll

@@ -29,9 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data\AspNetCoreTemplate.Data.csproj" />
     <ProjectReference Include="..\..\Services\AspNetCoreTemplate.Services.Data\AspNetCoreTemplate.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Data\AspNetCoreTemplate.Data.Models\AspNetCoreTemplate.Data.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AddressServiceTest\" />
-  </ItemGroup>
 </Project>

@@ -7,7 +7,7 @@
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.Courier;
     using AspNetCoreTemplate.Services.Data.Restaurant;
-    using AspNetCoreTemplate.Services.Data.User;
+    using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.Users;
