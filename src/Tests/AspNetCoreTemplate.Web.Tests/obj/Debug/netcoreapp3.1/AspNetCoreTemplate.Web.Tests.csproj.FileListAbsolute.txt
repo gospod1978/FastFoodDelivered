@@ -588,3 +588,4 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.Tests.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.Tests.pdb
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.Tests.genruntimeconfig.cache
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.StaticWebAssets.xml
