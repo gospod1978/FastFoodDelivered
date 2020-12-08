@@ -28,7 +28,7 @@
         <value>Home</value>
     </data>
     <data name="AllPurchasebyStatus" xml:space="preserve">
-        <value>Add Purchase by Status</value>
+        <value>All Purchase by Status</value>
     </data>
     <data name="SendEmail" xml:space="preserve">
         <value>Send Email</value>

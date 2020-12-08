@@ -29,6 +29,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="SendGrid" Version="9.21.2" />
+    <PackageReference Include="ClosedXML" Version="0.95.3" />
   </ItemGroup>
 
   <ItemGroup>

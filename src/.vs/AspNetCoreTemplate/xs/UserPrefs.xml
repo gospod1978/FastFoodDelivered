@@ -1,17 +1,19 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/Views/Home/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData1.cshtml">
     <Files>
       <File FileName="Web/AspNetCoreTemplate.Web/Views/Users/Searching.cshtml" Line="11" Column="9" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByStatus.cshtml" Line="17" Column="38" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByStatus.cshtml" Line="55" Column="5" />
       <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData.cshtml" Line="28" Column="158" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" Line="169" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Courier/Details.cshtml" Line="45" Column="205" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" Line="260" Column="132" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Purchases/DetailsPurchaseViewModel.cs" Line="36" Column="33" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Courier/Details.cshtml" />
       <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" Line="158" Column="31" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/IPurchaseService.cs" Line="8" Column="6" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData1.cshtml" Line="57" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Users/NavBarAdmin.cshtml" Line="44" Column="10" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Shared/_LoginPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/IPurchaseService.cs" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData1.cshtml" Line="55" Column="107" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Users/NavBarAdmin.cshtml" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Shared/_LoginPartial.cshtml" />
       <File FileName="Web/AspNetCoreTemplate.Web/Views/Home/Index.cshtml" Line="60" Column="6" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/UsersData/AllCouriers.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -36,13 +38,20 @@
             </Node>
             <Node name="Web" expanded="True">
               <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Resources" expanded="True" />
                 <Node name="Views" expanded="True">
-                  <Node name="Home" expanded="True">
-                    <Node name="Index.cshtml" selected="True" />
+                  <Node name="Home" expanded="True" />
+                  <Node name="Purchase" expanded="True">
+                    <Node name="AllByData1.cshtml" selected="True" />
                   </Node>
                   <Node name="Shared" expanded="True" />
                   <Node name="Users" expanded="True" />
+                  <Node name="UsersData" expanded="True" />
                 </Node>
+              </Node>
+              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
+                <Node name="Purchases" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -64,7 +73,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/CourierController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/CourierController.cs" line="230" column="1" />
-      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" line="169" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

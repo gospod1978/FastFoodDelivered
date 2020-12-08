@@ -1,5 +1,7 @@
 ﻿namespace AspNetCoreTemplate.Web.Controllers
 {
+    using System.Data;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -16,6 +18,7 @@
     using AspNetCoreTemplate.Web.ViewModels.Purchases;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
+    using ClosedXML.Excel;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
@@ -233,6 +236,68 @@
             this.purchaseService.ChangeStatus(input.Id, input.NewStatus);
 
             return this.RedirectToAction(nameof(this.AllByStatus));
+        }
+
+        [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant, Courier")]
+        public async Task<FileContentResult> ExportToExcel()
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var role = string.Empty;
+            if (this.User.IsInRole(GlobalConstants.CourierRoleName))
+            {
+                role = GlobalConstants.CourierRoleName;
+            }
+            else if (this.User.IsInRole(GlobalConstants.RestaurantRoleName))
+            {
+                role = GlobalConstants.RestaurantRoleName;
+            }
+            else if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) || this.User.IsInRole(GlobalConstants.AdminRoleName))
+            {
+                role = GlobalConstants.AdminRoleName;
+            }
+
+            var purchases = this.purchaseService.GetAll<DetailsPurchaseViewModel>(user.Id, role).OrderByDescending(x => x.CreatedOn);
+            foreach (var item in purchases)
+            {
+                var purchase = this.purchaseService.GetById<DetailsPurchaseViewModel>(item.Id);
+                var orderName = this.ordersService.GetById<OrderDetailsViewModel>(purchase.OrderId);
+                var restName = this.restaurantService.GetById<RestaurantAll>(purchase.RestaurantId);
+                var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
+                var courier = this.courierService.GetById<CourierWaitApprove>(purchase.CourierId);
+                var couriername = this.usersDataService.GetByUserId<UserDataIndexViewModel>(courier.UserId);
+                item.RestaurantName = restname.Name;
+                item.CourierName = couriername.Name;
+                item.OrderName = orderName.Name;
+            }
+
+            DataTable ws = new DataTable("Purchase");
+
+            ws.Columns.AddRange(new DataColumn[7]
+            {
+                new DataColumn("OrderName"),
+                new DataColumn("RestaurantName"),
+                new DataColumn("CourierName"),
+                new DataColumn("Status"),
+                new DataColumn("CreatedOn"),
+                new DataColumn("PromotionType"),
+                new DataColumn("Price"),
+            });
+
+            foreach (var item in purchases)
+            {
+                ws.Rows.Add(item.OrderName, item.RestaurantName, item.CourierName, item.Status, item.CreatedOn, item.PromotionType, item.Price);
+            }
+
+            using (XLWorkbook woekBook = new XLWorkbook())
+            {
+                woekBook.Worksheets.Add(ws);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    woekBook.SaveAs(stream);
+                    return this.File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Purchase.xlsx");
+                }
+            }
         }
 
         private string NextStatus(string status)

@@ -612,3 +612,7 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Users/Searching.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Purchase/AllByData.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Purchase/AllByData1.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/bin/Debug/netcoreapp3.1/ClosedXML.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/bin/Debug/netcoreapp3.1/DocumentFormat.OpenXml.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/bin/Debug/netcoreapp3.1/ExcelNumberFormat.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/bin/Debug/netcoreapp3.1/System.IO.Packaging.dll

@@ -768,6 +768,10 @@
               "target": "Package",
               "version": "[3.2.449, )"
             },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.95.3, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.6, )"

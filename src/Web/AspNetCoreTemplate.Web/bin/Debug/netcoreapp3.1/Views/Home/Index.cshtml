@@ -52,11 +52,12 @@
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="EmailById">@SharedLocalizer.GetLocalizedHtmlString("AllEmailSent")</a>
         </li>
-    }
+
 
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">@SharedLocalizer.GetLocalizedHtmlString("Documents")</a>
     </li>
+    }
     @if (this.User.IsInRole(GlobalConstants.CourierRoleName) ||
 this.User.IsInRole(GlobalConstants.AdminRoleName) ||
 this.User.IsInRole(GlobalConstants.AdministratorRoleName))
