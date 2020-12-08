@@ -157,6 +157,39 @@
         }
 
         [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant, Courier")]
+        public IActionResult AllByData()
+        {
+            return this.View();
+        }
+
+        [Authorize]
+        [Authorize(Roles = "Administrator, Admin, Restaurant, Courier")]
+        public async Task<IActionResult> AllByData1(int id)
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+            var role = string.Empty;
+            if (this.User.IsInRole(GlobalConstants.CourierRoleName))
+            {
+                role = GlobalConstants.CourierRoleName;
+            }
+            else if (this.User.IsInRole(GlobalConstants.RestaurantRoleName))
+            {
+                role = GlobalConstants.RestaurantRoleName;
+            }
+            else if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) || this.User.IsInRole(GlobalConstants.AdminRoleName))
+            {
+                role = GlobalConstants.AdminRoleName;
+            }
+
+            var purchases = this.purchaseService.GetAll<DetailsPurchaseViewModel>(user.Id, role, id);
+            var viewModel = new AllPurchaseViewModel();
+            viewModel.Purchases = purchases;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
         public async Task<IActionResult> Purchase()
         {
             var user = await this.userManager.GetUserAsync(this.User);

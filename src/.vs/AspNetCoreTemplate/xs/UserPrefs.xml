@@ -1,7 +1,17 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/AspNetCoreTemplate.Services.Data.Tests/LocationsServiceTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/Views/Home/Index.cshtml">
     <Files>
-      <File FileName="Tests/AspNetCoreTemplate.Services.Data.Tests/LocationsServiceTest.cs" Line="154" Column="13" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Users/Searching.cshtml" Line="11" Column="9" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByStatus.cshtml" Line="17" Column="38" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData.cshtml" Line="28" Column="158" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" Line="169" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Courier/Details.cshtml" Line="45" Column="205" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" Line="158" Column="31" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/IPurchaseService.cs" Line="8" Column="6" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData1.cshtml" Line="57" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Users/NavBarAdmin.cshtml" Line="44" Column="10" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Shared/_LoginPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/Home/Index.cshtml" Line="60" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,47 +23,34 @@
               </Node>
               <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
                 <Node name="Addresses" expanded="True" />
+                <Node name="Couriers" expanded="True" />
               </Node>
             </Node>
             <Node name="Services" expanded="True">
               <Node name="AspNetCoreTemplate.Services" expanded="True" />
               <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
                 <Node name="Addresses" expanded="True" />
+                <Node name="Courier" expanded="True" />
+                <Node name="Orders" expanded="True" />
               </Node>
-              <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
-            </Node>
-            <Node name="Tests" expanded="True">
-              <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True">
-                <Node name="Dependencies" expanded="True" />
-                <Node name="LocationsServiceTest.cs" selected="True" />
-              </Node>
-              <Node name="AspNetCoreTemplate.Web.Tests" expanded="True" />
             </Node>
             <Node name="Web" expanded="True">
               <Node name="AspNetCoreTemplate.Web" expanded="True">
-                <Node name="Dependencies" expanded="True">
-                  <Node name="ProjectDependencies" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="Home" expanded="True">
+                    <Node name="Index.cshtml" selected="True" />
+                  </Node>
+                  <Node name="Shared" expanded="True" />
+                  <Node name="Users" expanded="True" />
                 </Node>
               </Node>
-              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
-                <Node name="Addresses" expanded="True" />
-              </Node>
             </Node>
-            <Node name="AspNetCoreTemplate.Common" expanded="True" />
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="AspNetCoreTemplate" expanded="True">
-            <Node name="Tests" expanded="True">
-              <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True">
-                <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True">
-                  <Node name="SettingsServiceTests" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="AspNetCoreTemplate" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -65,7 +62,10 @@
     <String>/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered</String>
   </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/CourierController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/CourierController.cs" line="230" column="1" />
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" line="169" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

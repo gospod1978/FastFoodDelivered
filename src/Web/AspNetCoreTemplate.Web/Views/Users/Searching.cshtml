@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Common
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@{
+    this.ViewData["Title"] = "Admin Panel";
+}
+<ul>
+    @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+        this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="AllCouriers">@SharedLocalizer.GetLocalizedHtmlString("AllCouriers")</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="AllRestaurants">@SharedLocalizer.GetLocalizedHtmlString("AllRestaurants")</a>
+        </li>
+    }
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="AllByStatus">@SharedLocalizer.GetLocalizedHtmlString("AllOrders")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Purchase" asp-action="AllByData">@SharedLocalizer.GetLocalizedHtmlString("AllOrdersByData")</a>
+    </li>
+</ul>

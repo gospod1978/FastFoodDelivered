@@ -264,5 +264,12 @@
 
             return this.View(viewModel);
         }
+
+        [Authorize]
+        [Authorize(Roles = "Admin, Administrator, Courier, Restaurant")]
+        public IActionResult Searching()
+        {
+            return this.View();
+        }
     }
 }

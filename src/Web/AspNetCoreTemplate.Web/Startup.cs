@@ -74,7 +74,8 @@
                         options.RequestCultureProviders.Remove(defaultCookieRequestProvider);
                     }
 
-                    options.RequestCultureProviders.Insert(0,
+                    options.RequestCultureProviders.Insert(
+                        0,
                         new CookieRequestCultureProvider()
                         {
                             CookieName = ".AspNetCore.Culture",

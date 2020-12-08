@@ -609,3 +609,6 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.pdb
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.genruntimeconfig.cache
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Users/Searching.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Purchase/AllByData.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Debug/netcoreapp3.1/Razor/Views/Purchase/AllByData1.cshtml.g.cs

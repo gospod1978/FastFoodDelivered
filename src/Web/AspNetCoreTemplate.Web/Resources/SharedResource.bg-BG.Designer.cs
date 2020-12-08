@@ -143,9 +143,9 @@ namespace AspNetCoreTemplate.Web.Resources {
             }
         }
         
-        internal static string RestaurantApplay_ {
+        internal static string RestaurantApplay {
             get {
-                return ResourceManager.GetString("RestaurantApplay ", resourceCulture);
+                return ResourceManager.GetString("RestaurantApplay", resourceCulture);
             }
         }
         
@@ -746,6 +746,54 @@ namespace AspNetCoreTemplate.Web.Resources {
         internal static string Download {
             get {
                 return ResourceManager.GetString("Download", resourceCulture);
+            }
+        }
+        
+        internal static string Searching {
+            get {
+                return ResourceManager.GetString("Searching", resourceCulture);
+            }
+        }
+        
+        internal static string AllCouriers {
+            get {
+                return ResourceManager.GetString("AllCouriers", resourceCulture);
+            }
+        }
+        
+        internal static string AllRestaurants {
+            get {
+                return ResourceManager.GetString("AllRestaurants", resourceCulture);
+            }
+        }
+        
+        internal static string AllOrders {
+            get {
+                return ResourceManager.GetString("AllOrders", resourceCulture);
+            }
+        }
+        
+        internal static string AllOrdersByData {
+            get {
+                return ResourceManager.GetString("AllOrdersByData", resourceCulture);
+            }
+        }
+        
+        internal static string ToDay {
+            get {
+                return ResourceManager.GetString("ToDay", resourceCulture);
+            }
+        }
+        
+        internal static string LastWeek {
+            get {
+                return ResourceManager.GetString("LastWeek", resourceCulture);
+            }
+        }
+        
+        internal static string LastMonth {
+            get {
+                return ResourceManager.GetString("LastMonth", resourceCulture);
             }
         }
     }

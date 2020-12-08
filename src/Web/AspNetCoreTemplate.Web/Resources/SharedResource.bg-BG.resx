@@ -64,7 +64,7 @@
         <value> Кандидатствай за Куриер </value>
     </data>
 
-    <data name="RestaurantApplay " xml:space="preserve">
+    <data name="RestaurantApplay" xml:space="preserve">
         <value>Кандидатсвай за Партньор Ресторант </value>
     </data>
 
@@ -392,5 +392,29 @@
     </data>
     <data name="Download" xml:space="preserve">
         <value>Свали</value>
+    </data>
+    <data name="Searching" xml:space="preserve">
+        <value>Търсене</value>
+    </data>
+     <data name="AllCouriers" xml:space="preserve">
+        <value>Всички Куриери</value>
+    </data>
+     <data name="AllRestaurants" xml:space="preserve">
+        <value>Всички Ресторанти</value>
+    </data>
+     <data name="AllOrders" xml:space="preserve">
+        <value>Всички Поръчки</value>
+    </data>
+     <data name="AllOrdersByData" xml:space="preserve">
+        <value>Всички Поръчки за дата</value>
+    </data>
+    <data name="ToDay" xml:space="preserve">
+        <value>Днес</value>
+    </data>
+    <data name="LastWeek" xml:space="preserve">
+        <value>Последната седмица</value>
+    </data>
+    <data name="LastMonth" xml:space="preserve">
+        <value>Последният месец</value>
     </data>
 </root>

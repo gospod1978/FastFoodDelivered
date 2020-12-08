@@ -395,4 +395,28 @@
     <data name="Download" xml:space="preserve">
         <value>Download</value>
     </data>
+    <data name="Searching" xml:space="preserve">
+        <value>Searching</value>
+    </data>
+    <data name="AllCouriers" xml:space="preserve">
+        <value>All Couriers</value>
+    </data>
+     <data name="AllRestaurants" xml:space="preserve">
+        <value>All Restaurants</value>
+    </data>
+     <data name="AllOrders" xml:space="preserve">
+        <value>All Orders</value>
+    </data>
+     <data name="AllOrdersByData" xml:space="preserve">
+        <value>All Orders By Data</value>
+    </data>
+    <data name="ToDay" xml:space="preserve">
+        <value>ToDay</value>
+    </data>
+    <data name="LastWeek" xml:space="preserve">
+        <value>Last Week</value>
+    </data>
+    <data name="LastMonth" xml:space="preserve">
+        <value>Last Month</value>
+    </data>
 </root>

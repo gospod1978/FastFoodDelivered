@@ -150,45 +150,99 @@
             return query.To<T>().ToList();
         }
 
-        public IEnumerable<T> GetAll<T>(string id, string role, int? count = null)
+        public IEnumerable<T> GetAll<T>(string id, string role, int? days = null, int? count = null)
         {
-            if (role == GlobalConstants.AdminRoleName || role == GlobalConstants.AdministratorRoleName)
+            if (days != null)
             {
-                IQueryable<Purchase> query =
-            this.purchaseRepository.All().OrderByDescending(x => x.Status);
-
-                if (count.HasValue)
+                var data = DateTime.Today;
+                if (days == 7)
                 {
-                    query = query.Take(count.Value);
+                    data = DateTime.Today.AddDays(-7);
+                }
+                else if (days == 30)
+                {
+                    data = DateTime.Today.AddDays(-30);
                 }
 
-                return query.To<T>().ToList();
-            }
-            else if (role == GlobalConstants.CourierRoleName)
-            {
-                var courier = this.courierRepository.All().Where(x => x.UserId == id).FirstOrDefault();
-                IQueryable<Purchase> query =
-            this.purchaseRepository.All().Where(x => x.CourierId == courier.Id).OrderByDescending(x => x.Status);
-
-                if (count.HasValue)
+                if (role == GlobalConstants.AdminRoleName || role == GlobalConstants.AdministratorRoleName)
                 {
-                    query = query.Take(count.Value);
-                }
+                    IQueryable<Purchase> query =
+                this.purchaseRepository.All().Where(o => o.CreatedOn >= data).OrderByDescending(x => x.Status);
 
-                return query.To<T>().ToList();
+                    if (count.HasValue)
+                    {
+                        query = query.Take(count.Value);
+                    }
+
+                    return query.To<T>().ToList();
+                }
+                else if (role == GlobalConstants.CourierRoleName)
+                {
+                    var courier = this.courierRepository.All().Where(x => x.UserId == id).FirstOrDefault();
+                    IQueryable<Purchase> query =
+                this.purchaseRepository.All().Where(x => x.CourierId == courier.Id).OrderByDescending(x => x.Status);
+                    query = query.Where(o => o.CreatedOn >= data);
+                    if (count.HasValue)
+                    {
+                        query = query.Take(count.Value);
+                    }
+
+                    return query.To<T>().ToList();
+                }
+                else
+                {
+                    var restaurant = this.restaurantRepostiory.All().Where(x => x.UserId == id).FirstOrDefault();
+                    IQueryable<Purchase> query =
+                this.purchaseRepository.All().Where(x => x.RestaurantId == restaurant.Id).OrderByDescending(x => x.Status);
+                    query = query.Where(o => o.CreatedOn >= data);
+                    if (count.HasValue)
+                    {
+                        query = query.Take(count.Value);
+                    }
+
+                    return query.To<T>().ToList();
+                }
             }
             else
             {
-                var restaurant = this.restaurantRepostiory.All().Where(x => x.UserId == id).FirstOrDefault();
-                IQueryable<Purchase> query =
-            this.purchaseRepository.All().Where(x => x.RestaurantId == restaurant.Id).OrderByDescending(x => x.Status);
-
-                if (count.HasValue)
+                if (role == GlobalConstants.AdminRoleName || role == GlobalConstants.AdministratorRoleName)
                 {
-                    query = query.Take(count.Value);
-                }
+                    IQueryable<Purchase> query =
+                this.purchaseRepository.All().OrderByDescending(x => x.Status);
 
-                return query.To<T>().ToList();
+                    if (count.HasValue)
+                    {
+                        query = query.Take(count.Value);
+                    }
+
+                    return query.To<T>().ToList();
+                }
+                else if (role == GlobalConstants.CourierRoleName)
+                {
+                    var courier = this.courierRepository.All().Where(x => x.UserId == id).FirstOrDefault();
+                    IQueryable<Purchase> query =
+                this.purchaseRepository.All().Where(x => x.CourierId == courier.Id).OrderByDescending(x => x.Status);
+
+                    if (count.HasValue)
+                    {
+                        query = query.Take(count.Value);
+                    }
+
+                    return query.To<T>().ToList();
+                }
+                else
+                {
+                    var restaurant = this.restaurantRepostiory.All().Where(x => x.UserId == id).FirstOrDefault();
+                    IQueryable<Purchase> query =
+                this.purchaseRepository.All().Where(x => x.RestaurantId == restaurant.Id).OrderByDescending(x => x.Status);
+
+                    if (count.HasValue)
+                    {
+                        query = query.Take(count.Value);
+                    }
+
+                    return query.To<T>().ToList();
+                }
             }
         }
 
