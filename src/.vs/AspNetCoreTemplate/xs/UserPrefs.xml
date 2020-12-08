@@ -1,8 +1,7 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/AspNetCoreTemplate.Services.Data/Addresses/AddressService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/AspNetCoreTemplate.Services.Data.Tests/LocationsServiceTest.cs">
     <Files>
-      <File FileName="Tests/AspNetCoreTemplate.Services.Data.Tests/AddressServiceTests.cs" Line="107" Column="12" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Addresses/AddressService.cs" Line="1" Column="1" />
+      <File FileName="Tests/AspNetCoreTemplate.Services.Data.Tests/LocationsServiceTest.cs" Line="154" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,19 +16,28 @@
               </Node>
             </Node>
             <Node name="Services" expanded="True">
+              <Node name="AspNetCoreTemplate.Services" expanded="True" />
               <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
-                <Node name="Addresses" expanded="True">
-                  <Node name="AddressService.cs" selected="True" />
-                </Node>
+                <Node name="Addresses" expanded="True" />
               </Node>
               <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
             </Node>
             <Node name="Tests" expanded="True">
-              <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True" />
+              <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True">
+                <Node name="Dependencies" expanded="True" />
+                <Node name="LocationsServiceTest.cs" selected="True" />
+              </Node>
               <Node name="AspNetCoreTemplate.Web.Tests" expanded="True" />
             </Node>
             <Node name="Web" expanded="True">
-              <Node name="AspNetCoreTemplate.Web" expanded="True" />
+              <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="ProjectDependencies" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
+                <Node name="Addresses" expanded="True" />
+              </Node>
             </Node>
             <Node name="AspNetCoreTemplate.Common" expanded="True" />
           </Node>
@@ -41,9 +49,7 @@
             <Node name="Tests" expanded="True">
               <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True">
                 <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True">
-                  <Node name="AddressServiceTests" expanded="True">
-                    <Node name="GetAddressByIdShouldReturnCorrectInfo" selected="True" />
-                  </Node>
+                  <Node name="SettingsServiceTests" selected="True" />
                 </Node>
               </Node>
             </Node>

@@ -4,6 +4,7 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Models.Addresses;
+    using AspNetCoreTemplate.Web.ViewModels.Addresses;
 
     public interface IAddressService
     {
@@ -13,7 +14,7 @@
 
         T GetById<T>(string id);
 
-        Address GetAddress(string id);
+        IndexAddressViewModel GetAddress(string id);
 
         Task<string> CreateAsyncWorkingArea(string areaId, string userId);
 

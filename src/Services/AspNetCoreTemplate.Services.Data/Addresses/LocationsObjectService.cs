@@ -13,14 +13,11 @@
     public class LocationsObjectService : ILocationsObjectService
     {
         private readonly IDeletableEntityRepository<LocationObject> locationRepository;
-        private readonly UserManager<ApplicationUser> userManager;
 
         public LocationsObjectService(
-            IDeletableEntityRepository<LocationObject> locationRepository,
-            UserManager<ApplicationUser> userManager)
+            IDeletableEntityRepository<LocationObject> locationRepository)
         {
             this.locationRepository = locationRepository;
-            this.userManager = userManager;
         }
 
         public async Task<string> CreateAsyncLocationObject(string name, string adressId, string userId)

@@ -10,7 +10,12 @@
         "dependencies": {
           "AspNetCoreTemplate.Data": "1.0.0",
           "AspNetCoreTemplate.Data.Models": "1.0.0",
+          "AspNetCoreTemplate.Services": "1.0.0",
           "AspNetCoreTemplate.Services.Data": "1.0.0",
+          "AspNetCoreTemplate.Services.Mapping": "1.0.0",
+          "AspNetCoreTemplate.Services.Messaging": "1.0.0",
+          "AspNetCoreTemplate.Web.Infrastructure": "1.0.0",
+          "AspNetCoreTemplate.Web.ViewModels": "1.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.6",
           "Microsoft.NET.Test.Sdk": "16.6.1",
           "Moq": "4.14.5",
@@ -1914,6 +1919,11 @@
           "AspNetCoreTemplate.Data.Models.dll": {}
         }
       },
+      "AspNetCoreTemplate.Services/1.0.0": {
+        "runtime": {
+          "AspNetCoreTemplate.Services.dll": {}
+        }
+      },
       "AspNetCoreTemplate.Services.Data/1.0.0": {
         "dependencies": {
           "AspNetCoreTemplate.Common": "1.0.0",
@@ -1932,6 +1942,19 @@
         },
         "runtime": {
           "AspNetCoreTemplate.Services.Mapping.dll": {}
+        }
+      },
+      "AspNetCoreTemplate.Services.Messaging/1.0.0": {
+        "dependencies": {
+          "SendGrid": "9.21.2"
+        },
+        "runtime": {
+          "AspNetCoreTemplate.Services.Messaging.dll": {}
+        }
+      },
+      "AspNetCoreTemplate.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "AspNetCoreTemplate.Web.Infrastructure.dll": {}
         }
       },
       "AspNetCoreTemplate.Web.ViewModels/1.0.0": {
@@ -3151,12 +3174,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AspNetCoreTemplate.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "AspNetCoreTemplate.Services.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "AspNetCoreTemplate.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AspNetCoreTemplate.Services.Messaging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AspNetCoreTemplate.Web.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

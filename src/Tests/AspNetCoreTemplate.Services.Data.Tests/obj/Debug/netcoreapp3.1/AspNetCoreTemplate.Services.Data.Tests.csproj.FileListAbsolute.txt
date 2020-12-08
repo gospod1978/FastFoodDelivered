@@ -167,3 +167,9 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.Data.Tests.dll
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.Data.Tests.pdb
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/obj/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.Data.Tests.genruntimeconfig.cache
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.Messaging.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.Infrastructure.dll
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.pdb
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Services.Messaging.pdb
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Services.Data.Tests/bin/Debug/netcoreapp3.1/AspNetCoreTemplate.Web.Infrastructure.pdb

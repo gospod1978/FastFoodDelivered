@@ -42,16 +42,6 @@
             return area.Id;
         }
 
-        public Task<string> CreateAsyncWorkingAreaCourier(string userId, string areaId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> CreateAsyncWorkingAreaRestaurant(string userId, string areaId)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<T> GetAllAreas<T>(string id, int? count = null)
         {
             IQueryable<Area> query =
@@ -67,8 +57,7 @@
 
         public IEnumerable<T> GetAllWorkingAreas<T>(string id, int? count = null)
         {
-            var city = this.cityRepository.All().Where(x => x.Id == id).FirstOrDefault();
-            var areas = this.areaRepository.All().Where(x => x.CityId == city.Id);
+            var areas = this.areaRepository.All().Where(x => x.CityId == id);
 
             IQueryable<Area> query = areas.OrderBy(x => x.AreaName);
 
@@ -90,7 +79,7 @@
 
         public T GetByName<T>(string name)
         {
-            var entity = this.areaRepository.All().Where(x => x.Id == name)
+            var entity = this.areaRepository.All().Where(x => x.AreaName == name)
                 .To<T>().FirstOrDefault();
 
             return entity;

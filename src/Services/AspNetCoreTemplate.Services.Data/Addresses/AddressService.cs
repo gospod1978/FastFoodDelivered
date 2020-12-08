@@ -8,6 +8,7 @@
     using AspNetCoreTemplate.Data.Common.Repositories;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Services.Mapping;
+    using AspNetCoreTemplate.Web.ViewModels.Addresses;
 
     public class AddressService : IAddressService
     {
@@ -130,10 +131,10 @@
             return workingArea.Id;
         }
 
-        public Address GetAddress(string id)
+        public IndexAddressViewModel GetAddress(string id)
         {
             var entity = this.addressRepository.All().Where(x => x.Id == id)
-                .To<Address>().FirstOrDefault();
+                .To<IndexAddressViewModel>().FirstOrDefault();
 
             return entity;
         }
@@ -141,7 +142,7 @@
         public IEnumerable<T> GetAllAddress<T>(int? count = null)
         {
             IQueryable<Address> query =
-               this.addressRepository.All().OrderByDescending(x => x.City.CityName);
+               this.addressRepository.All().OrderByDescending(x => x.Id);
 
             if (count.HasValue)
             {

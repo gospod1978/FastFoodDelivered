@@ -10,14 +10,11 @@
 
     public class LocationsService : ILocationsService
     {
-        private readonly IDeletableEntityRepository<Street> streetRepository;
         private readonly IDeletableEntityRepository<Location> locationRepository;
 
         public LocationsService(
-            IDeletableEntityRepository<Street> streetRepository,
             IDeletableEntityRepository<Location> locationRepository)
         {
-            this.streetRepository = streetRepository;
             this.locationRepository = locationRepository;
         }
 

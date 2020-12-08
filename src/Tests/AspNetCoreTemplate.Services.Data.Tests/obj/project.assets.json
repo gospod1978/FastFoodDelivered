@@ -2771,6 +2771,16 @@
           "bin/placeholder/AspNetCoreTemplate.Data.Models.dll": {}
         }
       },
+      "AspNetCoreTemplate.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/AspNetCoreTemplate.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspNetCoreTemplate.Services.dll": {}
+        }
+      },
       "AspNetCoreTemplate.Services.Data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -2799,6 +2809,29 @@
         },
         "runtime": {
           "bin/placeholder/AspNetCoreTemplate.Services.Mapping.dll": {}
+        }
+      },
+      "AspNetCoreTemplate.Services.Messaging/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sendgrid": "9.18.0"
+        },
+        "compile": {
+          "bin/placeholder/AspNetCoreTemplate.Services.Messaging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspNetCoreTemplate.Services.Messaging.dll": {}
+        }
+      },
+      "AspNetCoreTemplate.Web.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/AspNetCoreTemplate.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspNetCoreTemplate.Web.Infrastructure.dll": {}
         }
       },
       "AspNetCoreTemplate.Web.ViewModels/1.0.0": {
@@ -8850,6 +8883,11 @@
       "path": "../../Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj",
       "msbuildProject": "../../Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj"
     },
+    "AspNetCoreTemplate.Services/1.0.0": {
+      "type": "project",
+      "path": "../../Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
+      "msbuildProject": "../../Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj"
+    },
     "AspNetCoreTemplate.Services.Data/1.0.0": {
       "type": "project",
       "path": "../../Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj",
@@ -8859,6 +8897,16 @@
       "type": "project",
       "path": "../../Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj",
       "msbuildProject": "../../Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj"
+    },
+    "AspNetCoreTemplate.Services.Messaging/1.0.0": {
+      "type": "project",
+      "path": "../../Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
+      "msbuildProject": "../../Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj"
+    },
+    "AspNetCoreTemplate.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
+      "msbuildProject": "../../Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj"
     },
     "AspNetCoreTemplate.Web.ViewModels/1.0.0": {
       "type": "project",
@@ -8870,7 +8918,12 @@
     ".NETCoreApp,Version=v3.1": [
       "AspNetCoreTemplate.Data >= 1.0.0",
       "AspNetCoreTemplate.Data.Models >= 1.0.0",
+      "AspNetCoreTemplate.Services >= 1.0.0",
       "AspNetCoreTemplate.Services.Data >= 1.0.0",
+      "AspNetCoreTemplate.Services.Mapping >= 1.0.0",
+      "AspNetCoreTemplate.Services.Messaging >= 1.0.0",
+      "AspNetCoreTemplate.Web.Infrastructure >= 1.0.0",
+      "AspNetCoreTemplate.Web.ViewModels >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.6",
       "Microsoft.NET.Test.Sdk >= 16.6.1",
       "Moq >= 4.14.5",
@@ -8912,6 +8965,21 @@
             },
             "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj": {
               "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj"
+            },
+            "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj": {
+              "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj"
+            },
+            "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj": {
+              "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj"
+            },
+            "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj": {
+              "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj"
+            },
+            "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj": {
+              "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj"
+            },
+            "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.ViewModels/AspNetCoreTemplate.Web.ViewModels.csproj": {
+              "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.ViewModels/AspNetCoreTemplate.Web.ViewModels.csproj"
             }
           }
         }
