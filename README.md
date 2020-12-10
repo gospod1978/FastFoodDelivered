@@ -101,6 +101,7 @@ This website is designed and runs using the main technologies below:
 - MS SQL Server Management Studio 2017
 - Microsoft Azure
 - SendGrid
+- ClosedXML.Excel
 
 
 This website has been created solely for educational purposes.
