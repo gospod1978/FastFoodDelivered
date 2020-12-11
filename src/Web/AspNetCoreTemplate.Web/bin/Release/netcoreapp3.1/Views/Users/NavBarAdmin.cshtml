@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@{
+    this.ViewData["Title"] = "Admin Panel";
+}
+<ul>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("Post")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Category")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Role")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("AddRoleToUser")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Courier" asp-action="AllCouriersDetail">@SharedLocalizer.GetLocalizedHtmlString("Couriers")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Cities" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("CitiesExist")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Vehicle" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Vehicles")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Address" asp-action="NavBarAddress">@SharedLocalizer.GetLocalizedHtmlString("Address")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="NavBar">@SharedLocalizer.GetLocalizedHtmlString("UserData")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Approve">@SharedLocalizer.GetLocalizedHtmlString("CourierWaitToApprove")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="ApproveRest">@SharedLocalizer.GetLocalizedHtmlString("RestaurantWaitToApprove")</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="AllEmail">@SharedLocalizer.GetLocalizedHtmlString("AllEmailSent")</a>
+    </li>
+</ul>

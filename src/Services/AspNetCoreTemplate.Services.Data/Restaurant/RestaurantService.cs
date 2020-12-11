@@ -1,35 +1,26 @@
 ﻿namespace AspNetCoreTemplate.Services.Data.Restaurant
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Common.Repositories;
-    using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Restaurants;
     using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Services.Mapping;
-    using Microsoft.AspNetCore.Identity;
 
     public class RestaurantService : IRestaurantService
     {
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly IDeletableEntityRepository<City> cityRepository;
         private readonly IDeletableEntityRepository<Restaurant> restaurantRepository;
         private readonly IAddressService addressService;
         private readonly IDeletableEntityRepository<WorkingArea> workingAreaRepository;
 
         public RestaurantService(
-            UserManager<ApplicationUser> userManager,
-            IDeletableEntityRepository<City> cityRepository,
             IDeletableEntityRepository<Restaurant> restaurantRepository,
             IAddressService addressService,
             IDeletableEntityRepository<WorkingArea> workingAreaRepository)
         {
-            this.userManager = userManager;
-            this.cityRepository = cityRepository;
             this.restaurantRepository = restaurantRepository;
             this.addressService = addressService;
             this.workingAreaRepository = workingAreaRepository;
@@ -109,7 +100,7 @@
         public IEnumerable<T> GetAll<T>(int? count = null)
         {
             IQueryable<Restaurant> query =
-               this.restaurantRepository.All().OrderBy(x => x.User.UserName);
+               this.restaurantRepository.All().OrderBy(x => x.Id);
 
             if (count.HasValue)
             {
@@ -122,7 +113,7 @@
         public IEnumerable<T> GetAllNo<T>(int? count = null)
         {
             IQueryable<Restaurant> query =
-                this.restaurantRepository.All().Where(x => x.IsRestaurnat == IsRestaurnat.No).OrderBy(x => x.User.UserName);
+                this.restaurantRepository.All().Where(x => x.IsRestaurnat == IsRestaurnat.No).OrderBy(x => x.Id);
 
             if (count.HasValue)
             {
@@ -135,7 +126,7 @@
         public IEnumerable<T> GetAllYes<T>(int? count = null)
         {
             IQueryable<Restaurant> query =
-                this.restaurantRepository.All().Where(x => x.IsRestaurnat == IsRestaurnat.Yes).OrderBy(x => x.User.UserName);
+                this.restaurantRepository.All().Where(x => x.IsRestaurnat == IsRestaurnat.Yes).OrderBy(x => x.Id);
 
             if (count.HasValue)
             {

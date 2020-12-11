@@ -113,7 +113,7 @@
             var imageId = await this.pictureService.CreateAsyncImage(uniqueFileName, extension, target.ToArray(), input.OrderId);
             this.ordersService.AddImageToOrder(input.OrderId, imageId);
 
-            return this.RedirectToAction(nameof(this.Details), new { id = input.OrderId });
+            return this.RedirectToAction("Index", "Home");
         }
 
         [Authorize]

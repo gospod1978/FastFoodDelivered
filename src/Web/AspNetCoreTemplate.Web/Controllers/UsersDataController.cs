@@ -131,7 +131,16 @@
             var userName = this.User.Identity.Name.ToString();
             var id = this.userService.GetUserName(userName);
             var userData = this.usersDataService.GetByUserId<UserDataIndexViewModel>(id);
-            var name = userData.Name;
+            var name = string.Empty;
+            //if (userData.Name == null)
+            //{
+            //    //return this.RedirectToAction(nameof(this.Index), new { @name = input.Name });
+            //}
+            //else
+            //{
+            //    name = userData.Name;
+            //}
+
             var viewModel = new CreateUserDataViewModel();
             if (name != null)
             {

@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Restaurants.RestaurantDetailsViewModel
+@{
+    this.ViewData["Title"] = "Detail Restaurant";
+}
+@if (this.TempData["InfoMessageCourier"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCourier"]
+    </div>
+}
+
+<h1 style="margin:20px;">@this.ViewData["Title"]</h1>
+
+<div class="container-fluid mt-100">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="media flex-wrap w-100 align-items-center">
+                        <img src="data:image;base64,@System.Convert.ToBase64String(Model.Photo)" width="120" height="120" class="d-block ui-w-60 rounded-circle" alt="@Model.ImageName" />
+                        <div class="media-body ml-3">
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("FullName") - @Model.FullName</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("MobilePhone") @Model.Phone</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Email") - @Model.Email</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("City") - @Model.City</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("WorkingArea") - @Model.WorkingArea - @Model.IsActiv<a class="nav-link text-dark" asp-controller="Restaurant" asp-action="IsWorking" asp-route-id="@Model.Id">@SharedLocalizer.GetLocalizedHtmlString("ChangeStatus")</a></p>
+                            </div>
+                            <div class="text-muted small">
+                                <p><a class="nav-link text-dark" asp-controller="Restaurant" asp-action="IsActive" asp-route-id="@Model.Id">@SharedLocalizer.GetLocalizedHtmlString("ChangeLocationRestaurant")</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

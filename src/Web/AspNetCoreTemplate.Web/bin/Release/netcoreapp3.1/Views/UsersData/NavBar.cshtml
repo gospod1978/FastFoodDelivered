@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@using AspNetCoreTemplate.Common
+@using AspNetCoreTemplate.Data.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    this.ViewData["Title"] = "Users Panel";
+}
+<ul>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("Create")</a>
+    </li>
+    @if (this.User.IsInRole(GlobalConstants.RestaurantRoleName) ||
+  this.User.IsInRole(GlobalConstants.CourierRoleName) ||
+  this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+  this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Info")</a>
+        </li>
+
+    }
+    @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+      this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="UsersData" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("All")</a>
+        </li>
+    }
+</ul>
+
+<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

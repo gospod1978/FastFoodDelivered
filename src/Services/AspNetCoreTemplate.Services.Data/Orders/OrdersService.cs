@@ -6,23 +6,18 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Common.Repositories;
-    using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Orders;
     using AspNetCoreTemplate.Data.Models.UserHome;
     using AspNetCoreTemplate.Services.Mapping;
-    using Microsoft.AspNetCore.Identity;
 
     public class OrdersService : IOrdersService
     {
         private readonly IDeletableEntityRepository<Order> orderRepository;
-        private readonly IDeletableEntityRepository<Picture> pictureRepository;
 
         public OrdersService(
-            IDeletableEntityRepository<Order> orderRepository,
-            IDeletableEntityRepository<Picture> pictureRepository)
+            IDeletableEntityRepository<Order> orderRepository)
         {
             this.orderRepository = orderRepository;
-            this.pictureRepository = pictureRepository;
         }
 
         public async Task<string> CreateAsyncMenu(string name, string description, string restaurantId, string timePreparation, decimal price, int categoryId)

@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreTemplate.Web.Controllers
+﻿    namespace AspNetCoreTemplate.Web.Controllers
 {
     using System.Threading.Tasks;
 

@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Cities.CityCreateInputViewModel
+@{
+    this.ViewData["Title"] = "Create City";
+}
+@if (this.TempData["InfoMessageCity"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCity"]
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create">
+    <div>
+        <label asp-for="CityName"></label>
+        <input asp-for="CityName" class="form-control" />
+        <span asp-validation-for="CityName" class="text-danger"></span>
+    </div>
+
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<a class="btn btn-danger" asp-area="" asp-controller="Cities" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

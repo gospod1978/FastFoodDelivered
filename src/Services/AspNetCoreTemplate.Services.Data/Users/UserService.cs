@@ -17,7 +17,6 @@
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<ApplicationRole> roleManager;
-        private readonly IRoleService roleServices;
         private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
         private readonly IDeletableEntityRepository<UserData> dataRepository;
         private readonly IDeletableEntityRepository<Restaurant> restaurantRepository;
@@ -26,7 +25,6 @@
         public UserService(
             UserManager<ApplicationUser> userManager,
             RoleManager<ApplicationRole> roleManager,
-            IRoleService roleServices,
             IDeletableEntityRepository<ApplicationUser> userRepository,
             IDeletableEntityRepository<UserData> dataRepository,
             IDeletableEntityRepository<Restaurant> restaurantRepository,
@@ -34,7 +32,6 @@
         {
             this.userManager = userManager;
             this.roleManager = roleManager;
-            this.roleServices = roleServices;
             this.userRepository = userRepository;
             this.dataRepository = dataRepository;
             this.restaurantRepository = restaurantRepository;

@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Locations.CreateLocationsInputModel
+@{
+    this.ViewData["Title"] = "Street Create";
+    var areaName = Model.AreaName.ToString();
+    var cityName = Model.CityName.ToString();
+    var streets = Model.Streets.Select(x => new SelectListItem(x.Name, x.Id.ToString()));
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+<form method="post" asp-action="Create3">
+    <div class="media-body">
+        <h5 class="mt-0" asp-for="CityName">@cityName</h5>
+    </div>
+    <div class="media-body">
+        <h5 class="mt-0" asp-for="AreaName">@areaName</h5>
+    </div>
+    <div>
+        <label asp-for="StreetId"></label>
+        <select asp-for="StreetId" asp-items="streets" class="form-control"></select>
+        <span asp-validation-for="StreetId" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Number"></label>
+        <input asp-for="Number" class="form-control" />
+        <span asp-validation-for="Number" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Entrance"></label>
+        <input asp-for="Entrance" class="form-control" />
+        <span asp-validation-for="Entrance" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Flour"></label>
+        <input asp-for="Flour" class="form-control" />
+        <span asp-validation-for="Flour" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Apartament"></label>
+        <input asp-for="Apartament" class="form-control" />
+        <span asp-validation-for="Apartament" class="text-danger"></span>
+    </div>
+    <hr />
+    <input type="submit" class="btn btn-primary" />
+</form>
+<a class="btn btn-danger" asp-area="" asp-controller="Streets" asp-action="Create">@SharedLocalizer.GetLocalizedHtmlString("CreateStreet")</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Areas" asp-action="All">@SharedLocalizer.GetLocalizedHtmlString("All")</a>
+<a class="btn btn-danger" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

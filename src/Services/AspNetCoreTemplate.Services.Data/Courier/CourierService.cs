@@ -6,36 +6,27 @@
     using System.Threading.Tasks;
 
     using AspNetCoreTemplate.Data.Common.Repositories;
-    using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Addresses;
     using AspNetCoreTemplate.Data.Models.Couriers;
     using AspNetCoreTemplate.Services.Data.Addresses;
     using AspNetCoreTemplate.Services.Mapping;
-    using AspNetCoreTemplate.Web.ViewModels.Couriers;
-    using Microsoft.AspNetCore.Identity;
 
     public class CourierService : ICourierService
     {
         private readonly IDeletableEntityRepository<Courier> courierRepository;
         private readonly IDeletableEntityRepository<Vehichle> vehichleRepository;
-        private readonly IDeletableEntityRepository<City> cityRepository;
         private readonly IDeletableEntityRepository<WorkingArea> workingAreaRepository;
-        private readonly UserManager<ApplicationUser> userManager;
         private readonly IAddressService addressService;
 
         public CourierService(
             IDeletableEntityRepository<Courier> courierRepository,
             IDeletableEntityRepository<Vehichle> vehichleRepository,
-            IDeletableEntityRepository<City> cityRepository,
             IDeletableEntityRepository<WorkingArea> workingAreaRepository,
-            UserManager<ApplicationUser> userManager,
             IAddressService addressService)
         {
             this.courierRepository = courierRepository;
             this.vehichleRepository = vehichleRepository;
-            this.cityRepository = cityRepository;
             this.workingAreaRepository = workingAreaRepository;
-            this.userManager = userManager;
             this.addressService = addressService;
         }
 
@@ -94,7 +85,7 @@
         public IEnumerable<T> GetAll<T>(int? count = null)
         {
             IQueryable<Courier> query =
-                this.courierRepository.All().OrderBy(x => x.User.UserName);
+                this.courierRepository.All().OrderBy(x => x.UserId);
 
             if (count.HasValue)
             {
@@ -107,7 +98,7 @@
         public IEnumerable<T> GetAllNo<T>(int? count = null)
         {
             IQueryable<Courier> query =
-                this.courierRepository.All().Where(x => x.IsCourier == IsCourier.No).OrderBy(x => x.User.UserName);
+                this.courierRepository.All().Where(x => x.IsCourier == IsCourier.No).OrderBy(x => x.UserId);
 
             if (count.HasValue)
             {
@@ -120,7 +111,7 @@
         public IEnumerable<T> GetAllYes<T>(int? count = null)
         {
             IQueryable<Courier> query =
-                this.courierRepository.All().Where(x => x.IsCourier == IsCourier.Yes).OrderBy(x => x.User.UserName);
+                this.courierRepository.All().Where(x => x.IsCourier == IsCourier.Yes).OrderBy(x => x.UserId);
 
             if (count.HasValue)
             {
