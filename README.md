@@ -46,11 +46,13 @@ The web project contains:
 
 4 different areas: Identity, Administration, Courier, Restaurant
 
-18  services
+20  services
 
 19 controllers
 
 81 views
+
+20 TestServices - tests all functionalities
 
 The first time when you made registration - Project create User:
 
