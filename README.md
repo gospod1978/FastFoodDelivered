@@ -3,6 +3,8 @@ ASP .NET Core 3.1 Web Application Project
 
 C# Web Development Path at Software University, Bulgaria
 
+https://fastfooddeliverd.azurewebsites.net
+
 ABOUT my web project:
 
 Fast Food Delivered (FFD) is an online orders and delivered food.
@@ -44,11 +46,13 @@ The web project contains:
 
 4 different areas: Identity, Administration, Courier, Restaurant
 
-18  services
+20  services
 
 19 controllers
 
 81 views
+
+20 TestServices - tests all functionalities
 
 The first time when you made registration - Project create User:
 
@@ -98,6 +102,8 @@ This website is designed and runs using the main technologies below:
 - MS Visual Studio 2019
 - MS SQL Server Management Studio 2017
 - Microsoft Azure
+- SendGrid
+- ClosedXML.Excel
 
 
 This website has been created solely for educational purposes.
