@@ -33,6 +33,11 @@
             return this.View();
         }
 
+        public IActionResult About()
+        {
+            return this.View();
+        }
+
         public IActionResult Carriers()
         {
             return this.View();

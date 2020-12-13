@@ -796,5 +796,17 @@ namespace AspNetCoreTemplate.Web.Resources {
                 return ResourceManager.GetString("LastMonth", resourceCulture);
             }
         }
+        
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        internal static string AboutUs {
+            get {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
     }
 }

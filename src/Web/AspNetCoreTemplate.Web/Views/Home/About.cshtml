@@ -1,0 +1,15 @@
+﻿@using AspNetCoreTemplate.Common
+@using AspNetCoreTemplate.Data.Models
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@{
+    this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}";
+}
+
+<div>
+    <p>@SharedLocalizer.GetLocalizedHtmlString("AboutUs")</p>
+</div>
+<a class="btn btn-danger" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

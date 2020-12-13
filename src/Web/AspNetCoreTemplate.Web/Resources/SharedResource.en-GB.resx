@@ -419,4 +419,18 @@
     <data name="LastMonth" xml:space="preserve">
         <value>Last Month</value>
     </data>
+    <data name="About" xml:space="preserve">
+        <value>About</value>
+    </data>
+    <data name="AboutUs" xml:space="preserve">
+        <value><pre>We are a platform that connects the customer, the restaurant and the courier in one place.
+Established in 2020, our company has rapid and rapid growth in the conditions of the Pandemic.
+            
+It is super convenient for the client because he does not have to enter and search all the sites in the city and it is enough to just look in the platform for what he wants and we will show the wide choice among all the restaurants in the platform.
+It is easy for restaurants because they are not obliged to maintain a driver, a car, to pay taxes and insurance, to think about traffic and problems. We provide them with quick and easy access to our couriers, who are equipped with a Thermo food box, which ensures that everything will be delivered as delivered to the courier.
+For couriers the opportunity for additional income, free time, no additional requirements, easy platform to use.
+We believe that when most restaurants are closed and you do not want to deprive yourself of your favourite dishes, we are your choice, thousands have already trusted us, and why not you.
+
+ Mihail Gospodinov</pre></value>
+    </data>
 </root>

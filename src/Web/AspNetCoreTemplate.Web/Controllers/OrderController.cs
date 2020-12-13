@@ -79,12 +79,12 @@
                 return this.View(input);
             }
 
-            var userLogin = await this.userManager.GetUserAsync(this.User);
+            var userLogin = this.userService.GetByName<UserIndexView>(this.User.Identity.Name);
             var restorant = this.restaurantService.GetByUserId<InfoRestaurantModel>(userLogin.Id);
 
-            var orderId = this.ordersService.CreateAsyncMenu(input.Name, input.Description, restorant.Id, input.TimePrepartion, input.Price, input.CategoryId);
+            var orderId = await this.ordersService.CreateAsyncMenu(input.Name, input.Description, restorant.Id, input.TimePrepartion, input.Price, input.CategoryId);
 
-            return this.RedirectToAction(nameof(this.Image), new { id = orderId.Result });
+            return this.RedirectToAction(nameof(this.Image), new { id = orderId });
         }
 
         [Authorize]
