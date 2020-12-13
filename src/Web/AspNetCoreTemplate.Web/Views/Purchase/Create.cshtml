@@ -16,21 +16,9 @@
         <input asp-for="OrderName" class="form-control" value="@Model.OrderName" />
         <span asp-validation-for="OrderName" class="text-danger"></span>
     </div>
-    <div>
-        <label asp-for="OrderId"></label>
-        <input asp-for="OrderId" class="form-control" value="@Model.OrderId" />
-        <span asp-validation-for="OrderId" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="CourierId"></label>
-        <input asp-for="CourierId" class="form-control" value="@Model.CourierId" />
-        <span asp-validation-for="CourierId" class="text-danger"></span>
-    </div>
-    <div>
-        <label asp-for="RestaurantId"></label>
-        <input asp-for="RestaurantId" class="form-control" value="@Model.RestaurantId" />
-        <span asp-validation-for="RestaurantId" class="text-danger"></span>
-    </div>
+        <input type="hidden" asp-for="OrderId" class="form-control" value="@Model.OrderId" />
+        <input type="hidden" asp-for="CourierId" class="form-control" value="@Model.CourierId" />
+        <input type="hidden" asp-for="RestaurantId" class="form-control" value="@Model.RestaurantId" />
     <div>
         <label asp-for="ResaurantName"></label>
         <input asp-for="ResaurantName" class="form-control" value="@Model.ResaurantName" />

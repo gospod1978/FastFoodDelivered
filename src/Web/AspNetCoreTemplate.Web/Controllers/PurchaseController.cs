@@ -12,11 +12,13 @@
     using AspNetCoreTemplate.Services.Data.Orders;
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.Users;
+    using AspNetCoreTemplate.Web.ViewModels.Areas;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
     using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using AspNetCoreTemplate.Web.ViewModels.Orders;
     using AspNetCoreTemplate.Web.ViewModels.Purchases;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
+    using AspNetCoreTemplate.Web.ViewModels.Users;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
     using ClosedXML.Excel;
     using Microsoft.AspNetCore.Authorization;
@@ -35,6 +37,7 @@
         private readonly IUsersDataService usersDataService;
         private readonly IImagesService pictureService;
         private readonly ICourierService courierService;
+        private readonly IAreasService areasService;
 
         public PurchaseController(
             UserManager<ApplicationUser> userManager,
@@ -46,7 +49,8 @@
             IUserService userService,
             IUsersDataService usersDataService,
             IImagesService pictureService,
-            ICourierService courierService)
+            ICourierService courierService,
+            IAreasService areasService)
         {
             this.userManager = userManager;
             this.purchaseService = purchaseService;
@@ -58,22 +62,22 @@
             this.usersDataService = usersDataService;
             this.pictureService = pictureService;
             this.courierService = courierService;
+            this.areasService = areasService;
         }
 
         [Authorize]
-        public async Task<IActionResult> Create(string id)
+        public IActionResult Create(string id)
         {
             var orderId = id;
-            var userLogin = await this.userManager.GetUserAsync(this.User);
+            var userLogin = this.userService.GetByName<UserIndexView>(this.User.Identity.Name);
             var locationObjUserId = this.locationsObjectService.GetLocationByUserIdOnly<LocationObjectIndexViewModel>(userLogin.Id);
             var userIdrest = this.ordersService.GetById<OrderDetailsViewModel>(orderId);
-            var workingAreaRestaurant = this.userService.GetUserByRestaurantId(userIdrest.RestaurantId);
-            var restorant = this.restaurantService.GetById<RestaurantAll>(workingAreaRestaurant);
+            var restorant = this.restaurantService.GetById<RestaurantAll>(userIdrest.RestaurantId);
             var locationRestaurantAreaName = restorant.Area.AreaName;
-            var userAreaName = locationObjUserId.Address.Area.AreaName;
+            var userAreaName = this.areasService.GetById<AreasAll>(locationObjUserId.Address.AreaId);
             var restName = this.restaurantService.GetById<RestaurantAll>(restorant.Id);
             var restname = this.usersDataService.GetByUserId<UserDataIndexViewModel>(restName.UserId);
-            var priceDelivery = this.purchaseService.PriceCourier(userAreaName, locationRestaurantAreaName);
+            var priceDelivery = this.purchaseService.PriceCourier(userAreaName.AreaName, locationRestaurantAreaName);
             var courierId = this.purchaseService.CourierIdFind(restorant.AreaId);
 
             var order = this.ordersService.GetById<OrderDetailsViewModel>(orderId);

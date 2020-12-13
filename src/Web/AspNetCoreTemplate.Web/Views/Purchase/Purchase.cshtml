@@ -37,7 +37,6 @@ else
                 <th>@SharedLocalizer.GetLocalizedHtmlString("FullName") @SharedLocalizer.GetLocalizedHtmlString("Courier")</th>
                 <th>@SharedLocalizer.GetLocalizedHtmlString("Status")Status</th>
                 <th>@SharedLocalizer.GetLocalizedHtmlString("Date") @SharedLocalizer.GetLocalizedHtmlString("Create")</th>
-                <th>@SharedLocalizer.GetLocalizedHtmlString("OrderId")OrderId</th>
             </tr>
         </thead>
         <tbody>
@@ -50,7 +49,6 @@ else
                     <td>@order.CourierName</td>
                     <td>@order.Status</td>
                     <td>@order.CreatedOn.ToString("d")</td>
-                    <td>@order.Id</td>
                 </tr>
             }
         </tbody>
