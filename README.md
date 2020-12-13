@@ -52,7 +52,7 @@ The web project contains:
 
 81 views
 
-20 TestServices - tests all functionalities
+121 TestServices - tests all functionalities  
 
 The first time when you made registration - Project create User:
 
