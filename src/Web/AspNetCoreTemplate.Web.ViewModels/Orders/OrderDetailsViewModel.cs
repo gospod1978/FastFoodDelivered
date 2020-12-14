@@ -62,5 +62,16 @@
                         : content;
             }
         }
+
+        public string ShortMenuName
+        {
+            get
+            {
+                var content = this.Name;
+                return content.Length > 5
+                        ? content.Substring(0, 5) + "..."
+                        : content;
+            }
+        }
     }
 }

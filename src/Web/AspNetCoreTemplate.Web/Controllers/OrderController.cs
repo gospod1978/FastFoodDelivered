@@ -117,7 +117,6 @@
         }
 
         [Authorize]
-        [Authorize(Roles = "Administrator, Admin, Restaurant")]
         public IActionResult Details(string id)
         {
             var viewModel = new OrderIndexViewModel();

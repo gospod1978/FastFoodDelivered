@@ -1,80 +1,51 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/Views/Purchase/Purchase.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs">
     <Files>
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Order/Image.cshtml" Line="32" Column="8" />
-      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfRepository.cs" Line="24" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" Line="82" Column="13" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Areas/Identity/IdentityHostingStartup.cs" Line="20" Column="85" />
-      <File FileName="Web/AspNetCoreTemplate.Web/appsettings.json" Line="1" Column="1" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Users/UserService.cs" Line="154" Column="1" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Mapping/QueryableMappingExtensions.cs" Line="21" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" Line="135" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Resources/SharedResource.en-GB.resx" Line="1" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Order/AllByCategories.cshtml" Line="40" Column="72" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/PurchaseController.cs" Line="74" Column="89" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Addresses/LocationsObjectService.cs" Line="132" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfDeletableEntityRepository.cs" Line="20" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/Address.cs" Line="12" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/ApplicationUser.cs" Line="20" Column="1" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/OrdersService.cs" Line="179" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/UserHome/Category.cs" Line="15" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/Restaurants/Restaurant.cs" Line="17" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/IsWorking.cs" Line="1" Column="1" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Restaurant/RestaurantService.cs" Line="145" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/Area.cs" Line="21" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/Areas/AreasAll.cs" Line="6" Column="26" />
-      <File FileName="Services/AspNetCoreTemplate.Services.Data/Addresses/AreasService.cs" Line="78" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data.Models/Addresses/City.cs" Line="16" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/Create.cshtml" Line="21" Column="104" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Locations/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Order/MenuCreate.cshtml" Line="1" Column="1" />
-      <File FileName="Web/AspNetCoreTemplate.Web/Views/Purchase/Purchase.cshtml" Line="1" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Orders/PurchaseService.cs" Line="95" Column="88" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AspNetCoreTemplate" expanded="True">
-            <Node name="Data" expanded="True">
-              <Node name="AspNetCoreTemplate.Data" expanded="True">
-                <Node name="Repositories" expanded="True" />
-              </Node>
-              <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
-                <Node name="Addresses" expanded="True" />
-                <Node name="Restaurants" expanded="True" />
-                <Node name="UserHome" expanded="True" />
-              </Node>
-            </Node>
             <Node name="Services" expanded="True">
               <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
-                <Node name="Addresses" expanded="True" />
-                <Node name="Orders" expanded="True" />
-                <Node name="Restaurant" expanded="True" />
+                <Node name="Orders" expanded="True">
+                  <Node name="PurchaseService.cs" selected="True" />
+                </Node>
                 <Node name="Users" expanded="True" />
               </Node>
-              <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
             </Node>
             <Node name="Web" expanded="True">
               <Node name="AspNetCoreTemplate.Web" expanded="True">
-                <Node name="Areas" expanded="True">
-                  <Node name="Identity" expanded="True" />
-                </Node>
                 <Node name="Controllers" expanded="True" />
                 <Node name="Resources" expanded="True" />
                 <Node name="Views" expanded="True">
+                  <Node name="Address" expanded="True" />
+                  <Node name="Areas" expanded="True" />
+                  <Node name="Categories" expanded="True" />
+                  <Node name="Cities" expanded="True" />
+                  <Node name="Courier" expanded="True" />
                   <Node name="Home" expanded="True" />
                   <Node name="Locations" expanded="True" />
+                  <Node name="LocationsObject" expanded="True" />
                   <Node name="Order" expanded="True" />
-                  <Node name="Purchase" expanded="True">
-                    <Node name="Purchase.cshtml" selected="True" />
-                  </Node>
+                  <Node name="Posts" expanded="True" />
+                  <Node name="Purchase" expanded="True" />
+                  <Node name="Restaurant" expanded="True" />
+                  <Node name="Roles" expanded="True" />
+                  <Node name="Settings" expanded="True" />
                   <Node name="Shared" expanded="True" />
+                  <Node name="Streets" expanded="True" />
                   <Node name="Users" expanded="True" />
+                  <Node name="UsersData" expanded="True" />
+                  <Node name="Vehicle" expanded="True" />
+                </Node>
+                <Node name="wwwroot" expanded="True">
+                  <Node name="css" expanded="True" />
                 </Node>
               </Node>
               <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
-                <Node name="Areas" expanded="True" />
-                <Node name="Users" expanded="True" />
+                <Node name="Orders" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -95,8 +66,7 @@
   </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" line="101" column="1" />
-      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/OrderController.cs" line="76" column="1" />
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/HomeController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/HomeController.cs" line="57" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -15,19 +15,16 @@
         ]
     });</script>
 
-<h2>@SharedLocalizer.GetLocalizedHtmlString("SendEmailWhit")  @Model.From</h2>
-<form asp-action="SendEmail" asp-controller="Users" method="post">
+<h2>@SharedLocalizer.GetLocalizedHtmlString("SendEmail") </h2>
+<form asp-action="Contact" asp-controller="Home" method="post">
     <div>
         <input type="hidden" asp-for="OriginalEmail" class="form-control" value="@Model.OriginalEmail" />
         <span asp-validation-for="OriginalEmail" class="text-danger"></span>
     </div>
     <div>
-        <input type="hidden" asp-for="From" class="form-control" value="@Model.From" />
+        <label asp-for="From"></label>
+        <input asp-for="From" class="form-control"/>
         <span asp-validation-for="From" class="text-danger"></span>
-    </div>
-    <div>
-        <input type="hidden" asp-for="UserId" class="form-control" value="@Model.UserId" />
-        <span asp-validation-for="UserId" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="To"></label>
@@ -44,8 +41,21 @@
         <textarea asp-for="Body" class="form-control"></textarea>
         <span asp-validation-for="Body" class="text-danger"></span>
     </div>
+    <br />
     <input type="submit" class="btn btn-primary" value="Send Email" />
 
 </form>
 
-<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+<br />
+
+<div class="row">
+    <div class="mapouter col-md5 userDataInfo">
+        <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Sofia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://embedgooglemap.net/131/"></a></div>
+    </div>
+    <div class="mapouter col-md4 userDataInfo">
+        <h1>Mihail Gospodinov</h1>
+        <h3>mob.phone - +359897000024</h3>
+        <h3>mob.phone - +35679790197</h3>
+        <h3>email: mggospodinov@gmail.com</h3>
+    </div>
+</div>

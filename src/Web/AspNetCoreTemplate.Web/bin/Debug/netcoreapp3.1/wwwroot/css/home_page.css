@@ -474,6 +474,10 @@ footer {
     margin: 10px;
 }
 
+.userDataInfo2 {
+    margin: 20px;
+}
+
 .btn-delete {
     border-radius: 10px;
     margin-left: 10px;
@@ -496,4 +500,18 @@ footer {
 .arrea-image {
     width: 100px;
     height: 80px;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 600px;
 }

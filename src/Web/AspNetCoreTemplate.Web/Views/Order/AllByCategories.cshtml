@@ -17,7 +17,7 @@
 }
 
 <div class="text-center">
-    <h1 style="margin:20px;">@this.ViewData["Title"]</h1>
+    <h1 class="userDataInfo2">@this.ViewData["Title"]</h1>
 </div>
 @if (Model.Orders.Count() == 0)
 {
@@ -44,7 +44,7 @@ else
             @foreach (var order in Model.Orders)
             {
                 <tr>
-                    <td>@order.Name </td>
+                    <td>@order.ShortMenuName</td>
                     <td>@order.Category.Name</td>
                     <td>@order.RestaurantName</td>
                     <td>@order.Price</td>
@@ -61,4 +61,4 @@ else
     </table>
 }
 
-<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+<a class="btn btn-primary userDataInfo2" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

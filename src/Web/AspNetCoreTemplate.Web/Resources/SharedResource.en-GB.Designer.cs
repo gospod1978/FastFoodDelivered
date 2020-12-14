@@ -803,6 +803,12 @@ namespace AspNetCoreTemplate.Web.Resources {
             }
         }
         
+        internal static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
         internal static string AboutUs {
             get {
                 return ResourceManager.GetString("AboutUs", resourceCulture);

@@ -9,8 +9,7 @@
 
         IEnumerable<T> GetAll<T>(int? count = null);
 
-        //string GetById<T>(string id);
-
+        // string GetById<T>(string id);
         T GetById<T>(string id);
 
         Task DeleteByName(string name);

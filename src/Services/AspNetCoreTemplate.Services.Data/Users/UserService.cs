@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data.Common.Repositories;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Data.Models.Restaurants;
@@ -59,6 +60,14 @@
 
         public async Task<string> CreateAsyncEmail(EmailModel input)
         {
+            if (input.UserId == null)
+            {
+                var user = new ApplicationUser { UserName = input.From, Email = input.From };
+                var passwordNew = GlobalConstants.Password;
+                await this.userManager.CreateAsync(user, passwordNew);
+                input.UserId = user.Id;
+            }
+
             var email = new Email
             {
                 From = input.From,

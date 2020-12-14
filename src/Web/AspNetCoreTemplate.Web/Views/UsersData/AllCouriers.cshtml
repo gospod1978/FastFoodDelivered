@@ -53,9 +53,9 @@ else
 @if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
 this.User.IsInRole(GlobalConstants.AdministratorRoleName))
 {
-<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+<a class="btn btn-primary userDataInfo2" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }
 else
 {
-<a class="btn btn-primary" style="margin:20px;" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+<a class="btn btn-primary userDataInfo2" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
 }

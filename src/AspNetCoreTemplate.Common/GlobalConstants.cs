@@ -21,7 +21,9 @@
 
         public const string EmailBodyText = "This email send from ";
 
-        public const string EmailUserName = "and UserName ";
+        public const string EmailBodyTextCopy = "You send this email from ";
+
+        public const string EmailUserName = " and UserName ";
 
         public const string Sofia = "Sofia";
 
@@ -40,5 +42,7 @@
         public const string Finished = "Finished";
 
         public const string MessageUserDataController = "You have this Full Name - {0}, you can changed or cancel!";
+
+        public const string Password = "123Random123";
     }
 }
