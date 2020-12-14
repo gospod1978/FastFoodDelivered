@@ -19,10 +19,10 @@
 <form method="post" asp-action="Create">
     <div>
         <label asp-for="ImageName"></label>
-        <a class="btn btn-danger" asp-area="" asp-controller="UsersData" asp-action="Image">@SharedLocalizer.GetLocalizedHtmlString("UploadImage")</a>
+        <a class="btn btn-primary" asp-area="" asp-controller="UsersData" asp-action="Image">@SharedLocalizer.GetLocalizedHtmlString("UploadImage")</a>
     </div>
     <hr />
     <input type="submit" class="btn btn-primary" />
 </form>
 
-<a class="btn btn-danger" asp-area="" asp-controller="Restaurant" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+<a class="btn btn-primary" asp-area="" asp-controller="Restaurant" asp-action="Details">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
