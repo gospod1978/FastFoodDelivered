@@ -426,6 +426,9 @@
      <data name="SendEmail" xml:space="preserve">
         <value>Изпрати Email</value>
     </data>
+    <data name="OpenSourceSystem" xml:space="preserve">
+        <value>Отворен код в </value>
+    </data>
     <data name="AboutUs" xml:space="preserve">
         <value>Ние сме платформа която свързва клиента, ресторанта и куриера на едно място.
 Създаден през 2020 година, нашата компания има бурен и бърз растеж в условията на Панадемията. 

@@ -428,6 +428,9 @@
       <data name="SendEmail" xml:space="preserve">
         <value>Send Email</value>
     </data>
+     <data name="OpenSourceSystem" xml:space="preserve">
+        <value>Open Source System in </value>
+    </data>
     <data name="AboutUs" xml:space="preserve">
         <value><pre>We are a platform that connects the customer, the restaurant and the courier in one place.
 Established in 2020, our company has rapid and rapid growth in the conditions of the Pandemic.

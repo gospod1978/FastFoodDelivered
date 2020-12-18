@@ -809,6 +809,12 @@ namespace AspNetCoreTemplate.Web.Resources {
             }
         }
         
+        internal static string OpenSourceSystem {
+            get {
+                return ResourceManager.GetString("OpenSourceSystem", resourceCulture);
+            }
+        }
+        
         internal static string AboutUs {
             get {
                 return ResourceManager.GetString("AboutUs", resourceCulture);
