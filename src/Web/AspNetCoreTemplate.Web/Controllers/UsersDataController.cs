@@ -55,6 +55,15 @@
         }
 
         [Authorize]
+        public IActionResult AllDocuments()
+        {
+            var viewModel = new IndexDetailsViewModel();
+            var documents = this.documentsService.GetAllDocuments<DocumentDetails>();
+            viewModel.Documents = (System.Collections.Generic.ICollection<DocumentDetails>)documents;
+            return this.View(viewModel);
+        }
+
+        [Authorize]
         public IActionResult Index(string name, string id, string userName, string userDataId)
         {
             if (id != null)
@@ -155,15 +164,26 @@
 
             var data = await this.usersDataService.CreateAsyncUserData(input.Name, id);
             this.TempData["InfoMessageAreas"] = "Data was created!";
-            return this.RedirectToAction(nameof(this.Index), new { @name = input.Name });
+            if (this.User.IsInRole(GlobalConstants.AdminRoleName) || this.User.IsInRole(GlobalConstants.AdministratorRoleName) ||
+                this.User.IsInRole(GlobalConstants.RestaurantRoleName) || this.User.IsInRole(GlobalConstants.CourierRoleName))
+            {
+                return this.RedirectToAction(nameof(this.Index), new { @name = input.Name });
+            }
+            else
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
         }
 
         [Authorize]
         public IActionResult Uploaud(string id)
         {
             var viewModel = new UploadDocumentViewModel();
-            var userDataId = this.usersDataService.GetByUserId<UserDataIndexViewModel>(id);
-            viewModel.UserDataId = userDataId.Id;
+            if (id != null)
+            {
+                var userDataId = this.usersDataService.GetByUserId<UserDataIndexViewModel>(id);
+                viewModel.UserDataId = userDataId.Id;
+            }
 
             return this.View(viewModel);
         }
