@@ -426,6 +426,9 @@
      <data name="SendEmail" xml:space="preserve">
         <value>Изпрати Email</value>
     </data>
+    <data name="AllUsers" xml:space="preserve">
+        <value>Всички Юзъри</value>
+    </data>
     <data name="OpenSourceSystem" xml:space="preserve">
         <value>Отворен код в </value>
     </data>

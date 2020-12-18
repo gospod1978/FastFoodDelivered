@@ -428,6 +428,9 @@
       <data name="SendEmail" xml:space="preserve">
         <value>Send Email</value>
     </data>
+    <data name="AllUsers" xml:space="preserve">
+        <value>All Users</value>
+    </data>
      <data name="OpenSourceSystem" xml:space="preserve">
         <value>Open Source System in </value>
     </data>

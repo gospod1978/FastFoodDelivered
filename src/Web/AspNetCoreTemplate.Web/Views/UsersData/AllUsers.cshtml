@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@using AspNetCoreTemplate.Common
+@model AspNetCoreTemplate.Web.ViewModels.UsersData.AllUser
+
+@{
+    this.ViewData["Title"] = $"All Users";
+
+}
+@if (this.TempData["InfoMessageApply"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageApply"]
+    </div>
+}
+
+<div class="text-center">
+    <h1 style="margin:20px;">@this.ViewData["Title"]</h1>
+</div>
+@if (Model.Users.Count() == 0)
+{
+
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Name")</th>
+                <th>@SharedLocalizer.GetLocalizedHtmlString("Email")</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.UserName </td>
+                    <td>@user.Email</td>
+                    <td><a class="btn btn-primary" asp-area="" asp-controller="UsersData" asp-action="Details" asp-route-id="@user.Id">@SharedLocalizer.GetLocalizedHtmlString("Details")</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (this.User.IsInRole(GlobalConstants.AdminRoleName) ||
+this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+{
+    <a class="btn btn-primary userDataInfo2" asp-area="" asp-controller="Users" asp-action="NavBarAdmin">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+}
+else
+{
+    <a class="btn btn-primary userDataInfo2" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>
+}

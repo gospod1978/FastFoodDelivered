@@ -9,6 +9,7 @@
     using AspNetCoreTemplate.Services.Data.Restaurant;
     using AspNetCoreTemplate.Services.Data.Users;
     using AspNetCoreTemplate.Web.ViewModels.Couriers;
+    using AspNetCoreTemplate.Web.ViewModels.LocationObjects;
     using AspNetCoreTemplate.Web.ViewModels.Restaurants;
     using AspNetCoreTemplate.Web.ViewModels.Users;
     using AspNetCoreTemplate.Web.ViewModels.UsersData;
@@ -464,11 +465,34 @@
             {
                 var cityName = this.citiesService.GetCityNameByAreaId(reastaurant.AreaId);
                 reastaurant.CityName = cityName;
-                var courierName = this.usersDataService.GetByUserId<UserDataIndexViewModel>(reastaurant.UserId);
-                reastaurant.Name = courierName.Name;
+                var restName = this.usersDataService.GetByUserId<UserDataIndexViewModel>(reastaurant.UserId);
+                reastaurant.Name = restName.Name;
             }
 
             viewModel.Restaurants = reastaurants;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
+        public IActionResult AllUsers()
+        {
+            var users = this.userService.GetAll<UserIndexView>();
+            var viewModel = new AllUser();
+            viewModel.Users = users;
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        [Authorize(Roles = "Administrator, Admin")]
+        public IActionResult Details(string id)
+        {
+            var user = this.userService.GetById<UserIndexView>(id);
+            var dataUser = this.usersDataService.GetByUserId<UserDataIndexViewModel>(id);
+            var viewModel = new LocationObjectIndexViewModel();
+            viewModel.Name = dataUser.Name;
 
             return this.View(viewModel);
         }

@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.LocationObjects.LocationObjectIndexViewModel
+@{
+    this.ViewData["Title"] = "Detail User";
+}
+@if (this.TempData["InfoMessageCourier"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessageCourier"]
+    </div>
+}
+
+<h1 style="margin:20px;">@this.ViewData["Title"]</h1>
+
+<div class="container-fluid mt-100">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="media flex-wrap w-100 align-items-center">
+                         <div class="media-body ml-3">
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("FullName") - @Model.Name</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("MobilePhone") @Model.Info</p>
+                            </div>
+                            @*<div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("Email") - @Model.User.Email</p>
+                            </div>
+                            <div class="text-muted small">
+                                <p>@SharedLocalizer.GetLocalizedHtmlString("City") - @Model.Address.City.CityName</p>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="btn btn-primary userDataInfo2" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

@@ -1,11 +1,53 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs">
+    <Files>
+      <File FileName="Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" Line="493" Column="1" />
+      <File FileName="Web/AspNetCoreTemplate.Web.ViewModels/LocationObjects/LocationObjectIndexViewModel.cs" Line="7" Column="46" />
+      <File FileName="Web/AspNetCoreTemplate.Web/Views/UsersData/Details.cshtml" Line="36" Column="35" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Users/UserService.cs" Line="131" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Mapping/QueryableMappingExtensions.cs" Line="21" Column="1" />
+      <File FileName="Services/AspNetCoreTemplate.Services.Data/Users/UsersDataService.cs" Line="54" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfDeletableEntityRepository.cs" Line="20" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data/Repositories/EfRepository.cs" Line="24" Column="1" />
+      <File FileName="Data/AspNetCoreTemplate.Data.Models/ApplicationUser.cs" Line="20" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AspNetCoreTemplate" expanded="True">
+            <Node name="Data" expanded="True">
+              <Node name="AspNetCoreTemplate.Data" expanded="True">
+                <Node name="Repositories" expanded="True" />
+              </Node>
+              <Node name="AspNetCoreTemplate.Data.Models" expanded="True">
+                <Node name="UserHome" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Services" expanded="True">
+              <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
+                <Node name="Users" expanded="True" />
+              </Node>
+              <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
+            </Node>
             <Node name="Web" expanded="True">
-              <Node name="AspNetCoreTemplate.Web" selected="True" />
+              <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Controllers" expanded="True">
+                  <Node name="UsersDataController.cs" selected="True" />
+                </Node>
+                <Node name="Resources" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="Home" expanded="True" />
+                  <Node name="Restaurant" expanded="True" />
+                  <Node name="Users" expanded="True" />
+                  <Node name="UsersData" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
+                <Node name="Addresses" expanded="True" />
+                <Node name="LocationObjects" expanded="True" />
+                <Node name="Users" expanded="True" />
+                <Node name="UsersData" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -19,7 +61,9 @@
     <String>/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered</String>
   </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" line="490" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
