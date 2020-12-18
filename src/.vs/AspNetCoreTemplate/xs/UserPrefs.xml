@@ -4,53 +4,8 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AspNetCoreTemplate" expanded="True">
-            <Node name="Services" expanded="True">
-              <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
-                <Node name="Orders" expanded="True" />
-                <Node name="Users" expanded="True" />
-              </Node>
-              <Node name="AspNetCoreTemplate.Services.Mapping" expanded="True" />
-            </Node>
-            <Node name="Tests" expanded="True">
-              <Node name="AspNetCoreTemplate.Services.Data.Tests" expanded="True" />
-            </Node>
             <Node name="Web" expanded="True">
-              <Node name="AspNetCoreTemplate.Web" expanded="True">
-                <Node name="Controllers" expanded="True">
-                  <Node name="UsersDataController.cs" selected="True" />
-                </Node>
-                <Node name="Resources" expanded="True" />
-                <Node name="Views" expanded="True">
-                  <Node name="Address" expanded="True" />
-                  <Node name="Areas" expanded="True" />
-                  <Node name="Categories" expanded="True" />
-                  <Node name="Cities" expanded="True" />
-                  <Node name="Courier" expanded="True" />
-                  <Node name="Home" expanded="True" />
-                  <Node name="Locations" expanded="True" />
-                  <Node name="LocationsObject" expanded="True" />
-                  <Node name="Order" expanded="True" />
-                  <Node name="Posts" expanded="True" />
-                  <Node name="Purchase" expanded="True" />
-                  <Node name="Restaurant" expanded="True" />
-                  <Node name="Roles" expanded="True" />
-                  <Node name="Settings" expanded="True" />
-                  <Node name="Shared" expanded="True" />
-                  <Node name="Streets" expanded="True" />
-                  <Node name="Users" expanded="True" />
-                  <Node name="UsersData" expanded="True" />
-                  <Node name="Vehicle" expanded="True" />
-                </Node>
-                <Node name="wwwroot" expanded="True">
-                  <Node name="css" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="AspNetCoreTemplate.Web.ViewModels" expanded="True">
-                <Node name="LocationObjects" expanded="True" />
-                <Node name="Orders" expanded="True" />
-                <Node name="Users" expanded="True" />
-                <Node name="UsersData" expanded="True" />
-              </Node>
+              <Node name="AspNetCoreTemplate.Web" selected="True" />
             </Node>
           </Node>
         </State>

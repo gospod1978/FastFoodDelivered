@@ -618,3 +618,4 @@
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Release/netcoreapp3.1/AspNetCoreTemplate.Web.genruntimeconfig.cache
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Release/netcoreapp3.1/Razor/Views/Home/About.cshtml.g.cs
 /Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Release/netcoreapp3.1/Razor/Views/Home/Contact.cshtml.g.cs
+/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/obj/Release/netcoreapp3.1/Razor/Views/UsersData/AllDocuments.cshtml.g.cs
