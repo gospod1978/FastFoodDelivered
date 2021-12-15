@@ -3,7 +3,7 @@ ASP .NET Core 3.1 Web Application Project
 
 C# Web Development Path at Software University, Bulgaria
 
-https://fastfooddeliverd.azurewebsites.net
+
 
 ABOUT my web project:
 
