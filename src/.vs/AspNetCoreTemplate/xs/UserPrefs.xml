@@ -6,34 +6,44 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" line="490" column="1" />
+      <Breakpoint file="/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" relfile="Web/AspNetCoreTemplate.Web/Controllers/UsersDataController.cs" line="490" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Web.AspNetCoreTemplate.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/AspNetCoreTemplate.Data/AspNetCoreTemplate.Data.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web/AspNetCoreTemplate.Web/appsettings.json">
     <Files>
-      <File FileName="Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj" Line="1" Column="1" />
-      <File FileName="Data/AspNetCoreTemplate.Data/AspNetCoreTemplate.Data.csproj" Line="4" Column="5" />
+      <File FileName="Web/AspNetCoreTemplate.Web/appsettings.json" Line="4" Column="23" />
+      <File FileName="Data/AspNetCoreTemplate.Data/appsettings.json" Line="4" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AspNetCoreTemplate" expanded="True">
+          <Node name="AspNetCoreTemplate" expanded="True" selected="True">
             <Node name="Data" expanded="True">
               <Node name="AspNetCoreTemplate.Data" expanded="True">
-                <Node name="Dependencies" expanded="True">
-                  <Node name="FrameworkReferences" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="AspNetCoreTemplate.Data.Common" expanded="True">
-                <Node name="Dependencies" expanded="True">
-                  <Node name="PackageDependencies" expanded="True" />
-                  <Node name="SdkDependencies" expanded="True" />
-                </Node>
+                <Node name="Migrations" expanded="True" />
               </Node>
             </Node>
-            <Node name="Services" expanded="True" />
-            <Node name="Web" expanded="True" />
+            <Node name="Services" expanded="True">
+              <Node name="AspNetCoreTemplate.Services.Data" expanded="True">
+                <Node name="Orders" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Tests" expanded="True">
+              <Node name="AspNetCoreTemplate.Web.Tests" expanded="True" />
+            </Node>
+            <Node name="Web" expanded="True">
+              <Node name="AspNetCoreTemplate.Web" expanded="True">
+                <Node name="Areas" expanded="True">
+                  <Node name="Identity" expanded="True">
+                    <Node name="Pages" expanded="True">
+                      <Node name="Account" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+                <Node name="Resources" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
