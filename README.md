@@ -1,5 +1,5 @@
 Fast Food Delivered
-ASP .NET Core 3.1 Web Application Project
+.NET6 Web Application Project
 
 C# Web Development Path at Software University, Bulgaria
 
