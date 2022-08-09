@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AspNetCoreTemplate.Services.Mapping
-build_property.ProjectDir = /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/
+build_property.ProjectDir = /Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/

@@ -12899,11 +12899,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Tests/AspNetCoreTemplate.Web.Tests/AspNetCoreTemplate.Web.Tests.csproj",
+      "projectUniqueName": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/AspNetCoreTemplate.Web.Tests.csproj",
       "projectName": "AspNetCoreTemplate.Web.Tests",
-      "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Tests/AspNetCoreTemplate.Web.Tests/AspNetCoreTemplate.Web.Tests.csproj",
+      "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/AspNetCoreTemplate.Web.Tests.csproj",
       "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
-      "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Tests/AspNetCoreTemplate.Web.Tests/obj/",
+      "outputPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Tests/AspNetCoreTemplate.Web.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"
@@ -12918,8 +12918,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj": {
-              "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj"
+            "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj": {
+              "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj"
             }
           }
         }

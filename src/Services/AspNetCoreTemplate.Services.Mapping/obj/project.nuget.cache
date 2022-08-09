@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5jGKENx9nyukonD5jV59x3S/ZZbwyhkVPyIQEMk7Xi3iUNQlFfJlhgpfXBhgrhpNFRTiH4fX6v8+reNtbPmEnA==",
+  "dgSpecHash": "3jz8vQ+IGqMsNjRDuPEXXVkhZWd6gQyRyNFxuuLy2X/CHLtyjr1PGmlzcT+Egm1zYsrA0Qt9+46I+IPzkox7MA==",
   "success": true,
-  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "/Users/mihailgospodinov/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/Users/mihailgospodinov/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

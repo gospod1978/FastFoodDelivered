@@ -165,11 +165,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj",
+      "projectUniqueName": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj",
       "projectName": "AspNetCoreTemplate.Data.Common",
-      "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj",
+      "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj",
       "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
-      "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/obj/",
+      "outputPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"
@@ -222,7 +222,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.106/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.105/RuntimeIdentifierGraph.json"
       }
     }
   }

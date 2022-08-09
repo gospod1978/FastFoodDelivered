@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GremjJlDflykfOTjmZN4Jicks+kh38w4JYyMf5BE4/PM5qgV8xiKn8Qnc7TgN/eSr5UjHrSCLYCpCNqzN9rs4Q==",
+  "dgSpecHash": "yihPO3Tslwm5Ycivko58SWqIwNcB97Bahn/wW5EKIA1TBkJz11E0XPlQ3CirfttBSbrrDSPjDClatbhBlEdrHA==",
   "success": true,
-  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Tests/Sandbox/Sandbox.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Tests/Sandbox/Sandbox.csproj",
   "expectedPackageFiles": [
     "/Users/mihailgospodinov/.nuget/packages/anglesharp/0.17.1/anglesharp.0.17.1.nupkg.sha512",
     "/Users/mihailgospodinov/.nuget/packages/anglesharp.css/0.16.4/anglesharp.css.0.16.4.nupkg.sha512",

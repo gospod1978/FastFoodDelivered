@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj": {}
+    "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj": {}
   },
   "projects": {
-    "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj": {
+    "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
+        "projectUniqueName": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
         "projectName": "AspNetCoreTemplate.Services.Messaging",
-        "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
+        "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
         "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
-        "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/obj/",
+        "outputPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"

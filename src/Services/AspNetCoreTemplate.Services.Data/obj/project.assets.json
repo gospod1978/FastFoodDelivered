@@ -1565,11 +1565,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj",
+      "projectUniqueName": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj",
       "projectName": "AspNetCoreTemplate.Services.Data",
-      "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj",
+      "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/AspNetCoreTemplate.Services.Data.csproj",
       "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
-      "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Data/obj/",
+      "outputPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Data/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"
@@ -1584,20 +1584,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj": {
-              "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj"
+            "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj": {
+              "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj"
             },
-            "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj": {
-              "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj"
+            "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj": {
+              "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/AspNetCoreTemplate.Data.Common.csproj"
             },
-            "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj": {
-              "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj"
+            "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj": {
+              "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Models/AspNetCoreTemplate.Data.Models.csproj"
             },
-            "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj": {
-              "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj"
+            "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj": {
+              "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/AspNetCoreTemplate.Services.Mapping.csproj"
             },
-            "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.ViewModels/AspNetCoreTemplate.Web.ViewModels.csproj": {
-              "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.ViewModels/AspNetCoreTemplate.Web.ViewModels.csproj"
+            "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.ViewModels/AspNetCoreTemplate.Web.ViewModels.csproj": {
+              "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.ViewModels/AspNetCoreTemplate.Web.ViewModels.csproj"
             }
           }
         }

@@ -65,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
+      "projectUniqueName": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
       "projectName": "AspNetCoreTemplate.Services",
-      "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
+      "projectPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
       "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
-      "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services/obj/",
+      "outputPath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"

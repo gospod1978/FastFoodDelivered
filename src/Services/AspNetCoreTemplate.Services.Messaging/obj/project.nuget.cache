@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a1h9uxdtWeMH2vh94ezPad31Sd3WCsfR0LhQOBMdwJNriTWx/zDi/LszZGJEbVqqlKwacwkW7NXTBFsDponF+g==",
+  "dgSpecHash": "vDFC5GnzesT1PzLCJvtXQJAT7vb2BTsKeyN7ZquK8LSh6t1CwAbgGXQVxRQWORplO4oPY6dPBZMMAJO6WeeBsw==",
   "success": true,
-  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/AspNetCoreTemplate.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "/Users/mihailgospodinov/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/mihailgospodinov/.nuget/packages/sendgrid/9.28.0/sendgrid.9.28.0.nupkg.sha512",

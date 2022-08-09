@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SgXPBSaCSCLoHPe5I25PvVuxF4zeJB0Eex/C/yfikXYozhTxwaLn097eb9ZwakjVXKybJvDR+BFlOsgtMLuMdQ==",
+  "dgSpecHash": "+Kk5MqCOZlWfVOJv4oM8wxUUBHjKYMdrAXvIGpWBpRO77Qu82ba6EzBoMj61SpQgP703CmccGfetGDWAXjYvDg==",
   "success": true,
-  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data/AspNetCoreTemplate.Data.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data/AspNetCoreTemplate.Data.csproj",
   "expectedPackageFiles": [
     "/Users/mihailgospodinov/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/mihailgospodinov/.nuget/packages/microsoft.aspnetcore.cryptography.internal/6.0.7/microsoft.aspnetcore.cryptography.internal.6.0.7.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZaDYXV8XypkBHm5w1axguJJ70X4/BrDdHcjIjkTz/9dyhDvB4U7WJwoKwuuTMGBl+xPeLrr59HS+W6vXwNSX0Q==",
+  "dgSpecHash": "aHo0eQyZTFXOjNQ/zOryJPRxxwK9DeZLuAnvWdEQdN1WJgASwP871tSVnlwqO+PSyaYBNFrh+6qd/xaKVUIOvQ==",
   "success": true,
-  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services/AspNetCoreTemplate.Services.csproj",
   "expectedPackageFiles": [
     "/Users/mihailgospodinov/.nuget/packages/stylecop.analyzers/1.2.0-beta.435/stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
     "/Users/mihailgospodinov/.nuget/packages/stylecop.analyzers.unstable/1.2.0.435/stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"

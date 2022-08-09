@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7TpdqjGEyqnZFVw0KblbS4apKV44OxDnpxtXCmJe3vbW1986XnN87SsCfAcoFZr0y93ub1EgPzuAf5jKVNI+SQ==",
+  "dgSpecHash": "z4IC7Q9ge4XwzziwDVMM+H0YCB53rZP3ksZzzRS+04u7I0r2WcKKbo6PdlsuLkjE00AqZa93bHuqcwyU9mgw4Q==",
   "success": true,
-  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/AspNetCoreTemplate.Web.csproj",
   "expectedPackageFiles": [
     "/Users/mihailgospodinov/.nuget/packages/anglesharp/0.17.1/anglesharp.0.17.1.nupkg.sha512",
     "/Users/mihailgospodinov/.nuget/packages/anglesharp.css/0.16.4/anglesharp.css.0.16.4.nupkg.sha512",
