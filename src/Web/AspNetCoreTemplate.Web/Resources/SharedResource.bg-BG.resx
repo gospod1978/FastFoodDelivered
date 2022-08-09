@@ -12,14 +12,8 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="CreateAddressDelivery" xml:space="preserve">
-        <value>Създай Адрес за Досташка</value>
-    </data>
     <data name="Language" xml:space="preserve">
         <value>Език</value>
-    </data>
-    <data name="AllAddressDelivery" xml:space="preserve">
-        <value> Всички адреси за доставка </value>
     </data>
     <data name="Purchase" xml:space="preserve">
         <value>Поръчка</value>
@@ -29,9 +23,6 @@
     </data>
     <data name="AllPurchasebyStatus" xml:space="preserve">
         <value>Всички поръчки по статъс</value>
-    </data>
-    <data name="SendEmail" xml:space="preserve">
-        <value>Изпрати Email</value>
     </data>
     <data name="AllEmailSent" xml:space="preserve">
         <value>Всички изпратени Email</value>
@@ -243,9 +234,6 @@
 <data name="Details" xml:space="preserve">
         <value>Детайли</value>
     </data>
-<data name="Purchase" xml:space="preserve">
-        <value>Поръчка</value>
-    </data>
 <data name="Name" xml:space="preserve">
         <value>име</value>
     </data>
@@ -275,9 +263,6 @@
     </data>
 <data name="ChangeLocationRestaurant" xml:space="preserve">
         <value>Промени локацията на Ресторанта</value>
-    </data>
-<data name="Delete" xml:space="preserve">
-        <value>Изтрий</value>
     </data>
 <data name="CreateNewRole" xml:space="preserve">
         <value>Създай нова Роля</value>

@@ -10,3 +10,15 @@
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.dll
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/ref/AspNetCoreTemplate.Services.Mapping.dll
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.pdb
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.deps.json
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Debug/net6.0/ref/AspNetCoreTemplate.Services.Mapping.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.pdb
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.csproj.AssemblyReference.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.AssemblyInfoInputs.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.AssemblyInfo.cs
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.csproj.CoreCompileInputs.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/ref/AspNetCoreTemplate.Services.Mapping.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Debug/net6.0/AspNetCoreTemplate.Services.Mapping.pdb

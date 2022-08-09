@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace AspNetCoreTemplate.Data.Migrations
+﻿namespace AspNetCoreTemplate.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class EmailAgain : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +22,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                     Subject = table.Column<string>(nullable: true),
                     Body = table.Column<string>(nullable: true),
                     OriginalEmail = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: true)
+                    UserId = table.Column<string>(nullable: true),
                 },
                 constraints: table =>
                 {

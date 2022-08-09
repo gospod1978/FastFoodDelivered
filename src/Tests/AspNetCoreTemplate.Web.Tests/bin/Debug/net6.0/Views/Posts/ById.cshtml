@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using AspNetCoreTemplate.Web.Resources
+@inject LocService SharedLocalizer
+@inject IViewLocalizer Localizer
+@model AspNetCoreTemplate.Web.ViewModels.Posts.PostViewModel
+@{
+    this.ViewData["Title"] = Model.Title;
+}
+
+@if (this.TempData["InfoMessage"] != null)
+{
+    <div class="alert alert-success">
+        @this.TempData["InfoMessage"]
+    </div>
+}
+
+<h1>@Model.Title</h1>
+
+<div class="container-fluid mt-100">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="media flex-wrap w-100 align-items-center">
+                        <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1574583246/AAA/2.jpg" class="d-block ui-w-40 rounded-circle" alt="">
+                        <div class="media-body ml-3">
+                            @Model.UserUserName
+                            <div class="text-muted small">
+                                <time datetime="@Model.CreatedOn.ToString("O")"></time>
+                            </div>
+                        </div>
+                        <div class="text-muted small ml-3">
+                            <form id="votesForm" method="post"></form>
+                            <div>
+                                <a href="#" onclick="sendVote(@Model.Id, true)">
+                                    <i class="fa fa-thumbs-up"></i>
+                                </a>
+                            </div>
+                            <div id="votesCount">@Model.VotesCount</div>
+                            <div>
+                                <a href="#" onclick="sendVote(@Model.Id, false)">
+                                    <i class="fa fa-thumbs-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer.GetLocalizedHtmlString("Back")</a>

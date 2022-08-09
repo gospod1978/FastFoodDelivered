@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace AspNetCoreTemplate.Data.Migrations
+﻿namespace AspNetCoreTemplate.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class Purchase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,7 +25,7 @@ namespace AspNetCoreTemplate.Data.Migrations
                     RestaurantId = table.Column<string>(nullable: true),
                     Price = table.Column<decimal>(nullable: false),
                     MenuPrice = table.Column<decimal>(nullable: false),
-                    DeliveryPrice = table.Column<decimal>(nullable: false)
+                    DeliveryPrice = table.Column<decimal>(nullable: false),
                 },
                 constraints: table =>
                 {

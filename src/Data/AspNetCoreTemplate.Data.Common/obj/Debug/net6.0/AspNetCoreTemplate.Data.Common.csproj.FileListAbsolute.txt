@@ -10,3 +10,14 @@
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.dll
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/ref/AspNetCoreTemplate.Data.Common.dll
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.pdb
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/bin/Debug/net6.0/AspNetCoreTemplate.Data.Common.deps.json
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/bin/Debug/net6.0/AspNetCoreTemplate.Data.Common.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/bin/Debug/net6.0/ref/AspNetCoreTemplate.Data.Common.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/bin/Debug/net6.0/AspNetCoreTemplate.Data.Common.pdb
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.AssemblyInfoInputs.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.AssemblyInfo.cs
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.csproj.CoreCompileInputs.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/ref/AspNetCoreTemplate.Data.Common.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Data/AspNetCoreTemplate.Data.Common/obj/Debug/net6.0/AspNetCoreTemplate.Data.Common.pdb

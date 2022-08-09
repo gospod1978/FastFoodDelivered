@@ -7,10 +7,12 @@
     using System.Text;
     using System.Text.Encodings.Web;
     using System.Threading.Tasks;
+
     using AspNetCoreTemplate.Common;
     using AspNetCoreTemplate.Data;
     using AspNetCoreTemplate.Data.Models;
     using AspNetCoreTemplate.Services.Data.Users;
+
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;

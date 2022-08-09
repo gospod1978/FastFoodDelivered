@@ -1,0 +1,46 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AspNetCoreTemplate.Common/1.0.0": {
+        "dependencies": {
+          "StyleCop.Analyzers": "1.2.0-beta.435"
+        },
+        "runtime": {
+          "AspNetCoreTemplate.Common.dll": {}
+        }
+      },
+      "StyleCop.Analyzers/1.2.0-beta.435": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.435"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.435": {}
+    }
+  },
+  "libraries": {
+    "AspNetCoreTemplate.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StyleCop.Analyzers/1.2.0-beta.435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TADk7vdGXtfTnYCV7GyleaaRTQjfoSfZXprQrVMm7cSJtJbFc1QIbWPyLvrgrfGdfHbGmUPvaN4ODKNxg2jgPQ==",
+      "path": "stylecop.analyzers/1.2.0-beta.435",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.435.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.435": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ouwPWZxbOV3SmCZxIRqHvljkSzkCyi1tDoMzQtDb/bRP8ctASV/iRJr+A2Gdj0QLaLmWnqTWDrH82/iP+X80Lg==",
+      "path": "stylecop.analyzers.unstable/1.2.0.435",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
+    }
+  }
+}

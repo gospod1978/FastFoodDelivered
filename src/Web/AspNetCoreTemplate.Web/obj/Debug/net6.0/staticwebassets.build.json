@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ix+xzoZBjb/VtGM6Znk1ULZElDt5FBmSBzjFgyb37pw=",
+  "Hash": "gbQGSxzTKhMCD1gG/2k6K4aCaCzqIihFPJecJgCYXDw=",
   "Source": "AspNetCoreTemplate.Web",
   "BasePath": "_content/AspNetCoreTemplate.Web",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "AspNetCoreTemplate.Web/wwwroot",
       "Source": "AspNetCoreTemplate.Web",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "/Users/mihailgospodinov/.nuget/packages/microsoft.aspnetcore.identity.ui/6.0.7/staticwebassets/V5/lib/jquery/LICENSE.txt"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/.DS_Store",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/.DS_Store",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": ".DS_Store",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/css/home_page.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/css/home_page.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "css/home_page.css",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot/css/home_page.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/css/site.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/css/site.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1088,27 +1088,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/css/site.min.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/favicon.ico",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
-      "BasePath": "_content/AspNetCoreTemplate.Web",
-      "RelativePath": "css/site.min.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/site.min.css"
-    },
-    {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/favicon.ico",
-      "SourceId": "AspNetCoreTemplate.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1122,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/files/.DS_Store",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/files/.DS_Store",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "files/.DS_Store",
       "AssetKind": "All",
@@ -1139,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot/files/.DS_Store"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/files/client.docx",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/files/client.docx",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "files/client.docx",
       "AssetKind": "All",
@@ -1156,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot/files/client.docx"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/files/privacy.docx",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/files/privacy.docx",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "files/privacy.docx",
       "AssetKind": "All",
@@ -1173,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot/files/privacy.docx"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/files/shemaDB.png",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/files/shemaDB.png",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "files/shemaDB.png",
       "AssetKind": "All",
@@ -1190,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot/files/shemaDB.png"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/js/site.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/js/site.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1207,27 +1190,10 @@
       "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/js/site.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
-      "BasePath": "_content/AspNetCoreTemplate.Web",
-      "RelativePath": "js/site.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/js/site.min.js"
-    },
-    {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
-      "SourceId": "AspNetCoreTemplate.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1241,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1258,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1275,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1292,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/css/all.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/css/all.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/css/all.css",
       "AssetKind": "All",
@@ -1309,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/css/all.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/css/all.min.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/css/all.min.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/css/all.min.css",
       "AssetKind": "All",
@@ -1326,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/css/all.min.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.eot",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.eot",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-brands-400.eot",
       "AssetKind": "All",
@@ -1343,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-brands-400.eot"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.svg",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.svg",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-brands-400.svg",
       "AssetKind": "All",
@@ -1360,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-brands-400.svg"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.ttf",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.ttf",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-brands-400.ttf",
       "AssetKind": "All",
@@ -1377,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-brands-400.ttf"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.woff",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.woff",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-brands-400.woff",
       "AssetKind": "All",
@@ -1394,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-brands-400.woff"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.woff2",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-brands-400.woff2",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-brands-400.woff2",
       "AssetKind": "All",
@@ -1411,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-brands-400.woff2"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.eot",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.eot",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-regular-400.eot",
       "AssetKind": "All",
@@ -1428,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-regular-400.eot"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.svg",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.svg",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-regular-400.svg",
       "AssetKind": "All",
@@ -1445,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-regular-400.svg"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.ttf",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.ttf",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-regular-400.ttf",
       "AssetKind": "All",
@@ -1462,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-regular-400.ttf"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.woff",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.woff",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-regular-400.woff",
       "AssetKind": "All",
@@ -1479,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-regular-400.woff"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.woff2",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-regular-400.woff2",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-regular-400.woff2",
       "AssetKind": "All",
@@ -1496,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-regular-400.woff2"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.eot",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.eot",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-solid-900.eot",
       "AssetKind": "All",
@@ -1513,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-solid-900.eot"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.svg",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.svg",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-solid-900.svg",
       "AssetKind": "All",
@@ -1530,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-solid-900.svg"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.ttf",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.ttf",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-solid-900.ttf",
       "AssetKind": "All",
@@ -1547,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-solid-900.ttf"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.woff",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.woff",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-solid-900.woff",
       "AssetKind": "All",
@@ -1564,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-solid-900.woff"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.woff2",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/fontawesome/webfonts/fa-solid-900.woff2",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/fontawesome/webfonts/fa-solid-900.woff2",
       "AssetKind": "All",
@@ -1581,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot/lib/fontawesome/webfonts/fa-solid-900.woff2"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1598,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1615,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1632,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1649,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery/dist/jquery.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1666,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1683,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/moment/min/moment-with-locales.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/moment/min/moment-with-locales.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/moment/min/moment-with-locales.min.js",
       "AssetKind": "All",
@@ -1700,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot/lib/moment/min/moment-with-locales.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/code/plugin.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/code/plugin.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/plugins/code/plugin.min.js",
       "AssetKind": "All",
@@ -1717,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/plugins/code/plugin.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/image/plugin.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/image/plugin.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/plugins/image/plugin.min.js",
       "AssetKind": "All",
@@ -1734,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/plugins/image/plugin.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/link/plugin.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/link/plugin.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/plugins/link/plugin.min.js",
       "AssetKind": "All",
@@ -1751,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/plugins/link/plugin.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/media/plugin.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/media/plugin.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/plugins/media/plugin.min.js",
       "AssetKind": "All",
@@ -1768,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/plugins/media/plugin.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/paste/plugin.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/paste/plugin.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/plugins/paste/plugin.min.js",
       "AssetKind": "All",
@@ -1785,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/plugins/paste/plugin.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/table/plugin.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/plugins/table/plugin.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/plugins/table/plugin.min.js",
       "AssetKind": "All",
@@ -1802,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/plugins/table/plugin.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/skins/content/default/content.min.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/skins/content/default/content.min.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/skins/content/default/content.min.css",
       "AssetKind": "All",
@@ -1819,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/skins/content/default/content.min.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/skins/ui/oxide/content.min.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/skins/ui/oxide/content.min.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/skins/ui/oxide/content.min.css",
       "AssetKind": "All",
@@ -1836,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/skins/ui/oxide/content.min.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/skins/ui/oxide/skin.min.css",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/skins/ui/oxide/skin.min.css",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/skins/ui/oxide/skin.min.css",
       "AssetKind": "All",
@@ -1853,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/skins/ui/oxide/skin.min.css"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/themes/silver/theme.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/themes/silver/theme.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/themes/silver/theme.min.js",
       "AssetKind": "All",
@@ -1870,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot/lib/tinymce/themes/silver/theme.min.js"
     },
     {
-      "Identity": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/tinymce.min.js",
+      "Identity": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/lib/tinymce/tinymce.min.js",
       "SourceId": "AspNetCoreTemplate.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/wwwroot/",
+      "ContentRoot": "/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web/wwwroot/",
       "BasePath": "_content/AspNetCoreTemplate.Web",
       "RelativePath": "lib/tinymce/tinymce.min.js",
       "AssetKind": "All",

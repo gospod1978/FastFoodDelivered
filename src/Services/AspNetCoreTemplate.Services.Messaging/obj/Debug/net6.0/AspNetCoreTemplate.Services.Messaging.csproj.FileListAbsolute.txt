@@ -10,3 +10,15 @@
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.dll
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/ref/AspNetCoreTemplate.Services.Messaging.dll
 /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.pdb
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/bin/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.deps.json
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/bin/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/bin/Debug/net6.0/ref/AspNetCoreTemplate.Services.Messaging.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/bin/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.pdb
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.csproj.AssemblyReference.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.AssemblyInfoInputs.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.AssemblyInfo.cs
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.csproj.CoreCompileInputs.cache
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/ref/AspNetCoreTemplate.Services.Messaging.dll
+/Users/mihailgospodinov/Desktop/mihail/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Messaging/obj/Debug/net6.0/AspNetCoreTemplate.Services.Messaging.pdb

@@ -1,0 +1,13 @@
+{
+  "AspNetCoreTemplate.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/AspNetCoreTemplate.Common",
+  "AspNetCoreTemplate.Data.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Data\/AspNetCoreTemplate.Data.Common",
+  "AspNetCoreTemplate.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Data\/AspNetCoreTemplate.Data",
+  "AspNetCoreTemplate.Data.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Data\/AspNetCoreTemplate.Data.Models",
+  "AspNetCoreTemplate.Services.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Services\/AspNetCoreTemplate.Services.Data",
+  "AspNetCoreTemplate.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Services\/AspNetCoreTemplate.Services",
+  "AspNetCoreTemplate.Services.Mapping, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Services\/AspNetCoreTemplate.Services.Mapping",
+  "AspNetCoreTemplate.Services.Messaging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Services\/AspNetCoreTemplate.Services.Messaging",
+  "AspNetCoreTemplate.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Web\/AspNetCoreTemplate.Web",
+  "AspNetCoreTemplate.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Web\/AspNetCoreTemplate.Web.Infrastructure",
+  "AspNetCoreTemplate.Web.ViewModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/mihailgospodinov\/Desktop\/mihail\/FastFoodDelivered\/src\/Web\/AspNetCoreTemplate.Web.ViewModels"
+}
