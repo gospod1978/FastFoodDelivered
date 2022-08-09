@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj": {}
+    "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj": {
+    "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
+        "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
         "projectName": "AspNetCoreTemplate.Web.Infrastructure",
-        "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
-        "packagesPath": "/Users/gospod1978/.nuget/packages/",
-        "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/",
+        "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
+        "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
+        "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gospod1978/.config/NuGet/NuGet.Config"
+          "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "net6.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -35,14 +35,14 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[1.2.0-beta.164, )"
+              "version": "[1.2.0-beta.435, )"
             }
           },
           "imports": [
@@ -56,11 +56,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "NETStandard.Library": {
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.105/RuntimeIdentifierGraph.json"
         }
       }
     }

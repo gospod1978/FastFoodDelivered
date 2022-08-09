@@ -1,36 +1,36 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {
-      "StyleCop.Analyzers/1.2.0-beta.164": {
+    "net6.0": {
+      "StyleCop.Analyzers/1.2.0-beta.435": {
         "type": "package",
         "dependencies": {
-          "StyleCop.Analyzers.Unstable": "1.2.0.164"
+          "StyleCop.Analyzers.Unstable": "1.2.0.435"
         }
       },
-      "StyleCop.Analyzers.Unstable/1.2.0.164": {
+      "StyleCop.Analyzers.Unstable/1.2.0.435": {
         "type": "package"
       }
     }
   },
   "libraries": {
-    "StyleCop.Analyzers/1.2.0-beta.164": {
-      "sha512": "IWMH8RyJGDu8ZrYFKIwjfcuXizpJnjnMGE8tDRnZ36AIAQeFDjeUPH2EUEMwj4+63oQBu/KkzRe9clSW9s5mdA==",
+    "StyleCop.Analyzers/1.2.0-beta.435": {
+      "sha512": "TADk7vdGXtfTnYCV7GyleaaRTQjfoSfZXprQrVMm7cSJtJbFc1QIbWPyLvrgrfGdfHbGmUPvaN4ODKNxg2jgPQ==",
       "type": "package",
-      "path": "stylecop.analyzers/1.2.0-beta.164",
+      "path": "stylecop.analyzers/1.2.0-beta.435",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "THIRD-PARTY-NOTICES.txt",
-        "stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
+        "stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
         "stylecop.analyzers.nuspec"
       ]
     },
-    "StyleCop.Analyzers.Unstable/1.2.0.164": {
-      "sha512": "3WJ5JvRP9QjdrwspeLFjwD2AZw2CcDmYLQ7x8oofxvOzXvboZdFlPsSV8h56hLyK0lnMFvtpb48nxz7oQ4RgCQ==",
+    "StyleCop.Analyzers.Unstable/1.2.0.435": {
+      "sha512": "ouwPWZxbOV3SmCZxIRqHvljkSzkCyi1tDoMzQtDb/bRP8ctASV/iRJr+A2Gdj0QLaLmWnqTWDrH82/iP+X80Lg==",
       "type": "package",
-      "path": "stylecop.analyzers.unstable/1.2.0.164",
+      "path": "stylecop.analyzers.unstable/1.2.0.435",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -47,7 +47,7 @@
         "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
         "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
         "rulesets/StyleCopAnalyzersDefault.ruleset",
-        "stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512",
+        "stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
         "stylecop.analyzers.unstable.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
@@ -55,34 +55,34 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": [
-      "StyleCop.Analyzers >= 1.2.0-beta.164"
+    "net6.0": [
+      "StyleCop.Analyzers >= 1.2.0-beta.435"
     ]
   },
   "packageFolders": {
-    "/Users/gospod1978/.nuget/packages/": {}
+    "/Users/mihailgospodinov/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
+      "projectUniqueName": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
       "projectName": "AspNetCoreTemplate.Web.Infrastructure",
-      "projectPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
-      "packagesPath": "/Users/gospod1978/.nuget/packages/",
-      "outputPath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/",
+      "projectPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/AspNetCoreTemplate.Web.Infrastructure.csproj",
+      "packagesPath": "/Users/mihailgospodinov/.nuget/packages/",
+      "outputPath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/gospod1978/.config/NuGet/NuGet.Config"
+        "/Users/mihailgospodinov/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "netstandard2.1"
+        "net6.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -93,14 +93,14 @@
       }
     },
     "frameworks": {
-      "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "StyleCop.Analyzers": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[1.2.0-beta.164, )"
+            "version": "[1.2.0-beta.435, )"
           }
         },
         "imports": [
@@ -114,11 +114,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "NETStandard.Library": {
+          "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.105/RuntimeIdentifierGraph.json"
       }
     }
   }

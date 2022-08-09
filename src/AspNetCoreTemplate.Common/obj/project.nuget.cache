@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wcANa6egrlxeCCUDhJnHxu5fQmy7HDlBCDB6AQT+M8LuHZA5RzBOfqk3LM53e6ounJmyN0T90vjgMQ/3AQBmRA==",
+  "dgSpecHash": "K+o8HLkMsS5KfyYgcMmVTeU7ajgyKDmI2oJdD4F8zuJXJVsSWNf8nAmSbW9WXdtZtTex/lFXS/dLUBM0KPN8AA==",
   "success": true,
-  "projectFilePath": "/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj",
+  "projectFilePath": "/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/AspNetCoreTemplate.Common/AspNetCoreTemplate.Common.csproj",
   "expectedPackageFiles": [
-    "/Users/gospod1978/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/gospod1978/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
-    "/Users/gospod1978/.nuget/packages/stylecop.analyzers/1.2.0-beta.164/stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
-    "/Users/gospod1978/.nuget/packages/stylecop.analyzers.unstable/1.2.0.164/stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512"
+    "/Users/mihailgospodinov/.nuget/packages/stylecop.analyzers/1.2.0-beta.435/stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "/Users/mihailgospodinov/.nuget/packages/stylecop.analyzers.unstable/1.2.0.435/stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
   ],
   "logs": []
 }

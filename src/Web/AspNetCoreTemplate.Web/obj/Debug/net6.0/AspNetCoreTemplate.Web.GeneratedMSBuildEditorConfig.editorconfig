@@ -1,0 +1,432 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AspNetCoreTemplate.Web
+build_property.RootNamespace = AspNetCoreTemplate.Web
+build_property.ProjectDir = /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = /Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/stylecop.json]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Address/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Address/Create1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzcy9DcmVhdGUxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Address/Create2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzcy9DcmVhdGUyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Address/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Address/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzcy9OYXZCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Address/NavBarAddress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzcy9OYXZCYXJBZGRyZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Areas/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJlYXMvQWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Areas/AllByCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJlYXMvQWxsQnlDaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Areas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJlYXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Areas/CreateAllAreaInSofia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJlYXMvQ3JlYXRlQWxsQXJlYUluU29maWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Areas/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJlYXMvTmF2QmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Categories/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9BbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Categories/ByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9CeU5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcmllcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Cities/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0FsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Cities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Cities/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL05hdkJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9BbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/AllCouriersDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9BbGxDb3VyaWVyc0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/Create2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9DcmVhdGUyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/IsActive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9Jc0FjdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Courier/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cmllci9OYXZCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Home/Carriers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DYXJyaWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Locations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Locations/Create1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zL0NyZWF0ZTEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Locations/Create2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zL0NyZWF0ZTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Locations/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zL05hdkJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/LocationsObject/AllByUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zT2JqZWN0L0FsbEJ5VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/LocationsObject/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zT2JqZWN0L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/LocationsObject/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9jYXRpb25zT2JqZWN0L05hdkJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Order/AllByCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvQWxsQnlDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Order/Image.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvSW1hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Order/MenuCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvTWVudUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Posts/ById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvQnlJZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Posts/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvQWxsQnlEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/AllByData1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvQWxsQnlEYXRhMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/AllByStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvQWxsQnlTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/Purchase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvUHVyY2hhc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Purchase/Status.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHVyY2hhc2UvU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Restaurant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Restaurant/Create2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9DcmVhdGUyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Restaurant/Create3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9DcmVhdGUzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Restaurant/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Restaurant/IsActive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzdGF1cmFudC9Jc0FjdGl2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Roles/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZXMvQWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Settings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2V0dGluZ3MvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Shared/_CookieConsentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Db29raWVDb25zZW50UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Shared/_SelectLanguagePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TZWxlY3RMYW5ndWFnZVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Streets/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RyZWV0cy9BbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Streets/AllCity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RyZWV0cy9BbGxDaXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Streets/Create1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RyZWV0cy9DcmVhdGUxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Streets/Create2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RyZWV0cy9DcmVhdGUyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Streets/Create3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RyZWV0cy9DcmVhdGUzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Streets/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RyZWV0cy9OYXZCYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/AllEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQWxsRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/Approve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQXBwcm92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/ApproveRest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQXBwcm92ZVJlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/ByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQnlOYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/EmailById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRW1haWxCeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/EmailDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRW1haWxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/NavBarAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvTmF2QmFyQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/Searching.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvU2VhcmNoaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Users/SendEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvU2VuZEVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/AllCouriers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0FsbENvdXJpZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/AllDocuments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0FsbERvY3VtZW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/AllRestaurants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0FsbFJlc3RhdXJhbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/AllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0FsbFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/AskDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0Fza0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/Image.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0ltYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/Image2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0ltYWdlMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/IndexPdfOne.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL0luZGV4UGRmT25lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL05hdkJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/NoActive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL05vQWN0aXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/Uploaud.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL1VwbG9hdWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/UsersData/ViewDocument.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnNEYXRhL1ZpZXdEb2N1bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Vehicle/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVoaWNsZS9BbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/Vehicle/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVmVoaWNsZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

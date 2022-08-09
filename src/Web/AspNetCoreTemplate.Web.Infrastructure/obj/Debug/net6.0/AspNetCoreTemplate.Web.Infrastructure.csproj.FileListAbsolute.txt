@@ -1,0 +1,11 @@
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.deps.json
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.dll
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/net6.0/ref/AspNetCoreTemplate.Web.Infrastructure.dll
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/bin/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.pdb
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.AssemblyInfoInputs.cache
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.AssemblyInfo.cs
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.dll
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/ref/AspNetCoreTemplate.Web.Infrastructure.dll
+/Users/mihailgospodinov/Downloads/FastFoodDelivered-master 2/src/Web/AspNetCoreTemplate.Web.Infrastructure/obj/Debug/net6.0/AspNetCoreTemplate.Web.Infrastructure.pdb

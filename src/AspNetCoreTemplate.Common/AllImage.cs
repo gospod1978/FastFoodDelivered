@@ -2,27 +2,27 @@
 {
     public static class AllImage
     {
-        public const string FoodMobileJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string FoodMobileJpg = "https://food.bolt.eu/images/hero-image.jpg";
 
         public const string CarriersJpg = "https://food.bolt.eu/static/careers-4243bf4be07ec2ebb96b78408b27ea7f.jpg";
 
         public const string CourierJpg = "https://food.bolt.eu/static/courier-3546d0ca0a22f0f40ead0e7212de72d8.jpg";
 
-        public const string FacebookSvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string FacebookSvg = "https://food.bolt.eu/images/food-bg-mobile.jpg";
 
         public const string FfdSvg = "https://www.linkpicture.com/q/ffd.svg";
 
-        public const string GooglePlaySvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string GooglePlaySvg = "https://food.bolt.eu/images/play-store/en.svg";
 
-        public const string AppStoreSvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string AppStoreSvg = "https://food.bolt.eu/images/app-store/en.svg";
 
-        public const string InstagramSvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string InstagramSvg = "https://food.bolt.eu/images/food-bg-mobile.jpg";
 
-        public const string PhoneJpg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string PhoneJpg = "https://food.bolt.eu/images/food-bg-mobile.jpg";
 
         public const string RestaurantJpg = "https://food.bolt.eu/static/restaurant-1614ba22162498ce62957e30130ebcf5.jpg";
 
-        public const string TwiterSvg = "https://food.bolt.eu/img/food-bg-mobile.jpg";
+        public const string TwiterSvg = "https://food.bolt.eu/images/food-bg-mobile.jpg";
 
         // image drivers
         public const string DriverOne = "https://images.unsplash.com/photo-1568967729548-e3dbad3d37e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80";

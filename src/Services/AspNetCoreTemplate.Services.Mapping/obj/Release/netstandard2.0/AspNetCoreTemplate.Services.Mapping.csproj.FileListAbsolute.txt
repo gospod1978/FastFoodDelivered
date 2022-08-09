@@ -1,9 +1,0 @@
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.deps.json
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.dll
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/bin/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.pdb
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.csprojAssemblyReference.cache
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.AssemblyInfoInputs.cache
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.AssemblyInfo.cs
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.csproj.CoreCompileInputs.cache
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.dll
-/Users/gospod1978/Desktop/SoftUni/FastFoodDelivered/FastFoodDelivered/src/Services/AspNetCoreTemplate.Services.Mapping/obj/Release/netstandard2.0/AspNetCoreTemplate.Services.Mapping.pdb
